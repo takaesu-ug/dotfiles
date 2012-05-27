@@ -1,0 +1,64 @@
+"vunlde.vimで管理してるpluginを読み込む
+
+" コマンドモードでタブ補完などを有効にする
+set nocompatible
+
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" 以下からBundleで管理するプラグインを書いていく
+
+"vundle 自体を管理する
+Bundle 'gmarik/vundle'
+
+
+
+
+" ColorSchema{{{
+    Bundle 'tomasr/molokai'
+    Bundle 'yuroyoro/yuroyoro256.vim'
+" }}}
+
+" Completion {{{
+    " 補完 neocomplcache.vim : 究極のVim的補完環境
+    Bundle 'Shougo/neocomplcache'
+
+    " neocomplcacheのsinpet補完
+    Bundle 'Shougo/neocomplcache-snippets-complete'
+" }}}
+
+" Programming {{{
+    " quickrun.vim : 編集中のファイルを簡単に実行できるプラグイン
+    Bundle 'thinca/vim-quickrun'
+
+    " perldocやphpmanual等のリファレンスをvim上で見る
+    Bundle 'thinca/vim-ref'
+
+    " SQLUtilities : SQL整形、生成ユーティリティ
+    Bundle 'SQLUtilities'
+
+    " ソースコード上のメソッド宣言、変数宣言の一覧を表示
+    Bundle 'taglist.vim'
+
+    " VimShell環境
+    Bundle 'Shougo/vimshell.git'
+
+    " vimproc : vimから非同期実行。vimshelleで必要
+    Bundle 'Shougo/vimproc.git'
+
+    " シンタックスエラーを検出する
+    Bundle 'scrooloose/syntastic.git'
+
+    " vim-ruby : VimでRubyを扱う際の最も基本的な拡張機能
+    " Bundle 'ruby.vim'
+
+    " rails.vim : rails的なアレ
+    " Bundle 'tpope/vim-rails'
+" }}}
+
+
+
+
+
+filetype plugin indent on
