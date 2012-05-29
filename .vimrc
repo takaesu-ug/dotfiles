@@ -6,6 +6,8 @@ source ~/dotfiles/.vimrc.colors
 source ~/dotfiles/.vimrc.completion
 "表示関連
 source ~/dotfiles/.vimrc.apperance
+"プラグインの設定
+source ~/dotfiles/.vimrc.plugins_setting
 
 
 "swap なし
@@ -55,19 +57,6 @@ autocmd FileType * set formatoptions-=ro
 autocmd BufNewFile,BufRead *.psgi   set filetype=perl
 autocmd BufNewFile,BufRead *.t      set filetype=perl
 autocmd BufNewFile,BufRead *.mt     set filetype=html
-
-
-" syntastic シンタックスエラープラグイン
-"HTMLは色々エラるのでとりあえずチェックしない
-let g:syntastic_mode_map = { 'mode': 'active',
-  \ 'active_filetypes': [],
-  \ 'passive_filetypes': ['html'] }
-"エラったときQuickfixが立ち上がる
-let g:syntastic_auto_loc_list = 1
-"jshint,gjshintがインストールされている場合優先されるように設定
-let g:syntastic_javascript_checker = 'jshint'
-
-
 
 
 
