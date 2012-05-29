@@ -26,16 +26,6 @@ nnoremap <C-i>  :<C-u>help<Space>
 nnoremap <C-i><C-i> :<C-u>help<Space><C-r><C-w><Enter>
 
 
-"タブをスペースで挿入(4スペース)
-set expandtab
-set ts=4 sw=4 sts=0
-
-" 保存時に行末の空白を除去する
-autocmd BufWritePre * :%s/\s\+$//ge
-" 保存時にtabをスペースに変換する(4スペース)
-autocmd BufWritePre * :%s/\t/    /ge
-
-
 " ;でコマンド入力( ;と:を入れ替)
 noremap ; :
 
@@ -51,12 +41,5 @@ set whichwrap=b,s,h,l,<,>,[,]
 
 " 貼り付け時のコメントが自動で入るのを防止
 autocmd FileType * set formatoptions-=ro
-
-
-"シンタックスハイライト 拡張子に応じてPerlやHtmlを識別する
-autocmd BufNewFile,BufRead *.psgi   set filetype=perl
-autocmd BufNewFile,BufRead *.t      set filetype=perl
-autocmd BufNewFile,BufRead *.mt     set filetype=html
-
 
 

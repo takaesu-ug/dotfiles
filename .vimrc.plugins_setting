@@ -368,9 +368,19 @@
 "------------------------------------
 " quickrun.vim
 "------------------------------------
+" 初期化
 let g:quickrun_config = {}
 " キーバインド設定（デフォルト \ + r で実行)
 nmap <Leader>r <plug>(quickrun)
+augroup QuickRunUnitTest
+    autocmd!
+    " Perl(*.t)ファイルのテストはproveを使う
+    autocmd BufWinEnter,BufNewFile *.t set filetype=perl.unit
+    " Ruby用
+    "autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
+augroup END
+let g:quickrun_config['perl.unit'] = {'command': 'prove', 'cmdopt': '-l'}
+"let g:quickrun_config['ruby.rspec'] = {'command': 'spec'}
 "------------------------------------
 " Pydiction
 "------------------------------------

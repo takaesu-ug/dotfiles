@@ -11,8 +11,6 @@ set display=uhex      " 印字不可能文字を16進数で表示
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
 match ZenkakuSpace /　/
 
-" カーソル行をハイライト
-set cursorline
 " カレントウィンドウにのみ罫線を引く
 augroup cch
   autocmd! cch
@@ -20,6 +18,8 @@ augroup cch
   autocmd WinEnter,BufRead * set cursorline
 augroup END
 
+" カーソル行をハイライト
+set cursorline
 hi clear CursorLine
 hi CursorLine gui=underline
 highlight CursorLine ctermbg=black guibg=black
@@ -32,4 +32,21 @@ set ttyfast
 "Escの２回押しで検索のハイライト消去
 nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
+"シンタックスハイライト 拡張子に応じてPerlやHtmlを識別する
+autocmd BufNewFile,BufRead *.psgi   set filetype=perl
+autocmd BufNewFile,BufRead *.t      set filetype=perl
+autocmd BufNewFile,BufRead *.mt     set filetype=html
 
+"タブをスペースで挿入(4スペース)
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=0
+
+" 保存時に行末の空白を除去する
+autocmd BufWritePre * :%s/\s\+$//ge
+" 保存時にtabをスペースに変換する(4スペース)
+autocmd BufWritePre * :%s/\t/    /ge
+
+"HTMLはタブを２文字にする
+"~/.vim/ftplugin/html.vimを參考

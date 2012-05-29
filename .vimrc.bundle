@@ -28,6 +28,13 @@ Bundle 'gmarik/vundle'
     Bundle 'Shougo/neocomplcache-snippets-complete'
 " }}}
 
+" Tools{{{
+    " Quich Filter 検索を一覧表示
+    " 有効にならない
+    " Bundle 'filtering.vim'
+" }}}
+
+
 " Programming {{{
     " quickrun.vim : 編集中のファイルを簡単に実行できるプラグイン
     Bundle 'thinca/vim-quickrun'
