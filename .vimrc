@@ -19,7 +19,6 @@ set nobackup
 " クリップボードのコピー
 set clipboard+=autoselect
 
-
 " Ctrl-iでヘルプ
 nnoremap <C-i>  :<C-u>help<Space>
 " Ctrl-i２回押しでカーソル下のキーワードをヘルプでひく
@@ -41,5 +40,4 @@ set whichwrap=b,s,h,l,<,>,[,]
 
 " 貼り付け時のコメントが自動で入るのを防止
 autocmd FileType * set formatoptions-=ro
-
 
