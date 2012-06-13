@@ -26,6 +26,9 @@ Bundle 'gmarik/vundle'
 
     " neocomplcacheのsinpet補完
     Bundle 'Shougo/neocomplcache-snippets-complete'
+
+    " 対応するカッコの補完 vim-smartinput
+    Bundle 'kana/vim-smartinput.git'
 " }}}
 
 " Tools{{{
