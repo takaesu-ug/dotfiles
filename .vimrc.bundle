@@ -13,12 +13,23 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 
-
-
 " ColorSchema{{{
     Bundle 'tomasr/molokai'
     Bundle 'yuroyoro/yuroyoro256.vim'
 " }}}
+
+" Basic{{{
+    " surround.vim : テキストをかっこで囲む/削除する
+    Bundle 'surround.vim'
+" }}}
+
+
+" Search / Replace{{{
+    " grep.vim : 外部のgrep利用。:Grepで対話形式でgrep :Rgrepは再帰
+    Bundle 'grep.vim'
+
+" }}}
+
 
 " Completion {{{
     " 補完 neocomplcache.vim : 究極のVim的補完環境
