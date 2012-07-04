@@ -44,24 +44,24 @@
 "map <Leader>x, c<space>
 """未対応ファイルタイプのエラーメッセージを表示しない
 "let NERDShutUp=1
-"
-"" ------------------------------------
-"" grep.vim
-""------------------------------------
-"" 検索外のディレクトリ、ファイルパターン
-"let Grep_Skip_Dirs = '.svn .git .hg'
-"let Grep_Skip_Files = '*.bak *~'
-"-
-""------------------------------------
-"" surround.vim
-""------------------------------------
-"" s, ssで選択範囲を指定文字でくくる
-"nmap s <Plug>Ysurround
-"nmap ss <Plug>Yssurround
+
+" ------------------------------------
+" grep.vim
+"------------------------------------
+" 検索外のディレクトリ、ファイルパターン
+let Grep_Skip_Dirs = '.svn .git .hg'
+let Grep_Skip_Files = '*.bak *~'
+
+"------------------------------------
+" surround.vim
+"------------------------------------
+" s, ssで選択範囲を指定文字でくくる
+nmap s <Plug>Ysurround
+nmap ss <Plug>Yssurround
 "let g:surround_{char2nr('e')} = "begin \r end"
 "let g:surround_{char2nr('d')} = "do \r end"
-"let g:surround_{char2nr("-")} = ":\r"
-"
+let g:surround_{char2nr("-")} = ":\r"
+
 ""------------------------------------
 "" smartchr.vim
 ""------------------------------------
