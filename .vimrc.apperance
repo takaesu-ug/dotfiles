@@ -51,3 +51,5 @@ autocmd BufWritePre * :%s/\t/    /ge
 
 "HTMLはタブを２文字にする
 "~/.vim/ftplugin/html.vimを參考
+
+

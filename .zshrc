@@ -5,7 +5,7 @@ source ~/.zsh.d/zshrc_takaesu
 
 #### 以 下 自 分 用 の 設 定  ###
 # $HOME binを読み込む
-export PATH=$PATH:/usr/local/sbin:~/bin
+export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 
 # オリジナルコマンドの読み込み
 source ~/dotfiles/.zshrc.command

@@ -34,7 +34,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 function tmux_init() {
   SESS='takamax'
   if [ $# -eq 1 ]; then
-    SESS=${SESS}_$1
+    SESS=$1
   fi
 
   tmux -f ~/.tmux.conf new-session -d -s $SESS
