@@ -9,6 +9,10 @@ source ~/dotfiles/.vimrc.apperance
 "プラグインの設定
 source ~/dotfiles/.vimrc.plugins_setting
 
+" 対応するカッコへのカーソル移動を拡張
+" http://nanasi.jp/articles/vim/matchit_vim.html
+source $VIMRUNTIME/macros/matchit.vim
+"let b:match_words = "{:}"
 
 "swap なし
 set noswapfile
