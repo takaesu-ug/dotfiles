@@ -20,7 +20,7 @@ set noswapfile
 "チルダ（バックアッップ）ファイルなし
 set nobackup
 
-" クリップボードのコピー
+" Visualモードでヤンクしたものをクリップボードにコピー
 set clipboard+=autoselect
 
 " Ctrl-iでヘルプ
