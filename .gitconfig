@@ -12,3 +12,11 @@
     log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
     hist = log '--pretty=format:\\\"%h %ad | %s%d [%an]\\\"' --graph --date=short
     svn-ref = "!f() { ret=''; for rev in $@; do ret=${ret}' '`git log --grep "git-svn-id.*@${rev}" --pretty=%H;`; done; echo $ret; }; f"
+    svn-br-rm = "~/bin/git-svn-br-rm"
+[tig]
+    show-refs = yes
+    show-line-numbers = yes
+    line-number-interval = 1
+[tig "color"]
+    cursor     = white red underline
+    title-blur = white magenta
