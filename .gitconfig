@@ -11,8 +11,16 @@
     lg = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
     log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
     hist = log '--pretty=format:\\\"%h %ad | %s%d [%an]\\\"' --graph --date=short
-    svn-ref = "!f() { ret=''; for rev in $@; do ret=${ret}' '`git log --grep "git-svn-id.*@${rev}" --pretty=%H;`; done; echo $ret; }; f"
+
+    # svn-ref [svnのrivision]  gitのハッシュを確認できる(svnリビジョンを複数指定した時はsvnのリビジョンの昇順で表示する)
+    #プログラム的にはdoのあとでretsvn(retsvn=${retsvn}' '${rev};) と ret(ret=${ret}' '`git log --grep "git-svn-id.*@${rev}" --pretty=%H;`;)を作っている.それぞれにforで回しながら代入している.
+    svn-ref = "!f() { ret=''; retsvn=''; for rev in `echo $@ | tr ' ' \"\n\" | sort | xargs echo;`; do retsvn=${retsvn}' '${rev}; ret=${ret}' '`git log --grep "git-svn-id.*@${rev}" --pretty=%H;`; done; echo $ret; echo $retsvn; }; f"
+
+    # svn-diff [オプション(--name-statusなど)]   git svn dcommitする前にdiffの確認ができる
+    svn-diff = "!f() { git svn dcommit -n | grep diff | awk -F'diff-tree' -v opt=$@ '{print \"git diff \"opt\" \"$2}' | sh; }; f"
+    # svn-br-rm   リモートのsvnから削除されたローカルのブランチやタグが表示される % git svn-br-rm |sh で実行することも出来る
     svn-br-rm = "~/bin/git-svn-br-rm"
+
 [tig]
     show-refs = yes
     show-line-numbers = yes
