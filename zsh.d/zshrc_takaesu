@@ -121,7 +121,7 @@ prompt_bar_right="-[%{%B%F{magenta}%}%d%{%f%b%}]-"
 ###   %{%B%}...%{%b%}: 「...」を太字にする。
 ###   %#: 一般ユーザなら「%」、rootユーザなら「#」になる。
 #prompt_left_self="[%h]%(1j,(%j),)"
-prompt_left_date="%{%B%}%D{%Y/%m/%d %H:%M}%{%b%}"
+prompt_left_date="%{%B%}%D{%Y/%m/%d %H:%M:%S}%{%b%}"
 prompt_left_status="(%{%B%F{white}%(?.%K{green}.%K{red})%}%?%{%k%f%b%})"
 prompt_left_mark="%{%B%}%#%{%b%} "
 prompt_left="[${prompt_left_date}${prompt_left_status}]${prompt_left_mark}"
