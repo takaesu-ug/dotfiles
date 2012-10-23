@@ -1,6 +1,12 @@
 ## お す す め 設 定 を 読 み 込 む
+
 ## https://github.com/clear-code/zsh.d/
-source ~/.zsh.d/zshrc_takaesu
+source ~/dotfiles/zsh.d/zshrc_takaesu
+
+## gitの補完をzshでも爆速に
+#結局使わなかった！！#zshをｖｅｒ5にしたら解決
+#refs http://project-p.jp/halt/?p=1701
+#source ~/dotfiles/.git-completion.bash
 
 
 #### 以 下 自 分 用 の 設 定  ###
@@ -10,7 +16,6 @@ export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 # オリジナルコマンドの読み込み
 source ~/dotfiles/.zshrc.command
 
-
 # エディタ設定（mvim）
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
@@ -18,7 +23,6 @@ alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"
 
 ## Anadroid SDK PATH
 #.zlogin で設定
-
 
 ## node.js
 # nodebrew
@@ -30,10 +34,4 @@ fi
 ## perl
 # perlbrew
 source ~/perl5/perlbrew/etc/bashrc
-
-
-
-
-
-
 
