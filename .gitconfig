@@ -8,6 +8,7 @@
     co = checkout
     ci = commit
     br = branch
+    lgl = log --date=local
     lg = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
     log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
     hist = log '--pretty=format:\\\"%h %ad | %s%d [%an]\\\"' --graph --date=short
@@ -21,10 +22,16 @@
     # svn-br-rm   リモートのsvnから削除されたローカルのブランチやタグが表示される % git svn-br-rm |sh で実行することも出来る
     svn-br-rm = "~/bin/git-svn-br-rm"
 
+    #git-diff関係
+    diffr = diff --word-diff-regex='\\w+|[^[:space:]]'
+    diffrr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
+    diffw = diff --word-diff
+
 [tig]
     show-refs = yes
     show-line-numbers = yes
     line-number-interval = 1
+    show-date = local
 [tig "color"]
     cursor     = white red underline
     title-blur = white magenta
