@@ -19,6 +19,8 @@ set noswapfile
 
 "チルダ（バックアッップ）ファイルなし
 set nobackup
+"crontabが編集時に使うtmpディレクトリではバックアップをスキップする
+set backupskip=/tmp/*,/private/tmp/*
 
 " Visualモードでヤンクしたものをクリップボードにコピー
 set clipboard+=autoselect
