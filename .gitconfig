@@ -14,7 +14,8 @@
     hist = log '--pretty=format:\\\"%h %ad | %s%d [%an]\\\"' --graph --date=short
 
     # svn-ref [svnのrivision]  gitのハッシュを確認できる(svnリビジョンを複数指定した時はsvnのリビジョンの昇順で表示する)
-    #プログラム的にはdoのあとでretsvn(retsvn=${retsvn}' '${rev};) と ret(ret=${ret}' '`git log --grep "git-svn-id.*@${rev}" --pretty=%H;`;)を作っている.それぞれにforで回しながら代入している.
+    #プログラム的にはdoのあとでretsvn(retsvn=${retsvn}' '${rev};) と ret(ret=${ret}' '`git log --grep "git-svn-id.*@${rev}" --pretty=%H;`;)を作っている.
+    #それぞれにforで回しながら代入している.
     svn-ref = "!f() { ret=''; retsvn=''; for rev in `echo $@ | tr ' ' \"\n\" | sort | xargs echo;`; do retsvn=${retsvn}' '${rev}; ret=${ret}' '`git log --grep "git-svn-id.*@${rev}" --pretty=%H;`; done; echo $ret; echo $retsvn; }; f"
 
     # svn-diff [オプション(--name-statusなど)]   git svn dcommitする前にdiffの確認ができる
@@ -26,6 +27,14 @@
     diffr = diff --word-diff-regex='\\w+|[^[:space:]]'
     diffrr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
     diffw = diff --word-diff
+
+    #git-cherry関連(コミット間のdiff)
+    # colorized cheery -v
+    cch= "!f() { git cherry -v "$@" | awk '{ if($1 == \"+\"){ color = \"green\" } if($1 == \"-\"){ color = \"red\" } cmd = \"git show --date=short --no-notes --pretty=format:\\047%C\" color $1 \" %h %Cgreen%cd %Cblue%cn%x09%Creset%s\\047 --summary \" $2; cmd | getline t; close(cmd); print t }' ;}; f"
+    ## git log部分の解説(以下のようなshowコマンドになっている) \047 => シングルコート
+    # ・git show --date=short --no-notes --pretty=format:'%Cgreen+ %h %Cgreen%cd %Cblue%cn%x09%Creset%s' --summary 62b7de0'
+    # ・awk内でのgetline、close  cmdは任意のコマンドとして（git show)を実行している
+    #   getlineで読み込んだcmdのコマンドを明示的にcloseさせている
 
 [tig]
     show-refs = yes
