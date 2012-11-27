@@ -3,6 +3,10 @@
 # grep （数字分上下を表示[-B数字 -A数字]  再帰的[-r]）
 alias grep="grep --color"
 
+# インストールしたCpanモジュールを出力
+alias perl-installed="find `perl -e 'print \"@INC\"'` -name \"*.pm\" -print"
+
+
 
 # w3mでgoogle検索
 function google() {
