@@ -28,8 +28,12 @@ Bundle 'gmarik/vundle'
     " grep.vim : 外部のgrep利用。:Grepで対話形式でgrep :Rgrepは再帰
     Bundle 'grep.vim'
 
+    " App::Ack をvimで利用するためのプラグイン
+    Bundle 'ack.vim'
+
 " }}}
 
+    Bundle 'vtreeexplorer'
 
 " Completion {{{
     " 補完 neocomplcache.vim : 究極のVim的補完環境
@@ -73,6 +77,8 @@ Bundle 'gmarik/vundle'
 
     " Perlサポート
     Bundle 'perl-support.vim'
+    " Mojoliciousサポート
+    Bundle 'mojo.vim'
 
     " vim-ruby : VimでRubyを扱う際の最も基本的な拡張機能
     " Bundle 'ruby.vim'

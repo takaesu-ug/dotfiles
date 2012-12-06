@@ -23,7 +23,9 @@ set nobackup
 set backupskip=/tmp/*,/private/tmp/*
 
 " Visualモードでヤンクしたものをクリップボードにコピー
+" http://vim-users.jp/2010/02/hack126/
 set clipboard+=autoselect
+"set clipboard+=unnamed
 
 " Ctrl-iでヘルプ
 nnoremap <C-i>  :<C-u>help<Space>
