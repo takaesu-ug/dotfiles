@@ -28,13 +28,27 @@
 ""------------------------------------
 "" Alignを日本語環境で使用するための設定
 "let g:Align_xstrlen = 3
-"
-""------------------------------------
-"" VTreeExplorer
-""------------------------------------
-"" 縦に表示する
-"let g:treeExplVertical=1
-"
+
+"------------------------------------
+" VTreeExplorer
+"------------------------------------
+" 縦に表示する
+let g:treeExplVertical=1
+" 分割したウィンドウのサイズ
+let g:treeExplWinSize=30
+
+"------------------------------------
+" netrw
+"------------------------------------
+" netrwは常にtree view
+let g:netrw_liststyle = 3
+" CVSと.で始まるファイルは表示しない
+"let g:netrw_list_hide = 'CVS,\(^\|\s\s\)\zs\.\S\+'
+" 'v'でファイルを開くときは右側に開く。(デフォルトが左側なので入れ替え)
+let g:netrw_altv = 1
+" 'o'でファイルを開くときは下側に開く。(デフォルトが上側なので入れ替え)
+let g:netrw_alto = 1
+
 ""------------------------------------
 "" NERD_commenter.vim
 ""------------------------------------
@@ -249,60 +263,60 @@ nmap <Leader>tl :CMiniBufExplorer<CR>:TrinityToggleTagList<CR>:TMiniBufExplorer<
 "xmap <silent> ib <Plug>CamelCaseMotion_ib
 "omap <silent> ie <Plug>CamelCaseMotion_ie
 "xmap <silent> ie <Plug>CamelCaseMotion_ie
-"
-""------------------------------------
-"" vimshell
-""------------------------------------
-"let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-"let g:vimshell_right_prompt = 'vimshell#vcs#info("(%s)-[%b]", "(%s)-[%b|%a]")'
-"let g:vimshell_enable_smart_case = 1
-"
-"if has('win32') || has('win64')
-"  " Display user name on Windows.
-"  let g:vimshell_prompt = $USERNAME."% "
-"else
-"  " Display user name on Linux.
-"  let g:vimshell_prompt = $USER."% "
-"
-"  call vimshell#set_execute_file('bmp,jpg,png,gif', 'gexe eog')
-"  call vimshell#set_execute_file('mp3,m4a,ogg', 'gexe amarok')
-"  let g:vimshell_execute_file_list['zip'] = 'zipinfo'
-"  call vimshell#set_execute_file('tgz,gz', 'gzcat')
-"  call vimshell#set_execute_file('tbz,bz2', 'bzcat')
-"endif
-"
-"function! g:my_chpwd(args, context)
-"  call vimshell#execute('echo "chpwd"')
-"endfunction
-"function! g:my_emptycmd(cmdline, context)
-"  call vimshell#execute('echo "emptycmd"')
-"  return a:cmdline
-"endfunction
-"function! g:my_preprompt(args, context)
-"  call vimshell#execute('echo "preprompt"')
-"endfunction
-"function! g:my_preexec(cmdline, context)
-"  call vimshell#execute('echo "preexec"')
-"
-"  if a:cmdline =~# '^\s*diff\>'
-"    call vimshell#set_syntax('diff')
-"  endif
-"  return a:cmdline
-"endfunction
-"
-"autocmd FileType vimshell
-"\ call vimshell#altercmd#define('g', 'git')
-"\| call vimshell#altercmd#define('i', 'iexe')
-"\| call vimshell#altercmd#define('l', 'll')
-"\| call vimshell#altercmd#define('ll', 'ls -l')
-"\| call vimshell#hook#set('chpwd', ['g:my_chpwd'])
-"\| call vimshell#hook#set('emptycmd', ['g:my_emptycmd'])
-"\| call vimshell#hook#set('preprompt', ['g:my_preprompt'])
-"\| call vimshell#hook#set('preexec', ['g:my_preexec'])
-"
-"command! Vs :VimShell
-"
-"
+
+"------------------------------------
+" vimshell
+"------------------------------------
+let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+let g:vimshell_right_prompt = 'vimshell#vcs#info("(%s)-[%b]", "(%s)-[%b|%a]")'
+let g:vimshell_enable_smart_case = 1
+
+if has('win32') || has('win64')
+  " Display user name on Windows.
+  let g:vimshell_prompt = $USERNAME."% "
+else
+  " Display user name on Linux.
+  let g:vimshell_prompt = $USER."% "
+
+  call vimshell#set_execute_file('bmp,jpg,png,gif', 'gexe eog')
+  call vimshell#set_execute_file('mp3,m4a,ogg', 'gexe amarok')
+  let g:vimshell_execute_file_list['zip'] = 'zipinfo'
+  call vimshell#set_execute_file('tgz,gz', 'gzcat')
+  call vimshell#set_execute_file('tbz,bz2', 'bzcat')
+endif
+
+function! g:my_chpwd(args, context)
+  call vimshell#execute('echo "chpwd"')
+endfunction
+function! g:my_emptycmd(cmdline, context)
+  call vimshell#execute('echo "emptycmd"')
+  return a:cmdline
+endfunction
+function! g:my_preprompt(args, context)
+  call vimshell#execute('echo "preprompt"')
+endfunction
+function! g:my_preexec(cmdline, context)
+  call vimshell#execute('echo "preexec"')
+
+  if a:cmdline =~# '^\s*diff\>'
+    call vimshell#set_syntax('diff')
+  endif
+  return a:cmdline
+endfunction
+
+autocmd FileType vimshell
+\ call vimshell#altercmd#define('g', 'git')
+\| call vimshell#altercmd#define('i', 'iexe')
+\| call vimshell#altercmd#define('l', 'll')
+\| call vimshell#altercmd#define('ll', 'ls -l')
+\| call vimshell#hook#set('chpwd', ['g:my_chpwd'])
+\| call vimshell#hook#set('emptycmd', ['g:my_emptycmd'])
+\| call vimshell#hook#set('preprompt', ['g:my_preprompt'])
+\| call vimshell#hook#set('preexec', ['g:my_preexec'])
+
+command! Vs :VimShell
+
+
 ""------------------------------------
 "" unite.vim
 ""------------------------------------
@@ -379,7 +393,7 @@ augroup QuickRunUnitTest
     " Ruby用
     "autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
 augroup END
-let g:quickrun_config['perl.unit'] = {'command': 'prove', 'cmdopt': '-lv'}
+let g:quickrun_config['perl.unit'] = {'command': 'prove', 'cmdopt': '-lv -MProject::Libs'}
 "let g:quickrun_config['ruby.rspec'] = {'command': 'spec'}
 
 
@@ -389,21 +403,22 @@ let g:quickrun_config['perl.unit'] = {'command': 'prove', 'cmdopt': '-lv'}
 "------------------------------------
 "let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
 
+""" TODO:エラー発生すると落ちるので一時的に無効 20121019 """
 "------------------------------------
 " Syntastic(シンタックスエラープラグイン)
 "------------------------------------
 "HTMLは色々エラるのでとりあえずチェックしない
-let g:syntastic_mode_map = { 'mode': 'active',
-  \ 'active_filetypes': [],
-  \ 'passive_filetypes': ['html'] }
-" エラー行をsignで表示する
-let g:syntastic_enable_signs = 1
-" 可能ならhighligt表示する
-let g:syntastic_enable_highlighting = 1
-"エラったときQuickfixが立ち上がる
-let g:syntastic_auto_loc_list = 1
-"jshint,gjshintがインストールされている場合優先されるように設定
-let g:syntastic_javascript_checker = 'jshint'
+"let g:syntastic_mode_map = { 'mode': 'active',
+"  \ 'active_filetypes': [],
+"  \ 'passive_filetypes': ['html'] }
+"" エラー行をsignで表示する
+"let g:syntastic_enable_signs = 1
+"" 可能ならhighligt表示する
+"let g:syntastic_enable_highlighting = 1
+""エラったときQuickfixが立ち上がる
+"let g:syntastic_auto_loc_list = 1
+""jshint,gjshintがインストールされている場合優先されるように設定
+"let g:syntastic_javascript_checker = 'jshint'
 
 
 "------------------------------------
@@ -414,3 +429,25 @@ let g:syntastic_javascript_checker = 'jshint'
 "vmap <C-A> <Plug>ToggleV
 
 "let g:toggle_pairs = { 'and':'or', 'or':'and', 'if':'unless', 'unless':'if', 'yes':'no', 'no':'yes', 'enable':'disable', 'disable':'enable', 'pick':'reword', 'reword':'fixup', 'fixup':'squash', 'squash':'edit', 'edit':'exec', 'exec':'pick' }
+
+
+
+
+"------------------------------------
+" mojo.vim
+"http://www.vim.org/scripts/script.php?script_id=3168
+"設定方法:https://github.com/yko/mojo.vim
+"------------------------------------
+let mojo_highlight_data = 1
+let mojo_disable_html = 1
+let mojo_no_helpers = 1
+
+
+"------------------------------------
+" perl-support.vim
+"------------------------------------
+" 遅延ロードをしない .t のテストファイルを生成する時にエラーが出るため。。
+" 起動など遅くなるなら解除する
+let g:Perl_CreateMenusDelayed = 'no'
+
+
