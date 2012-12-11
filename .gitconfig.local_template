@@ -1,0 +1,8 @@
+[user]
+    name = USERNAME
+    email = MAIL
+
+[github]
+    user     = GITHUB_ID
+    password = GITHUB_PW
+
