@@ -1,6 +1,6 @@
-[user]
-    name = yusabana
-    email = taka.esu.user@gmail.com
+[include]
+    path = /Users/yuji/dotfiles/.gitconfig.local
+    #[github]ディレクティブでuserとpassなどを設定
 [color]
     ui = auto
 [alias]
@@ -44,3 +44,5 @@
 [tig "color"]
     cursor     = white red underline
     title-blur = white magenta
+
+
