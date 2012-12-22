@@ -21,6 +21,18 @@ Bundle 'gmarik/vundle'
 " Basic{{{
     " surround.vim : テキストをかっこで囲む/削除する
     Bundle 'surround.vim'
+
+    " unite.vim http://blog.ruedap.com/entry/20110110/vim_unite_plugin
+    Bundle 'unite.vim'
+
+    " VimShell環境
+    Bundle 'Shougo/vimshell.git'
+
+    " vimproc : vimから非同期実行。vimshelleで必要
+    Bundle 'Shougo/vimproc.git'
+
+    " vim のファイラ
+    Bundle 'Shougo/vimfiler.git'
 " }}}
 
 
@@ -66,12 +78,6 @@ Bundle 'gmarik/vundle'
     " ソースコード上のメソッド宣言、変数宣言の一覧を表示
     Bundle 'taglist.vim'
 
-    " VimShell環境
-    Bundle 'Shougo/vimshell.git'
-
-    " vimproc : vimから非同期実行。vimshelleで必要
-    Bundle 'Shougo/vimproc.git'
-
     " シンタックスエラーを検出する
     Bundle 'scrooloose/syntastic.git'
 
@@ -79,6 +85,9 @@ Bundle 'gmarik/vundle'
     Bundle 'perl-support.vim'
     " Mojoliciousサポート
     Bundle 'mojo.vim'
+
+    " Scalaシンタックス
+    " Bundle 'derekwyatt/vim-scala'
 
     " vim-ruby : VimでRubyを扱う際の最も基本的な拡張機能
     " Bundle 'ruby.vim'
