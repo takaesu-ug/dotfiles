@@ -87,7 +87,7 @@ Bundle 'gmarik/vundle'
     Bundle 'mojo.vim'
 
     " Scalaシンタックス
-    " Bundle 'derekwyatt/vim-scala'
+    Bundle 'derekwyatt/vim-scala'
 
     " vim-ruby : VimでRubyを扱う際の最も基本的な拡張機能
     " Bundle 'ruby.vim'

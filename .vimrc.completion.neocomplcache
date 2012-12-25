@@ -29,6 +29,7 @@ let g:neocomplcache_dictionary_filetype_lists = {
     \ 'default' : '',
     \ 'javascript' : $HOME.'/.vim/dict/javascript.dict',
     \ 'perl' : $HOME.'/.vim/dict/perl.dict',
+    \ 'scala' : $HOME.'/.vim/dict/scala.dict',
     \ 'vm' : $HOME.'/.vim/dict/vim.dict'
     \ }
 
