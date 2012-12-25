@@ -1,5 +1,5 @@
 [include]
-    path = /Users/yuji/dotfiles/.gitconfig.local
+    path = ~/dotfiles/.gitconfig.local
     #[github]ディレクティブでuserとpassなどを設定
 [color]
     ui = auto
