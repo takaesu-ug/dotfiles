@@ -32,10 +32,11 @@ nnoremap <C-i>  :<C-u>help<Space>
 " Ctrl-i２回押しでカーソル下のキーワードをヘルプでひく
 nnoremap <C-i><C-i> :<C-u>help<Space><C-r><C-w><Enter>
 
-
 " ;でコマンド入力( ;と:を入れ替)
 noremap ; :
 
+" Oキーでノーマルモードで改行を入れる http://vim-users.jp/2009/08/hack57/
+nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
 
 " CTRL-hjklでウィンドウ移動
 nnoremap <C-j> <C-w>j
