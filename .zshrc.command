@@ -25,7 +25,7 @@ w3m http://www.google.co.jp/$opt
 # w3mでALC検索
 function alc() {
 if [ $ != 0 ]; then
-    w3m "http://eow.alc.co.jp/$*/UTF-8/?ref=sa"
+    w3m +38 "http://eow.alc.co.jp/$*/UTF-8/?ref=sa"
 else
     w3m "http://www.alc.co.jp/"
 fi
