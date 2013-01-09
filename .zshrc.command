@@ -7,30 +7,6 @@ alias grep="grep --color"
 alias pm-installed="find `perl -e 'print \"@INC\"'` -name \"*.pm\" -print"
 alias pm-version='perl -le '"'"'for $module (@ARGV) { eval "use $module"; print "$module ", ${"$module\::VERSION"} || "not found" }'"'"
 
-
-# w3mでgoogle検索
-function google() {
-local str opt
-if [ $ != 0 ]; then
-    for i in $*; do
-        str="$str+$i"
-    done
-    str=`echo $str | sed 's/^\+//'`
-    opt='search?num=50&hl=ja&lr=lang_ja'
-    opt="${opt}&q=${str}"
-fi
-w3m http://www.google.co.jp/$opt
-}
-
-# w3mでALC検索
-function alc() {
-if [ $ != 0 ]; then
-    w3m +38 "http://eow.alc.co.jp/$*/UTF-8/?ref=sa"
-else
-    w3m "http://www.alc.co.jp/"
-fi
-}
-
 # tmux init
 ## tmuxのカラー設定　itermでtmuxを使い、Vimのカラースキームを有効にする
 ## http://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode
@@ -51,3 +27,58 @@ function tmux_init() {
 
 
 
+# w3mでgoogle検索
+function google() {
+  local str opt
+  if [ $# != 0 ]; then
+    for i in $*; do
+        str="$str+$i"
+    done
+    str=`echo $str | sed 's/^\+//'` #行頭の+を除く
+    opt='search?num=50&hl=ja&lr=lang_ja'
+    opt="${opt}&q=${str}"
+  fi
+  w3m http://www.google.co.jp/$opt
+}
+
+# w3mでALC検索
+function alc() {
+  if [ $# != 0 ]; then
+    w3m +38 "http://eow.alc.co.jp/$*/UTF-8/?ref=sa"
+  else
+    w3m "http://www.alc.co.jp/"
+  fi
+}
+
+# w3m でGoogle translate English->Japanese
+function gte() {
+  google_translate "$*" "en-ja"
+}
+
+# w3m でGoogle translate Japanese->English
+function gtj() {
+  google_translate "$*" "ja-en"
+}
+
+# 実行方法
+# google_translate "検索文字列" [翻訳オプション(en-ja 英語->日本語)]
+function google_translate() {
+  local str opt cond
+
+  if [ $# != 0 ]; then
+    str=`echo $1 | sed -e 's/  */+/g'` # 1文字以上の半角空白を+に変換
+    cond=$2
+    if [ $cond = "ja-en" ]; then
+      # ja -> en 翻訳
+      opt='?hl=ja&sl=ja&tl=en&ie=UTF-8&oe=UTF-8'
+    else
+      # en -> ja 翻訳
+      opt='?hl=ja&sl=en&tl=ja&ie=UTF-8&oe=UTF-8'
+    fi
+  else
+    opt='?hl=ja&sl=en&tl=ja&ie=UTF-8&oe=UTF-8'
+  fi
+
+  opt="${opt}&text=${str}"
+  w3m +13 "http://translate.google.com/${opt}"
+}
