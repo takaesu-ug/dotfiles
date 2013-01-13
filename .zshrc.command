@@ -7,6 +7,10 @@ alias grep="grep --color"
 alias pm-installed="find `perl -e 'print \"@INC\"'` -name \"*.pm\" -print"
 alias pm-version='perl -le '"'"'for $module (@ARGV) { eval "use $module"; print "$module ", ${"$module\::VERSION"} || "not found" }'"'"
 
+# IDE起動
+alias eclipse='open -n /Applications/eclipse/Eclipse.app'
+alias open idea='open -n /Applications/IntelliJ\ IDEA\ 12\ CE.app'
+
 # tmux init
 ## tmuxのカラー設定　itermでtmuxを使い、Vimのカラースキームを有効にする
 ## http://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode
