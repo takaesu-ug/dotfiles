@@ -90,10 +90,12 @@ Bundle 'gmarik/vundle'
     Bundle 'derekwyatt/vim-scala'
 
     " vim-ruby : VimでRubyを扱う際の最も基本的な拡張機能
-    " Bundle 'ruby.vim'
+    "Bundle 'ruby.vim'
+    " https://github.com/vim-ruby/vim-ruby/blob/master/INSTALL.markdown
+    Bundle 'vim-ruby/vim-ruby'
 
-    " rails.vim : rails的なアレ
-    " Bundle 'tpope/vim-rails'
+    " rails.vim : rails
+    Bundle 'tpope/vim-rails'
 " }}}
 
 
