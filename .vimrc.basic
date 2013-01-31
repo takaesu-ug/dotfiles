@@ -42,4 +42,10 @@ source $VIMRUNTIME/macros/matchit.vim
 "C-jでノーマルモードに移行する
 inoremap <silent> <C-j> <ESC>
 
+"ペーストするときにインデントさせない [C-e] に設定
+"[C-e]の設定を一旦クリアしてpastetoggleを[C-e]に割り当てる
+"ノーマルモードに移動する時に「set nopaste」を実行する
+inoremap <C-e> <nop>
+set pastetoggle=<C-e>
+autocmd InsertLeave * set nopaste
 
