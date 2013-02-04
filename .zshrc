@@ -16,11 +16,6 @@ export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 # オリジナルコマンドの読み込み
 source ~/dotfiles/.zshrc.command
 
-# エディタ設定（mvim）
-export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
-alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-
 ## Anadroid SDK PATH
 #.zlogin で設定
 
@@ -33,5 +28,7 @@ fi
 
 ## perl
 # perlbrew
-source ~/perl5/perlbrew/etc/bashrc
+if [[ -f ~/perl5/perlbrew/etc/bashrc ]]; then
+  source ~/perl5/perlbrew/etc/bashrc
+fi
 

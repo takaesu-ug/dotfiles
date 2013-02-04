@@ -1,4 +1,9 @@
 ### Alias類
+# MacVim
+export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+
 # find grep 合わせ技のエイリアス まだできていない・・・・・
 # grep （数字分上下を表示[-B数字 -A数字]  再帰的[-r]）
 alias grep="grep --color"
