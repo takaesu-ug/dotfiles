@@ -41,7 +41,7 @@ let g:treeExplWinSize=30
 " netrw
 "------------------------------------
 " netrwは常にtree view
-let g:netrw_liststyle = 3
+let g:netrw_liststyle = 1
 " CVSと.で始まるファイルは表示しない
 "let g:netrw_list_hide = 'CVS,\(^\|\s\s\)\zs\.\S\+'
 " 'v'でファイルを開くときは右側に開く。(デフォルトが左側なので入れ替え)
