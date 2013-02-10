@@ -2,7 +2,8 @@
 " カラー関連 Colors
 "-------------------------------------------------------------------------------
 
-colorscheme molokai
+colorscheme jellybeans
+"colorscheme molokai
 "colorscheme yuroyoro256
 
 " 256色
