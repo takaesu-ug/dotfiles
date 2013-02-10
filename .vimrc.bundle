@@ -34,6 +34,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'Shougo/vimshell.git'
 
     " vimproc : vimから非同期実行。vimshelleで必要
+    " vimproc は利用するためにコンパイルが必要.
+    " 以下のコマンドを実行して、 vimproc/autoload/vimproc_mac.so ができていればOK
+    " cd $HOME/.vim/bundle/vimproc/ ; make -f make_mac.mak
     NeoBundle 'Shougo/vimproc.git'
 
     " vim のファイラ
