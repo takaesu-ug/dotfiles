@@ -40,6 +40,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'Shougo/vimproc.git'
 
     " vim のファイラ
+    " http://www.karakaram.com/vimfiler
     NeoBundle 'Shougo/vimfiler.git'
 " }}}
 
