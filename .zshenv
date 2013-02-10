@@ -1,7 +1,8 @@
 
 # perlbrew
-source ~/perl5/perlbrew/etc/bashrc
-
+if [[ -f ~/perl5/perlbrew/etc/bashrc ]]; then
+  source ~/perl5/perlbrew/etc/bashrc
+fi
 
 # Graidle (groovy)
 export GRADLE_HOME=/usr/local/Cellar/gradle/1.0-milestone-9
