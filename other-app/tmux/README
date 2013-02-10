@@ -1,5 +1,7 @@
 # reattach-to-user-namespace ファイルの使い方
+### https://github.com/ChrisJohnsen/tmux-MacOSX-pasteboard
 
 1. 単純にこのファイルをパスの通っている箇所に配置、またはリンクを貼る
 2. dotfiles/.tmux.conf に 「bind-key C-c run "tmux saave-buffer - | ~/bin/reattach-to-user-namespace pbcopy"」という設定があるのでそのパスを任意に変更する
+
 
