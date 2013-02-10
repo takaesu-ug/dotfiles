@@ -431,8 +431,6 @@ let g:quickrun_config['perl.unit'] = {'command': 'prove', 'cmdopt': '-lv -MProje
 "let g:toggle_pairs = { 'and':'or', 'or':'and', 'if':'unless', 'unless':'if', 'yes':'no', 'no':'yes', 'enable':'disable', 'disable':'enable', 'pick':'reword', 'reword':'fixup', 'fixup':'squash', 'squash':'edit', 'edit':'exec', 'exec':'pick' }
 
 
-
-
 "------------------------------------
 " mojo.vim
 "http://www.vim.org/scripts/script.php?script_id=3168
