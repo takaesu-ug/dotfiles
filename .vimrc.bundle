@@ -1,105 +1,110 @@
-"vunlde.vimで管理してるpluginを読み込む
+"NeoBunlde.vimで管理してるpluginを読み込む
 
 " コマンドモードでタブ補完などを有効にする
 set nocompatible
-
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
-" 以下からBundleで管理するプラグインを書いていく
+if has('vim_starting')
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
-"vundle 自体を管理する
-Bundle 'gmarik/vundle'
+call neobundle#rc(expand('~/.vim/bundle/'))
+
+
+" 以下からNeoBundleで管理するプラグインを書いていく
+
+"neobundle 自体を管理する
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 
 " ColorSchema{{{
-    Bundle 'tomasr/molokai'
-    Bundle 'yuroyoro/yuroyoro256.vim'
+    NeoBundle 'tomasr/molokai'
+    NeoBundle 'yuroyoro/yuroyoro256.vim'
+    NeoBundle 'nanotech/jellybeans.vim'
 " }}}
 
 " Basic{{{
     " surround.vim : テキストをかっこで囲む/削除する
-    Bundle 'surround.vim'
+    NeoBundle 'surround.vim'
 
     " unite.vim http://blog.ruedap.com/entry/20110110/vim_unite_plugin
-    Bundle 'unite.vim'
+    NeoBundle 'unite.vim'
 
     " VimShell環境
-    Bundle 'Shougo/vimshell.git'
+    "NeoBundle 'Shougo/vimshell.git'
 
     " vimproc : vimから非同期実行。vimshelleで必要
-    Bundle 'Shougo/vimproc.git'
+    NeoBundle 'Shougo/vimproc.git'
 
     " vim のファイラ
-    Bundle 'Shougo/vimfiler.git'
+    NeoBundle 'Shougo/vimfiler.git'
 " }}}
 
 
 " Search / Replace{{{
     " grep.vim : 外部のgrep利用。:Grepで対話形式でgrep :Rgrepは再帰
-    Bundle 'grep.vim'
+    NeoBundle 'grep.vim'
 
     " App::Ack をvimで利用するためのプラグイン
-    Bundle 'ack.vim'
+    NeoBundle 'ack.vim'
 
 " }}}
 
-    Bundle 'vtreeexplorer'
+    NeoBundle 'vtreeexplorer'
 
 " Completion {{{
     " 補完 neocomplcache.vim : 究極のVim的補完環境
-    Bundle 'Shougo/neocomplcache'
+    NeoBundle 'Shougo/neocomplcache'
 
     " neocomplcacheのsinpet補完
-    Bundle 'Shougo/neocomplcache-snippets-complete'
+    NeoBundle 'Shougo/neosnippet'
 
     " 対応するカッコの補完 vim-smartinput
-    Bundle 'kana/vim-smartinput.git'
+    NeoBundle 'kana/vim-smartinput.git'
 " }}}
 
 " Tools{{{
     " Quich Filter 検索を一覧表示
     " 有効にならない
-    " Bundle 'filtering.vim'
+    " NeoBundle 'filtering.vim'
 " }}}
 
 
 " Programming {{{
     " quickrun.vim : 編集中のファイルを簡単に実行できるプラグイン
-    Bundle 'thinca/vim-quickrun'
+    NeoBundle 'thinca/vim-quickrun'
 
     " perldocやphpmanual等のリファレンスをvim上で見る
-    Bundle 'thinca/vim-ref'
+    NeoBundle 'thinca/vim-ref'
 
     " SQLUtilities : SQL整形、生成ユーティリティ
-    Bundle 'SQLUtilities'
+    NeoBundle 'SQLUtilities'
 
     " ソースコード上のメソッド宣言、変数宣言の一覧を表示
-    Bundle 'taglist.vim'
+    NeoBundle 'taglist.vim'
 
     " シンタックスエラーを検出する
-    Bundle 'scrooloose/syntastic.git'
+    NeoBundle 'scrooloose/syntastic.git'
 
     " Perlサポート
-    Bundle 'perl-support.vim'
+    NeoBundle 'perl-support.vim'
     " Mojoliciousサポート
-    Bundle 'mojo.vim'
+    NeoBundle 'mojo.vim'
 
     " Scalaシンタックス
-    Bundle 'derekwyatt/vim-scala'
+    NeoBundle 'derekwyatt/vim-scala'
 
     " vim-ruby : VimでRubyを扱う際の最も基本的な拡張機能
-    "Bundle 'ruby.vim'
+    "NeoBundle 'ruby.vim'
     " https://github.com/vim-ruby/vim-ruby/blob/master/INSTALL.markdown
-    Bundle 'vim-ruby/vim-ruby'
+    NeoBundle 'vim-ruby/vim-ruby'
 
     " rails.vim : rails
-    Bundle 'tpope/vim-rails'
+    NeoBundle 'tpope/vim-rails'
 " }}}
 
 
-
-
-
 filetype plugin indent on
+
+" Installation check.
+NeoBundleCheck
