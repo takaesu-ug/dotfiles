@@ -11,6 +11,9 @@ alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl "
 # grep （数字分上下を表示[-B数字 -A数字]  再帰的[-r]）
 alias grep="grep --color"
 
+# gitのエイリアス
+alias g="git"
+
 # インストールしたCpanモジュールを出力
 alias pm-installed="find `perl -e 'print \"@INC\"'` -name \"*.pm\" -print"
 alias pm-version='perl -le '"'"'for $module (@ARGV) { eval "use $module"; print "$module ", ${"$module\::VERSION"} || "not found" }'"'"
