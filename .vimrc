@@ -1,4 +1,4 @@
-"vunlde.vimで管理してるpluginを読み込む
+"neobunlde.vimで管理してるpluginを読み込む
 source ~/dotfiles/.vimrc.bundle
 
 "Color関連
