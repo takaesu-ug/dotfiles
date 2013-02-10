@@ -31,7 +31,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'unite.vim'
 
     " VimShell環境
-    "NeoBundle 'Shougo/vimshell.git'
+    NeoBundle 'Shougo/vimshell.git'
 
     " vimproc : vimから非同期実行。vimshelleで必要
     NeoBundle 'Shougo/vimproc.git'
@@ -98,7 +98,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     "NeoBundle 'ruby.vim'
     " https://github.com/vim-ruby/vim-ruby/blob/master/INSTALL.markdown
     NeoBundle 'vim-ruby/vim-ruby'
-
     " rails.vim : rails
     NeoBundle 'tpope/vim-rails'
 " }}}
@@ -107,4 +106,5 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 filetype plugin indent on
 
 " Installation check.
+" 保存時にNeoBundleの更新をチェックする
 NeoBundleCheck
