@@ -1,0 +1,36 @@
+#!/bin/sh
+
+#Basic認証ユーザ、パスワード
+http_user='USER NAME'
+http_passwd='PASSWORD'
+#Redmineの個人設定ページ右側にあるAPIキー
+api_key='API KEY'
+
+REDMINE_URL='HTTPS://'${HTTP_USER}':'${HTTP_PASSWD}'@PROJECT.TAKAPRA.COM/REDMINE/ISSUES/'
+MSG=`CAT ${GIT_DIR}'/COMMIT_EDITMSG' | GREP -P -V '^#([ |\T|\N])'`
+
+
+# チケット番号の抽出
+TICKET_IDS=`RUBY -E "'${MSG}'.SCAN(/(#\D+)/){|A| PUTS A[0].GSUB('#','');}"`
+
+IF [ "$TICKET_IDS" = '' ]; THEN
+    # チケット番号が無い時
+    ECHO "### NOTICE ###"
+    ECHO "  チケット番号が入力されていないようです。"
+ELSE
+    # チケットの件名を出力
+    ECHO '### RELATED TICKET ###'
+    FOR TICKET_ID IN $TICKET_IDS; DO
+        REDMINE_API_URL=${REDMINE_URL}${TICKET_ID}'.JSON?FORMAT=JSON&KEY='$API_KEY;
+        SUBJECT=`PHP -R "ECHO @JSON_DECODE(FILE_GET_CONTENTS('${REDMINE_API_URL}'))->ISSUE->SUBJECT;"`
+        ECHO '  #'$TICKET_ID' '$SUBJECT;
+    DONE
+FI
+
+ECHO ""
+ECHO "### INFO ###"
+ECHO "  コミットを取り消したい時は以下のコマンドを実行してください"
+ECHO "  GIT RESET --SOFT HEAD~"
+ECHO ""
+
+Exit 0

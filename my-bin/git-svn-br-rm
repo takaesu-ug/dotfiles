@@ -1,0 +1,9 @@
+#!/bin/sh
+
+repo_url=`git svn info | grep 'URL:' | awk '{print $2}' | perl -pi -e "s/(branches|trunk|tags).*/branches/g"`
+svn_list=`svn list $repo_url | awk -F'/' '{print $1}'`;
+git_list=`git br -r | grep -v 'trunk\|tags\/'`;
+
+perl -e "@a=qw/ `echo $svn_list` /; @b=qw/ `echo $git_list` /; @diff=grep{!{map{\$_,1}@a}->{\$_}}@b; print join(\"\n\", @diff);" | \
+    awk '{print "git branch -D -r "$1"\nrm -rf ./.git/svn/refs/remotes/"$1}'
+
