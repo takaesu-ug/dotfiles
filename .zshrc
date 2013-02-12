@@ -1,7 +1,7 @@
 ## お す す め 設 定 を 読 み 込 む
 
 ## https://github.com/clear-code/zsh.d/
-source ~/dotfiles/zsh.d/zshrc_takaesu
+source ~/dotfiles/zsh.d/zshrc_yusabana
 
 ## gitの補完をzshでも爆速に
 #結局使わなかった！！#zshをｖｅｒ5にしたら解決
