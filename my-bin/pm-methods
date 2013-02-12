@@ -1,0 +1,15 @@
+#!/usr/bin/env perl
+use strict;
+use warnings;
+use Perl6::Say;
+
+use Class::Inspector;
+use UNIVERSAL::require;
+
+sub get_methods {
+    $_[0]->require;
+    Class::Inspector->methods(($_[0]), "public")
+}
+
+$ARGV[0] || exit 0;
+say $_ for grep {$_ !~ /^[A-Z]|^import$/} @{get_methods($ARGV[0])||[]};
