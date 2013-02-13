@@ -18,6 +18,26 @@ alias g="git"
 alias pm-installed="find `perl -e 'print \"@INC\"'` -name \"*.pm\" -print"
 alias pm-version='perl -le '"'"'for $module (@ARGV) { eval "use $module"; print "$module ", ${"$module\::VERSION"} || "not found" }'"'"
 
+# z コマンド補完ツール
+if [[ -f `brew --prefix`/etc/profile.d/z.sh ]]; then
+  source `brew --prefix`/etc/profile.d/z.sh
+  function precmd () {
+    _z --add "$(pwd -P)"
+  }
+fi
+
+## node.js
+# nodebrew
+if [[ -f ~/.nodebrew/nodebrew ]]; then
+  export PATH=$HOME/.nodebrew/current/bin:$PATH
+fi
+
+## perl
+# perlbrew
+if [[ -f ~/perl5/perlbrew/etc/bashrc ]]; then
+  source ~/perl5/perlbrew/etc/bashrc
+fi
+
 # IDE起動
 alias eclipse='open -n /Applications/eclipse/Eclipse.app'
 alias open idea='open -n /Applications/IntelliJ\ IDEA\ 12\ CE.app'
@@ -39,7 +59,6 @@ function tmux_init() {
   tmux -f ~/.tmux.conf new-window -d -k -t $SESS:4 -n run
   tmux -f ~/.tmux.conf attach-session -t $SESS
 }
-
 
 
 # w3mでgoogle検索
