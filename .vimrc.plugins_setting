@@ -403,28 +403,26 @@ let g:quickrun_config['perl.unit'] = {'command': 'prove', 'cmdopt': '-lv -MProje
 "let g:quickrun_config['ruby.rspec'] = {'command': 'spec'}
 
 
-
 "------------------------------------
 " Pydiction
 "------------------------------------
 "let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
 
-""" TODO:エラー発生すると落ちるので一時的に無効 20121019 """
 "------------------------------------
 " Syntastic(シンタックスエラープラグイン)
 "------------------------------------
 "HTMLは色々エラるのでとりあえずチェックしない
-"let g:syntastic_mode_map = { 'mode': 'active',
-"  \ 'active_filetypes': [],
-"  \ 'passive_filetypes': ['html'] }
-"" エラー行をsignで表示する
-"let g:syntastic_enable_signs = 1
-"" 可能ならhighligt表示する
-"let g:syntastic_enable_highlighting = 1
-""エラったときQuickfixが立ち上がる
-"let g:syntastic_auto_loc_list = 1
-""jshint,gjshintがインストールされている場合優先されるように設定
-"let g:syntastic_javascript_checker = 'jshint'
+let g:syntastic_mode_map = { 'mode': 'active',
+  \ 'active_filetypes': [],
+  \ 'passive_filetypes': ['html'] }
+" エラー行をsignで表示する
+let g:syntastic_enable_signs = 1
+" 可能ならhighligt表示する
+let g:syntastic_enable_highlighting = 1
+"エラったときQuickfixが立ち上がる
+let g:syntastic_auto_loc_list = 1
+"jshint,gjshintがインストールされている場合優先されるように設定
+let g:syntastic_javascript_checker = 'jshint'
 
 
 "------------------------------------
@@ -446,7 +444,6 @@ let mojo_highlight_data = 1
 let mojo_disable_html = 1
 let mojo_no_helpers = 1
 
-
 "------------------------------------
 " perl-support.vim
 "------------------------------------
@@ -454,4 +451,9 @@ let mojo_no_helpers = 1
 " 起動など遅くなるなら解除する
 let g:Perl_CreateMenusDelayed = 'no'
 
+
+"------------------------------------
+" vim-nodejs-complete
+"------------------------------------
+let g:node_usejscomplete = 1
 
