@@ -204,6 +204,7 @@ let Tlist_WinWidth = 30
 "map <silent> <leader>tl :Tlist<CR>        " taglistを開くショットカットキー
 nmap <F7> :CMiniBufExplorer<CR>:TrinityToggleTagList<CR>:TMiniBufExplorer<CR>
 nmap <Leader>tl :CMiniBufExplorer<CR>:TrinityToggleTagList<CR>:TMiniBufExplorer<CR>
+let g:tlist_javascript_settings = 'javascript;c:class;m:method;f:function;p:property'
 
 ""------------------------------------
 "" Srcexp
