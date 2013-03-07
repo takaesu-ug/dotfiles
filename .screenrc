@@ -1,0 +1,10 @@
+escape ^T^T
+defscrollback 5000
+screstartup_message off
+vbell off
+termcapinfo xterm* ti@:te@
+#hardstatus alwayslastline "[%Y-%m-%d(%D) %c:%s] %`%-w%{=b bw}%n %t%{-}%+w $STY"
+caption always "%{= wb} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wk} [%l] %{=b wb}%m/%d %{=b wm}"
+termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+#パスワード設定方法 http://technique.sonots.com/?UNIX%2F%E8%A8%AD%E5%AE%9A%E3%80%81%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%2F.screenrc
+password MAYTAJzqgOw5c
