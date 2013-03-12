@@ -106,6 +106,16 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'vim-ruby/vim-ruby'
     " rails.vim : rails
     NeoBundle 'tpope/vim-rails'
+    " Rsenseを用いた補完 neocomplcache-rsense
+    NeoBundle 'Shougo/neocomplcache-rsense', {
+        \ 'depends': 'Shogo/neocomplcache',
+        \ 'autoload': { 'filetypes': 'ruby' } }
+    NeoBundleLazy 'taichouchou2/rsense-0.3', {
+        \ 'build' : {
+        \    'mac': 'ruby /usr/local/Cellar/rsense/0.3/libexec/etc/config.rb > ~/.rsense',
+        \    'unix': 'ruby etc/config.rb > ~/.rsense',
+        \  } }
+
 
     " javascript補完
     NeoBundle 'teramako/jscomplete-vim'
