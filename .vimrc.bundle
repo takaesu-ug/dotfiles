@@ -51,9 +51,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 
 " Search / Replace{{{
-    " grep.vim : 外部のgrep利用。:Grepで対話形式でgrep :Rgrepは再帰
-    NeoBundle 'grep.vim'
-
     " App::Ack をvimで利用するためのプラグイン
     NeoBundle 'ack.vim'
 

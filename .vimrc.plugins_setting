@@ -65,12 +65,6 @@ let g:vimfiler_as_default_explorer = 1
 """未対応ファイルタイプのエラーメッセージを表示しない
 "let NERDShutUp=1
 
-" ------------------------------------
-" grep.vim
-"------------------------------------
-" 検索外のディレクトリ、ファイルパターン
-let Grep_Skip_Dirs = '.svn .git .hg'
-let Grep_Skip_Files = '*.bak *~'
 
 "------------------------------------
 " surround.vim
