@@ -114,8 +114,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'vim-ruby/vim-ruby'
     " rails.vim : rails
     NeoBundle 'tpope/vim-rails'
+    " uniteからrails操作（移動など）
     NeoBundleLazy 'basyura/unite-rails', {
         \ 'depends' : 'Shougo/unite.vim' }
+    " rspecのシンタックスなど
+    NeoBundleLazy 'skwp/vim-rspec', {
+          \ 'autoload': { 'filetypes': ['ruby', 'eruby', 'haml'] } }
     " Rsenseを用いた補完 neocomplcache-rsense
     NeoBundle 'Shougo/neocomplcache-rsense', {
         \ 'depends': 'Shogo/neocomplcache',
