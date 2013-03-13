@@ -459,7 +459,6 @@ let mojo_no_helpers = 1
 " 起動など遅くなるなら解除する
 let g:Perl_CreateMenusDelayed = 'no'
 
-
 "------------------------------------
 " vim-nodejs-complete
 "------------------------------------
