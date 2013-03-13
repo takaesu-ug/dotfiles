@@ -65,6 +65,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     " 対応するカッコの補完 vim-smartinput
     NeoBundle 'kana/vim-smartinput.git'
+
+    " if...endやdef...endなどを書きだしてくれる
+    NeoBundleLazy 'taichouchou2/vim-endwise.git', {
+        \ 'autoload' : {
+        \   'insert' : 1,
+        \ } }
 " }}}
 
 " Tools{{{
@@ -114,10 +120,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
         \ 'autoload': { 'filetypes': 'ruby' } }
     NeoBundleLazy 'taichouchou2/rsense-0.3', {
         \ 'build' : {
-        \    'mac': 'ruby /usr/local/Cellar/rsense/0.3/libexec/etc/config.rb > ~/.rsense',
+        \    'mac' : 'ruby etc/config.rb > ~/.rsense',
         \    'unix': 'ruby etc/config.rb > ~/.rsense',
         \  } }
-
 
     " javascript補完
     NeoBundle 'teramako/jscomplete-vim'
