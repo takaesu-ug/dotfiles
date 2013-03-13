@@ -51,9 +51,15 @@ let g:netrw_alto = 1
 
 "------------------------------------
 " VimFiler
+" K => 新規フォルダ
+" N => 新規ファイル
+" Space => 選択
+" r => リネーム
 "------------------------------------
 " 「:e」でvimfilerを開くように変更
 let g:vimfiler_as_default_explorer = 1
+" vimfilerのセーフモードを解除 （切替はgs）
+let g:vimfiler_safe_mode_by_default = 0
 
 ""------------------------------------
 "" NERD_commenter.vim
