@@ -80,42 +80,42 @@ autocmd FileType php        setlocal omnifunc=phpcomplete#CompletePHP
 autocmd FileType c          setlocal omnifunc=ccomplete#Complete
 autocmd FileType ruby       setlocal omnifunc=rubycomplete#Complete
 
-"" Enable heavy omni completion.
-"if !exists('g:neocomplcache_omni_patterns')
-"  let g:neocomplcache_omni_patterns = {}
-"endif
-"let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
-"let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
-"let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
-"
-"" autocmd FileType ruby let g:neocomplcache_source_disable = {
-"  " \ 'include_complete' : 1,
-"  " \ 'omni_complete' : 1
-"" \ }
-"" autocmd FileType ruby let g:neocomplcache_source_disable = {
-"  " \ 'include_complete' : 1
-"" \ }
-"
-""インクルードパスの指定
-"let g:neocomplcache_include_paths = {
-"  \ 'cpp'  : '.,/opt/local/include/gcc46/c++,/opt/local/include,/usr/include',
-"  \ 'c'    : '.,/usr/include',
-"  \ 'ruby' : '.,$HOME/.rvm/rubies/**/lib/ruby/1.8/',
-"  \ }
-""インクルード文のパターンを指定
-"let g:neocomplcache_include_patterns = {
-"  \ 'ruby' : '^\s*require',
-"  \ 'perl' : '^\s*use',
-"  \ }
-""インクルード先のファイル名の解析パターン
-"let g:neocomplcache_include_exprs = {
-"  \ 'ruby' : substitute(v:fname,'::','/','g')
-"  \ }
-"" ファイルを探す際に、この値を末尾に追加したファイルも探す。
-"let g:neocomplcache_include_suffixes = {
-"  \ 'ruby' : '.rb',
-"  \ }
+" Enable heavy omni completion.
+if !exists('g:neocomplcache_omni_patterns')
+  let g:neocomplcache_omni_patterns = {}
+endif
+let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\h\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplcache_omni_patterns.c = '\%(\.\|->\)\h\w*'
+let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
+
+" autocmd FileType ruby let g:neocomplcache_source_disable = {
+  " \ 'include_complete' : 1,
+  " \ 'omni_complete' : 1
+" \ }
+" autocmd FileType ruby let g:neocomplcache_source_disable = {
+  " \ 'include_complete' : 1
+" \ }
+
+"インクルードパスの指定
+let g:neocomplcache_include_paths = {
+  \ 'cpp'  : '.,/opt/local/include/gcc46/c++,/opt/local/include,/usr/include',
+  \ 'c'    : '.,/usr/include',
+  \ 'ruby' : '.,$HOME/.rvm/rubies/**/lib/ruby/1.8/',
+  \ }
+"インクルード文のパターンを指定
+let g:neocomplcache_include_patterns = {
+  \ 'ruby' : '^\s*require',
+  \ 'perl' : '^\s*use',
+  \ }
+"インクルード先のファイル名の解析パターン
+let g:neocomplcache_include_exprs = {
+  \ 'ruby' : substitute(v:fname,'::','/','g')
+  \ }
+" ファイルを探す際に、この値を末尾に追加したファイルも探す。
+let g:neocomplcache_include_suffixes = {
+  \ 'ruby' : '.rb',
+  \ }
 
 " Ruby Rsenseでの補完をさせる
 " https://github.com/Shougo/neocomplcache/issues/355
