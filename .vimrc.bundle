@@ -33,6 +33,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " VimShell環境
     NeoBundle 'Shougo/vimshell.git'
 
+    " VimShellでVCSを見るモジュール
+    NeoBundleLazy 'Shougo/vim-vcs', {
+        \ 'depends' : 'thinca/vim-openbuf',
+        \ 'autoload' : {'commands' : 'Vcs'},
+        \   }
+
     " vimproc : vimから非同期実行。vimshelleで必要
     " vimproc は利用するためにコンパイルが必要.
     " vimproc/autoload/vimproc_mac.so ができていればOK 内部的には次のコマンドを実行している
