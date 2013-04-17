@@ -11,3 +11,5 @@ export PATH=$PATH:$GRADLE_HOME/bin
 # ruby rbenv
 eval "$(rbenv init -)"
 
+
+export PATH=/usr/local/bin:$PATH
