@@ -40,7 +40,10 @@ fi
 
 # IDE起動
 alias eclipse='open -n /Applications/eclipse/Eclipse.app'
-alias open idea='open -n /Applications/IntelliJ\ IDEA\ 12\ CE.app'
+alias idea='open -n /Applications/IntelliJ\ IDEA\ 12\ CE.app'
+
+# SVN関連
+alias svn-vim-diff='svn diff "$@" |vim -R -'
 
 # tmux init
 ## tmuxのカラー設定　itermでtmuxを使い、Vimのカラースキームを有効にする
