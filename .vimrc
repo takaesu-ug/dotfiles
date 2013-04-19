@@ -16,3 +16,6 @@ source ~/dotfiles/.vimrc.plugins_setting
 "基本的な設定関連
 source ~/dotfiles/.vimrc.basic
 
+"プログラミング関連設定
+source ~/dotfiles/.vimrc.programming
+

@@ -1,0 +1,13 @@
+" magic comment
+function! MagicComment()
+  let magic_comment = "# -*- coding: utf-8 -*-\n"
+  let pos = getpos(".")
+  call cursor(1, 0)
+  execute ":normal i" . magic_comment
+  call setpos(".", pos)
+endfunction
+
+map <silent> <F9> :call MagicComment()<CR>
+
+
+
