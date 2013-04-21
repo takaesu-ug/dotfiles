@@ -53,6 +53,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " vim のファイラ
     " http://www.karakaram.com/vimfiler
     NeoBundle 'Shougo/vimfiler.git'
+
+    " ローカル専用（.local.vimrcを置いたディレクトリ以下）のvimrcを有効にする
+    NeoBundle 'thinca/vim-localrc'
 " }}}
 
 
@@ -91,6 +94,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 
 " Programming {{{
+    " tcomment コメントプラグイン
+    NeoBundle 'tomtom/tcomment_vim'
+
     " quickrun.vim : 編集中のファイルを簡単に実行できるプラグイン
     NeoBundle 'thinca/vim-quickrun'
 
@@ -103,6 +109,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " ソースコード上のメソッド宣言、変数宣言の一覧を表示
     NeoBundle 'taglist.vim'
 
+"    " ソースコードのctagsサポート
+"    NeoBundle 'szw/vim-tags'
+"    let g:vim_tags_project_tags_command = "/usr/local/opt/ctags/bin/ctags -f .tags -R {OPTIONS} {DIRECTORY} 2>/dev/null &"
+"    let g:vim_tags_gems_tags_command = "/usr/local/opt/ctags/bin/ctags -R -f .Gemfile.lock.tags `bundle show --paths` 2>/dev/null &"
+"    set tags+=.tags
+"    set tags+=.Gemfile.lock.tags
+
     " シンタックスエラーを検出する
     NeoBundle 'scrooloose/syntastic.git'
 
@@ -114,8 +127,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " Scalaシンタックス
     NeoBundle 'derekwyatt/vim-scala'
 
-    " vim-ruby : VimでRubyを扱う際の最も基本的な拡張機能
-    "NeoBundle 'ruby.vim'
     " https://github.com/vim-ruby/vim-ruby/blob/master/INSTALL.markdown
     NeoBundle 'vim-ruby/vim-ruby'
     " rails.vim : rails
@@ -123,6 +134,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " uniteからrails操作（移動など）
     NeoBundleLazy 'basyura/unite-rails', {
         \ 'depends' : 'Shougo/unite.vim' }
+    NeoBundleLazy 'taichouchou2/unite-rails_best_practices', {
+        \ 'depends' : 'Shougo/unite.vim',
+        \ 'build' : {
+        \    'mac': 'gem install rails_best_practices',
+        \    'unix': 'gem install rails_best_practices',
+        \   }
+        \ }
     " rspecのシンタックスなど
     NeoBundleLazy 'skwp/vim-rspec', {
           \ 'autoload': { 'filetypes': ['ruby', 'eruby', 'haml'] } }

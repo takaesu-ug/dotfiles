@@ -83,6 +83,42 @@ nmap ss <Plug>Yssurround
 let g:surround_{char2nr("-")} = ":\r"
 
 "------------------------------------
+" tcomment.vim
+"------------------------------------
+let g:tcommentMapLeader1 = '<C-@>'       "(default: '<c-_>')
+let g:tcommentMapLeader2 = '<Leader>'    "(default: '<Leader>_')
+let g:tcommentMapLeaderOp1 = 'gc'        "(default: 'gc')
+let g:tcommentMapLeaderOp2 = 'gC'        "(default: 'gC')
+
+" tcommentで使用する形式を追加
+if !exists('g:tcomment_types')
+  let g:tcomment_types = {}
+endif
+let g:tcomment_types = {
+      \'php_surround' : "<?php %s ?>",
+      \'eruby_surround' : "<%% %s %%>",
+      \'eruby_surround_minus' : "<%% %s -%%>",
+      \'eruby_surround_equality' : "<%%= %s %%>",
+\}
+
+" マッピングを追加
+function! SetErubyMapping2()
+  nmap <buffer> <C-@>c :TCommentAs eruby_surround<CR>
+  nmap <buffer> <C-@>- :TCommentAs eruby_surround_minus<CR>
+  nmap <buffer> <C-@>= :TCommentAs eruby_surround_equality<CR>
+
+  vmap <buffer> <C-@>c :TCommentAs eruby_surround<CR>
+  vmap <buffer> <C-@>- :TCommentAs eruby_surround_minus<CR>
+  vmap <buffer> <C-@>= :TCommentAs eruby_surround_equality<CR>
+endfunction
+
+" erubyのときだけ設定を追加
+au FileType eruby call SetErubyMapping2()
+" phpのときだけ設定を追加
+au FileType php nmap <buffer><C-@>c :TCommentAs php_surround<CR>
+au FileType php vmap <buffer><C-@>c :TCommentAs php_surround<CR>
+
+"------------------------------------
 " endwise.vim
 "------------------------------------
 "{{{
