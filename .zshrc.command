@@ -3,20 +3,28 @@
 export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
 alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-
 # Sublime Text 2
 alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl "$@"'
+# IDE起動
+alias eclipse='open -n /Applications/eclipse/Eclipse.app'
+alias idea='open -n /Applications/IntelliJ\ IDEA\ 12\ CE.app'
 
 # find grep 合わせ技のエイリアス まだできていない・・・・・
 # grep （数字分上下を表示[-B数字 -A数字]  再帰的[-r]）
 alias grep="grep --color"
 
+# diffコマンドをカラーにする
+alias diff="colordiff"
+
 # gitのエイリアス
 alias g="git"
+# SVN関連
+alias svn-vim-diff='svn diff "$@" |vim -R -'
 
 # インストールしたCpanモジュールを出力
 alias pm-installed="find `perl -e 'print \"@INC\"'` -name \"*.pm\" -print"
 alias pm-version='perl -le '"'"'for $module (@ARGV) { eval "use $module"; print "$module ", ${"$module\::VERSION"} || "not found" }'"'"
+
 
 # z コマンド補完ツール
 if [[ -f `brew --prefix`/etc/profile.d/z.sh ]]; then
@@ -38,12 +46,6 @@ if [[ -f ~/perl5/perlbrew/etc/bashrc ]]; then
   source ~/perl5/perlbrew/etc/bashrc
 fi
 
-# IDE起動
-alias eclipse='open -n /Applications/eclipse/Eclipse.app'
-alias idea='open -n /Applications/IntelliJ\ IDEA\ 12\ CE.app'
-
-# SVN関連
-alias svn-vim-diff='svn diff "$@" |vim -R -'
 
 # tmux init
 ## tmuxのカラー設定　itermでtmuxを使い、Vimのカラースキームを有効にする
