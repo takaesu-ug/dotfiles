@@ -7,6 +7,9 @@ source ~/dotfiles/zsh.d/zshrc_yusabana
 # $HOME binを読み込む
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 
+# RubyのBundler用にPathを設定
+export PATH=./vendor/bin:$PATH
+
 # オリジナルコマンドの読み込み
 source ~/dotfiles/.zshrc.command
 
