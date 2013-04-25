@@ -45,8 +45,8 @@ let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 let g:neocomplcache_snippets_dir = $HOME.'/.vim/snippets'
 
 " スニペット
-imap <silent><C-k> <Plug>(neosnippet_expand_or_jump)
-smap <silent><C-k> <Plug>(neosnippet_expand_or_jump)
+imap <silent><C-g> <Plug>(neosnippet_expand_or_jump)
+smap <silent><C-g> <Plug>(neosnippet_expand_or_jump)
 
 "" undo
 "inoremap <expr><C-g>     neocomplcache#undo_completion()
