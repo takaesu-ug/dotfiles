@@ -58,10 +58,11 @@ function tmux_init() {
   fi
 
   tmux -f ~/.tmux.conf new-session -d -s $SESS
-  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:1 -n dev
-  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:2 -n db
-  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:3 -n search
-  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:4 -n run
+  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:1 -n dev1
+  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:2 -n dev2
+  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:3 -n dev3
+  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:4 -n db
+  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:5 -n run
   tmux -f ~/.tmux.conf attach-session -t $SESS
 }
 
