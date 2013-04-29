@@ -122,3 +122,13 @@ function google_translate() {
   opt="${opt}&text=${str}"
   w3m +13 "http://translate.google.com/${opt}"
 }
+
+
+### Mac Only
+# クイックルック起動
+# 次のコマンドをdefaults実行するとquicklookでテキスト選択できるようになる
+# defaults write com.apple.finder QLEnableTextSelection -bool true
+if [ -f /usr/bin/qlmanage ]; then
+  alias ql='qlmanage -p "$@" >& /dev/null'
+fi
+
