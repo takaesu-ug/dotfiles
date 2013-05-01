@@ -3,6 +3,7 @@ function! MagicComment()
   let magic_comment = "# -*- coding: utf-8 -*-"
   call append(0, magic_comment)
 
+  "let magic_comment = "# -*- coding: utf-8 -*-"
   "let pos = getpos(".")
   "call cursor(1, 1)
   "execute ":normal O" . magic_comment
@@ -16,3 +17,10 @@ nmap <silent> <C-r><C-u> :call MagicComment()<CR>
 "    autocmd! SetShebang
 "    autocmd BufNewFile *.rb 0put =\"# -*- encoding: UTF-8 -*-\"|$
 "augroup END
+
+"Ctagファイルをファイルタイプに合わせて読み込む方法
+"http://qiita.com/items/ab2ad83ddbaf2f6ce7fb#
+" VIM上からtagファイルを読み込むには :set tags+=~/tags_file,~/tags2_file
+"if filereadable(expand('~/.vim/my-tags/rtags'))
+"  au FileType ruby,eruby setl tags+=~/.vim/my-tags/rtags
+"endif
