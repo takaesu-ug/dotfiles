@@ -1,16 +1,5 @@
 "Ruby utf-8 magic comment
-function! MagicComment()
-  let magic_comment = "# -*- coding: utf-8 -*-"
-  call append(0, magic_comment)
-
-  "let magic_comment = "# -*- coding: utf-8 -*-"
-  "let pos = getpos(".")
-  "call cursor(1, 1)
-  "execute ":normal O" . magic_comment
-  "call setpos(".", pos)
-endfunction
-
-nmap <silent> <C-r><C-u> :call MagicComment()<CR>
+nmap <silent> <C-r><C-u> :call append(0, "# -*- coding: utf-8 -*-")<CR>
 
 " 新規のrbファイルを作成時に自動挿入する"
 "augroup SetShebang
