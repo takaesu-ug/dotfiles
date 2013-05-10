@@ -8,7 +8,7 @@ source ~/dotfiles/zsh.d/zshrc_yusabana
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 
 # RubyのBundler用にPathを設定
-export PATH=./vendor/bin:$PATH
+#export PATH=./vendor/bin:$PATH
 
 # オリジナルコマンドの読み込み
 source ~/dotfiles/.zshrc.command
@@ -17,3 +17,6 @@ source ~/dotfiles/.zshrc.command
 #.zlogin で設定
 
 
+### 最後に読み込ませたい
+# direnv用の設定
+eval "$(direnv hook $0)"
