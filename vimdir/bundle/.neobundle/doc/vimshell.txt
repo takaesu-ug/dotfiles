@@ -218,16 +218,23 @@ VARIABLES 					*vimshell-variables*
 g:vimshell_prompt				*g:vimshell_prompt*
 		Sets vimshell default prompt string. Initial value is
 		"vimshell%".
+		Note: This is fixed string. You cannot change it
+		dynamically(for example : current directory).
+		(cf: |g:vimshell_user_prompt|)
 
 g:vimshell_secondary_prompt			*g:vimshell_secondary_prompt*
 		Sets vimshell default secondary prompt string. Initial value
 		is "%%".
+		Note: This is fixed string. You cannot change it
+		dynamically(for example : current directory).
+		(cf: |g:vimshell_user_prompt|)
 
 g:vimshell_user_prompt				*g:vimshell_user_prompt*
 		You can define additional prompt to substitute a string for
-		this.  Unlike |g:vimshell_prompt|, it can be a non-fixed
+		this.
+		Note: Unlike |g:vimshell_prompt|, it can be a non-fixed
 		string.  You can get multi-line prompt by separating "user
-		prompt" with \n.
+		prompt" with "\n".
 
 		This example will be helpful to show current directory
 		everytime.
@@ -241,8 +248,17 @@ g:vimshell_right_prompt				*g:vimshell_right_prompt*
 		and shows the prompt on preferable position.
 		Initial value is empty.
 
-g:vimshell_no_default_keymappings
+					*g:vimshell_force_overwrite_statusline*
+g:vimshell_force_overwrite_statusline
+		If this variable is 1, vimshell will overwrite 'statusline'
+		automatically.
+		Note: If you want to change 'statusline' in vimshell buffer,
+		you must set it to 0.
+
+		The default value is 0.
+
 					*g:vimshell_no_default_keymappings*
+g:vimshell_no_default_keymappings
 		Disables all default key mappings in vimshell.
 
 		You can not use vimshell functions unless you set new
@@ -828,8 +844,12 @@ Insert mode default key mappings.
 ------------------------------------------------------------------------------
 FUNCTIONS 						*vimshell-functions*
 
-vimshell#interactive#send({expr})
+vimshell#get_status_string()			 *vimshell#get_status_string()*
+		Returns vimshell status string. It is useful to custom
+		statusline.
+
 					*vimshell#interactive#send()*
+vimshell#interactive#send({expr})
 		It sends {expr} to the interpreter in background buffer of
 		vimshell, iexe, texe.  You can control interpreter as if you
 		are using |quickrun|.
@@ -837,8 +857,8 @@ vimshell#interactive#send({expr})
 		Note: If interpreter is not loaded in current tab, you can run
 		interpreter command.
 
-vimshell#interactive#send_string({expr})
 					*vimshell#interactive#send_string()*
+vimshell#interactive#send_string({expr})
 		Deprecated. Use |vimshell#interactive#send()| instead; they
 		are equivalent.
 
@@ -1489,8 +1509,32 @@ https://github.com/Shougo/vimshell/issues/86
 A: Because we would love to provide compatibility between Windows and UNIX
 with same script. The path separator is just an evil shit.
 
+Q: I want to change |g:vimshell_prompt| dynamically.
+
+A: You cannot do it. |g:vimshell_prompt| is fixed string.
+But you can change |g:vimshell_user_prompt| dynamically instead of it.
+
+Note: In below page(Japanese), it emulates dynamic prompt in vimshell.
+http://kannokanno.hatenablog.com/entry/2013/05/10/140947
+But this behavior is unexpected. It may be not worked in later version.
+
 ==============================================================================
 CHANGELOG						*vimshell-changelog*
+
+2013-05-14
+- Fixed errors.
+- Added which completion.
+
+2013-05-11
+- Improved $LINES behavior.
+- Supported window resize.
+- Improved completion behavior.
+
+2013-05-08
+- Added g:vimshell_force_overwrite_statusline option.
+
+2013-05-02
+- Set min_pattern_length in neocomplcache source.
 
 2013-04-21
 - Fixed exe internal command.
