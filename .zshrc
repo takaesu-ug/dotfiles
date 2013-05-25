@@ -19,4 +19,6 @@ source ~/dotfiles/.zshrc.command
 
 ### 最後に読み込ませたい
 # direnv用の設定
+# https://github.com/zimbatm/direnv/issues/42 (DIRENV_RUBYの設定)
 eval "$(direnv hook $0)"
+export DIRENV_RUBY=/usr/bin/ruby
