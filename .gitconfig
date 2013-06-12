@@ -5,6 +5,7 @@
     ui = auto
 [alias]
     st = status
+    stt = status -s -b
     co = checkout
     ci = commit
     br = branch
