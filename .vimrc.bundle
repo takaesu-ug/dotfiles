@@ -131,16 +131,18 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'vim-ruby/vim-ruby'
     " rails.vim : rails
     NeoBundle 'tpope/vim-rails'
-    " uniteからrails操作（移動など）
-    NeoBundleLazy 'basyura/unite-rails', {
-        \ 'depends' : 'Shougo/unite.vim' }
-    NeoBundleLazy 'taichouchou2/unite-rails_best_practices', {
-        \ 'depends' : 'Shougo/unite.vim',
-        \ 'build' : {
-        \    'mac': 'gem install rails_best_practices',
-        \    'unix': 'gem install rails_best_practices',
-        \   }
-        \ }
+    " cucumeber.vim
+    NeoBundle  'tpope/vim-cucumber'
+    "" uniteからrails操作（移動など）
+    "NeoBundleLazy 'basyura/unite-rails', {
+    "    \ 'depends' : 'Shougo/unite.vim' }
+    "NeoBundleLazy 'taichouchou2/unite-rails_best_practices', {
+    "    \ 'depends' : 'Shougo/unite.vim',
+    "    \ 'build' : {
+    "    \    'mac': 'gem install rails_best_practices',
+    "    \    'unix': 'gem install rails_best_practices',
+    "    \   }
+    "    \ }
     " rspecのシンタックスなど
     NeoBundleLazy 'skwp/vim-rspec', {
           \ 'autoload': { 'filetypes': ['ruby', 'eruby', 'haml'] } }
