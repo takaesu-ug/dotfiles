@@ -90,6 +90,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " ツリー表示
     " :VST でカレントディレクトリの一覧表示
     NeoBundle 'vtreeexplorer'
+
+    " vim-gitgutter https://github.com/airblade/vim-gitgutter
+    " gitの差分をvimに表示
+    NeoBundle 'airblade/vim-gitgutter'
+
+    " キャメル、スネークケース区切りで操作
+    " camelcasemotion.vim
+    NeoBundle 'bkad/CamelCaseMotion'
 " }}}
 
 
