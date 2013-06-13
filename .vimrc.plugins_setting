@@ -15,14 +15,6 @@
 "let g:Align_xstrlen = 3
 
 "------------------------------------
-" VTreeExplorer
-"------------------------------------
-" 縦に表示する
-let g:treeExplVertical=1
-" 分割したウィンドウのサイズ
-let g:treeExplWinSize=30
-
-"------------------------------------
 " netrw
 "------------------------------------
 " netrwは常にtree view
@@ -453,7 +445,7 @@ let g:node_usejscomplete = 1
 " vim-gitgutter
 "------------------------------------
 " デフォルトで無効にする場合
-"let g:gitgutter_enabled = 0
+let g:gitgutter_enabled = 0
 " ファイルを読み込んだ時のみ更新するようにする
 let g:gitgutter_eager = 0
 nmap gh <Plug>GitGutterNextHunk
