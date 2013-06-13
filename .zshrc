@@ -7,6 +7,11 @@ source ~/dotfiles/zsh.d/zshrc_yusabana
 # $HOME binを読み込む
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 
+# ルート証明を読み込む（brewでcurl-ca-bundleを入れている場合)
+if [ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]; then
+    export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
+fi
+
 # RubyのBundler用にPathを設定
 #export PATH=./vendor/bin:$PATH
 
