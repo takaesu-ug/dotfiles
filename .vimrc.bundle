@@ -87,10 +87,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " 有効にならない
     " NeoBundle 'filtering.vim'
 
-    " vim-gitgutter https://github.com/airblade/vim-gitgutter
-    " gitの差分をvimに表示
-    NeoBundle 'airblade/vim-gitgutter'
-
     " キャメル、スネークケース区切りで操作 http://nanasi.jp/articles/vim/camelcasemotion_vim.html
     " camelcasemotion.vim
     NeoBundle 'bkad/CamelCaseMotion'
