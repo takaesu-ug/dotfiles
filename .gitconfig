@@ -22,7 +22,7 @@
     # svn-diff [オプション(--name-statusなど)]   git svn dcommitする前にdiffの確認ができる
     svn-diff = "!f() { git svn dcommit -n | grep diff | awk -F'diff-tree' -v opt=$@ '{print \"git diff \"opt\" \"$2}' | sh; }; f"
     # svn-br-rm   リモートのsvnから削除されたローカルのブランチやタグが表示される % git svn-br-rm |sh で実行することも出来る
-    svn-br-rm = "~/bin/git-svn-br-rm"
+    # svn-br-rm = "~/bin/git-svn-br-rm"
 
     #git-diff関係
     diffr = diff --word-diff-regex='\\w+|[^[:space:]]'
