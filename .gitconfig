@@ -10,6 +10,7 @@
     ci = commit
     br = branch
     lgl = log --date=local
+    log-one = log --all --oneline --decorate --graph
     lg = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
     log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
     hist = log '--pretty=format:\\\"%h %ad | %s%d [%an]\\\"' --graph --date=short
