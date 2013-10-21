@@ -23,7 +23,7 @@ noremap ; :
 nnoremap O :<C-u>call append(expand('.'), '')<Cr>j
 
 " j<C-j>でノーマルモードに移行する
-inoremap <silent> j<C-j> <ESC>
+inoremap <silent> <C-j> <ESC>
 
 " CTRL-hjklでウィンドウ移動
 nnoremap <C-j> <C-w>j
@@ -36,18 +36,20 @@ inoremap <C-n> <Down>
 inoremap <C-p> <Up>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
+inoremap <silent> <C-a> <Esc>0<Insert>
+inoremap <silent> <C-e><C-e> <Esc>$a
 
 " カーソル前の文字削除
 inoremap <silent> <C-h> <C-g>u<C-h>
 " カーソル後の文字削除
 inoremap <silent> <C-d> <Del>
-"" カーソルから行頭まで削除
+" カーソルから行頭まで削除
 "inoremap <silent> <C-d>e <Esc>lc^ "C-uで利用可能なため
-"" カーソルから行末まで削除
+" カーソルから行末まで削除
 inoremap <silent> <C-d>0 <Esc>lc$
-"" カーソルから行頭までヤンク
+" カーソルから行頭までヤンク
 inoremap <silent> <C-y>e <Esc>ly0<Insert>
-"" カーソルから行末までヤンク
+" カーソルから行末までヤンク
 inoremap <silent> <C-y>0 <Esc>ly$<Insert>
 
 " 行頭・行末移動方向をキーの相対位置にあわせる
