@@ -12,8 +12,9 @@ if [ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]; then
     export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 fi
 
-# RubyのBundler用にPathを設定
-#export PATH=./vendor/bin:$PATH
+# go用の設定
+export GOPATH=~/workspace/go/path
+export PATH=$GOPATH/bin:$PATH
 
 # オリジナルコマンドの読み込み
 source ~/dotfiles/.zshrc.command
