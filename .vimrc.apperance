@@ -37,10 +37,11 @@ set ttyfast
 nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
 "シンタックスハイライト 拡張子に応じてPerlやHtmlを識別する
-autocmd BufNewFile,BufRead *.psgi   set filetype=perl
-autocmd BufNewFile,BufRead *.t      set filetype=perl
-autocmd BufNewFile,BufRead *.mt     set filetype=html
-autocmd BufNewFile,BufRead *.tx     set filetype=html
+autocmd BufNewFile,BufRead *.psgi     set filetype=perl
+autocmd BufNewFile,BufRead *.t        set filetype=perl
+autocmd BufNewFile,BufRead *.mt       set filetype=html
+autocmd BufNewFile,BufRead *.tx       set filetype=html
+autocmd BufNewFile,BufRead *.html.erb set filetype=html
 
 "タブをスペースで挿入(4スペース)
 set expandtab
