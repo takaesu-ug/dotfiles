@@ -441,3 +441,11 @@ let g:Perl_CreateMenusDelayed = 'no'
 "------------------------------------
 let g:node_usejscomplete = 1
 
+"----------------------------------------
+" open-browsere
+"----------------------------------------
+" カーソル下のURLをブラウザで開く
+nmap <Leader>o <Plug>(openbrowser-open)
+vmap <Leader>o <Plug>(openbrowser-open)
+" ググる
+nnoremap <Leader>g :<C-u>OpenBrowserSearch<Space><C-r><C-w><Enter>

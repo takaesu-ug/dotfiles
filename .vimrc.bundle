@@ -90,6 +90,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " キャメル、スネークケース区切りで操作 http://nanasi.jp/articles/vim/camelcasemotion_vim.html
     " camelcasemotion.vim
     NeoBundle 'bkad/CamelCaseMotion'
+
+    " git連携プラグイン
+    NeoBundle 'tpope/vim-fugitive'
+
+    " カーソルのあるURLをブラウザで開く
+    NeoBundle 'open-browser.vim'
 " }}}
 
 
@@ -160,6 +166,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'teramako/jscomplete-vim'
     " jscomplete-vim依存のnodejs用の補完
     NeoBundle 'myhere/vim-nodejs-complete'
+
+    " html5関連
+    " NeoBundle 'hail2u/vim-css3-syntax'
+    NeoBundle 'othree/html5.vim'
 " }}}
 
 
