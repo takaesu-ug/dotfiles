@@ -101,7 +101,7 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 let g:neocomplcache_include_paths = {
   \ 'cpp'  : '.,/opt/local/include/gcc46/c++,/opt/local/include,/usr/include',
   \ 'c'    : '.,/usr/include',
-  \ 'ruby' : '.,$HOME/.rvm/rubies/**/lib/ruby/1.8/',
+  \ 'ruby' : '.,$HOME/.rbenv/versions/**/lib/ruby/2.0.0/',
   \ }
 "インクルード文のパターンを指定
 let g:neocomplcache_include_patterns = {
@@ -122,3 +122,6 @@ let g:neocomplcache_include_suffixes = {
 let g:neocomplcache#sources#rsense#home_directory = neobundle#get_neobundle_dir() . '/rsense-0.3'
 let g:rsenseUseOmniFunc = 1
 
+" Another plugin set completefunc! Disabled neocomplcache.が出たのでその対処
+" http://okuhiiro.daiwa-hotcom.com/wordpress/?p=859
+let g:neocomplcache_force_overwrite_completefunc = 1
