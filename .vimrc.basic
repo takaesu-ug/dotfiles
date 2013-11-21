@@ -1,3 +1,6 @@
+"ビープ音を消す
+set visualbell t_vb=
+
 "swap なし
 set noswapfile
 
