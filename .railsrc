@@ -1,0 +1,1 @@
+-d mysql --skip-bundle --skip-test-unit
