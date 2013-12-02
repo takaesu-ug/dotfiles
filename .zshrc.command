@@ -28,6 +28,7 @@ alias g="git"
 # SVN関連
 alias svn-vim-diff='svn diff "$@" |vim -R -'
 
+
 # インストールしたCpanモジュールを出力
 alias pm-installed="find `perl -e 'print \"@INC\"'` -name \"*.pm\" -print"
 alias pm-version='perl -le '"'"'for $module (@ARGV) { eval "use $module"; print "$module ", ${"$module\::VERSION"} || "not found" }'"'"
@@ -53,7 +54,6 @@ if [[ -f ~/perl5/perlbrew/etc/bashrc ]]; then
   source ~/perl5/perlbrew/etc/bashrc
 fi
 
-
 # tmux init
 ## tmuxのカラー設定　itermでtmuxを使い、Vimのカラースキームを有効にする
 ## http://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode
@@ -73,6 +73,12 @@ function tmux_init() {
   tmux -f ~/.tmux.conf attach-session -t $SESS
 }
 
+# whoisコマンドエイリアス(日本語文字化け対応） aliasコマンドでは引数を処理できないようだ
+if [ -f `brew --prefix`/bin/nkf ]; then
+  function whois() {
+    /usr/bin/whois $@ | `brew --prefix`/bin/nkf -w
+  }
+fi
 
 # w3mでgoogle検索
 function google() {
