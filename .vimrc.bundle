@@ -96,6 +96,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     " カーソルのあるURLをブラウザで開く
     NeoBundle 'open-browser.vim'
+
+    " yankround.vim ヤンクの履歴をたどる
+    NeoBundle 'LeafCage/yankround.vim'
+    NeoBundle 'kien/ctrlp.vim'
 " }}}
 
 
