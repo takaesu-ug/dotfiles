@@ -80,6 +80,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
         \ 'autoload' : {
         \   'insert' : 1,
         \ } }
+
+    " スニペット集
+    NeoBundle 'honza/vim-snippets.git'
 " }}}
 
 " Tools{{{

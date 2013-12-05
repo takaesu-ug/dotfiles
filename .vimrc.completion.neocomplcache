@@ -42,7 +42,8 @@ endif
 let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 
 " ユーザー定義スニペット保存ディレクトリ
-let g:neocomplcache_snippets_dir = $HOME.'/.vim/snippets'
+"let g:neocomplcache_snippets_dir = $HOME.'/.vim/bundle/vim-snippets/snippets', $HOME.'/.vim/snippets'
+let g:neocomplcache_snippets_dir = '~/.vim/bundle/vim-snippets/snippets,~/.vim/snippets'
 
 " スニペット
 imap <silent><C-g> <Plug>(neosnippet_expand_or_jump)
