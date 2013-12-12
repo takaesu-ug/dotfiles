@@ -60,9 +60,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 
 " Search / Replace{{{
-    " App::Ack をvimで利用するためのプラグイン
-    NeoBundle 'ack.vim'
-
+    " ag.vim  https://github.com/rking/ag.vim
+    NeoBundle 'rking/ag.vim'
 " }}}
 
 " Completion {{{
