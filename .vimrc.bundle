@@ -169,7 +169,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
         \  } }
 
     " javascript補完
-    NeoBundle 'teramako/jscomplete-vim'
+    " tern.vimを使う方法に変更する
+    " http://kozo2.hatenablog.com/entry/2013/05/03/235840
+
     " jscomplete-vim依存のnodejs用の補完
     NeoBundle 'myhere/vim-nodejs-complete'
 
