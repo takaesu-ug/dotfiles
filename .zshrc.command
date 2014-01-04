@@ -42,17 +42,7 @@ if [[ -f `brew --prefix`/etc/profile.d/z.sh ]]; then
   }
 fi
 
-## node.js
-# nodebrew
-if [[ -f ~/.nodebrew/nodebrew ]]; then
-  export PATH=$HOME/.nodebrew/current/bin:$PATH
-fi
 
-## perl
-# perlbrew
-if [[ -f ~/perl5/perlbrew/etc/bashrc ]]; then
-  source ~/perl5/perlbrew/etc/bashrc
-fi
 
 # tmux init
 ## tmuxのカラー設定　itermでtmuxを使い、Vimのカラースキームを有効にする
