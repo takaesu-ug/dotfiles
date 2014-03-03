@@ -2,9 +2,14 @@
 " カラー関連 Colors
 "-------------------------------------------------------------------------------
 
-colorscheme jellybeans
-"colorscheme molokai
-"colorscheme yuroyoro256
+if has('gui_running')
+  set background=dark
+  " colorscheme molokai
+else
+  colorscheme jellybeans
+  " colorscheme molokai
+  "colorscheme yuroyoro256
+endif
 
 " 256色
 set t_Co=256

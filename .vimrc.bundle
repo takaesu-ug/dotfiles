@@ -54,6 +54,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " http://www.karakaram.com/vimfiler
     NeoBundle 'Shougo/vimfiler.git'
 
+    " vim Tree
+    " NeoBundle 'scrooloose/nerdtree'
+
     " ローカル専用（.local.vimrcを置いたディレクトリ以下）のvimrcを有効にする
     NeoBundle 'thinca/vim-localrc'
 " }}}
