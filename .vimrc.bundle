@@ -178,6 +178,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " jscomplete-vim依存のnodejs用の補完
     NeoBundle 'myhere/vim-nodejs-complete'
 
+    " coffee syntax + autocompile
+    " http://qiita.com/alpaca_taichou/items/fb442cfa78f91634cfaa
+    NeoBundle 'kchmck/vim-coffee-script'
+
     " html5関連
     " NeoBundle 'hail2u/vim-css3-syntax'
     NeoBundle 'othree/html5.vim'

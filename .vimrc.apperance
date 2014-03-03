@@ -42,6 +42,7 @@ autocmd BufNewFile,BufRead *.t        set filetype=perl
 autocmd BufNewFile,BufRead *.mt       set filetype=html
 autocmd BufNewFile,BufRead *.tx       set filetype=html
 autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html
+autocmd BufNewFile,BufRead *.coffee   set filetype=coffee
 
 "タブをスペースで挿入(4スペース)
 set expandtab
