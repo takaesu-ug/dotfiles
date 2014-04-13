@@ -74,6 +74,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " neocomplcacheのsinpet補完
     NeoBundle 'Shougo/neosnippet'
 
+    " neocomplcacheのデフォルトスニペット
+    " refs. http://d.hatena.ne.jp/osyo-manga/20140112/1389525543
+    NeoBundle '"Shougo/neosnippet-snippets"'
+
     " 対応するカッコの補完 vim-smartinput
     NeoBundle 'kana/vim-smartinput.git'
 
