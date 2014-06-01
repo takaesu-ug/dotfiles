@@ -13,11 +13,14 @@
     co = checkout
     ci = commit
     br = branch
-    lgl = log --date=local
-    log-one = log --all --oneline --decorate --graph
-    lg = log --graph --date=short --pretty=format:'%Cgreen%h %cd %Cblue%cn %Creset%s'
+
+    lga = log --graph --all --abbrev-commit --pretty=format:'%x09 %Cred%h%Creset %Cgreen%ai %C(bold blue)(%an) -%C(yellow)%d%Creset %s%Creset'
+    lg  = log --graph       --abbrev-commit --pretty=format:'%x09 %Cred%h%Creset %Cgreen%ai %C(bold blue)(%an) -%C(yellow)%d%Creset %s%Creset'
+    lgstat =  log --oneline --decorate --stat
     log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
-    hist = log '--pretty=format:\\\"%h %ad | %s%d [%an]\\\"' --graph --date=short
+    log-one = log --all --oneline --decorate --graph
+    lgl = log --date=local
+    hist = log --graph --date=short --pretty='format:%h %ad | %s%d [%an]'
 
     # svn-ref [svnのrivision]  gitのハッシュを確認できる(svnリビジョンを複数指定した時はsvnのリビジョンの昇順で表示する)
     #プログラム的にはdoのあとでretsvn(retsvn=${retsvn}' '${rev};) と ret(ret=${ret}' '`git log --grep "git-svn-id.*@${rev}" --pretty=%H;`;)を作っている.
