@@ -50,6 +50,7 @@
     show-line-numbers = yes
     line-number-interval = 1
     show-date = local
+    show-id = yes # X で表示の有無
 [tig "color"]
     cursor     = white red underline
     title-blur = white magenta
