@@ -3,18 +3,6 @@
 "-------------------------------------------------------------------------------
 
 "------------------------------------
-" YankRing.vim
-"------------------------------------
-" Yankの履歴参照
-"nmap ,y ;YRShow<CR>
-"
-""------------------------------------
-"" Align
-""------------------------------------
-"" Alignを日本語環境で使用するための設定
-"let g:Align_xstrlen = 3
-
-"------------------------------------
 " netrw
 "------------------------------------
 " netrwは常にtree view
@@ -37,17 +25,6 @@ let g:netrw_alto = 1
 let g:vimfiler_as_default_explorer = 1
 " vimfilerのセーフモードを解除 （切替はgs）
 let g:vimfiler_safe_mode_by_default = 0
-
-""------------------------------------
-"" NERD_commenter.vim
-""------------------------------------
-"" コメントの間にスペースを空ける
-"let NERDSpaceDelims = 1
-""<Leader>xでコメントをトグル(NERD_commenter.vim)
-"map <Leader>x, c<space>
-"""未対応ファイルタイプのエラーメッセージを表示しない
-"let NERDShutUp=1
-
 
 "------------------------------------
 " surround.vim
@@ -98,71 +75,8 @@ au FileType php vmap <buffer><C-@>c :TCommentAs php_surround<CR>
 "------------------------------------
 " endwise.vim
 "------------------------------------
-"{{{
 let g:endwise_no_mappings=1
-"}}}
 
-""------------------------------------
-"" smartchr.vim
-""------------------------------------
-"" inoremap <expr> = smartchr#loop('=', '==', '=>')
-"" inoremap <expr> . smartchr#loop('.',  '->', '=>')
-"
-""
-"" " 演算子の間に空白を入れる
-"" inoremap <buffer><expr> + smartchr#one_of(' + ', ' ++ ', '+')
-"" inoremap <buffer><expr> +=  smartchr#one_of(' += ')
-"" " inoremap <buffer><expr> - smartchr#one_of(' - ', ' -- ', '-')
-"" inoremap <buffer><expr> -=  smartchr#one_of(' -= ')
-"" " inoremap <buffer><expr> / smartchr#one_of(' / ', ' // ', '/')
-"" inoremap <buffer><expr> /=  smartchr#one_of(' /= ')
-"" inoremap <buffer><expr> * smartchr#one_of(' * ', ' ** ', '*')
-"" inoremap <buffer><expr> *=  smartchr#one_of(' *= ')
-"" inoremap <buffer><expr> & smartchr#one_of(' & ', ' && ', '&')
-"" inoremap <buffer><expr> % smartchr#one_of(' % ', '%')
-"" inoremap <buffer><expr> =>  smartchr#one_of(' => ')
-"" inoremap <buffer><expr> <-   smartchr#one_of(' <-  ')
-"" inoremap <buffer><expr> <Bar> smartchr#one_of(' <Bar> ', ' <Bar><Bar> ', '<Bar>')
-"" inoremap <buffer><expr> , smartchr#one_of(', ', ',')
-"" " 3項演算子の場合は、後ろのみ空白を入れる
-"" inoremap <buffer><expr> ? smartchr#one_of('? ', '?')
-"" " inoremap <buffer><expr> : smartchr#one_of(': ', '::', ':')
-"
-"" " =の場合、単純な代入や比較演算子として入力する場合は前後にスペースをいれる。
-"" " 複合演算代入としての入力の場合は、直前のスペースを削除して=を入力
-"" inoremap <buffer><expr> = search('¥(&¥<bar><bar>¥<bar>+¥<bar>-¥<bar>/¥<bar>>¥<bar><¥) ¥%#', 'bcn')? '<bs>= '  : search('¥(*¥<bar>!¥)¥%#', 'bcn') ? '= '  : smartchr#one_of(' = ', ' == ', '=')
-"
-"" " 下記の文字は連続して現れることがまれなので、二回続けて入力したら改行する
-"" inoremap <buffer><expr> } smartchr#one_of('}', '}<cr>')
-"" inoremap <buffer><expr> ; smartchr#one_of(';', ';<cr>')
-"" "()は空白入れる
-"" inoremap <buffer><expr> ( smartchr#one_of('( ')
-"" inoremap <buffer><expr> ) smartchr#one_of(' )')
-"
-"" " if文直後の(は自動で間に空白を入れる
-"" inoremap <buffer><expr> ( search('¥<¥if¥%#', 'bcn')? ' (': '('
-"
-"
-""------------------------------------
-"" DumbBuf.vim
-""------------------------------------
-""<Leader>b<Space>でBufferList
-"let dumbbuf_hotkey = '<Leader>b<Space>'
-"let dumbbuf_mappings = {
-"    \ 'n': {
-"        \'<Esc>': { 'opt': '<silent>', 'mapto': ':<C-u>close<CR>' }
-"    \}
-"\}
-"let dumbbuf_single_key  = 1
-"let dumbbuf_updatetime  = 1    " &updatetimeの最小値
-"let dumbbuf_wrap_cursor = 0
-"let dumbbuf_remove_marked_when_close = 1
-"
-""------------------------------------
-"" gundo.Vim
-""------------------------------------
-"" nmap U :<C-u>GundoToggle<CR>
-"
 "------------------------------------
 " taglist.Vim
 "------------------------------------
@@ -181,45 +95,6 @@ let Tlist_WinWidth = 30
 nmap <F7> :CMiniBufExplorer<CR>:TrinityToggleTagList<CR>:TMiniBufExplorer<CR>
 nmap <Leader>tl :CMiniBufExplorer<CR>:TrinityToggleTagList<CR>:TMiniBufExplorer<CR>
 let g:tlist_javascript_settings = 'javascript;c:class;m:method;f:function;p:property'
-
-""------------------------------------
-"" Srcexp
-""------------------------------------
-"" [Srcexpl] tagsを利用したソースコード閲覧・移動補助機能
-"let g:SrcExpl_UpdateTags    = 1         " tagsをsrcexpl起動時に自動で作成（更新）
-"let g:SrcExpl_RefreshTime   = 0         " 自動表示するまでの時間(0:off)
-"let g:SrcExpl_WinHeight     = 9         " プレビューウインドウの高さ
-"let g:SrcExpl_RefreshMapKey = "<Space>" " 手動表示のMAP
-"let g:SrcExpl_GoBackMapKey  = "<C-b>"   " 戻る機能のMAP
-"" Source Explorerの機能ON/OFF
-"" nmap <F8> :CMiniBufExplorer<CR>:SrcExplToggle<CR>:TMiniBufExplorer<CR>
-"
-""------------------------------------
-"" operator-camelize.vim
-""------------------------------------
-"" camel-caseへの変換
-"map <Leader>u <Plug>(operator-camelize)
-"map <Leader>U <Plug>(operator-decamelize)
-"
-""------------------------------------
-"" operator-replace.vim
-""------------------------------------
-"" RwなどでYankしてるもので置き換える
-"map R <Plug>(operator-replace)
-"
-""------------------------------------
-"" sumartword.vim
-""------------------------------------
-"noremap ,w  w
-"noremap ,b  b
-"noremap ,e  e
-"noremap ,ge  ge
-"
-"map W  <Plug>(smartword-w)
-"map B  <Plug>(smartword-b)
-"map E  <Plug>(smartword-e)
-"map ge  <Plug>(smartword-ge)
-
 
 "------------------------------------
 " camelcasemotion.vim
@@ -312,19 +187,6 @@ nnoremap <silent> [unite]m  :<C-u>Unite -no-split file_mru<CR>
 " 現在のバッファのカレントディレクトリからファイル一覧
 nnoremap <silent> [unite]d  :<C-u>UniteWithBufferDir -no-split file<CR>
 
-" nnoremap <silent> [unite]b  :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
-
-"let g:yankring_zap_keys = ""
-"一旦unite-railsは聞かないので削除
-"" from basyura/unite-rails
-"nnoremap <silent> [unite]rm  :<C-u>Unite -no-split rails/model<CR>
-"nnoremap <silent> [unite]rc  :<C-u>Unite -no-split rails/controller<CR>
-"nnoremap <silent> [unite]rv  :<C-u>Unite -no-split rails/view<CR>
-"nnoremap <silent> [unite]rl  :<C-u>Unite -no-split rails/lib<CR>
-"nnoremap <silent> [unite]rj  :<C-u>Unite -no-split rails/javascript<CR>
-"nnoremap <silent> [unite]rs  :<C-u>Unite -no-split rails/spec<CR>
-
-
 autocmd FileType unite call s:unite_my_settings()
 function! s:unite_my_settings()"{{{
   " Overwrite settings.
@@ -352,7 +214,6 @@ let g:unite_source_file_mru_limit = 200
 " unite-plugins
 cnoremap UH Unite help<Enter>
 cnoremap UO Unite outline<Enter>
-
 
 " agとUnite.vim http://blog.monochromegane.com/blog/2013/09/18/ag-and-unite/
 " grep検索
@@ -390,11 +251,6 @@ let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
 
 
 "------------------------------------
-" Pydiction
-"------------------------------------
-"let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
-
-"------------------------------------
 " Syntastic(シンタックスエラープラグイン)
 "------------------------------------
 "HTMLは色々エラるのでとりあえずチェックしない
@@ -409,17 +265,6 @@ let g:syntastic_enable_highlighting = 1
 let g:syntastic_auto_loc_list = 1
 "jshint,gjshintがインストールされている場合優先されるように設定
 let g:syntastic_javascript_checker = 'jshint'
-
-
-"------------------------------------
-" toggle.vim
-"------------------------------------
-"imap <C-A> <Plug>ToggleI
-"nmap <C-A> <Plug>ToggleN
-"vmap <C-A> <Plug>ToggleV
-
-"let g:toggle_pairs = { 'and':'or', 'or':'and', 'if':'unless', 'unless':'if', 'yes':'no', 'no':'yes', 'enable':'disable', 'disable':'enable', 'pick':'reword', 'reword':'fixup', 'fixup':'squash', 'squash':'edit', 'edit':'exec', 'exec':'pick' }
-
 
 "------------------------------------
 " mojo.vim
@@ -451,7 +296,6 @@ vmap <Leader>o <Plug>(openbrowser-open)
 " ググる
 nnoremap <Leader>g :<C-u>OpenBrowserSearch<Space><C-r><C-w><Enter>
 
-
 "----------------------------------------
 " yankround.vim, ctrlp.vim
 "----------------------------------------
@@ -463,7 +307,6 @@ nmap <C-n> <Plug>(yankround-next)
 let g:yankround_max_history = 50
 ""履歴一覧(kien/ctrlp.vim)
 nnoremap <silent>g<C-p> :<C-u>CtrlPYankRound<CR>
-
 
 "------------------------------------
 " indent_guides
@@ -482,7 +325,6 @@ hi IndentGuidesEven ctermbg=237
 " デフォルトで有効にするファイルタイプ
 au FileType coffee,javascript IndentGuidesEnable
 nmap <silent><Leader>ig <Plug>IndentGuidesToggle"
-
 
 "------------------------------------
 " sass-compile.vim

@@ -128,13 +128,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " ソースコード上のメソッド宣言、変数宣言の一覧を表示
     NeoBundle 'taglist.vim'
 
-"    " ソースコードのctagsサポート
-"    NeoBundle 'szw/vim-tags'
-"    let g:vim_tags_project_tags_command = "/usr/local/opt/ctags/bin/ctags -f .tags -R {OPTIONS} {DIRECTORY} 2>/dev/null &"
-"    let g:vim_tags_gems_tags_command = "/usr/local/opt/ctags/bin/ctags -R -f .Gemfile.lock.tags `bundle show --paths` 2>/dev/null &"
-"    set tags+=.tags
-"    set tags+=.Gemfile.lock.tags
-
     " シンタックスエラーを検出する
     NeoBundle 'scrooloose/syntastic.git'
 
@@ -154,18 +147,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'vim-ruby/vim-ruby'
     " rails.vim : rails
     NeoBundle 'tpope/vim-rails'
-    " cucumeber.vim
-    NeoBundle  'tpope/vim-cucumber'
-    "" uniteからrails操作（移動など）
-    "NeoBundleLazy 'basyura/unite-rails', {
-    "    \ 'depends' : 'Shougo/unite.vim' }
-    "NeoBundleLazy 'taichouchou2/unite-rails_best_practices', {
-    "    \ 'depends' : 'Shougo/unite.vim',
-    "    \ 'build' : {
-    "    \    'mac': 'gem install rails_best_practices',
-    "    \    'unix': 'gem install rails_best_practices',
-    "    \   }
-    "    \ }
     " rspecのシンタックスなど
     NeoBundleLazy 'skwp/vim-rspec', {
           \ 'autoload': { 'filetypes': ['ruby', 'eruby', 'haml'] } }
