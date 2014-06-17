@@ -167,12 +167,14 @@ command! Vs :VimShell
 
 "------------------------------------
 " unite.vim
+" uniteを開いた時に tab (C-i) でアクションのビューを表示する
 "------------------------------------
 " The prefix key.
 nnoremap    [unite]   <Nop>
-nmap        f [unite]
+nmap        <Space>f [unite]
 
-nnoremap [unite]u  :<C-u>Unite -no-split<Space>
+
+" nnoremap [unite]u  :<C-u>Unite -no-split<Space>
 
 " 全部乗せ
 nnoremap <silent> [unite]a  :<C-u>UniteWithCurrentDir -no-split -buffer-name=files buffer file_mru bookmark file<CR>
