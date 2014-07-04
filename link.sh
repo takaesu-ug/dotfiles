@@ -8,6 +8,7 @@ files=(.zshrc
        .gitconfig
        .gitconfig.local
        .hgrc
+       .tigrc
        )
 
 now=`date '+%Y%m%d'`

@@ -1,0 +1,30 @@
+# refs.
+# http://jonas.nitro.dk/tig/tigrc.5.html
+# http://blog.hifumi.info/2014/05/29/tigrc-2/
+
+# Views
+set main-view = line-number:true,interval=1 date:local author:full id commit-title:true,graph=true,refs=true
+set tree-view = date:local author:full id file-size:units mode file-name
+set blame-view = date:local author:full id line-number:true,interval=1 text
+set status-view = file-name status:long
+set refs-view = date:local author:full id ref:true commit-title:true
+
+# Variables
+set tab-size = 8
+set line-graphics = ascii
+set horizontal-scroll = 20%
+set vertical-split = auto
+
+# Color
+color cursor white red underline
+color title-blur white magenta
+
+# o で該当のgithubのdiffページを開く
+bind main o !@hub browse -- commit/%(commit)
+bind diff o !@hub browse -- commit/%(commit)
+bind log  o !@hub browse -- commit/%(commit)
+
+# <Ctrl-c> で、コミットハッシュ値をコピーできるようにする
+bind main <Esc>c !@bash -c "cut -c-7 <<<%(commit) | xargs echo -n | pbcopy"
+bind diff <Esc>c !@bash -c "cut -c-7 <<<%(commit) | xargs echo -n | pbcopy"
+bind log  <Esc>c !@bash -c "cut -c-7 <<<%(commit) | xargs echo -n | pbcopy"
