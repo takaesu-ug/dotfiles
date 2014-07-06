@@ -2,6 +2,9 @@
 export EDITOR=vim
 
 ### Alias類
+alias -g L='| less'
+alias -g G='| grep'
+
 # MacVim
 if [[ -f $HOME/Applications/MacVim.app/Contents/MacOS/Vim ]]; then
   alias vi='env LANG=ja_JP.UTF-8 ~/Applications/MacVim.app/Contents/MacOS/Vim "$@"'
@@ -27,11 +30,8 @@ alias ag="ag --pager='less -R --no-init --quit-if-one-screen'"
 # diffコマンドをカラーにする
 alias diff="colordiff"
 
-# gitのエイリアス
-alias g="git"
 # SVN関連
 alias svn-vim-diff='svn diff "$@" |vim -R -'
-
 
 # インストールしたCpanモジュールを出力
 alias pm-installed="find `perl -e 'print \"@INC\"'` -name \"*.pm\" -print"
@@ -127,6 +127,60 @@ function google_translate() {
   opt="${opt}&text=${str}"
   w3m +13 "http://translate.google.com/${opt}"
 }
+
+
+## pecoを使ったコマンド関連
+if [[ -f `brew --prefix`/bin/peco ]]; then
+  # Alias
+  alias ghc='cd $(ghq list -p | peco)'
+  alias gho='gh-open $(ghq list -p | peco)'
+
+  ## peco-で始まるfunctionを検索する
+  function peco-function-list () {
+    local selected=$(functions | grep "^.*\ ()\ {" | sed -e "s| () {||" | grep peco- | grep -v function-list | peco --query "$LBUFFER")
+    if [ -n "$selected" ]; then
+      ${selected}
+    fi
+  }
+  zle -N peco-function-list
+  bindkey '^k' peco-function-list
+
+  ## pecoでghqのソースディレクトリを開く
+  function peco-src () {
+    local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+      BUFFER="cd ${selected_dir}"
+      zle accept-line
+    fi
+    zle clear-screen
+  }
+  zle -N peco-src
+  bindkey '^]' peco-src
+
+  ## gh-openエイリアスコマンドのショートカット設定
+  function peco-gh-open () {
+    gh-open $(ghq list -p | peco)
+  }
+  zle -N peco-gh-open
+  bindkey '^g' peco-gh-open
+
+  ## ^r でのコマンドヒストリにpecoを使う
+  function peco-select-history() {
+    local tac
+    if which tac > /dev/null; then
+      tac="tac"
+    else
+      tac="tail -r"
+    fi
+    BUFFER=$(\history -n 1 | \
+      eval $tac | \
+      peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+  }
+  zle -N peco-select-history
+  bindkey '^r' peco-select-history
+fi
 
 
 ### Mac Only

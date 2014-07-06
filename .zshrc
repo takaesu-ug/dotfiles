@@ -13,7 +13,7 @@ if [ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]; then
 fi
 
 # go用の設定
-export GOPATH=~/workspace/go/path
+export GOPATH=~/workspace/gopath
 export PATH=$GOPATH/bin:$PATH
 
 # オリジナルコマンドの読み込み

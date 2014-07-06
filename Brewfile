@@ -9,6 +9,10 @@ upgrade
 tap sanemat/font
 install ricty
 
+# Peco
+tap peco/peco
+install peco
+
 # Tap Repository
 tap homebrew/dupes
 tap homebrew/versions
@@ -17,9 +21,11 @@ tap homebrew/versions
 install cmake
 install direnv
 install git
+install go
 install hub
 install imagemagick
 install jq
+install mercurial
 install mpg123
 install mysql
 install nginx
