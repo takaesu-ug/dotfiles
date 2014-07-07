@@ -22,5 +22,12 @@ export PATH=$PATH:$GRADLE_HOME/bin
 # type rbenv > /dev/null 2>&1 && eval "$(rbenv init -)"
 
 # anyenv
-export PATH="$HOME/.anyenv/bin:$PATH"
-type anyenv > /dev/null 2>&1 && eval "$(anyenv init -)"
+# tmuxを使った場合にパスの読み込みを正しくする
+# http://qiita.com/luckypool/items/f1e756e9d3e9786ad9ea
+if [ -d ${HOME}/.anyenv ] ; then
+  export PATH="$HOME/.anyenv/bin:$PATH"
+  eval "$(anyenv init -)"
+  for D in `ls $HOME/.anyenv/envs`; do
+    export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
+  done
+fi
