@@ -82,7 +82,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundle 'kana/vim-smartinput.git'
 
     " if...endやdef...endなどを書きだしてくれる
-    NeoBundleLazy 'taichouchou2/vim-endwise.git', {
+    NeoBundleLazy 'tpope/vim-endwise', {
         \ 'autoload' : {
         \   'insert' : 1,
         \ } }
@@ -151,14 +151,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     NeoBundleLazy 'skwp/vim-rspec', {
           \ 'autoload': { 'filetypes': ['ruby', 'eruby', 'haml'] } }
     " Rsenseを用いた補完 neocomplcache-rsense
-    NeoBundle 'Shougo/neocomplcache-rsense', {
-        \ 'depends': 'Shogo/neocomplcache',
-        \ 'autoload': { 'filetypes': 'ruby' } }
-    NeoBundleLazy 'taichouchou2/rsense-0.3', {
-        \ 'build' : {
-        \    'mac' : 'ruby etc/config.rb > ~/.rsense',
-        \    'unix': 'ruby etc/config.rb > ~/.rsense',
-        \  } }
+    NeoBundleLazy 'Shougo/neocomplcache-rsense', {
+          \ 'depends' : 'Shougo/neocomplcache',
+          \ 'autoload' : { 'filetypes' : ['ruby', 'eruby'] } }
+
 
     " javascript補完
     " tern.vimを使う方法に変更する
@@ -175,10 +171,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
     " NeoBundle 'hail2u/vim-css3-syntax'
     NeoBundle 'othree/html5.vim'
 
-    " sass
-    " https://github.com/AtsushiM/sass-compile.vim
-    NeoBundle 'AtsushiM/sass-compile.vim'
-
+    " " sass
+    " " https://github.com/AtsushiM/sass-compile.vim
+    " NeoBundle 'AtsushiM/search-parent.vim'
+    " NeoBundle 'AtsushiM/sass-compile.vim'
 " }}}
 
 

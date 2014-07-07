@@ -73,11 +73,6 @@ au FileType php nmap <buffer><C-@>c :TCommentAs php_surround<CR>
 au FileType php vmap <buffer><C-@>c :TCommentAs php_surround<CR>
 
 "------------------------------------
-" endwise.vim
-"------------------------------------
-let g:endwise_no_mappings=1
-
-"------------------------------------
 " taglist.Vim
 "------------------------------------
 " 関数一覧
@@ -338,23 +333,23 @@ hi IndentGuidesEven ctermbg=237
 au FileType coffee,javascript IndentGuidesEnable
 nmap <silent><Leader>ig <Plug>IndentGuidesToggle"
 
-"------------------------------------
-" sass-compile.vim
-"------------------------------------
-" 編集したファイルから遡るフォルダの最大数
-let g:sass_compile_cdloop = 5
-" ファイル保存時に自動コンパイル（1で自動実行）
-let g:sass_compile_auto = 0
-" 自動コンパイルを実行する拡張子
-let g:sass_compile_file = ['scss', 'sass']
-" cssファイルが入っているディレクトリ名（前のディレクトリほど優先）
-let g:sass_compile_cssdir = ['css', 'stylesheet']
-" コンパイル実行前に実行したいコマンドを設定
-" 例：growlnotifyによる通知
-" let g:sass_compile_beforecmd = "growlnotify -t 'sass-compile.vim' -m 'start
-" sass compile.'"
-" コンパイル実行後に実行したいコマンドを設定
-" 例：growlnotifyによる通知(${sasscompileresult}は実行結果)
-" let g:sass_compile_aftercmd = "growlnotify -t 'sass-compile.vim' -m
-" ${sasscompileresult}"
+""------------------------------------
+"" sass-compile.vim
+""------------------------------------
+"" 編集したファイルから遡るフォルダの最大数
+"let g:sass_compile_cdloop = 5
+"" ファイル保存時に自動コンパイル（1で自動実行）
+"let g:sass_compile_auto = 0
+"" 自動コンパイルを実行する拡張子
+"let g:sass_compile_file = ['scss', 'sass']
+"" cssファイルが入っているディレクトリ名（前のディレクトリほど優先）
+"let g:sass_compile_cssdir = ['css', 'stylesheet']
+"" コンパイル実行前に実行したいコマンドを設定
+"" 例：growlnotifyによる通知
+"" let g:sass_compile_beforecmd = "growlnotify -t 'sass-compile.vim' -m 'start
+"" sass compile.'"
+"" コンパイル実行後に実行したいコマンドを設定
+"" 例：growlnotifyによる通知(${sasscompileresult}は実行結果)
+"" let g:sass_compile_aftercmd = "growlnotify -t 'sass-compile.vim' -m
+"" ${sasscompileresult}"
 

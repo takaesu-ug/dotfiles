@@ -35,6 +35,7 @@ install pkg-config
 install readline
 install reattach-to-user-namespace
 install redis
+install rsense
 install rsync
 install subversion
 install the_silver_searcher

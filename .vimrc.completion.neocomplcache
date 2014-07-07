@@ -22,9 +22,9 @@ let g:neocomplcache_enable_quick_match = 1
 " 補完候補の一番先頭を選択状態にする(AutoComplPopと似た動作)
 let g:neocomplcache_enable_auto_select = 1
 "ポップアップメニューで表示される候補の数。初期値は100
-let g:neocomplcache_max_list = 100
+let g:neocomplcache_max_list = 50
 " autocomplete（自動補完）をスキップするタイム
-let g:neocomplcache_skip_auto_completion_time = '0.8'
+let g:neocomplcache_skip_auto_completion_time = '2.0'
 
 " Define dictionary.
 let g:neocomplcache_dictionary_filetype_lists = {
@@ -57,7 +57,7 @@ inoremap <expr><C-s> neocomplcache#complete_common_string()
 "" inoremap <C-k> <C-o>D
 
 "" C-nでneocomplcache補完
-inoremap <expr><C-n>  pumvisible() ? "\<C-n>" : "\<C-x>\<C-u>\<C-p>"
+inoremap <expr><C-n> pumvisible() ? "\<C-n>" : "\<C-x>\<C-u>\<C-p>"
 "" C-pでkeyword補完
 inoremap <expr><C-p> pumvisible() ? "\<C-p>" : "\<C-p>\<C-n>"
 
@@ -67,6 +67,12 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-x><C-o> &filetype == 'vim' ? "\<C-x><C-v><C-p>" : neocomplcache#manual_omni_complete()
+
+"" Ruby Rsenseでの補完をさせる
+"" https://github.com/Shougo/neocomplcache/issues/355
+let g:rsenseHome = "/usr/local/Cellar/rsense/0.3/libexec/"
+let g:rsenseUseOmniFunc = 1
+let g:neocomplcache#sources#rsense#home_directory = '/usr/local/Cellar/rsense/0.3/libexec/'
 
 " buffer開いたらneoconでcache
 autocmd BufReadPost,BufEnter,BufWritePost :NeoComplCacheCachingBuffer <buffer>
@@ -94,7 +100,7 @@ let g:neocomplcache_omni_patterns.cpp = '\h\w*\%(\.\|->\)\h\w*\|\h\w*::'
 let g:neocomplcache_include_paths = {
   \ 'cpp'  : '.,/opt/local/include/gcc46/c++,/opt/local/include,/usr/include',
   \ 'c'    : '.,/usr/include',
-  \ 'ruby' : '.,$HOME/.anyenv/envs/rbenv/versions/**/lib/ruby/**/',
+  \ 'ruby' : '.,~/.anyenv/envs/rbenv/versions/**/lib/ruby/**/',
   \ }
 "インクルード文のパターンを指定
 let g:neocomplcache_include_patterns = {
@@ -110,10 +116,6 @@ let g:neocomplcache_include_suffixes = {
   \ 'ruby' : '.rb',
   \ }
 
-" Ruby Rsenseでの補完をさせる
-" https://github.com/Shougo/neocomplcache/issues/355
-let g:neocomplcache#sources#rsense#home_directory = neobundle#get_neobundle_dir() . '/rsense-0.3'
-let g:rsenseUseOmniFunc = 1
 
 " Another plugin set completefunc! Disabled neocomplcache.が出たのでその対処
 " http://okuhiiro.daiwa-hotcom.com/wordpress/?p=859
