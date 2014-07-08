@@ -62,6 +62,7 @@ cask install bartender
 cask install charles
 cask install calibre
 cask install clipmenu
+cask install evernote
 cask install firefox
 cask install dropbox
 cask install gyazo
