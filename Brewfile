@@ -19,6 +19,8 @@ tap homebrew/versions
 
 # Packages
 install cmake
+install colordiff
+install ctags
 install direnv
 install git
 install go
@@ -63,7 +65,7 @@ cask install charles
 cask install calibre
 cask install clipmenu
 cask install evernote
-cask install firefox
+cask install firefox-ja
 cask install dropbox
 cask install gyazo
 cask install google-japanese-ime
@@ -88,4 +90,4 @@ cask install xtrafinder
 # cleanup
 
 # remove cask caching installer package
-#cask cleanup
+cask cleanup

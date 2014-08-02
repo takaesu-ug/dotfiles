@@ -69,6 +69,7 @@ inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-x><C-o> &filetype == 'vim' ? "\<C-x><C-v><C-p>" : neocomplcache#manual_omni_complete()
 
 "" Ruby Rsenseでの補完をさせる
+"" rsense自体は homebrew で入れておく
 "" https://github.com/Shougo/neocomplcache/issues/355
 let g:rsenseHome = "/usr/local/Cellar/rsense/0.3/libexec/"
 let g:rsenseUseOmniFunc = 1

@@ -134,6 +134,21 @@ if [[ -f `brew --prefix`/bin/peco ]]; then
   # Alias
   alias ghc='cd $(ghq list -p | peco)'
   alias gho='gh-open $(ghq list -p | peco)'
+  alias sshlist="awk 'match($1,/^Host$/){print $2}' ~/.ssh/config | peco | xargs -o ssh"
+
+  ## .ssh/config の Hostから一覧を取得してSSHする
+  function peco-sshlist () {
+    #BSD以外のOSでのやり方
+    #awk 'match($1,/^Host$/){print $2}' ~/.ssh/config | xargs sh -c 'ssh "$@" </dev/tty' ssh
+    local host=$(awk 'match($1,/^Host$/){print $2}' ~/.ssh/config | peco)
+    if [ -n "$host" ]; then
+      BUFFER="ssh ${host}"
+      zle accept-line  # accept-line を実行することでコマンドを実行する
+    fi
+    zle clear-screen
+  }
+  zle -N peco-sshlist
+  bindkey '^s' peco-sshlist
 
   ## peco-で始まるfunctionを検索する
   function peco-function-list () {

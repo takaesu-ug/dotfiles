@@ -45,9 +45,6 @@
     # ・awk内でのgetline、close  cmdは任意のコマンドとして（git show)を実行している
     #   getlineで読み込んだcmdのコマンドを明示的にcloseさせている
 
-[user]
-    name = Yuji Takaesu
-    email = taka.esu.user@gmail.com
 [ghq]
     root = ~/workspace/ghq
     root = ~/workspace/gopath
