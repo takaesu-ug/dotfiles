@@ -118,6 +118,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
     " quickrun.vim : 編集中のファイルを簡単に実行できるプラグイン
     NeoBundle 'thinca/vim-quickrun'
+    " quickrunでrspecの色づけ https://github.com/glidenote/rspec-result-syntax
+    NeoBundle 'glidenote/rspec-result-syntax'
 
     " perldocやphpmanual等のリファレンスをvim上で見る
     NeoBundle 'thinca/vim-ref'
