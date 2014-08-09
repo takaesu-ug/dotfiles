@@ -22,12 +22,17 @@ set diff-context = 6
 color cursor white red underline
 color title-blur white magenta
 
+## コマンド定義
 # o で該当のgithubのdiffページを開く
 bind main o !@hub browse -- commit/%(commit)
 bind diff o !@hub browse -- commit/%(commit)
 bind log  o !@hub browse -- commit/%(commit)
 
 # <Ctrl-c> で、コミットハッシュ値をコピーできるようにする
-bind main <Esc>c !@bash -c "cut -c-7 <<<%(commit) | xargs echo -n | pbcopy"
-bind diff <Esc>c !@bash -c "cut -c-7 <<<%(commit) | xargs echo -n | pbcopy"
-bind log  <Esc>c !@bash -c "cut -c-7 <<<%(commit) | xargs echo -n | pbcopy"
+bind main Y !@bash -c "cut -c-7 <<<%(commit) | xargs echo -n | pbcopy"
+bind diff Y !@bash -c "cut -c-7 <<<%(commit) | xargs echo -n | pbcopy"
+bind log  Y !@bash -c "cut -c-7 <<<%(commit) | xargs echo -n | pbcopy"
+
+# 該当のコミットまで rebase -i する
+bind main <Ctrl-r> !git rebase -i %(commit)
+bind diff <Ctrl-r> !git rebase -i %(commit)
