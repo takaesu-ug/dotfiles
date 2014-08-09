@@ -26,6 +26,7 @@ install git
 install go
 install hub
 install imagemagick
+install icu4c   # 明示的にリンクを貼る brew link icu4c
 install jq
 install mercurial
 install mpg123
@@ -51,6 +52,7 @@ install whois
 install z
 install zsh
 
+
 # homebrew-cask
 # installed into /opt/homebrew-cask/Caskroom, and link to $HOME/Applications.
 tap caskroom/cask
@@ -65,11 +67,13 @@ cask install charles
 cask install calibre
 cask install clipmenu
 cask install evernote
-cask install firefox-ja
 cask install dropbox
+cask install firefox-ja
+cask install flux
 cask install gyazo
 cask install google-japanese-ime
 cask install google-chrome
+cask install heroku-toolbelt
 cask install hipchat
 cask install iterm2
 cask install java

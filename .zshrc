@@ -28,3 +28,6 @@ source ~/dotfiles/.zshrc.command
 # https://github.com/zimbatm/direnv/issues/42 (DIRENV_RUBYの設定)
 eval "$(direnv hook $0)"
 export DIRENV_RUBY=/usr/bin/ruby
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
