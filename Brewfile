@@ -78,7 +78,7 @@ cask install hipchat
 cask install iterm2
 cask install java
 cask install keepassx
-cask install keyremap4macbook
+cask install karabiner
 cask install kindle
 cask install kobito
 cask install macvim-kaoriya
