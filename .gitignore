@@ -6,3 +6,5 @@ tmux-MacOSX-pasteboard/
 # 個別設定
 my-bin/1pac
 my-bin/reattach-to-user-namespace
+
+vimdir/bundle
