@@ -1,2 +1,1 @@
-#-d sqlite3 --skip-bundle --skip-test-unit
 -d mysql --skip-bundle --skip-test-unit

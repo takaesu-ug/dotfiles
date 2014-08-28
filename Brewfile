@@ -33,6 +33,7 @@ install mpg123
 install mysql
 install nginx
 install openssl
+install phantomjs
 install postgresql
 install pkg-config
 install readline
@@ -41,6 +42,7 @@ install redis
 install rsense
 install rsync
 install subversion
+install the_platinum_searcher
 install the_silver_searcher
 install tig
 install tmux
