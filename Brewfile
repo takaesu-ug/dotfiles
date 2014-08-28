@@ -86,6 +86,7 @@ cask install kobito
 cask install macvim-kaoriya
 cask install magican
 cask install mysqlworkbench
+cask install processing
 cask install skitch
 cask install skype
 cask install virtualbox
