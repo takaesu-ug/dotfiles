@@ -8,8 +8,9 @@ set listchars=nbsp:¬,tab:>.,trail:_,extends:>,precedes:< " 不可視文字の�
 set display=uhex      " 印字不可能文字を16進数で表示
 
 " StatusLine
+" http://www.ksknet.net/vi/statusline.html
 set laststatus=2
-set statusline=%F%r%h%=
+set statusline=%F%r%h%m%=%l/%L:%c%V
 
 " 全角スペースの表示
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
@@ -53,8 +54,3 @@ set softtabstop=0
 autocmd BufWritePre * :%s/\s\+$//ge
 " 保存時にtabをスペースに変換する(4スペース)
 autocmd BufWritePre * :%s/\t/    /ge
-
-"HTMLはタブを２文字にする
-"~/.vim/ftplugin/html.vimを參考
-
-

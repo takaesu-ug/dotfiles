@@ -1,9 +1,7 @@
 "ビープ音を消す
 set visualbell t_vb=
-
 "swap なし
 set noswapfile
-
 "チルダ（バックアッップ）ファイルなし
 set nobackup
 "crontabが編集時に使うtmpディレクトリではバックアップをスキップする
