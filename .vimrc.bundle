@@ -16,7 +16,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 "" ColorSchema
 NeoBundle 'tomasr/molokai'
-NeoBundle 'yuroyoro/yuroyoro256.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 
 "" Basic
