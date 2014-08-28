@@ -67,15 +67,12 @@ NeoBundleLazy 'tpope/vim-endwise', {
             \   'insert' : 1,
             \ } }
 
-" ag.vim  https://github.com/rking/ag.vim
-NeoBundle 'rking/ag.vim'
+" 複数カーソルで一括編集などを行う
+" https://github.com/terryma/vim-multiple-cursors
+NeoBundle 'terryma/vim-multiple-cursors'
 
 " スニペット集
 NeoBundle 'honza/vim-snippets.git'
-
-" Quich Filter 検索を一覧表示
-" 有効にならない
-" NeoBundle 'filtering.vim'
 
 " キャメル、スネークケース区切りで操作
 " http://nanasi.jp/articles/vim/camelcasemotion_vim.html
