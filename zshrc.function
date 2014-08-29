@@ -1,0 +1,151 @@
+# tmux init
+## tmuxのカラー設定　itermでtmuxを使い、Vimのカラースキームを有効にする
+## http://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode
+alias tmux="TERM=screen-256color-bce tmux"
+function tmux_init() {
+  SESS='takamax'
+  if [ $# -eq 1 ]; then
+    SESS=$1
+  fi
+
+  tmux -f ~/.tmux.conf new-session -d -s $SESS
+  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:1 -n dev1
+  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:2 -n dev2
+  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:3 -n dev3
+  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:4 -n db
+  tmux -f ~/.tmux.conf new-window -d -k -t $SESS:5 -n run
+  tmux -f ~/.tmux.conf attach-session -t $SESS
+}
+
+# whoisコマンドエイリアス(日本語文字化け対応） aliasコマンドでは引数を処理できないようだ
+if [ -f `brew --prefix`/bin/nkf ]; then
+  function whois() {
+    /usr/bin/whois $@ | `brew --prefix`/bin/nkf -w
+  }
+fi
+
+# w3mでgoogle検索
+function google() {
+  local str opt
+  if [ $# != 0 ]; then
+    for i in $*; do
+        str="$str+$i"
+    done
+    str=`echo $str | sed 's/^\+//'` #行頭の+を除く
+    opt='search?num=50&hl=ja&lr=lang_ja'
+    opt="${opt}&q=${str}"
+  fi
+  w3m http://www.google.co.jp/$opt
+}
+
+# w3mでALC検索
+function alc() {
+  if [ $# != 0 ]; then
+    w3m +38 "http://eow.alc.co.jp/$*/UTF-8/?ref=sa"
+  else
+    w3m "http://www.alc.co.jp/"
+  fi
+}
+
+# w3m でGoogle translate English->Japanese
+function gte() {
+  google_translate "$*" "en-ja"
+}
+
+# w3m でGoogle translate Japanese->English
+function gtj() {
+  google_translate "$*" "ja-en"
+}
+
+# 実行方法
+# google_translate "検索文字列" [翻訳オプション(en-ja 英語->日本語)]
+function google_translate() {
+  local str opt cond
+
+  if [ $# != 0 ]; then
+    str=`echo $1 | sed -e 's/  */+/g'` # 1文字以上の半角空白を+に変換
+    cond=$2
+    if [ $cond = "ja-en" ]; then
+      # ja -> en 翻訳
+      opt='?hl=ja&sl=ja&tl=en&ie=UTF-8&oe=UTF-8'
+    else
+      # en -> ja 翻訳
+      opt='?hl=ja&sl=en&tl=ja&ie=UTF-8&oe=UTF-8'
+    fi
+  else
+    opt='?hl=ja&sl=en&tl=ja&ie=UTF-8&oe=UTF-8'
+  fi
+
+  opt="${opt}&text=${str}"
+  w3m +13 "http://translate.google.com/${opt}"
+}
+
+
+## pecoを使ったコマンド関連
+if [[ -f `brew --prefix`/bin/peco ]]; then
+  # Alias
+  alias ghc='cd $(ghq list -p | peco)'
+  alias gho='gh-open $(ghq list -p | peco)'
+  alias sshlist="awk 'match($1,/^Host$/){print $2}' ~/.ssh/config | peco | xargs -o ssh"
+
+  ## .ssh/config の Hostから一覧を取得してSSHする
+  function peco-sshlist () {
+    #BSD以外のOSでのやり方
+    #awk 'match($1,/^Host$/){print $2}' ~/.ssh/config | xargs sh -c 'ssh "$@" </dev/tty' ssh
+    local host=$(awk 'match($1,/^Host$/){print $2}' ~/.ssh/config | peco)
+    if [ -n "$host" ]; then
+      BUFFER="ssh ${host}"
+      zle accept-line  # accept-line を実行することでコマンドを実行する
+    fi
+    zle clear-screen
+  }
+  zle -N peco-sshlist
+  bindkey '^s' peco-sshlist
+
+  ## peco-で始まるfunctionを検索する
+  function peco-function-list () {
+    local selected=$(functions | grep "^.*\ ()\ {" | sed -e "s| () {||" | grep peco- | grep -v function-list | peco --query "$LBUFFER")
+    if [ -n "$selected" ]; then
+      ${selected}
+    fi
+  }
+  zle -N peco-function-list
+  bindkey '^k' peco-function-list
+
+  ## pecoでghqのソースディレクトリを開く
+  function peco-src () {
+    local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+      BUFFER="cd ${selected_dir}"
+      zle accept-line
+    fi
+    zle clear-screen
+  }
+  zle -N peco-src
+  bindkey '^]' peco-src
+
+  ## gh-openエイリアスコマンドのショートカット設定
+  function peco-gh-open () {
+    gh-open $(ghq list -p | peco)
+  }
+  zle -N peco-gh-open
+  bindkey '^g' peco-gh-open
+
+  ## ^r でのコマンドヒストリにpecoを使う
+  function peco-select-history() {
+    local tac
+    if which tac > /dev/null; then
+      tac="tac"
+    else
+      tac="tail -r"
+    fi
+    BUFFER=$(\history -n 1 | \
+      eval $tac | \
+      peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+  }
+  zle -N peco-select-history
+  bindkey '^r' peco-select-history
+fi
+

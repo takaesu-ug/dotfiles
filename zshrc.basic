@@ -1,0 +1,6 @@
+# エディタの設定をvimにする
+export EDITOR=vim
+
+#emacsのキーバインド
+bindkey -e
+
