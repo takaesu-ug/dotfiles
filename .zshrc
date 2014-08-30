@@ -1,5 +1,5 @@
 ## https://github.com/clear-code/zsh.d/
-source ~/dotfiles/zsh.d/zshrc_yusabana
+# source ~/dotfiles/zsh.d/zshrc_yusabana
 
 
 # ルート証明を読み込む（brewでcurl-ca-bundleを入れている場合)
@@ -13,11 +13,11 @@ fi
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 
 # 基本的な設定
-source ~/dotfiles/zshrc.basic
+source ~/dotfiles/zshdir/zshrc.basic
 
 # オリジナルコマンド類の読み込み
-source ~/dotfiles/.zshrc.command
-source ~/dotfiles/zshrc.function
+source ~/dotfiles/zshdir/zshrc.command
+source ~/dotfiles/zshdir/zshrc.function
 
 
 ### 最後に読み込ませたい
