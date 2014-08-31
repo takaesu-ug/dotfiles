@@ -15,17 +15,16 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # homebrew PATH
 export PATH=/usr/local/bin:$PATH
 
-# anyenv
-# tmuxを使った場合にパスの読み込みを正しくする
+## anyenv
 # http://qiita.com/luckypool/items/f1e756e9d3e9786ad9ea
 if [ -d ${HOME}/.anyenv ] ; then
   export PATH="$HOME/.anyenv/bin:$PATH"
   eval "$(anyenv init -)"
 
-  ## この設定はいらなそうなので一旦コメントアウト
-  # for D in `ls $HOME/.anyenv/envs`; do
-  #   export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
-  # done
+  ## tmuxを使った場合にパスの読み込みを正しくする
+  for D in `ls $HOME/.anyenv/envs`; do
+    export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
+  done
 fi
 
 # # perlbrew

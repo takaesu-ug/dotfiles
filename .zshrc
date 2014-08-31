@@ -12,6 +12,9 @@ fi
 # $HOME binを読み込む
 export PATH=/usr/local/bin:/usr/local/sbin:~/bin:$PATH
 
+# promptの設定を読み込む
+source ~/dotfiles/zshdir/zshrc.prompt
+
 # 基本的な設定
 source ~/dotfiles/zshdir/zshrc.basic
 

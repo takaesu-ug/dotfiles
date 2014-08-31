@@ -1,6 +1,14 @@
 ### Alias類
 alias -g L='| less'
 alias -g G='| grep'
+alias -g H='| head'
+alias -g T='| tail'
+alias -g S='| sed'
+
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
+alias x="exit"
 
 # MacVim
 if [[ -f $HOME/Applications/MacVim.app/Contents/MacOS/Vim ]]; then
@@ -17,7 +25,6 @@ alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl "
 alias eclipse='open -n /Applications/eclipse/Eclipse.app'
 alias idea='open -n /Applications/IntelliJ\ IDEA\ 12\ CE.app'
 
-# find grep 合わせ技のエイリアス まだできていない・・・・・
 # grep （数字分上下を表示[-B数字 -A数字]  再帰的[-r]）
 alias grep="grep --color"
 
