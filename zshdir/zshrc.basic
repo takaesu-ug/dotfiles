@@ -5,7 +5,8 @@ export EDITOR=vim
 bindkey -e
 
 # ビープ音をオフ
-setopt nolistbeep
+setopt nobeep
+# setopt nolistbeep # 補完候補のみビープを消すとき
 
 # 実行時間
 # 実行したプロセスの消費時間が3秒以上かかったら自動的に消費時間の統計情報を表示する。

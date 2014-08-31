@@ -9,6 +9,8 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 alias x="exit"
+alias relogin='exec $SHELL -l'
+alias less='less -q' # ビープ音を消す
 
 # MacVim
 if [[ -f $HOME/Applications/MacVim.app/Contents/MacOS/Vim ]]; then
