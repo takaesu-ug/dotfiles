@@ -56,3 +56,8 @@ SEPARATOR3=$(str_with_color white ':')
 PROMPT='${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${STATUS_EMOJI} ${CURRENT_DIRECTORY}
 [${DATE_TIME}]$PROMPT_CHAR'
 
+# # RPROMPTはなしで様子みする（自動で画面サイズで消え得るのはいいよね～）
+# RPROMPT='[${CURRENT_DIRECTORY}]'
+# # 最終行のRPROMPTだけ出力する
+# setopt transient_rprompt
+
