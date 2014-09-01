@@ -48,16 +48,38 @@ PROMPT_PREFIX=$(str_with_color white '#')
 USER_NAME=$(str_with_color blue '%n')
 HOST_NAME=$(str_with_color cyan '%m')
 CURRENT_DIRECTORY=$(str_with_color yellow '%~')
-PROMPT_CHAR=$(str_with_color white ' %% ')
+PROMPT_CHAR=$(str_with_color white '%% ')
 SEPARATOR1=$(str_with_color white '|')
 SEPARATOR2=$(str_with_color white '@')
 SEPARATOR3=$(str_with_color white ':')
 
-PROMPT='${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${STATUS_EMOJI} ${CURRENT_DIRECTORY}
-[${DATE_TIME}]$PROMPT_CHAR'
 
-# # RPROMPTはなしで様子みする（自動で画面サイズで消え得るのはいいよね～）
-# RPROMPT='[${CURRENT_DIRECTORY}]'
-# # 最終行のRPROMPTだけ出力する
-# setopt transient_rprompt
+MY_PROMPT='default' # prompt切り替え(toggle)するためのフラグ変数
 
+PROMPT='
+${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${STATUS_EMOJI} ${CURRENT_DIRECTORY}
+[${DATE_TIME}] $PROMPT_CHAR'
+
+
+function toggle_prompt() {
+  if [[ $MY_PROMPT == 'default' ]]; then
+    PROMPT='
+${PROMPT_PREFIX}${STATUS_CODE}[${DATE_TIME}]
+$PROMPT_CHAR'
+
+    # RPROMPTはなしで様子みする（自動で画面サイズで消え得るのはいいよね～）
+    RPROMPT='$(my_vcs_info) ${STATUS_EMOJI} [${CURRENT_DIRECTORY}]'
+
+    # 最終行のRPROMPTだけ出力する
+    setopt transient_rprompt
+    MY_PROMPT='short_prompt'
+
+  else
+    PROMPT='
+${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${STATUS_EMOJI} ${CURRENT_DIRECTORY}
+[${DATE_TIME}] $PROMPT_CHAR'
+
+    RPROMPT=''
+    MY_PROMPT='default'
+  fi
+}
