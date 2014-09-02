@@ -56,15 +56,13 @@ SEPARATOR3=$(str_with_color white ':')
 
 MY_PROMPT='default' # prompt切り替え(toggle)するためのフラグ変数
 
-PROMPT='
-${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${STATUS_EMOJI} ${CURRENT_DIRECTORY}
+PROMPT='${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${STATUS_EMOJI} ${CURRENT_DIRECTORY}
 [${DATE_TIME}] $PROMPT_CHAR'
 
 
 function toggle_prompt() {
   if [[ $MY_PROMPT == 'default' ]]; then
-    PROMPT='
-${PROMPT_PREFIX}${STATUS_CODE}[${DATE_TIME}]
+    PROMPT='${PROMPT_PREFIX}${STATUS_CODE}[${DATE_TIME}]
 $PROMPT_CHAR'
 
     # RPROMPTはなしで様子みする（自動で画面サイズで消え得るのはいいよね～）
@@ -75,8 +73,7 @@ $PROMPT_CHAR'
     MY_PROMPT='short_prompt'
 
   else
-    PROMPT='
-${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${STATUS_EMOJI} ${CURRENT_DIRECTORY}
+    PROMPT='${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${STATUS_EMOJI} ${CURRENT_DIRECTORY}
 [${DATE_TIME}] $PROMPT_CHAR'
 
     RPROMPT=''
