@@ -22,6 +22,9 @@ NeoBundle 'nanotech/jellybeans.vim'
 " surround.vim : テキストをかっこで囲む/削除する
 NeoBundle 'surround.vim'
 
+" jkでの上下移動を激速にする
+NeoBundle 'rhysd/accelerated-jk'
+
 " Uniteのようなバッファなどを扱う
 " ctrlp.vimの使い方まとめ
 " http://qiita.com/oahiroaki/items/d71337fb9d28303a54a8

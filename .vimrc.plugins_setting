@@ -100,6 +100,13 @@ map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
 
 "------------------------------------
+" accelerated-jk
+"------------------------------------
+let g:accelerated_jk_acceleration_table = [10,5,3]
+nmap j <Plug>(accelerated_jk_gj)
+nmap k <Plug>(accelerated_jk_gk)
+
+"------------------------------------
 " unite.vim
 " uniteを開いた時に tab (C-i) でアクションのビューを表示する
 "------------------------------------
