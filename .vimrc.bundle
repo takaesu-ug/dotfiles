@@ -2,17 +2,17 @@
 
 " コマンドモードでタブ補完などを有効にする
 set nocompatible
-filetype off
+filetype plugin indent off
 
 if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
-
-call neobundle#rc(expand('~/.vim/bundle/'))
-
 
 "neobundle 自体を管理する
 NeoBundleFetch 'Shougo/neobundle.vim'
+
+
 
 "" ColorSchema
 NeoBundle 'tomasr/molokai'
@@ -37,7 +37,7 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 " unite.vim http://blog.ruedap.com/entry/20110110/vim_unite_plugin
 NeoBundle 'Shougo/unite.vim'
 
-" vimproc : vimから非同期実行。vimshelleで必要
+" vimproc : vimから非同期実行。
 " vimproc は利用するためにコンパイルが必要.
 " vimproc/autoload/vimproc_mac.so ができていればOK 内部的には次のコマンドを実行している
 " cd $HOME/.vim/bundle/vimproc/ ; make -f make_mac.mak
@@ -144,6 +144,10 @@ NeoBundle 'kchmck/vim-coffee-script'
 "" html5関連
 " NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'othree/html5.vim'
+
+
+
+call neobundle#end()
 
 filetype plugin indent on
 
