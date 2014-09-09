@@ -168,8 +168,6 @@ if [[ -f `brew --prefix`/bin/peco ]]; then
     zle clear-screen
   }
   zle -N peco-bundle-open
-  bindkey '^b' peco-bundle-open
+  bindkey '^o' peco-bundle-open
 
 fi
-
-
