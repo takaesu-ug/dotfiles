@@ -36,6 +36,7 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 
 " unite.vim http://blog.ruedap.com/entry/20110110/vim_unite_plugin
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
 
 " vimproc : vimから非同期実行。
 " vimproc は利用するためにコンパイルが必要.
