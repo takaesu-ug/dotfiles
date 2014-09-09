@@ -97,7 +97,7 @@ NeoBundle 'thinca/vim-quickrun'
 " quickrunでrspecの色づけ https://github.com/glidenote/rspec-result-syntax
 NeoBundle 'glidenote/rspec-result-syntax'
 
-" perldocやphpmanual等のリファレンスをvim上で見る
+" perldocやphpmanual等のリファレンスをvim上で見る(K ラージKでドキュメントリファレンスを開く)
 NeoBundle 'thinca/vim-ref'
 
 " SQLUtilities : SQL整形、生成ユーティリティ
