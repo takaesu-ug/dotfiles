@@ -152,6 +152,24 @@ if [[ -f `brew --prefix`/bin/peco ]]; then
   }
   zle -N peco-select-history
   bindkey '^r' peco-select-history
+
+
+  function peco-bundle-open() {
+    # 最低限動作するなら以下の４行だけでいいが、ZLEのbind_keyで動かすと改行されずに次の入力に移らないない。
+    # local package=$(bundle list | awk 'NR>1 {print $2}' |peco)
+    # if [ -n "$package" ]; then
+    #   cd `bundle show $package`
+    # fi
+    local package=$(bundle list | awk 'NR>1 {print $2}' |peco)
+    if [ -n "$package" ]; then
+      BUFFER="cd `bundle show $package`"
+      zle accept-line
+    fi
+    zle clear-screen
+  }
+  zle -N peco-bundle-open
+  bindkey '^b' peco-bundle-open
+
 fi
 
 
