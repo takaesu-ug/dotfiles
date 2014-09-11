@@ -49,3 +49,5 @@
     root = ~/workspace/ghq
     root = ~/workspace/gopath
 
+[credential]
+	helper = osxkeychain
