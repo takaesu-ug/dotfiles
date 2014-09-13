@@ -89,6 +89,7 @@ cask install mysqlworkbench
 cask install processing
 cask install skitch
 cask install skype
+cask install slack
 cask install virtualbox
 cask install vagrant
 cask install xtrafinder
