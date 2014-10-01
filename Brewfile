@@ -28,6 +28,7 @@ install hub
 install imagemagick
 install icu4c   # 明示的にリンクを貼る brew link icu4c
 install jq
+install lha
 install mercurial
 install mpg123
 install mysql
