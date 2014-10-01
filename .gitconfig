@@ -50,4 +50,4 @@
     root = ~/workspace/gopath
 
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
