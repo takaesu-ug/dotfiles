@@ -18,6 +18,7 @@ tap homebrew/dupes
 tap homebrew/versions
 
 # Packages
+install ansible
 install cmake
 install colordiff
 install ctags
@@ -28,6 +29,7 @@ install hub
 install imagemagick
 install icu4c   # 明示的にリンクを貼る brew link icu4c
 install jq
+install jmeter
 install lha
 install mercurial
 install mpg123
@@ -37,6 +39,7 @@ install openssl
 install phantomjs
 install postgresql
 install pkg-config
+install python
 install readline
 install reattach-to-user-namespace
 install redis
