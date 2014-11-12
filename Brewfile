@@ -68,10 +68,12 @@ install brew-cask
 cask install alfred
   cask alfred link
 cask install atom
+cask install android-file-transfer
 cask install bartender
 cask install charles
 cask install calibre
 cask install clipmenu
+cask install cyberduck
 cask install evernote
 cask install dropbox
 cask install firefox-ja
