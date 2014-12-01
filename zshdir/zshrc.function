@@ -170,4 +170,22 @@ if [[ -f `brew --prefix`/bin/peco ]]; then
   zle -N peco-bundle-open
   bindkey '^o' peco-bundle-open
 
+  # http://qiita.com/sona-tar/items/fe401c597e8e51d4e243
+  function peco-git-hash() {
+    git log --oneline | peco | awk '{print $1}'
+  }
+  alias git-hash='peco-git-hash'
+  alias -g GH='$(peco-git-hash)'
+  # GHの使い方
+  # git diff GH
+
+  function peco-git-changed-files() {
+    git status --short | peco | awk '{print $2}'
+  }
+  alias git-changed-files='peco-git-changed-files'
+  alias -g GF='$(peco-git-changed-files)'
+  # GFの使い方
+  # git add GH
+  # git co GH
+
 fi
