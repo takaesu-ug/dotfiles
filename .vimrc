@@ -1,3 +1,5 @@
+scriptencoding utf-8
+
 "neobunlde.vimで管理してるpluginを読み込む
 source ~/dotfiles/.vimrc.bundle
 

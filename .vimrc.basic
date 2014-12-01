@@ -1,5 +1,7 @@
 "ビープ音を消す
-set visualbell t_vb=
+set t_vb=
+set visualbell
+set noerrorbells
 "swap なし
 set noswapfile
 "チルダ（バックアッップ）ファイルなし
