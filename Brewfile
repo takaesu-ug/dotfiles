@@ -16,6 +16,8 @@ install peco
 # Tap Repository
 tap homebrew/dupes
 tap homebrew/versions
+tap homebrew/apache
+tap homebrew/php
 
 # Packages
 install ansible
@@ -31,12 +33,15 @@ install icu4c   # 明示的にリンクを貼る brew link icu4c
 install jq
 install jmeter
 install lha
-install mercurial
+install libmcrypt #phpenv, php-build で必要
+# install mercurial
 install mpg123
 install mysql
 install nginx
 install openssl
 install phantomjs
+install php55
+install php55-mcrypt #laravelに必要
 install postgresql
 install pkg-config
 install python
@@ -93,15 +98,17 @@ cask install macvim-kaoriya
 cask install magican
 cask install mysqlworkbench
 cask install processing
+cask install prott
 cask install skitch
 cask install skype
 cask install slack
 cask install virtualbox
 cask install vagrant
 cask install xtrafinder
+cask install xquartz
 
 # Remove outdated versions
-# cleanup
+cleanup
 
 # remove cask caching installer package
 cask cleanup
