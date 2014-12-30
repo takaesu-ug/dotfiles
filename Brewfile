@@ -46,7 +46,7 @@ install postgresql
 install pkg-config
 install python
 install readline
-install reattach-to-user-namespace
+# install reattach-to-user-namespace
 install redis
 install rsense
 install rsync
