@@ -1,6 +1,9 @@
 .gitconfig.local
 dotfiles.git/
+
+# tmux reattach-to-user-namespaceの設定
 tmux-MacOSX-pasteboard/
+tmuxdir/reattach-to-user-namespace
 
 
 # 個別設定
