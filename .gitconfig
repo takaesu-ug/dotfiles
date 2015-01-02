@@ -49,5 +49,6 @@
     root = ~/workspace/ghq
     root = ~/workspace/gopath
 
+# refs. http://qiita.com/hnakamur/items/cb04882cc69f2d1a7367
 [credential]
     helper = osxkeychain
