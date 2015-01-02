@@ -1,17 +1,20 @@
 "NeoBunlde.vimで管理してるpluginを読み込む
 
 " コマンドモードでタブ補完などを有効にする
-set nocompatible
 filetype plugin indent off
 
 if has('vim_starting')
+  if &compatible
+    set nocompatible
+  endif
+
   set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 "neobundle 自体を管理する
 NeoBundleFetch 'Shougo/neobundle.vim'
-
 
 
 "" ColorSchema
