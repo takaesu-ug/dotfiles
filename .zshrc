@@ -18,6 +18,9 @@ source ~/dotfiles/zshdir/zshrc.prompt
 # 基本的な設定
 source ~/dotfiles/zshdir/zshrc.basic
 
+# プログラミング言語関連の設定
+source ~/dotfiles/zshdir/zshrc.programming
+
 # オリジナルコマンド類の読み込み
 source ~/dotfiles/zshdir/zshrc.command
 source ~/dotfiles/zshdir/zshrc.function
