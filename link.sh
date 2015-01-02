@@ -1,15 +1,16 @@
 #!/bin/sh
 
-files=(.zshrc
-       .zlogin
-       .zshenv
-       .tmux.conf
-       .vimrc
-       .gitconfig
-       .gitconfig.local
-       .hgrc
-       .tigrc
-       )
+files=(
+  .gitconfig
+  .gitconfig.local
+#  .hgrc
+  .tigrc
+  .tmux.conf
+  .vimrc
+  .zlogin
+  .zshenv
+  .zshrc
+)
 
 now=`date '+%Y%m%d'`
 
