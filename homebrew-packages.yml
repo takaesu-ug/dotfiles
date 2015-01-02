@@ -1,0 +1,128 @@
+# homebrewのパッケージをインストールするための設定
+##################################################
+# homebrew のアップグレードは個別にやる
+#   brew upgrade [PACKAGE名]
+
+# homebrewのクリーン
+#   brew cleanup
+
+# homebrew-caskのクリーン
+#  brew cask cleanup
+##################################################
+
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  sudo: no
+
+  vars:
+    homebrew_taps:
+      - caskroom/cask
+      - caskroom/versions
+
+      - sanemat/font                    # Font Ricty http://morizyun.github.io/blog/ricty-font-homebrew-mac/
+      - peco/peco
+      - homebrew/dupes
+      - homebrew/versions
+      - homebrew/apache
+      - homebrew/php
+    homebrew_packages:
+      - { name: brew-cask }
+      - { name: ansible }
+      - { name: automake }
+      - { name: cmake }
+      - { name: colordiff }
+      - { name: ctags }
+      - { name: direnv }
+      - { name: git }
+      - { name: go }
+      - { name: hub }
+      - { name: imagemagick }
+      - { name: icu4c, state: linked }   # 明示的にリンクを貼る brew link --force icu4c
+      - { name: jq }
+      - { name: jmeter }
+      - { name: lha }
+      - { name: libmcrypt }              # phpenv, php-build で必要
+      - { name: mpg123 }
+      - { name: mysql }
+      - { name: nginx }
+      - { name: openssl }
+      - { name: peco }
+      - { name: phantomjs }
+      - { name: php55 }
+      - { name: php55-mcrypt }           #laravelに必要
+      - { name: postgresql }
+      - { name: pkg-config }
+      - { name: python }
+      - { name: readline }
+      - { name: redis }
+# なぜかインストールできない      - { name: ricty }
+      - { name: rsense }
+      - { name: subversion }
+      - { name: the_platinum_searcher }
+      - { name: the_silver_searcher }
+      - { name: tig }
+      - { name: tmux }
+      - { name: tree }
+      - { name: w3m }
+      - { name: watch }
+      - { name: wget }
+      - { name: whois }
+      - { name: z }
+      - { name: zsh }
+    homebrew_cask_packages:
+      - { name: alfred }
+      - { name: atom }
+      - { name: android-file-transfer }
+      - { name: bartender }
+      - { name: charles }
+      - { name: calibre }
+      - { name: clipmenu }
+      - { name: cyberduck }
+      - { name: evernote }
+      - { name: dropbox }
+      - { name: firefox-ja }
+      - { name: flux }
+      - { name: gyazo }
+      - { name: google-japanese-ime }
+      - { name: google-chrome }
+      - { name: heroku-toolbelt }
+      - { name: hipchat }
+      - { name: iterm2 }
+      - { name: java }
+      - { name: keepassx }
+      - { name: karabiner }
+# fomulaがない      - { name: kindle }
+      - { name: kobito }
+      - { name: macvim-kaoriya }
+      - { name: magican }
+      - { name: mysqlworkbench }
+      - { name: processing }
+      - { name: prott }
+      - { name: skitch }
+      - { name: skype }
+      - { name: slack }
+      - { name: virtualbox }
+      - { name: vagrant }
+      - { name: xtrafinder }
+      - { name: xquartz }
+
+  tasks:
+    ## homebrew 関連 ##
+    - name: homebrew update
+      homebrew: update_homebrew=yes
+    - name: homebrew tap
+      homebrew_tap: tap={{ item }} state=present
+      with_items: homebrew_taps
+    - name: homebrew packages install
+      homebrew: name={{ item.name }} state={{ item.state|default("present") }}
+      with_items: homebrew_packages
+    #- name: homebrew installed packages upgrade
+    #- homebrew: update_homebrew=yes upgrade_all=yes
+
+
+    ## homebrew cask 関連 ##
+    - name: homebrew cask packages install
+      homebrew_cask: name={{ item.name }} state=installed
+      with_items: homebrew_cask_packages
+
