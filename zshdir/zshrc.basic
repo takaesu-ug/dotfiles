@@ -20,3 +20,4 @@ log
 ## ^Dでログアウトしないようにする。
 setopt ignore_eof
 
+DISABLE_AUTO_TITLE=true
