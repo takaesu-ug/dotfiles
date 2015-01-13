@@ -134,7 +134,8 @@ NeoBundleLazy 'skwp/vim-rspec', {
 NeoBundleLazy 'Shougo/neocomplcache-rsense', {
             \ 'depends' : 'Shougo/neocomplcache',
             \ 'autoload' : { 'filetypes' : ['ruby', 'eruby'] } }
-
+" slimテンプレートのシンタックス
+NeoBundle 'slim-template/vim-slim'
 
 "" javascript補完
 " tern.vimを使う方法に変更する
