@@ -11,6 +11,8 @@ set backupskip=/tmp/*,/private/tmp/*
 " .{ファイル名}.un~ ファイルを作成しないようにする refs.http://www.kaoriya.net/blog/2014/03/30/
 " set undofile
 set noundofile
+" 一行の文字数が多くてもきちんと描画(@で省略されないようにする)
+set display=lastline
 
 " Visualモードでヤンクしたものをクリップボードにコピー
 " http://vim-users.jp/2010/02/hack126/

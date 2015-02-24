@@ -213,6 +213,10 @@ let g:syntastic_auto_loc_list = 1
 "jshint,gjshintがインストールされている場合優先されるように設定
 let g:syntastic_javascript_checker = 'jshint'
 
+" rubyのシンタックスチェックをanyenv以下の設定を見るようにする
+" https://github.com/scrooloose/syntastic/wiki/Ruby:---mri
+let g:syntastic_ruby_exec = '/Users/takaesu/.anyenv/envs/rbenv/shims/ruby'
+
 "------------------------------------
 " perl-support.vim
 "------------------------------------

@@ -46,6 +46,7 @@
       - { name: mpg123 }
       - { name: mysql }
       - { name: nginx }
+      - { name: nkf }
       - { name: openssl }
       - { name: peco }
       - { name: phantomjs }
