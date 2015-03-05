@@ -43,6 +43,7 @@
       - { name: jmeter }
       - { name: lha }
       - { name: libmcrypt }              # phpenv, php-build で必要
+      - { name: mercurial }
       - { name: mpg123 }
       - { name: mysql }
       - { name: nginx }
@@ -93,7 +94,6 @@
       - { name: java }
       - { name: keepassx }
       - { name: karabiner }
-# fomulaがない      - { name: kindle }
       - { name: kobito }
       - { name: macvim-kaoriya }
       - { name: magican }
