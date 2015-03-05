@@ -165,6 +165,7 @@ let g:unite_source_file_mru_limit = 200
 " fugitive.vim , vimgrep(:vim)に関して
 " http://qiita.com/yuku_t/items/0c1aff03949cb1b8fe6b
 "------------------------------------
+" 標準的な使い方  :vim {pattern} {file} | cw
 " grep検索の実行後にQuickFix Listを表示する
 autocmd QuickFixCmdPost *grep* cwindow
 
