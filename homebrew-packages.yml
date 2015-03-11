@@ -98,6 +98,7 @@
       - { name: macvim-kaoriya }
       - { name: magican }
       - { name: mysqlworkbench }
+      - { name: opera }
       - { name: processing }
       - { name: prott }
       - { name: skitch }
@@ -125,5 +126,7 @@
     ## homebrew cask 関連 ##
     - name: homebrew cask packages install
       homebrew_cask: name={{ item.name }} state=installed
+      environment:
+        HOMEBREW_CASK_OPTS: "--appdir=/Applications"  # homebrew-caskでよくあること http://qiita.com/tienlen/items/1a50c7507c8f6454f6c6
       with_items: homebrew_cask_packages
 
