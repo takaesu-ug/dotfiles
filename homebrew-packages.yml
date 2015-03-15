@@ -53,6 +53,7 @@
       - { name: phantomjs }
       - { name: php55 }
       - { name: php55-mcrypt }           #laravelに必要
+      - { name: plantuml }
       - { name: postgresql }
       - { name: pkg-config }
       - { name: python }
