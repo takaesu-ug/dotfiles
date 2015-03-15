@@ -103,6 +103,9 @@ NeoBundle 'glidenote/rspec-result-syntax'
 " perldocやphpmanual等のリファレンスをvim上で見る(K ラージKでドキュメントリファレンスを開く)
 NeoBundle 'thinca/vim-ref'
 
+" 検索置換のサポートツール http://qiita.com/yuku_t/items/77a3361ff4d27bda641e
+NeoBundle 'tpope/vim-abolish'
+
 " SQLUtilities : SQL整形、生成ユーティリティ
 NeoBundle 'SQLUtilities'
 
@@ -153,6 +156,12 @@ NeoBundle 'othree/html5.vim'
 "" yaml関連
 " syntax がシンプルで速くなる
 NeoBundle 'stephpy/vim-yaml'
+NeoBundle 'chase/vim-ansible-yaml'
+
+"" ascii-doc関連
+" https://github.com/dahu/vim-asciidoc
+" NeoBundle 'dahu/vim-asciidoc'
+" NeoBundle 'dagwieers/asciidoc-vim'
 
 
 call neobundle#end()
