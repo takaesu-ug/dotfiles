@@ -9,7 +9,7 @@ files=(
   .vimrc
   .zlogin
   .zshenv
-  .zshrc
+#  .zshrc
 )
 
 now=`date '+%Y%m%d'`
@@ -40,11 +40,11 @@ for file in "${files[@]}"; do
 done
 
 
-# reattach-to-user-namespaceのシンボリックリンク作成 <-ここは環境に合わせてをENVを書き換える
-if [ -f $HOME/dotfiles/my-bin/reattach-to-user-namespace ]; then
-  echo "ファイルあり"
-else
-  ln -s $HOME/dotfiles/tmuxdir/reattach-to-user-namespace_[ENV] $HOME/dotfiles/my-bin/reattach-to-user-namespace
-  echo "ファイルなし"
-fi
+## reattach-to-user-namespaceのシンボリックリンク作成 <-ここは環境に合わせてをENVを書き換える
+#if [ -f $HOME/dotfiles/my-bin/reattach-to-user-namespace ]; then
+#  echo "ファイルあり"
+#else
+#  ln -s $HOME/dotfiles/tmuxdir/reattach-to-user-namespace_[ENV] $HOME/dotfiles/my-bin/reattach-to-user-namespace
+#  echo "ファイルなし"
+#fi
 

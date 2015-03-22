@@ -24,6 +24,7 @@
       - peco/peco
       - homebrew/dupes
       - homebrew/versions
+      - homebrew/boneyard
       - homebrew/apache
       - homebrew/php
     homebrew_packages:
@@ -37,6 +38,8 @@
       - { name: git }
       - { name: go }
       - { name: hub }
+      - { name: httpd22 }
+      # - { name: httpd24 } #httpd22と共存できない
       - { name: imagemagick }
       - { name: icu4c, state: linked }   # 明示的にリンクを貼る brew link --force icu4c
       - { name: jq }
@@ -51,12 +54,14 @@
       - { name: openssl }
       - { name: peco }
       - { name: phantomjs }
-      - { name: php55 }
-      - { name: php55-mcrypt }           #laravelに必要
+#      - { name: php55 }
+#      - { name: php55-mcrypt }           #laravelに必要
       - { name: plantuml }
       - { name: postgresql }
       - { name: pkg-config }
       - { name: python }
+      - { name: re2c }  # php-build に必要
+      - { name: reattach-to-user-namespace }
       - { name: readline }
       - { name: redis }
 # なぜかインストールできない      - { name: ricty }
@@ -74,7 +79,7 @@
       - { name: z }
       - { name: zsh }
     homebrew_cask_packages:
-      - { name: alfred }
+#      - { name: alfred }
       - { name: atom }
       - { name: android-file-transfer }
       - { name: bartender }
@@ -84,8 +89,9 @@
       - { name: cyberduck }
       - { name: evernote }
       - { name: dropbox }
-      - { name: firefox-ja }
+      - { name: flashlight }
       - { name: flux }
+      - { name: firefox-ja }
       - { name: gyazo }
       - { name: google-japanese-ime }
       - { name: google-chrome }
@@ -105,6 +111,7 @@
       - { name: skitch }
       - { name: skype }
       - { name: slack }
+      - { name: spark }
       - { name: virtualbox }
       - { name: vagrant }
       - { name: xtrafinder }
