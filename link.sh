@@ -10,9 +10,14 @@ files=(
   .zlogin
   .zshenv
 #  .zshrc
+  .bundle/config
 )
 
 now=`date '+%Y%m%d'`
+
+# Rubyのbundler のデフォルトディレクトリを事前に作成
+mkdir -p $HOME/.bundle
+
 
 for file in "${files[@]}"; do
   absolute_file=$HOME/$file
