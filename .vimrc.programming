@@ -13,3 +13,6 @@ nmap <silent> <C-r><C-u> :call append(0, "# -*- coding: utf-8 -*-")<CR>
 "if filereadable(expand('~/.vim/my-tags/rtags'))
 "  au FileType ruby,eruby setl tags+=~/.vim/my-tags/rtags
 "endif
+
+" tagsジャンプの時に複数ある時は一覧表示
+nnoremap <C-]> g<C-]>
