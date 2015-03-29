@@ -27,6 +27,7 @@
       - homebrew/boneyard
       - homebrew/apache
       - homebrew/php
+      - homebrew/binary
     homebrew_packages:
       - { name: brew-cask }
       - { name: ansible }
@@ -52,6 +53,7 @@
       - { name: nginx }
       - { name: nkf }
       - { name: openssl }
+      - { name: packer }
       - { name: peco }
       - { name: phantomjs }
 #      - { name: php55 }
@@ -79,7 +81,7 @@
       - { name: z }
       - { name: zsh }
     homebrew_cask_packages:
-#      - { name: alfred }
+      - { name: alfred }
       - { name: atom }
       - { name: android-file-transfer }
       - { name: bartender }
@@ -89,7 +91,7 @@
       - { name: cyberduck }
       - { name: evernote }
       - { name: dropbox }
-      - { name: flashlight }
+      # - { name: flashlight } #spotlightを便利にするツール alfredを使うため一旦除外
       - { name: flux }
       - { name: firefox-ja }
       - { name: gyazo }
@@ -102,6 +104,7 @@
       - { name: keepassx }
       - { name: karabiner }
       - { name: kobito }
+      - { name: macdown }
       - { name: macvim-kaoriya }
       - { name: magican }
       - { name: mysqlworkbench }

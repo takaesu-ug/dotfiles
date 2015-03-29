@@ -15,8 +15,15 @@ if [ -d ${HOME}/.anyenv ] ; then
   done
 fi
 
-# (コマンドが存在する場合のみ http://qiita.com/skkzsh/items/d63861293fd6bde1b0d8)
+## env 系の設定 PATHをrbenvのほうがさきにくるようにする
+# phpenv
+if [ -d ${HOME}/.phpenv ]; then
+  export PATH=$HOME/.phpenv/bin:$PATH
+  type phpenv > /dev/null 2>&1 && eval "$(phpenv init -)"
+fi
+
 # rbenv
+# (コマンドが存在する場合のみ http://qiita.com/skkzsh/items/d63861293fd6bde1b0d8)
 if [ -d ${HOME}/.rbenv ]; then
   export PATH=$HOME/.rbenv/bin:$PATH
   type rbenv > /dev/null 2>&1 && eval "$(rbenv init -)"
@@ -28,11 +35,6 @@ if [ -d ${HOME}/.ndenv ]; then
   type ndenv > /dev/null 2>&1 && eval "$(ndenv init -)"
 fi
 
-# phpenv
-if [ -d ${HOME}/.phpenv ]; then
-  export PATH=$HOME/.phpenv/bin:$PATH
-  type phpenv > /dev/null 2>&1 && eval "$(phpenv init -)"
-fi
 
 # # perlbrew
 # if [[ -f ~/perl5/perlbrew/etc/bashrc ]]; then
