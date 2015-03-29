@@ -85,3 +85,14 @@ autocmd InsertLeave * set nopaste
 " :gr(ep) コマンドでptを使って検索できるように -e オプションを使って正規表現も使えるように
 " 全角文字を指定する :gr '[^\x01-\x7E]' config/locales/'
 set grepprg=pt\ -e\ --nogroup
+
+" Macの場合で insertモードから <Esc> <C-c> <C-[> のキーでノーマルモードに移るときに英数に切り替える
+" http://qiita.com/creasty/items/30d1f0fc262f7c455d14
+if executable('osascript')
+  let s:keycode_jis_eisuu = 102
+  let g:force_alphanumeric_input_command = "osascript -e 'tell application \"System Events\" to key code " . s:keycode_jis_eisuu . "' &"
+
+  inoremap <silent> <Esc> <Esc>:call system(g:force_alphanumeric_input_command)<CR>
+  inoremap <silent> <C-c> <C-c>:call system(g:force_alphanumeric_input_command)<CR>
+  inoremap <silent> <C-[> <C-[>:call system(g:force_alphanumeric_input_command)<CR>
+endif
