@@ -13,3 +13,8 @@ my-bin/reattach-to-user-namespace
 vimdir/bundle
 
 .DS_Store
+
+# git管理下にしたくないが.keepは反映させて空のディレクトリを置いておきたい
+# http://quartet-communications.com/info/topics/13642
+secret/*
+!secret/.keep
