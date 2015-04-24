@@ -188,4 +188,9 @@ if [[ -f `brew --prefix`/bin/peco ]]; then
   # git add GH
   # git co GH
 
+
+  # git ls-tree - Qiita http://qiita.com/sasaplus1/items/cff8d5674e0ad6c26aa9
+  function peco-git-cd() {
+    cd $(git ls-tree -dr --name-only HEAD | peco)
+  }
 fi

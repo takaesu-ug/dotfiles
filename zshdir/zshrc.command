@@ -10,7 +10,9 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias x="exit"
 alias relogin='exec $SHELL -l'
-alias less='less -qR' # ビープ音を消す
+
+# http://qiita.com/yusabana/items/b5cc2a706be8c031043e
+LESS=-qR # ビープ音を消して、ANSIカラーシーケンス
 
 # MacVim
 if [[ -f /Applications/MacVim.app/Contents/MacOS/Vim ]]; then
