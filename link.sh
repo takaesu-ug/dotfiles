@@ -10,6 +10,7 @@ files=(
   .zlogin
   .zshenv
 #  .zshrc
+  .inputrc
   .bundle/config
 )
 
