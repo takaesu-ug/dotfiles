@@ -115,6 +115,7 @@
       - { name: skype }
       - { name: slack }
       - { name: spark }
+      - { name: visual-studio-code }
       - { name: virtualbox }
       - { name: vagrant }
       - { name: xtrafinder }
