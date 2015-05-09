@@ -1,18 +1,16 @@
 .gitconfig.local
-dotfiles.git/
 
 # tmux reattach-to-user-namespaceの設定
 tmux-MacOSX-pasteboard/
 tmuxdir/reattach-to-user-namespace
 
+.DS_Store
 
 # 個別設定
 my-bin/1pac
 my-bin/reattach-to-user-namespace
 
 vimdir/bundle
-
-.DS_Store
 
 # git管理下にしたくないが.keepは反映させて空のディレクトリを置いておきたい
 # http://quartet-communications.com/info/topics/13642
