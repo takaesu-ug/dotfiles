@@ -42,7 +42,7 @@
       - { name: httpd22 }
       # - { name: httpd24 } #httpd22と共存できない
       - { name: imagemagick }
-      - { name: icu4c, state: linked }   # 明示的にリンクを貼る brew link --force icu4c
+#      - { name: icu4c, state: linked }   # 明示的にリンクを貼る brew link --force icu4c ## 一時的に何に使っているかわからないのでコメントアウトしておく
       - { name: jq }
       - { name: jmeter }
       - { name: lha }
