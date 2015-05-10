@@ -3,27 +3,67 @@ yusabana's dotfiles
 
 dot files(Setting files) Repository （設定ファイル関連のリポジトリ）
 
-
-ansibleでhomebrew関連を入れる
+MacOSXの場合、xcode, xcode-commandline-toolsをインストールする
 -------------------
 
-homebrewインストール
+### xcode
+AppStoreでインストールする
 
-`ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"`
-
-homebrew で python と ansible をインストール
-
-`ansible-host` というファイルを作成する
-
-```ansible-host
-localhost
-```
-
-ansibleを実行
+### xcode-commandline-tools
 
 ```
-ansible-playbook -i ansible-host -vv homebrew-packages.yml
+% xcode-select --install
 ```
+
+dotfiles clone する
+------------------
+
+```
+% cd $HOME
+% git clone https://github.com/yusabana/dotfiles
+```
+
+homebrewとpython,ansibleをインストールする
+-------------------
+- [Mac の開発環境構築を自動化する (2015 年初旬編) - t-wadaのブログ](http://t-wada.hatenablog.jp/entry/mac-provisioning-by-ansible)
+- [AnsibleでHomebrew, Cask, Atomエディターのパッケージを管理する - Qiita](http://qiita.com/hnakamur/items/1c27cf0df19fe57ec624)
+
+```
+% cd $HOME/dotfiles/
+% ./setup1.sh
+```
+
+
+ansibleからhomebrew, homebrew-cask関連のパッケージをインストールする
+
+```
+% cd $HOME/dotfiles/
+$ ansible-playbook -i ansible_hosts -vv homebrew-packages.yml
+```
+
+git関連設定
+-------------------
+
+```
+% cd $HOME/dotfiles/
+% cp .gitconfig.local.
+```
+
+iterm関連の設定
+-------------------
+
+### iterm2 + macvim の環境で記号の表示が半角分しか確保されず表示がずれてしまう件の対応方法
+
+[もぷろぐ: Mac の iTerm2 と Vim の 全角記号の問題について](http://ac-mopp.blogspot.jp/2012/10/mac-iterm2-vim.html)
+
+.vimrcに以下の設定を入れるというのをよく見かけるが、
+`set ambiwidth=double`
+
+iterm2の場合はそれだけではダメなようです。
+`Preferences > Profile > Text > Double-Width Characters` の `Treat ambiguous-width characters as double width.` にチェックする
+とりあえずiterm2を使っているときはiterm2だけの設定でことは足りていた。
+
+
 
 vim設定
 --------------------
@@ -70,10 +110,3 @@ go get -u github.com/motemen/ghq
 go get -u github.com/typester/gh-open
 ```
 
-setup1.shを実行してから
-[Mac の開発環境構築を自動化する (2015 年初旬編) - t-wadaのブログ](http://t-wada.hatenablog.jp/entry/mac-provisioning-by-ansible)
-[AnsibleでHomebrew, Cask, Atomエディターのパッケージを管理する - Qiita](http://qiita.com/hnakamur/items/1c27cf0df19fe57ec624)
-
-```
-ansible-playbook -i ansible_hosts -vv homebrew-packages.yml
-```
