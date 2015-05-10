@@ -28,11 +28,12 @@ homebrewとpython,ansibleをインストールする
 - [Mac の開発環境構築を自動化する (2015 年初旬編) - t-wadaのブログ](http://t-wada.hatenablog.jp/entry/mac-provisioning-by-ansible)
 - [AnsibleでHomebrew, Cask, Atomエディターのパッケージを管理する - Qiita](http://qiita.com/hnakamur/items/1c27cf0df19fe57ec624)
 
+setup-homebrew-ansible.shを実行することでhomebrewとansibleをインストールする
+
 ```
 % cd $HOME/dotfiles/
-% ./setup1.sh
+% ./setup-hombrew-ansible.sh
 ```
-
 
 ansibleからhomebrew, homebrew-cask関連のパッケージをインストールする
 
@@ -46,8 +47,16 @@ git関連設定
 
 ```
 % cd $HOME/dotfiles/
-% cp .gitconfig.local.
+% cp .gitconfig.local_template .gitconfig.local
 ```
+
+peco関連設定
+-------------------
+
+```
+% ln -s $HOME/dotfiles/peco_config.json $HOME/.peco/config.json
+```
+
 
 iterm関連の設定
 -------------------
@@ -64,13 +73,53 @@ iterm2の場合はそれだけではダメなようです。
 とりあえずiterm2を使っているときはiterm2だけの設定でことは足りていた。
 
 
+zsh設定
+--------------------
+
+### oh-my-zsh
+
+[robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+#### インストール
+
+```
+% curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+```
+
+この時点でおそらくoh-my-zsh用の $HOME/.zshrc ができていると思うが以下のとおり別ファイル名で保管して、
+自分の設定ファイルを適用する
+
+```
+% mv $HOME/.zshrc $HOME/.zshrc_bk_oh-my-zsh
+% ln -s ~/dotfiles/zshdir/oh-my-zsh/zshrc $HOME/.zshrc
+```
+
+
+#### (別手順)手動インストール方法
+
+手動で入れたい場合のみ実行する
+https://github.com/robbyrussell/oh-my-zsh#manual-installation
+
+```
+% git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+```
+
+その他各種設定ファイルを配置
+--------------------
+
+```
+% cd $HOME/dotfiles/
+% ./link.sh
+```
+
 
 vim設定
 --------------------
 
-vimdir/README_LINK.txt
+dotfiles/vimdir ディレクトリを ~/.vim にリンクを貼る
 
-~/.vim ディレクトリを dotfiles/vimdir にリンクを貼る
+参考
+dotfiles/vimdir/README_LINK.txt
 
 ### NeoBundleの対応
 http://qiita.com/puriketu99/items/1c32d3f24cc2919203eb
@@ -94,12 +143,6 @@ let g:rsenseHome = "/usr/local/Cellar/rsense/0.3/libexec/"
 let g:rsenseUseOmniFunc = 1
 let g:neocomplcache#sources#rsense#home_directory = '/usr/local/Cellar/rsense/0.3/libexec/'
 ```
-
-zsh設定
---------------------
-
-以下を見る
-zshdir/oh-my-zsh/README.md
 
 
 Go関連設定

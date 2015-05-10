@@ -3,14 +3,14 @@
 files=(
   .gitconfig
   .gitconfig.local
-#  .hgrc
+  .hgrc
+  .inputrc
   .tigrc
   .tmux.conf
   .vimrc
   .zlogin
   .zshenv
 #  .zshrc
-  .inputrc
   .bundle/config
 )
 
