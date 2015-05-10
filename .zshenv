@@ -9,5 +9,9 @@ export PATH=$PATH:$HOME/workspace/android_apps/android-sdk/tools:$HOME/workspace
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # homebrew PATH
-export PATH=/usr/local/bin:$PATH
+# $HOME binを読み込む
+export PATH=/usr/local/bin:$HOME/bin:$PATH
 
+# ログインシェルやインタラクティブシェル以外でも実行させたい場合はここで以下を読み込む
+# # プログラミング言語関連の設定
+# source ~/dotfiles/zshdir/zshrc.programming
