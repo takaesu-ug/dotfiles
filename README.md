@@ -50,6 +50,18 @@ git関連設定
 % cp .gitconfig.local_template .gitconfig.local
 ```
 
+
+### github用の設定
+
+- [GitHubへのアクセスはSSHよりHTTPSがお勧めらしいので切り替えてみた - Qiita](http://qiita.com/hnakamur/items/cb04882cc69f2d1a7367)
+
+```
+git config --global credential.helper osxkeychain
+
+# パスワードを入れる
+# または２段階認証を使っている場合はアクセストークンを入れる
+```
+
 peco関連設定
 -------------------
 
@@ -57,8 +69,7 @@ peco関連設定
 % ln -s $HOME/dotfiles/peco_config.json $HOME/.peco/config.json
 ```
 
-
-iterm関連の設定
+iterm2関連の設定
 -------------------
 
 ### iterm2 + macvim の環境で記号の表示が半角分しか確保されず表示がずれてしまう件の対応方法
@@ -72,10 +83,8 @@ iterm2の場合はそれだけではダメなようです。
 `Preferences > Profile > Text > Double-Width Characters` の `Treat ambiguous-width characters as double width.` にチェックする
 とりあえずiterm2を使っているときはiterm2だけの設定でことは足りていた。
 
-
 zsh設定
 --------------------
-
 ### oh-my-zsh
 
 [robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
@@ -123,11 +132,14 @@ dotfiles/vimdir/README_LINK.txt
 
 ### NeoBundleの対応
 http://qiita.com/puriketu99/items/1c32d3f24cc2919203eb
-以下のようにNeoBundleだけ先に入れておいて `NeoBundleInstall` を実行する
+以下のようにNeoBundleだけ先に入れておく。
 
 ```
 git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ```
+
+その他はNeoBundle経由でプラグインをインストールするので vimを立ち上げてから `:NeoBundleInstall` を実行する
+
 
 ### Rsenseの設定について
 
@@ -144,7 +156,6 @@ let g:rsenseUseOmniFunc = 1
 let g:neocomplcache#sources#rsense#home_directory = '/usr/local/Cellar/rsense/0.3/libexec/'
 ```
 
-
 Go関連設定
 --------------------
 
@@ -152,4 +163,12 @@ Go関連設定
 go get -u github.com/motemen/ghq
 go get -u github.com/typester/gh-open
 ```
+
+
+○○env 関連のプログラミングビルドツール設定
+-------------------
+
+以下のファイルを参照
+
+dotfiles/my-docs/env.md
 
