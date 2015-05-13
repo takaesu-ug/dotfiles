@@ -63,7 +63,7 @@
       - { name: pkg-config }
       - { name: python }
       - { name: re2c }  # php-build に必要
-      - { name: reattach-to-user-namespace }
+      # - { name: reattach-to-user-namespace } 自分でビルドする .tmux.conf参照
       - { name: readline }
       - { name: redis }
 # なぜかインストールできない      - { name: ricty }
