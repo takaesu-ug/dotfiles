@@ -6,7 +6,8 @@ function beer() {
 # tmux init
 ## tmuxのカラー設定 itermでtmuxを使い、Vimのカラースキームを有効にする
 ## http://stackoverflow.com/questions/10158508/lose-vim-colorscheme-in-tmux-mode
-alias tmux="TERM=screen-256color-bce tmux"
+
+# alias tmux="TERM=screen-256color-bce tmux -2"
 function tmux_init() {
   SESS='takamax'
   if [ $# -eq 1 ]; then

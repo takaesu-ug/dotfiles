@@ -5,7 +5,10 @@ if has('gui_running')
   set background=dark
   " colorscheme molokai
 else
-  colorscheme jellybeans
+  let g:hybrid_use_Xresources = 1
+  colorscheme hybrid
+
+  " colorscheme jellybeans
   " colorscheme molokai
 endif
 
@@ -13,8 +16,3 @@ endif
 set t_Co=256
 set t_Sf=[3%dm
 set t_Sb=[4%dm
-
-" ハイライト on
-syntax enable
-" 補完候補の色づけ for vim7
-hi PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg=#f0e68c

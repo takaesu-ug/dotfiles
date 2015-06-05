@@ -6,11 +6,11 @@ source $HOME/dotfiles/vimdir/vimrc.bundle
 "Color関連
 source $HOME/dotfiles/vimdir/vimrc.colors
 
-"補完(completion)関連
-source $HOME/dotfiles/vimdir/vimrc.completion
-
 "表示関連
 source $HOME/dotfiles/vimdir/vimrc.apperance
+
+"補完(completion)関連
+source $HOME/dotfiles/vimdir/vimrc.completion
 
 "プラグインの設定
 source $HOME/dotfiles/vimdir/vimrc.plugins_setting

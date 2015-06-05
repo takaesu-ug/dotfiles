@@ -1,11 +1,15 @@
 "-------------------------------------------------------------------------------
 " 表示 Apperance
 "-------------------------------------------------------------------------------
+syntax enable         " ハイライトオン
 set showmatch         " 括弧の対応をハイライト
 set number            " 行番号表示
 set list              " 不可視文字表示
 set listchars=nbsp:¬,tab:>.,trail:_,extends:>,precedes:< " 不可視文字の表示形式
 set display=uhex      " 印字不可能文字を16進数で表示
+
+" 補完候補の色づけ for vim7
+highlight PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg=#f0e68c
 
 " StatusLine
 " http://www.ksknet.net/vi/statusline.html
@@ -25,8 +29,8 @@ augroup END
 
 " カーソル行をハイライト
 set cursorline
-hi clear CursorLine
-hi CursorLine gui=underline
+highlight clear CursorLine
+highlight CursorLine gui=underline
 highlight CursorLine ctermbg=black guibg=black
 
 " コマンド実行中は再描画しない

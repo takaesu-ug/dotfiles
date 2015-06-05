@@ -83,6 +83,30 @@ iterm2の場合はそれだけではダメなようです。
 `Preferences > Profile > Text > Double-Width Characters` の `Treat ambiguous-width characters as double width.` にチェックする
 とりあえずiterm2を使っているときはiterm2だけの設定でことは足りていた。
 
+↑のitermの設定にするとtmuxでpaneを分割すると枠線が消えてしまう問題が発生する
+[iTerm2 + tmux での pane の枠線の表示に関する問題を解決する - Qiita](http://qiita.com/snaka/items/0d26a73a5f0372ae95b9)
+
+
+
+## color テーマ
+vim のカラーテーマ `vim-hybrid` を利用してiterm2のカラーを変更できるのでお好みに
+[w0ng/vim-hybrid](https://github.com/w0ng/vim-hybrid)
+
+```
+curl -L -o hybrid.itermcolors https://github.com/w0ng/dotfiles/blob/master/iterm2/hybrid.itermcolors
+```
+
+hybrid.itermcolors というファイルが出来るのitermの preferences->Profile から読み込む
+
+
+# vim-hybridの設定は.vimrcに以下のような定義があること
+
+```
+let g:hybrid_use_Xresources = 1
+colorscheme hybrid
+```
+
+
 zsh設定
 --------------------
 ### oh-my-zsh
