@@ -5,8 +5,9 @@ Oh My Zsh Setup
 ```
 % git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 
-% ln -s ~/dotfiles/zshdir/oh-my-zsh/.zshrc ~/.zshrc
-
-customディレクトリへのリンクをはる
 ```
+
+
+TopのREADME.mdに記載するためこのファイルは必要ないかな
+
 

@@ -60,10 +60,11 @@
 #      - { name: php55-mcrypt }           #laravelに必要
       - { name: plantuml }
       - { name: postgresql }
+      - { name: pow }
       - { name: pkg-config }
       - { name: python }
       - { name: re2c }  # php-build に必要
-      # - { name: reattach-to-user-namespace } 自分でビルドする .tmux.conf参照
+      - { name: reattach-to-user-namespace } # 自分でビルドする方法もあり .tmux.conf参照
       - { name: readline }
       - { name: redis }
 # なぜかインストールできない      - { name: ricty }
@@ -92,7 +93,7 @@
       - { name: evernote }
       - { name: dropbox }
       # - { name: flashlight } #spotlightを便利にするツール alfredを使うため一旦除外
-      - { name: flux }
+      # - { name: flux }
       - { name: firefox-ja }
       - { name: gyazo }
       - { name: google-japanese-ime }
