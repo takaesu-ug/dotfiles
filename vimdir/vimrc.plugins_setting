@@ -263,4 +263,3 @@ nmap <silent><Leader>ig <Plug>IndentGuidesToggle"
 " https://github.com/kien/ctrlp.vim
 " バージョン管理関連は除外する
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-

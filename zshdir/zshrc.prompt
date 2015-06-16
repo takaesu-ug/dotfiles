@@ -41,7 +41,7 @@ SUSHI=$'\U1F363 '
 DEFAULT=$'\U1F37A ' # ビール
 ERROR=$'\U1F479 '   # なまはげ
 
-DATE_TIME=$(str_with_color white '%D{%Y-%m-%d %H:%M:%S}')
+DATE_TIME=$(str_with_color white '[%D{%Y-%m-%d %H:%M:%S}]')
 STATUS_CODE="(%(?.%F{green}.%F{red})%}%?%{%f%})"
 STATUS_EMOJI="%(?.${DEFAULT}.${ERROR})"
 PROMPT_PREFIX=$(str_with_color white '#')
@@ -57,7 +57,7 @@ SEPARATOR3=$(str_with_color white ':')
 MY_PROMPT='default' # prompt切り替え(toggle)するためのフラグ変数
 
 PROMPT='${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${STATUS_EMOJI} ${CURRENT_DIRECTORY}
-[${DATE_TIME}] $PROMPT_CHAR'
+${DATE_TIME} $PROMPT_CHAR'
 
 
 function toggle_prompt() {

@@ -20,4 +20,3 @@ source $HOME/dotfiles/vimdir/vimrc.basic
 
 "プログラミング関連設定
 source $HOME/dotfiles/vimdir/vimrc.programming
-
