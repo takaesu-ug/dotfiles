@@ -20,6 +20,7 @@
       - caskroom/cask
       - caskroom/versions
 
+      - yusabana/custom
       - sanemat/font                    # Font Ricty http://morizyun.github.io/blog/ricty-font-homebrew-mac/
       - peco/peco
       - homebrew/dupes
@@ -73,7 +74,7 @@
       - { name: the_platinum_searcher }
       - { name: the_silver_searcher }
       - { name: tig }
-      - { name: tmux }
+      - { name: tmux-patched }
       - { name: tree }
       - { name: w3m }
       - { name: watch }
@@ -112,6 +113,7 @@
       - { name: opera }
       - { name: processing }
       - { name: prott }
+      - { name: rubymine }
       - { name: skitch }
       - { name: skype }
       - { name: slack }
