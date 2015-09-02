@@ -26,6 +26,9 @@ NeoBundle 'nanotech/jellybeans.vim'
 " surround.vim : テキストをかっこで囲む/削除する
 NeoBundle 'surround.vim'
 
+" Alignで行頭や行末などで揃える(選択してから  Align \w\+,)
+NeoBundle 'h1mesuke/vim-alignta'
+
 " jkでの上下移動を激速にする
 NeoBundle 'rhysd/accelerated-jk'
 
