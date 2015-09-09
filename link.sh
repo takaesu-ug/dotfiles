@@ -2,6 +2,7 @@
 
 files=(
   .gitconfig
+  .gitattributes
   .gitconfig.local
   .hgrc
   .inputrc

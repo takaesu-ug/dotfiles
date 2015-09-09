@@ -74,6 +74,7 @@
       - { name: the_platinum_searcher }
       - { name: the_silver_searcher }
       - { name: tig }
+      - { name: tika }
       - { name: tmux-patched }
       - { name: tree }
       - { name: w3m }
