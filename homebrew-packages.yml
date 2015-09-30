@@ -33,6 +33,7 @@
       - { name: brew-cask }
       - { name: ansible }
       - { name: automake }
+      - { name: ccat }
       - { name: cmake }
       - { name: colordiff }
       - { name: ctags }
