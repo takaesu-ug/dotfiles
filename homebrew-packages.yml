@@ -63,6 +63,7 @@
       - { name: plantuml }
       - { name: postgresql }
       - { name: pow }
+      - { name: pstree }
       - { name: pkg-config }
       - { name: python }
       - { name: re2c }  # php-build に必要
