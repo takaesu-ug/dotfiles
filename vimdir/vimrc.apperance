@@ -8,6 +8,9 @@ set list              " 不可視文字表示
 set listchars=nbsp:¬,tab:>.,trail:_,extends:>,precedes:< " 不可視文字の表示形式
 set display=uhex      " 印字不可能文字を16進数で表示
 
+" 行番号のカラー
+highlight LineNr ctermfg=238
+
 " 補完候補の色づけ for vim7
 highlight PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg=#f0e68c
 
@@ -19,7 +22,6 @@ set statusline=%F%r%h%m%=%l/%L:%c%V
 " 全角スペースの表示
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
 match ZenkakuSpace /　/
-
 
 "" カーソル行をハイライト
 " カレントウィンドウにのみ罫線を引く
