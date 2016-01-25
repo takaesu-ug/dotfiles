@@ -1,0 +1,10 @@
+#!/bin/sh
+
+if [[ $# -ne 1 ]]; then
+  echo 'please input ruby version at argument'
+  exit
+fi
+
+version=$1
+
+RUBY_CONFIGURE_OPTS="--with-readline-dir=`brew --prefix readline` --with-openssl-dir=`brew --prefix openssl`" rbenv install -k $version
