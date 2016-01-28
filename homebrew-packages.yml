@@ -30,6 +30,7 @@
       - homebrew/php
       - homebrew/binary
     homebrew_packages:
+      - { name: awscli }        # http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
       - { name: brew-cask }
       - { name: ansible }
       - { name: automake }
