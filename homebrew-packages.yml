@@ -30,6 +30,7 @@
       - homebrew/php
       - homebrew/binary
     homebrew_packages:
+      - { name: awscli }
       - { name: brew-cask }
       - { name: ansible }
       - { name: automake }
