@@ -4,6 +4,7 @@
 
 [core]
     attributesFile = ~/.gitattributes
+    excludesfile = /Users/takaesu/.gitignore_global
 [color]
     ui = auto
 [pager]
@@ -61,3 +62,9 @@
 
 [diff "officexml"]
     textconv = /usr/local/bin/tika -t
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
+[mergetool "sourcetree"]
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
