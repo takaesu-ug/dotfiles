@@ -1,0 +1,36 @@
+#!/bin/sh
+
+## Refs.
+# bash によるオプション解析 - Qiita http://qiita.com/b4b4r07/items/dcd6be0bb9c9185475bb
+# シェルスクリプトでコマンドを作るまで - ザリガニが見ていた...。http://d.hatena.ne.jp/zariganitosh/20100206/1265436726
+# コマンドラインオプションのusageの書式 – fujlog http://www.fujlog.net/2014/04/command-line-getopt-usage-format.html
+
+usage_exit() {
+  echo "Usage $0 [-h] [-t target-dir=.] [-p port=8080]"
+  exit 1
+}
+
+# デフォルト値
+target="."
+port=8080
+
+while getopts ht:p: option; do
+  case $option in
+    h)  usage_exit
+        ;;
+    t)  target=$OPTARG
+        ;;
+    p)  port=$OPTARG
+        ;;
+    \?) usage_exit
+        ;;
+  esac
+done
+
+shift $((OPTIND - 1)) # getopts以外の引数を処理するために "$@" 変数の位置をずらす
+
+### exec
+## php5.3+
+php -S localhost:$port -t $target
+## ruby webrick
+# ruby -run -e httpd $target -p $port
