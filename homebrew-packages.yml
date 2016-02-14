@@ -124,7 +124,6 @@
       - { name: visual-studio-code }
       - { name: virtualbox }
       - { name: vagrant }
-      - { name: xtrafinder }
       - { name: xquartz }
 
   tasks:
