@@ -5,14 +5,16 @@ env関連の設定
 rbenv
 ----------
 
-git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+* `git clone https://github.com/sstephenson/rbenv.git ~/.rbenv`
+* `git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build`
 
+```
 RUBY_CONFIGURE_OPTS="--with-readline-dir=`brew --prefix readline` --with-openssl-dir=`brew --prefix openssl`" rbenv install -k 2.1.2
 
 rbenv rehash
 rbenv versions
 rbenv global 2.1.2
+```
 
 設定ファイルに以下の読み込みを追加
 
@@ -26,14 +28,17 @@ fi
 nbenv
 ----------
 
-git clone https://github.com/riywo/ndenv ~/.ndenv
-git clone https://github.com/riywo/node-build.git ~/.ndenv/plugins/node-build
+* `git clone https://github.com/riywo/ndenv ~/.ndenv`
+* `git clone https://github.com/riywo/node-build.git ~/.ndenv/plugins/node-build`
 
+```
 ndenv install v0.12.2
 ndenv rehash
 ndenv global v0.12.2
+```
 
 設定ファイルに以下の読み込みを追加
+
 ```
 if [ -d ${HOME}/.ndenv ]; then
   export PATH=$HOME/.ndenv/bin:$PATH
@@ -43,7 +48,6 @@ fi
 
 phpenv
 ----------
-
 
 - [phpenvの導入して複数バージョンのPHPを管理する - Qiita](http://qiita.com/uchiko/items/5f1843d3d848de619fdf) <=これがだいぶ参考になる
 - [CHH/phpenv](https://github.com/CHH/phpenv)
