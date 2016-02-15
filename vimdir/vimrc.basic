@@ -96,4 +96,3 @@ if executable('osascript')
   inoremap <silent> <C-c> <C-c>:call system(g:force_alphanumeric_input_command)<CR>
   inoremap <silent> <C-[> <C-[>:call system(g:force_alphanumeric_input_command)<CR>
 endif
-

@@ -51,7 +51,7 @@ git関連設定
 ```
 
 
-### github用の設定
+### github用の設定(これは既に.gitconfigに設定が入っているのでやる必要はない)
 
 - [GitHubへのアクセスはSSHよりHTTPSがお勧めらしいので切り替えてみた - Qiita](http://qiita.com/hnakamur/items/cb04882cc69f2d1a7367)
 
@@ -62,49 +62,14 @@ git config --global credential.helper osxkeychain
 # または２段階認証を使っている場合はアクセストークンを入れる
 ```
 
-peco関連設定
+peco関連設定(homebrewでインストール済み)
+
 -------------------
 
 ```
+% mkdir $HOME/.peco
 % ln -s $HOME/dotfiles/peco_config.json $HOME/.peco/config.json
 ```
-
-iterm2関連の設定
--------------------
-
-### iterm2 + macvim の環境で記号の表示が半角分しか確保されず表示がずれてしまう件の対応方法
-
-[もぷろぐ: Mac の iTerm2 と Vim の 全角記号の問題について](http://ac-mopp.blogspot.jp/2012/10/mac-iterm2-vim.html)
-
-.vimrcに以下の設定を入れるというのをよく見かけるが、
-`set ambiwidth=double`
-
-iterm2の場合はダメなようです。
-`Preferences > Profile > Text > Double-Width Characters` の `Treat ambiguous-width characters as double width.` にチェックする
-
-だが、、↑のitermの設定にするとtmuxでpaneを分割すると枠線が消えてしまう問題が発生する
-[iTerm2 + tmux での pane の枠線の表示に関する問題を解決する - Qiita](http://qiita.com/snaka/items/0d26a73a5f0372ae95b9)
-
-
-
-## color テーマ
-vim のカラーテーマ `vim-hybrid` を利用してiterm2のカラーを変更できるのでお好みに
-[w0ng/vim-hybrid](https://github.com/w0ng/vim-hybrid)
-
-```
-curl -L -o hybrid.itermcolors https://github.com/w0ng/dotfiles/blob/master/iterm2/hybrid.itermcolors
-```
-
-hybrid.itermcolors というファイルが出来るのitermの preferences->Profile から読み込む
-
-
-# vim-hybridの設定は.vimrcに以下のような定義があること
-
-```
-let g:hybrid_use_Xresources = 1
-colorscheme hybrid
-```
-
 
 zsh設定
 --------------------
@@ -126,7 +91,6 @@ zsh設定
 % ln -s ~/dotfiles/zshdir/oh-my-zsh/zshrc $HOME/.zshrc
 ```
 
-
 #### (別手順)手動インストール方法
 
 手動で入れたい場合のみ実行する
@@ -134,6 +98,42 @@ https://github.com/robbyrussell/oh-my-zsh#manual-installation
 
 ```
 % git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+```
+
+iterm2関連の設定
+-------------------
+
+### iterm2 + macvim の環境で記号の表示が半角分しか確保されず表示がずれてしまう件の対応方法
+
+[もぷろぐ: Mac の iTerm2 と Vim の 全角記号の問題について](http://ac-mopp.blogspot.jp/2012/10/mac-iterm2-vim.html)
+
+.vimrcに以下の設定を入れるというのをよく見かけるが、
+`set ambiwidth=double`
+
+iterm2の場合はダメなようです。
+`Preferences > Profile > Text > Double-Width Characters` の `Treat ambiguous-width characters as double width.` にチェックする
+
+だが、、↑のitermの設定にするとtmuxでpaneを分割すると枠線が消えてしまう問題が発生する
+[iTerm2 + tmux での pane の枠線の表示に関する問題を解決する - Qiita](http://qiita.com/snaka/items/0d26a73a5f0372ae95b9)
+
+
+### color テーマ
+vim のカラーテーマ `vim-hybrid` を利用してiterm2のカラーを変更できるのでお好みに
+[w0ng/vim-hybrid](https://github.com/w0ng/vim-hybrid)
+
+```
+curl -O https://raw.githubusercontent.com/w0ng/dotfiles/master/iterm2/hybrid.itermcolors
+```
+
+hybrid.itermcolors というファイルが出来るのitermの preferences->Profile から読み込む
+
+## vim-hybridの設定は.vimrcに以下のような定義があること
+
+```
+  set background=dark
+  let g:hybrid_custom_term_colors = 1
+  let g:hybrid_reduced_contrast = 1
+  colorscheme hybrid
 ```
 
 その他各種設定ファイルを配置
