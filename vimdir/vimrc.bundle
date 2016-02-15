@@ -19,6 +19,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 "" ColorSchema
 NeoBundle 'w0ng/vim-hybrid'
+NeoBundle 'chriskempson/vim-tomorrow-theme'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'nanotech/jellybeans.vim'
 

@@ -6,12 +6,15 @@ if has('gui_running')
   " colorscheme molokai
 else
   set background=dark
+
+  " colorscheme Tomorrow-Night
+  " colorscheme jellybeans
+  " colorscheme molokai
+
+  "hybridについては以下の設定も込み
   let g:hybrid_custom_term_colors = 1
   let g:hybrid_reduced_contrast = 1
   colorscheme hybrid
-
-  " colorscheme jellybeans
-  " colorscheme molokai
 endif
 
 " 256色

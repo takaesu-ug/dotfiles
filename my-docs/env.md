@@ -138,4 +138,3 @@ $ brew reinstall libpng --universal
 ```
 $ phpenv install 5.3.29
 ```
-

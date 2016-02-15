@@ -51,9 +51,11 @@ git関連設定
 ```
 
 
-### github用の設定(これは既に.gitconfigに設定が入っているのでやる必要はない)
+### github用の設定
+**(これは既に.gitconfigに設定が入っているのでやる必要はない)**
 
 - [GitHubへのアクセスはSSHよりHTTPSがお勧めらしいので切り替えてみた - Qiita](http://qiita.com/hnakamur/items/cb04882cc69f2d1a7367)
+- https://help.github.com/articles/which-remote-url-should-i-use/#cloning-with-https-urls-recommended
 
 ```
 git config --global credential.helper osxkeychain
@@ -63,7 +65,6 @@ git config --global credential.helper osxkeychain
 ```
 
 peco関連設定(homebrewでインストール済み)
-
 -------------------
 
 ```
@@ -188,10 +189,9 @@ go get -u github.com/typester/gh-open
 ```
 
 
-○○env 関連のプログラミングビルドツール設定
+●●env 関連のプログラミングビルドツール設定
 -------------------
 
 以下のファイルを参照
 
 dotfiles/my-docs/env.md
-
