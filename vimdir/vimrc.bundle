@@ -170,7 +170,6 @@ NeoBundle 'mitsuhiko/vim-jinja.git'
 " NeoBundle 'dahu/vim-asciidoc'
 " NeoBundle 'dagwieers/asciidoc-vim'
 
-
 call neobundle#end()
 
 filetype plugin indent on

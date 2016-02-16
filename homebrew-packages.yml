@@ -79,6 +79,7 @@
       - { name: tika }
       - { name: tmux-patched }
       - { name: tree }
+      - { name: vim }
       - { name: w3m }
       - { name: watch }
       - { name: wget }
