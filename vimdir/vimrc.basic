@@ -93,6 +93,7 @@ if executable('osascript')
   let g:force_alphanumeric_input_command = "osascript -e 'tell application \"System Events\" to key code " . s:keycode_jis_eisuu . "' &"
 
   inoremap <silent> <Esc> <Esc>:call system(g:force_alphanumeric_input_command)<CR>
-  inoremap <silent> <C-c> <C-c>:call system(g:force_alphanumeric_input_command)<CR>
-  inoremap <silent> <C-[> <C-[>:call system(g:force_alphanumeric_input_command)<CR>
+  "" 以下の2つを追加するとなぜかCtrpが立ち上がってしまうので一旦無効にする
+  " inoremap <silent> <C-c> <C-c>:call system(g:force_alphanumeric_input_command)<CR>
+  " inoremap <silent> <C-[> <C-[>:call system(g:force_alphanumeric_input_command)<CR>
 endif
