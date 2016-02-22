@@ -20,15 +20,18 @@
       - caskroom/cask
       - caskroom/versions
 
-      - yusabana/custom
-      - sanemat/font                    # Font Ricty http://morizyun.github.io/blog/ricty-font-homebrew-mac/
-      - peco/peco
       - homebrew/dupes
       - homebrew/versions
       - homebrew/boneyard
       - homebrew/apache
       - homebrew/php
       - homebrew/binary
+
+      - yusabana/custom
+      - sanemat/font                    # Font Ricty http://morizyun.github.io/blog/ricty-font-homebrew-mac/
+      - peco/peco
+      - argon/mas
+
     homebrew_packages:
       - { name: awscli }        # http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
       - { name: ansible }
@@ -49,6 +52,7 @@
       - { name: jmeter }
       - { name: lha }
       - { name: libmcrypt }              # phpenv, php-build で必要
+      - { name: mas }
       - { name: mercurial }
       - { name: mpg123 }
       - { name: mysql }
