@@ -1,6 +1,6 @@
 "ビープ音を消す
 set t_vb=
-set visualbell
+set novisualbell
 set noerrorbells
 "swap なし
 set noswapfile
