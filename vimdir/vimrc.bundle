@@ -157,6 +157,8 @@ NeoBundle 'kchmck/vim-coffee-script'
 "" html5関連
 " NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'othree/html5.vim'
+" Zencoding https://github.com/mattn/emmet-vim
+NeoBundle 'mattn/emmet-vim'
 
 "" yaml関連
 " syntax がシンプルで速くなる

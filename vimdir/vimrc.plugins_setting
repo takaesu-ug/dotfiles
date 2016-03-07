@@ -228,6 +228,27 @@ let g:Perl_CreateMenusDelayed = 'no'
 "------------------------------------
 let g:node_usejscomplete = 1
 
+
+"------------------------------------
+" emmet-vim(zencoding)
+"------------------------------------
+" >は下の階層
+" +は同階層
+" *数値は個数
+" $は連番が入る $を並べた数の桁が使える
+" .はクラス名 #はID名
+" ()はブロックにできる 複雑な階層があるときなどに使用
+"example
+" div>(ul>li*5)+span
+" a[href=http// sytle=display:none;] → <a href="http//" sytle="display:none;"></a>
+let g:user_emmet_leader_key='<C-W>'
+
+let g:user_emmet_settings = {
+\ 'variables': {
+\ 'lang' : 'ja'
+\ }
+\}
+
 "----------------------------------------
 " open-browsere
 "----------------------------------------
