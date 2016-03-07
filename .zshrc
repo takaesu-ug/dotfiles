@@ -2,7 +2,7 @@
 # source ~/dotfiles/zsh.d/zshrc_yusabana
 
 # ルート証明を読み込む（brewでcurl-ca-bundleを入れている場合)
-if [ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]; then
+if [[ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]]; then
   export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 fi
 
@@ -20,6 +20,10 @@ source ~/dotfiles/zshdir/zshrc.programming
 source ~/dotfiles/zshdir/zshrc.command
 source ~/dotfiles/zshdir/zshrc.function
 
+# secret environments variables (ex. access_toke)
+if [[ -f ~/dotfiles/secret/set_environment.sh ]]; then
+  source ~/dotfiles/secret/set_environment.sh
+fi
 
 ### 最後に読み込ませたい
 # direnv用の設定
