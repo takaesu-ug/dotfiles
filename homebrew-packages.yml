@@ -56,6 +56,7 @@
       - { name: mercurial }
       - { name: mpg123 }
       - { name: mysql }
+      - { name: mycli }
       - { name: nginx }
       - { name: nkf }
       - { name: openssl }
@@ -66,6 +67,7 @@
 #      - { name: php55-mcrypt }           #laravelに必要
       - { name: plantuml }
       - { name: postgresql }
+      - { name: pgcli }
       - { name: pow }
       - { name: pstree }
       - { name: pkg-config }
