@@ -241,13 +241,17 @@ let g:node_usejscomplete = 1
 "example
 " div>(ul>li*5)+span
 " a[href=http// sytle=display:none;] → <a href="http//" sytle="display:none;"></a>
-let g:user_emmet_leader_key='<C-y>'
+let g:user_emmet_leader_key='<C-e>'
 
 let g:user_emmet_settings = {
-\ 'variables': {
-\ 'lang' : 'ja'
-\ }
+\  'variables': {
+\    'lang' : 'ja'
+\  },
+\  'custom_expands' : {
+\    '^\%(loremj\|lipsumj\)\(\d*\)$' : function('emmet#lorem#ja#expand')
+\  }
 \}
+
 
 "----------------------------------------
 " open-browsere
