@@ -75,11 +75,11 @@ autocmd FileType * set formatoptions-=ro
 source $VIMRUNTIME/macros/matchit.vim
 " let b:match_words = "{:}"   "この設定を入れていると動かない
 
-"ペーストするときにインデントさせない [C-e] に設定
-"[C-e]の設定を一旦クリアしてpastetoggleを[C-e]に割り当てる
+"ペーストするときにインデントさせない
+"[C-y]の設定を一旦クリアしてpastetoggleを[C-y]に割り当てる
 "ノーマルモードに移動する時に「set nopaste」を実行する
-inoremap <C-e> <nop>
-set pastetoggle=<C-e>
+inoremap <C-y> <nop>
+set pastetoggle=<C-y>
 autocmd InsertLeave * set nopaste
 
 " :gr(ep) コマンドでptを使って検索できるように -e オプションを使って正規表現も使えるように
