@@ -153,6 +153,9 @@ NeoBundle 'myhere/vim-nodejs-complete'
 " coffee syntax + autocompile
 " http://qiita.com/alpaca_taichou/items/fb442cfa78f91634cfaa
 NeoBundle 'kchmck/vim-coffee-script'
+" react
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 
 "" html5関連
 " NeoBundle 'hail2u/vim-css3-syntax'
