@@ -57,7 +57,7 @@
       - { name: mas }
       - { name: mercurial }
       - { name: mpg123 }
-      - { name: mysql }
+      - { name: mysql56 }
       - { name: mycli }
       - { name: nginx }
       - { name: nkf }
