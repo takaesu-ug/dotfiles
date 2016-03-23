@@ -41,6 +41,8 @@
       - { name: colordiff }
       - { name: ctags }
       - { name: direnv }
+      - { name: docker }
+      - { name: docker-machine }
       - { name: git }
       - { name: go }
       - { name: hub }
@@ -85,7 +87,6 @@
       - { name: tika }
       - { name: tmux-patched }
       - { name: tree }
-      - { name: vim }
       - { name: w3m }
       - { name: watch }
       - { name: wget }
