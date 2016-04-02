@@ -105,7 +105,7 @@
       - { name: cyberduck }
       - { name: evernote }
       - { name: dropbox }
-      # - { name: flashlight } #spotlightを便利にするツール alfredを使うため一旦除外
+      - { name: flux }
       - { name: firefox-ja }
       - { name: gyazo }
       - { name: google-japanese-ime }
