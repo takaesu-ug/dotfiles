@@ -19,7 +19,7 @@ highlight PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399f
 " StatusLine
 " http://www.ksknet.net/vi/statusline.html
 set laststatus=2
-set statusline=%F%r%h%m%=%l/%L:%c%V
+set statusline=%F%r%h%m%=%l/%L:%c%V%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}
 
 " 全角スペースの表示
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray

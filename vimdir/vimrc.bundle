@@ -170,10 +170,8 @@ NeoBundle 'chase/vim-ansible-yaml'
 
 NeoBundle 'mitsuhiko/vim-jinja.git'
 
-"" ascii-doc関連
-" https://github.com/dahu/vim-asciidoc
-" NeoBundle 'dahu/vim-asciidoc'
-" NeoBundle 'dagwieers/asciidoc-vim'
+" editconfig テキストエディタの共通フォーマッタ http://editorconfig.org/
+NeoBundle 'editorconfig/editorconfig-vim'
 
 call neobundle#end()
 
