@@ -5,6 +5,7 @@
 [core]
     attributesFile = ~/.gitattributes
     excludesfile = /Users/takaesu/.gitignore_global
+    editor = vim -U NONE -c \"set fenc=utf-8\"
 [color]
     ui = auto
 [pager]
