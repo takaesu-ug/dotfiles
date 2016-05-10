@@ -42,6 +42,15 @@ ansibleからhomebrew, homebrew-cask関連のパッケージをインストー�
 $ ansible-playbook -i ansible_hosts -vv homebrew-packages.yml
 ```
 
+### ※特記事項
+
+homebrew-caskで入れたアプリケーションは以下のように環境変数を設定してから再度インストールすることで上書きインストールしてアップデートができる。
+
+```
+HOMEBREW_CASK_OPTS="--appdir=/Applications" brew cask install macvim-kaoriya --force
+```
+
+
 git関連設定
 -------------------
 
