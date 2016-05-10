@@ -1,0 +1,179 @@
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+# 以下のhookスクリプトが実行されて mac であれば lib/vimproc_mac.so ができる
+hook_post_update = '''
+  if dein#util#_is_windows()
+    let cmd = 'tools\\update-dll-mingw'
+  elseif executable('gmake')
+    let cmd = 'gmake'
+  else
+    let cmd = 'make'
+  endif
+  let g:dein#plugin.build = cmd
+'''
+
+### カラー ###
+[[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+[[plugins]]
+repo = 'chriskempson/vim-tomorrow-theme'
+
+[[plugins]]
+repo = 'tomasr/molokai'
+
+[[plugins]]
+repo = 'nanotech/jellybeans.vim'
+
+
+### Basic ###
+[[plugins]]
+# テキストをかっこで囲む/削除する
+repo = 'surround.vim'
+
+[[plugins]]
+# Alignで行頭や行末などで揃える(選択してから  Align \w\+,)
+repo = 'h1mesuke/vim-alignta'
+
+[[plugins]]
+# jkでの上下移動を激速にする
+repo = 'rhysd/accelerated-jk'
+
+[[plugins]]
+# unite.vim http://blog.ruedap.com/entry/20110110/vim_unite_plugin
+repo = 'Shougo/unite.vim'
+
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/vimfiler.git'
+
+[[plugins]]
+# Uniteのようなバッファなどを扱う
+# ctrlp.vimの使い方まとめ
+# http://qiita.com/oahiroaki/items/d71337fb9d28303a54a8
+# Ctrl+p 起動  Ctrl+c 閉じる
+# Ctrl+d フルパス検索、ファイル名検索モード切り替え
+# Ctrl+r 正規表現モード、通常モード切り替え
+# Ctrl+f, Ctrl+b 検索対象切り替え
+repo = 'ctrlpvim/ctrlp.vim'
+
+[[plugins]]
+# neocomplcache.vim : 究極のVim的補完環境
+repo = 'Shougo/neocomplcache'
+
+[[plugins]]
+# neocomplcacheのsinpet補完
+repo = 'Shougo/neosnippet'
+
+[[plugins]]
+# neocomplcacheのデフォルトスニペット
+# refs. http://d.hatena.ne.jp/osyo-manga/20140112/1389525543
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+# 対応するカッコの補完 vim-smartinput
+repo = 'kana/vim-smartinput.git'
+
+[[plugins]]
+# 複数カーソルで一括編集などを行う
+# https://github.com/terryma/vim-multiple-cursors
+repo = 'terryma/vim-multiple-cursors'
+
+[[plugins]]
+# スニペット集
+repo = 'honza/vim-snippets.git'
+
+[[plugins]]
+# キャメル、スネークケース区切りで操作
+# http://nanasi.jp/articles/vim/camelcasemotion_vim.html
+repo = 'bkad/CamelCaseMotion'
+
+[[plugins]]
+# git連携プラグイン
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+# カーソルのあるURLをブラウザで開く
+repo = 'open-browser.vim'
+
+[[plugins]]
+# tcomment コメントプラグイン
+repo = 'tomtom/tcomment_vim'
+
+[[plugins]]
+# quickrun.vim : 編集中のファイルを簡単に実行できるプラグイン
+repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+# quickrunでrspecの色づけ https://github.com/glidenote/rspec-result-syntax
+repo = 'glidenote/rspec-result-syntax'
+
+[[plugins]]
+# perldocやphpmanual等のリファレンスをvim上で見る(K ラージKでドキュメントリファレンスを開く)
+repo = 'thinca/vim-ref'
+
+[[plugins]]
+# 検索置換のサポートツール http://qiita.com/yuku_t/items/77a3361ff4d27bda641e
+repo = 'tpope/vim-abolish'
+
+[[plugins]]
+# ソースコード上のメソッド宣言、変数宣言の一覧を表示
+repo = 'taglist.vim'
+
+[[plugins]]
+# シンタックスエラーを検出する
+repo = 'scrooloose/syntastic.git'
+
+[[plugins]]
+# VimでESLintをグローバルインストールせずに、Syntastic+ESLintでES2015の構文チェックをする
+#    http://dackdive.hateblo.jp/entry/2016/04/28/090000
+# npmでローカルに入れたeslintで動くようにする
+# (プロジェクト毎にローカルにpluginなどを使っているとグローバルに入れたeslintだとエラーとなるため)
+# シンタックスチェックがうざい時は、:SyntasticToggleMode でON／OFFを切り換えておくと良さそう
+repo = 'pmsorhaindo/syntastic-local-eslint.vim'
+
+[[plugins]]
+# indentの深さに色を付ける
+# http://qiita.com/alpaca_taichou/items/fb442cfa78f91634cfaa
+repo = 'nathanaelkane/vim-indent-guides'
+
+## javascript 関連 ##
+[[plugins]]
+# jscomplete-vim依存のnodejs用の補完
+repo = 'myhere/vim-nodejs-complete'
+
+[[plugins]]
+# coffee syntax + autocompile http://qiita.com/alpaca_taichou/items/fb442cfa78f91634cfaa
+repo = 'kchmck/vim-coffee-script'
+
+[[plugins]]
+# es6, react
+repo = 'pangloss/vim-javascript'
+repo = 'mxw/vim-jsx'
+## /javascript 関連 ##
+
+## html5 関連 ##
+[[plugins]]
+repo = 'othree/html5.vim'
+
+[[plugins]]
+# Zencoding https://github.com/mattn/emmet-vim
+repo = 'mattn/emmet-vim'
+## /html5 関連 ##
+
+## yaml,ansible 関連 ##
+[[plugins]]
+repo = 'stephpy/vim-yaml'
+
+[[plugins]]
+repo = 'chase/vim-ansible-yaml'
+
+[[plugins]]
+repo = 'mitsuhiko/vim-jinja.git'
+## /yaml,ansible 関連 ##
+
+[[plugins]]
+# editconfig テキストエディタの共通フォーマッタ http://editorconfig.org/
+repo = 'editorconfig/editorconfig-vim'

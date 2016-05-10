@@ -3,8 +3,8 @@ scriptencoding utf-8
 " filetypeの設定を記述
 source $HOME/dotfiles/vimdir/vimrc.filetype
 
-"neobunlde.vimで管理してるpluginを読み込む
-" source $HOME/dotfiles/vimdir/vimrc.bundle
+" bundleを更新する
+" source $HOME/dotfiles/vimdir/vimrc.bundle bundleは使わない
 source $HOME/dotfiles/vimdir/vimrc.dein
 
 "Color関連

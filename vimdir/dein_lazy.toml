@@ -1,0 +1,35 @@
+[[plugins]]
+# if...endやdef...endなどを書きだしてくれる
+repo = 'tpope/vim-endwise'
+on_i = 1
+
+[[plugins]]
+repo  = 'cespare/vim-toml'
+on_ft = 'toml'
+
+[[plugins]]
+repo = 'perl-support.vim'
+on_ft = ['perl']
+
+[[plugins]]
+repo = 'vim-ruby/vim-ruby'
+on_ft = ['ruby']
+
+[[plugins]]
+repo = 'tpope/vim-rails'
+on_ft = ['ruby']
+
+[[plugins]]
+repo = 'skwp/vim-rspec'
+on_ft = ['ruby']
+
+[[plugins]]
+# Rsenseを用いた補完 neocomplcache-rsense
+repo = 'Shougo/neocomplcache-rsense'
+depends = ['Shougo/neocomplcache']
+on_ft = ['ruby', 'eruby']
+
+[[plugins]]
+# slimテンプレートのシンタックス
+repo = 'slim-template/vim-slim'
+on_ft = ['slim']
