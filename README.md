@@ -163,7 +163,10 @@ dotfiles/vimdir ディレクトリを ~/.vim にリンクを貼る
 参考
 dotfiles/vimdir/README_LINK.txt
 
-### NeoBundleの対応
+### ~~NeoBundleの対応~~
+
+**NOTE:Neobundleを使うのやめてdein.vimにした**
+
 http://qiita.com/puriketu99/items/1c32d3f24cc2919203eb
 以下のようにNeoBundleだけ先に入れておく。
 
@@ -173,6 +176,22 @@ git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 その他はNeoBundle経由でプラグインをインストールするので vimを立ち上げてから `:NeoBundleInstall` を実行する
 
+
+### dein.vimを使ってプラグインはインストールする
+
+* 設定ファイルは以下
+  * vimdir/vimrc.dein
+
+* プラグインの読み込みはtomlファイルで定義
+  * vimdir/dein.toml
+  * vimdir/dein_lazy.toml
+
+vimrc.dein にて dein.vim は自動でインストールするように設定しているので特に個別に入れる必要はない
+また $HOME/.cache/dein/ 以下にプラグインのモジュールなどはインストールされる
+
+* [NeoVim、そしてdein.vimへ - Qiita](http://qiita.com/okamos/items/2259d5c770d51b88d75b)
+* [NeoBundle から dein.vim に乗り換えたら爆速だった話 - Qiita](http://qiita.com/delphinus35/items/00ff2c0ba972c6e41542)
+* [NeoVim と dein.vim を使ってみる! - Qiita](http://qiita.com/ress/items/7e71e007cf8d41a07a1a)
 
 ### Rsenseの設定について
 

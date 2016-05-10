@@ -81,14 +81,6 @@ set ttyfast
 "Escの２回押しで検索のハイライト消去
 nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
-"シンタックスハイライト 拡張子に応じてPerlやHtmlを識別する
-autocmd BufNewFile,BufRead *.psgi     set filetype=perl
-autocmd BufNewFile,BufRead *.t        set filetype=perl
-autocmd BufNewFile,BufRead *.mt       set filetype=html
-autocmd BufNewFile,BufRead *.tx       set filetype=html
-autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html
-autocmd BufNewFile,BufRead *.j2       set filetype=jinja
-
 "タブをスペースで挿入(4スペース)
 set expandtab
 set tabstop=4
