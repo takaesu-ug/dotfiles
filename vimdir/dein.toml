@@ -60,17 +60,10 @@ repo = 'Shougo/vimfiler.git'
 repo = 'ctrlpvim/ctrlp.vim'
 
 [[plugins]]
-# neocomplcache.vim : 究極のVim的補完環境
-repo = 'Shougo/neocomplcache'
-
-[[plugins]]
-# neocomplcacheのsinpet補完
-repo = 'Shougo/neosnippet'
-
-[[plugins]]
-# neocomplcacheのデフォルトスニペット
-# refs. http://d.hatena.ne.jp/osyo-manga/20140112/1389525543
-repo = 'Shougo/neosnippet-snippets'
+# https://github.com/Shougo/neocomplete.vim
+# https://github.com/Shougo/neocomplete.vim/wiki/neocomplete-migration-guide
+repo = 'Shougo/neocomplete.vim'
+# repo = 'Shougo/neocomplcache'  neocomplcacheは使わない
 
 [[plugins]]
 # 対応するカッコの補完 vim-smartinput
@@ -80,10 +73,6 @@ repo = 'kana/vim-smartinput.git'
 # 複数カーソルで一括編集などを行う
 # https://github.com/terryma/vim-multiple-cursors
 repo = 'terryma/vim-multiple-cursors'
-
-[[plugins]]
-# スニペット集
-repo = 'honza/vim-snippets.git'
 
 [[plugins]]
 # キャメル、スネークケース区切りで操作

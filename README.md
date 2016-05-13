@@ -179,6 +179,8 @@ git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 ### dein.vimを使ってプラグインはインストールする
 
+https://github.com/Shougo/dein.vim/blob/master/doc/dein.txt
+
 * 設定ファイルは以下
   * vimdir/vimrc.dein
 
@@ -188,6 +190,17 @@ git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 
 vimrc.dein にて dein.vim は自動でインストールするように設定しているので特に個別に入れる必要はない
 また $HOME/.cache/dein/ 以下にプラグインのモジュールなどはインストールされる
+
+```
+インストールする
+:call dein#install()
+
+アップデートする
+:call dein#update()
+
+deinで入れているプラグイン一覧
+:Unite dein
+```
 
 * [NeoVim、そしてdein.vimへ - Qiita](http://qiita.com/okamos/items/2259d5c770d51b88d75b)
 * [NeoBundle から dein.vim に乗り換えたら爆速だった話 - Qiita](http://qiita.com/delphinus35/items/00ff2c0ba972c6e41542)

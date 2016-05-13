@@ -1,4 +1,19 @@
 [[plugins]]
+# neocomplcacheのsinpet補完
+repo = 'Shougo/neosnippet'
+on_i = 1
+
+[[plugins]]
+# refs. http://d.hatena.ne.jp/osyo-manga/20140112/1389525543
+repo = 'Shougo/neosnippet-snippets'
+on_i = 1
+
+[[plugins]]
+# vimスニペット集 https://github.com/honza/vim-snippets/tree/master/snippets
+repo = 'honza/vim-snippets.git'
+on_i = 1
+
+[[plugins]]
 # if...endやdef...endなどを書きだしてくれる
 repo = 'tpope/vim-endwise'
 on_i = 1
@@ -22,12 +37,6 @@ on_ft = ['ruby']
 [[plugins]]
 repo = 'skwp/vim-rspec'
 on_ft = ['ruby']
-
-[[plugins]]
-# Rsenseを用いた補完 neocomplcache-rsense
-repo = 'Shougo/neocomplcache-rsense'
-depends = ['Shougo/neocomplcache']
-on_ft = ['ruby', 'eruby']
 
 [[plugins]]
 # slimテンプレートのシンタックス
