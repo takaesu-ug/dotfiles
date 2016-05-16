@@ -233,6 +233,10 @@ let g:syntastic_auto_loc_list = 1
 ""     - always
 let g:syntastic_javascript_checkers = ['eslint']
 
+" http://stackoverflow.com/questions/29635150/how-do-i-fix-this-annoying-syntastic-rails-error
+let g:syntastic_eruby_ruby_quiet_messages =
+    \ {'regex': 'possibly useless use of a variable in void context'}
+
 "------------------------------------
 " vim-jsx
 "------------------------------------
