@@ -150,6 +150,14 @@ repo = 'othree/html5.vim'
 [[plugins]]
 # Zencoding https://github.com/mattn/emmet-vim
 repo = 'mattn/emmet-vim'
+
+[[plugins]]
+# vimでCSSを編集するときに色をプレヴュー〜colorizer&unite-webcolorname | Scimpr Blog
+# http://blog.scimpr.com/2013/02/24/vimでcssを編集するときに色をプレヴュー〜colorizer/
+# :ColorHighlight - start/update highlighting
+# :ColorClear      - clear all highlights
+# :ColorToggle     - toggle highlights
+repo = 'lilydjwg/colorizer'
 ## /html5 関連 ##
 
 ## yaml,ansible 関連 ##
