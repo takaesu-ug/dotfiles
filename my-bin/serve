@@ -31,6 +31,7 @@ shift $((OPTIND - 1)) # getopts以外の引数を処理するために "$@" 変�
 
 ### exec
 ## php5.3+
-php -S localhost:$port -t $target
+# php -S localhost:$port -t $target
+php -S 0.0.0.0:$port -t $target
 ## ruby webrick
 # ruby -run -e httpd $target -p $port
