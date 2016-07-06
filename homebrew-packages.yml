@@ -129,6 +129,7 @@
       - { name: slack }
       - { name: sourcetree }
       - { name: spark }
+      - { name: sshfs }
       - { name: visual-studio-code }
       - { name: virtualbox }
       - { name: vagrant }
