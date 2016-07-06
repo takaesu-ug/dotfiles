@@ -140,6 +140,8 @@ repo = 'kchmck/vim-coffee-script'
 [[plugins]]
 # es6, react
 repo = 'pangloss/vim-javascript'
+
+[[plugins]]
 repo = 'mxw/vim-jsx'
 ## /javascript 関連 ##
 
