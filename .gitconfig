@@ -21,6 +21,7 @@
 
     lga = log --graph --all --abbrev-commit --pretty=format:'%x09 %Cred%h%Creset %Cgreen%ai %C(bold blue)(%an) -%C(yellow)%d%Creset %s%Creset'
     lg  = log --graph       --abbrev-commit --pretty=format:'%x09 %Cred%h%Creset %Cgreen%ai %C(bold blue)(%an) -%C(yellow)%d%Creset %s%Creset'
+    lgd = log --oneline --graph --decorate=full
     lgstat =  log --oneline --decorate --stat
     log-all = log --graph --all --color --pretty='%x09%h %cn%x09%s %Cred%d%Creset'
     log-one = log --all --oneline --decorate --graph
@@ -41,6 +42,7 @@
     diffr = diff --word-diff-regex='\\w+|[^[:space:]]'
     diffrr = diff --color-words --word-diff-regex='\\w+|[^[:space:]]'
     diffw = diff --word-diff
+    diffstat = diff --stat
 
     #git-cherry関連(コミット間のdiff)
     # colorized cheery -v
