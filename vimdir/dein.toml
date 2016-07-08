@@ -116,14 +116,6 @@ repo = 'taglist.vim'
 repo = 'scrooloose/syntastic.git'
 
 [[plugins]]
-# VimでESLintをグローバルインストールせずに、Syntastic+ESLintでES2015の構文チェックをする
-#    http://dackdive.hateblo.jp/entry/2016/04/28/090000
-# npmでローカルに入れたeslintで動くようにする
-# (プロジェクト毎にローカルにpluginなどを使っているとグローバルに入れたeslintだとエラーとなるため)
-# シンタックスチェックがうざい時は、:SyntasticToggleMode でON／OFFを切り換えておくと良さそう
-repo = 'pmsorhaindo/syntastic-local-eslint.vim'
-
-[[plugins]]
 # indentの深さに色を付ける
 # http://qiita.com/alpaca_taichou/items/fb442cfa78f91634cfaa
 repo = 'nathanaelkane/vim-indent-guides'
