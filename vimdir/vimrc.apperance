@@ -87,7 +87,11 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=0
 
+" vimに自作コマンドを実装する - Qiita http://qiita.com/shimbaroid/items/f2ad60c203ccdff7da16
 " 保存時に行末の空白を除去する
 " autocmd BufWritePre * :%s/\s\+$//ge
-"" 保存時にtabをスペースに変換する(4スペース)
-" autocmd BufWritePre * :%s/\t/    /ge
+" :Tailw 行末のwhite space削除
+:command Tailw :%s/\s\+$//ge
+"" 保存時にtabをスペースに変換する(2スペース)
+" autocmd BufWritePre * :%s/\t/  /ge
+:command Tab2w :%s/\t/  /ge
