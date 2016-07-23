@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# (未)引数チェック
+
+
+tab_num=$1
+command=$2
+
+# for page in {$tab_num}; do tmux send-keys -t $page "$command" C-m; done;
+for page in 1 2 3; do tmux send-keys -t $page "$command" C-m; done;
