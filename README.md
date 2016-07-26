@@ -160,6 +160,10 @@ vim設定
 
 dotfiles/vimdir ディレクトリを ~/.vim にリンクを貼る
 
+```
+ln -s $HOME/dotfiles/vimdir $HOME/.vim
+```
+
 参考
 dotfiles/vimdir/README_LINK.txt
 

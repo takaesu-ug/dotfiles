@@ -47,7 +47,7 @@
       - { name: go }
       - { name: hub }
       - { name: httpd22 }
-      # - { name: httpd24 } #httpd22と共存できない
+#      - { name: httpd24 } #httpd22と共存できない
       - { name: imagemagick }
 #      - { name: icu4c, state: linked }   # 明示的にリンクを貼る brew link --force icu4c ## 一時的に何に使っているかわからないのでコメントアウトしておく
       - { name: jq }
@@ -84,7 +84,7 @@
       - { name: the_platinum_searcher }
       - { name: the_silver_searcher }
       - { name: tig }
-      - { name: tika }
+#      - { name: tika } インストール出来ない。。
       - { name: tmux-patched }
       - { name: tree }
       - { name: w3m }
@@ -149,10 +149,10 @@
     #- homebrew: update_homebrew=yes upgrade_all=yes
 
 
-    ## homebrew cask 関連 ##
-    - name: homebrew cask packages install
-      homebrew_cask: name={{ item.name }} state=installed
-      environment:
-        HOMEBREW_CASK_OPTS: "--appdir=/Applications"  # homebrew-caskでよくあること http://qiita.com/tienlen/items/1a50c7507c8f6454f6c6
-      with_items: homebrew_cask_packages
+#    ## homebrew cask 関連 ##
+#    - name: homebrew cask packages install
+#      homebrew_cask: name={{ item.name }} state=installed
+#      environment:
+#        HOMEBREW_CASK_OPTS: "--appdir=/Applications"  # homebrew-caskでよくあること http://qiita.com/tienlen/items/1a50c7507c8f6454f6c6
+#      with_items: homebrew_cask_packages
 

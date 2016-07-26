@@ -8,7 +8,7 @@
 % ln -s ../dotfiles/vimdir/snippets ~/.vim
 
 ## 2つ目
-ln -s $HOME/.vim $HOME/dotfiles/vimdir
+ln -s $HOME/dotfiles/vimdir $HOME/.vim
 
 
 2つ目のやり方で行う
