@@ -52,9 +52,19 @@
     # ・awk内でのgetline、close  cmdは任意のコマンドとして（git show)を実行している
     #   getlineで読み込んだcmdのコマンドを明示的にcloseさせている
 
+    # Commit Hash から、該当 Pull Request を見つける方法 - Qiita
+    # http://qiita.com/awakia/items/f14dc6310e469964a8f7
+    showpr = "!f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
+    openpr = "!f() { hub browse -- `git showpr $1 | cut -f5 -d' ' | sed -e 's|#|pull/|'`; }; f"
+
+    # ** '!'を前につけるとgitを取って展開したコマンドを実行できます **
+
+
+
 # ghq + cpan-ghq + pecoを組み合わせる 〜ghq編〜 - Masteries
 # http://masteries.papix.net/entry/2014-06-30-ghq.html
 # 複数指定した場合は検索時には複数を参照されるが、新しいリポジトリを取得する時は一番上の設定のディレクトリに設定する
+
 [ghq]
     root = ~/workspace/ghq
     root = ~/workspace/gopath
