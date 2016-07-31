@@ -2,6 +2,11 @@
 export GOPATH=~/workspace/gopath
 export PATH=$GOPATH/bin:$PATH
 
+# ghgを入れてgo製のパッケージを利用するだけの設定
+# http://www.songmu.jp/riji/entry/2016-07-06-ghg.html
+if type ghg >/dev/null 2>&1; then
+  export PATH=$PATH:$(ghg bin)
+fi
 
 ## env 系の設定 PATHをrbenvのほうがさきにくるようにする
 # phpenv
@@ -29,4 +34,3 @@ fi
 #   source ~/perl5/perlbrew/etc/bashrc
 # fi
 #
-

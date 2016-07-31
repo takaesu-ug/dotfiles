@@ -228,15 +228,38 @@ let g:neocomplcache#sources#rsense#home_directory = '/usr/local/Cellar/rsense/0.
 Go関連設定
 --------------------
 
+### ただバイナリを利用するだけならghgでインストールする。
+
+```
+go get -u github.com/Songmu/ghg/cmd/ghg
+```
+
+* 必要なパッケージをインストール
+
+```
+ghg get motemen/ghq
+ghg get typester/gh-open
+```
+
+* ghgのインストールディレクトリにパスを通す
+
+```
+if type ghg >/dev/null 2>&1; then
+  export PATH=$PATH:$(ghg bin)
+fi
+```
+
+### [今は利用していない] 素でインストールする方法
+
 ```
 go get -u github.com/motemen/ghq
 go get -u github.com/typester/gh-open
 ```
 
 
-●●env 関連のプログラミングビルドツール設定
+XXenv 関連のプログラミングビルドツール設定
 -------------------
 
 以下のファイルを参照
 
-dotfiles/my-docs/env.md
+[dotfiles/my-docs/env.md](dotfiles/my-docs/env.md)
