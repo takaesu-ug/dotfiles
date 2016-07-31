@@ -46,7 +46,7 @@
       - { name: git }
       - { name: go }
       - { name: hub }
-      - { name: httpd22 }
+#      - { name: httpd22 }
 #      - { name: httpd24 } #httpd22と共存できない
       - { name: imagemagick }
 #      - { name: icu4c, state: linked }   # 明示的にリンクを貼る brew link --force icu4c ## 一時的に何に使っているかわからないのでコメントアウトしておく
@@ -95,35 +95,35 @@
       - { name: zsh }
 
     homebrew_cask_packages:
-      - { name: alfred }
+#      - { name: alfred }
       - { name: atom }
-      - { name: android-file-transfer }
+#      - { name: android-file-transfer }
       - { name: bartender }
       - { name: charles }
-      - { name: calibre }
-      - { name: clipmenu }
-      - { name: cyberduck }
-      - { name: evernote }
+#      - { name: calibre }
+#      - { name: clipmenu }
+#      - { name: cyberduck }
+#      - { name: evernote }
       - { name: dropbox }
-      - { name: flux }
+#      - { name: flux }
       - { name: firefox-ja }
       - { name: gyazo }
       - { name: google-japanese-ime }
       - { name: google-chrome }
       - { name: heroku-toolbelt }
-      - { name: hipchat }
+#      - { name: hipchat }
       - { name: iterm2 }
       - { name: java }
       - { name: keepassx }
       - { name: karabiner }
-      - { name: macdown }
+#      - { name: macdown }
       - { name: macvim-kaoriya }
-      - { name: magican }
-      - { name: mysqlworkbench }
+#      - { name: magican }
+#      - { name: mysqlworkbench }
       - { name: opera }
       - { name: processing }
       - { name: prott }
-      - { name: rubymine }
+#      - { name: rubymine }
       - { name: skitch }
       - { name: skype }
       - { name: slack }
@@ -155,4 +155,3 @@
 #      environment:
 #        HOMEBREW_CASK_OPTS: "--appdir=/Applications"  # homebrew-caskでよくあること http://qiita.com/tienlen/items/1a50c7507c8f6454f6c6
 #      with_items: homebrew_cask_packages
-
