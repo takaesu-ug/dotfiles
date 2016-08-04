@@ -7,6 +7,7 @@ tmuxdir/reattach-to-user-namespace
 .DS_Store
 
 # 個別設定
+my-bin/gyazocl
 my-bin/1pac
 my-bin/reattach-to-user-namespace
 
