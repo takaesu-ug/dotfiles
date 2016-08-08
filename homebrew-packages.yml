@@ -28,7 +28,7 @@
       - homebrew/binary
 
       - yusabana/custom
-      - sanemat/font                    # Font Ricty http://morizyun.github.io/blog/ricty-font-homebrew-mac/
+      - sanemat/font       # Font Ricty http://morizyun.github.io/blog/ricty-font-homebrew-mac/   http://qiita.com/sims0728/items/fd4638494bde009bbdb1   http://dev.classmethod.jp/devenv/vim-ricty-for-powerline/
       - peco/peco
       - argon/mas
 
@@ -78,7 +78,7 @@
       - { name: reattach-to-user-namespace } # 自分でビルドする方法もあり .tmux.conf参照
       - { name: readline }
       - { name: redis }
-# なぜかインストールできない      - { name: ricty }
+      - { name: ricty }
       - { name: rsense }
       - { name: subversion }
       - { name: the_platinum_searcher }
