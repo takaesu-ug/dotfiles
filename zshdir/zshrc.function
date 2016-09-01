@@ -161,9 +161,15 @@ if [[ -f `brew --prefix`/bin/peco ]]; then
     else
       tac="tail -r"
     fi
+
+    # http://qiita.com/richmikan@github/items/3c74212b0d8dec9bd00f
+    NL=$(printf '\\\012_')
+    NL=${NL%_}
+
     BUFFER=$(\history -n 1 | \
       eval $tac | \
-      peco --query "$LBUFFER" --prompt "[histories] >")
+      peco --query "$LBUFFER" --prompt "[histories] >" | sed -e 's/\\n/'"$NL"'/g')
+      # peco --query "$LBUFFER" --prompt "[histories] >" | tr '\\n' '\n')
     CURSOR=$#BUFFER
     zle clear-screen
   }
