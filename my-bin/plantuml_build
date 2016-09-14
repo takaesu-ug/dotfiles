@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+if ARGV.empty?
+  puts 'should be defined plantuml_file'
+  exit
+end
+
+target = ARGV.join(' ')
+plantuml_jar = "#{File.dirname(File.expand_path(__FILE__))}/plantuml.jar"
+# p "#{File.expand_path(__dir__)}/plantuml.jar"
+
+`java -jar #{plantuml_jar} #{target}`
