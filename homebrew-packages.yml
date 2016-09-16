@@ -44,7 +44,7 @@
       - { name: docker }
       - { name: docker-machine }
       - { name: git }
-      - { name: go }
+#      - { name: go }  # goは公式から入れる https://golang.org/doc/install
       - { name: hub }
 #      - { name: httpd22 }
 #      - { name: httpd24 } #httpd22と共存できない

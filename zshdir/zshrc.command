@@ -9,6 +9,7 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 alias x="exit"
+alias tree="tree -F -C --dirsfirst"
 alias relogin='exec $SHELL -l'
 
 # http://qiita.com/yusabana/items/b5cc2a706be8c031043e
