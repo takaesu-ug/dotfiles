@@ -1,5 +1,5 @@
-"Ruby utf-8 magic comment
-nmap <silent> <C-r><C-u> :call append(0, "# -*- coding: utf-8 -*-")<CR>
+"Rails string frozen magic comment
+nmap <silent> <C-r><C-u> :call append(0, "# frozen_string_literal: true")<CR>
 
 " 新規のrbファイルを作成時に自動挿入する"
 "augroup SetShebang
