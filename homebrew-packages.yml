@@ -52,6 +52,7 @@
 #      - { name: icu4c, state: linked }   # 明示的にリンクを貼る brew link --force icu4c ## 一時的に何に使っているかわからないのでコメントアウトしておく
       - { name: jq }
       - { name: jmeter }
+      - { name: lesspipe }
       - { name: lha }
       - { name: libmcrypt }              # phpenv, php-build で必要
       - { name: mas }
@@ -118,7 +119,6 @@
       - { name: karabiner }
 #      - { name: macdown }
       - { name: macvim-kaoriya }
-#      - { name: magican }
 #      - { name: mysqlworkbench }
       - { name: opera }
       - { name: processing }

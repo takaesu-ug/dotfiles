@@ -20,4 +20,17 @@ log
 ## ^Dでログアウトしないようにする。
 setopt ignore_eof
 
+# あなたの知らない less の世界 - Qiita http://qiita.com/delphinus/items/b04752bb5b64e6cc4ea9
+export PAGER=less
+export LESS_TERMCAP_mb=$'\E[01;31m'      # Begins blinking.
+export LESS_TERMCAP_md=$'\E[01;31m'      # Begins bold.
+export LESS_TERMCAP_me=$'\E[0m'          # Ends mode.
+export LESS_TERMCAP_se=$'\E[0m'          # Ends standout-mode.
+export LESS_TERMCAP_so=$'\E[00;47;30m'   # Begins standout-mode.
+export LESS_TERMCAP_ue=$'\E[0m'          # Ends underline.
+export LESS_TERMCAP_us=$'\E[01;32m'      # Begins underline.
+if type lesspipe.sh > /dev/null; then
+  export LESSOPEN='| /usr/bin/env lesspipe.sh %s 2>&-'
+fi
+
 DISABLE_AUTO_TITLE=true
