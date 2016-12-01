@@ -4,11 +4,11 @@
 # http://qiita.com/yoshikazusawa/items/d99e8b5d6f6a45aa6e2e
 
 # Views
-set main-view = line-number:true,interval=1 date:local author:full id commit-title:true,graph=true,refs=true
-set tree-view = date:local author:full id file-size:units mode file-name
-set blame-view = date:local author:full id line-number:true,interval=1 text
+set main-view = line-number:true,interval=1 date:default,local=true author:full id commit-title:true,graph=true,refs=true
+set tree-view = date:default,local=true author:full id file-size:units mode file-name
+set blame-view = date:default,local=true author:full id line-number:true,interval=1 text
 set status-view = file-name status:long
-set refs-view = date:local author:full id ref:true commit-title:true
+set refs-view = date:default,local=true author:full id ref:true commit-title:true
 
 # Variables
 set tab-size = 8
