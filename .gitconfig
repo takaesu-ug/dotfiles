@@ -19,6 +19,8 @@
     ci = commit
     br = branch
 
+    # https://speakerdeck.com/a_matsuda/my-favorite-tools?slide=42
+    loga = log -p --stat --reverse --abbrev-commit --decorate --topo-order
     lga = log --graph --all --abbrev-commit --pretty=format:'%x09 %Cred%h%Creset %Cgreen%ai %C(bold blue)(%an) -%C(yellow)%d%Creset %s%Creset'
     lg  = log --graph       --abbrev-commit --pretty=format:'%x09 %Cred%h%Creset %Cgreen%ai %C(bold blue)(%an) -%C(yellow)%d%Creset %s%Creset'
     lgd = log --oneline --graph --decorate=full
@@ -59,6 +61,9 @@
     genpr  = "!f() { hub browse -- pull/$(git rev-parse --abbrev-ref HEAD); }; f"
     ### サンプル hoge = "!f() { your command }; f"
     ### ** '!'を前につけるとgitを取って展開したコマンドを実行できます **
+
+#   hub pull-request -i <issue-no>  issueをpull-requestに
+
 
 
 
