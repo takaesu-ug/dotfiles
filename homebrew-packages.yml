@@ -43,13 +43,11 @@
       - { name: direnv }
       - { name: docker }
       - { name: docker-machine }
+      - { name: fzf }
       - { name: git }
 #      - { name: go }  # goは公式から入れる https://golang.org/doc/install
       - { name: hub }
-#      - { name: httpd22 }
-#      - { name: httpd24 } #httpd22と共存できない
       - { name: imagemagick }
-#      - { name: icu4c, state: linked }   # 明示的にリンクを貼る brew link --force icu4c ## 一時的に何に使っているかわからないのでコメントアウトしておく
       - { name: jq }
       - { name: jmeter }
       - { name: lesspipe }
@@ -85,14 +83,12 @@
       - { name: the_platinum_searcher }
       - { name: the_silver_searcher }
       - { name: tig }
-#      - { name: tika } インストール出来ない。。
       - { name: tmux-patched }
       - { name: tree }
       - { name: w3m }
       - { name: watch }
       - { name: wget }
       - { name: whois }
-      - { name: z }
       - { name: zsh }
 
     homebrew_cask_packages:

@@ -167,20 +167,6 @@ ln -s $HOME/dotfiles/vimdir $HOME/.vim
 参考
 dotfiles/vimdir/README_LINK.txt
 
-### ~~NeoBundleの対応~~
-
-**NOTE:Neobundleを使うのやめてdein.vimにした**
-
-http://qiita.com/puriketu99/items/1c32d3f24cc2919203eb
-以下のようにNeoBundleだけ先に入れておく。
-
-```
-git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-```
-
-その他はNeoBundle経由でプラグインをインストールするので vimを立ち上げてから `:NeoBundleInstall` を実行する
-
-
 ### dein.vimを使ってプラグインはインストールする
 
 https://github.com/Shougo/dein.vim/blob/master/doc/dein.txt
@@ -239,6 +225,7 @@ go get -u github.com/Songmu/ghg/cmd/ghg
 ```
 ghg get motemen/ghq
 ghg get typester/gh-open
+ghg get typester/ghr
 ```
 
 * ghgのインストールディレクトリにパスを通す
