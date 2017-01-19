@@ -39,7 +39,7 @@ let g:surround_{char2nr("-")} = ":\r"
 " tcomment.vim
 "------------------------------------
 let g:tcommentMapLeader1 = '<C-_>'       "(default: '<c-_>')
-let g:tcommentMapLeader2 = '<Leader>'    "(default: '<Leader>_')
+" let g:tcommentMapLeader2 = '<Leader>'    "(default: '<Leader>_')
 let g:tcommentMapLeaderOp1 = 'gc'        "(default: 'gc')
 let g:tcommentMapLeaderOp2 = 'gC'        "(default: 'gC')
 
@@ -309,8 +309,14 @@ au FileType coffee,javascript IndentGuidesEnable
 nmap <silent><Leader>ig <Plug>IndentGuidesToggle"
 
 "------------------------------------
-" ctrlp.vim
+" fzf.vim
 "------------------------------------
-" https://github.com/kien/ctrlp.vim
-" バージョン管理関連は除外する
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+" https://github.com/junegunn/fzf#usage-as-vim-plugin
+" コマンドはこれを参照 https://github.com/junegunn/fzf.vim#commands
+set rtp+=/usr/local/opt/fzf
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
+let g:fzf_layout = { 'down': '~40%' }

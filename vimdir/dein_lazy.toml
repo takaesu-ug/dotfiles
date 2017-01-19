@@ -42,3 +42,8 @@ on_ft = ['ruby']
 # slimテンプレートのシンタックス
 repo = 'slim-template/vim-slim'
 on_ft = ['slim']
+
+[[plugins]]
+repo = 'kannokanno/previm'
+on_ft = ['markdown']
+depends = ['open-browser.vim']

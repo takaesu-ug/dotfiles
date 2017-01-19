@@ -50,14 +50,10 @@ repo = 'Shougo/neomru.vim'
 repo = 'Shougo/vimfiler.git'
 
 [[plugins]]
-# Uniteのようなバッファなどを扱う
-# ctrlp.vimの使い方まとめ
-# http://qiita.com/oahiroaki/items/d71337fb9d28303a54a8
-# Ctrl+p 起動  Ctrl+c 閉じる
-# Ctrl+d フルパス検索、ファイル名検索モード切り替え
-# Ctrl+r 正規表現モード、通常モード切り替え
-# Ctrl+f, Ctrl+b 検索対象切り替え
-repo = 'ctrlpvim/ctrlp.vim'
+# https://github.com/junegunn/fzf#usage-as-vim-plugin
+# https://github.com/junegunn/fzf/wiki/Examples-(vim)
+# https://github.com/junegunn/fzf.vim
+repo = 'junegunn/fzf.vim'
 
 [[plugins]]
 # https://github.com/Shougo/neocomplete.vim
