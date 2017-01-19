@@ -44,6 +44,10 @@ repo = 'rhysd/accelerated-jk'
 repo = 'Shougo/unite.vim'
 
 [[plugins]]
+repo = 'moznion/unite-git-conflict.vim'
+depends = ['Shougo/unite.vim']
+
+[[plugins]]
 repo = 'Shougo/neomru.vim'
 
 [[plugins]]
