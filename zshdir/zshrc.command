@@ -46,14 +46,6 @@ alias svn-vim-diff='svn diff "$@" |vim -R -'
 alias pm-installed="find `perl -e 'print \"@INC\"'` -name \"*.pm\" -print"
 alias pm-version='perl -le '"'"'for $module (@ARGV) { eval "use $module"; print "$module ", ${"$module\::VERSION"} || "not found" }'"'"
 
-# z コマンド補完ツール
-if [[ -f `brew --prefix`/etc/profile.d/z.sh ]]; then
-  source `brew --prefix`/etc/profile.d/z.sh
-  function precmd () {
-    _z --add "$(pwd -P)"
-  }
-fi
-
 ### Mac Only
 # クイックルック起動
 # 次のコマンドをdefaults実行するとquicklookでテキスト選択できるようになる
