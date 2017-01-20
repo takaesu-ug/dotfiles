@@ -313,6 +313,7 @@ nmap <silent><Leader>ig <Plug>IndentGuidesToggle"
 "------------------------------------
 " fzf.vim
 "------------------------------------
+" https://github.com/junegunn/fzf/wiki/Examples-(vim)
 " https://github.com/junegunn/fzf#usage-as-vim-plugin
 " コマンドはこれを参照 https://github.com/junegunn/fzf.vim#commands
 set rtp+=/usr/local/opt/fzf
@@ -322,3 +323,5 @@ let g:fzf_action = {
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
 let g:fzf_layout = { 'down': '~40%' }
+
+nnoremap <silent> <C-p> :FZF<CR>
