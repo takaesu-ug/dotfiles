@@ -317,11 +317,22 @@ nmap <silent><Leader>ig <Plug>IndentGuidesToggle"
 " https://github.com/junegunn/fzf#usage-as-vim-plugin
 " コマンドはこれを参照 https://github.com/junegunn/fzf.vim#commands
 set rtp+=/usr/local/opt/fzf
-" This is the default extra key bindings
+let g:fzf_layout = { 'down': '~40%' }
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
-let g:fzf_layout = { 'down': '~40%' }
-
 nnoremap <silent> <C-p> :FZF<CR>
+nnoremap <silent> <C-m> :FZFMru<CR>
+
+command! FZFMru call fzf#run({
+  \ 'source':  reverse(s:all_files()),
+  \ 'sink':    'edit',
+  \ 'options': '-m -x +s',
+  \ 'down':    '40%' })
+function! s:all_files()
+  return extend(
+  \ filter(copy(v:oldfiles),
+  \        "v:val !~ 'fugitive:\\|NERD_tree\\|^/tmp/\\|.git/'"),
+  \ map(filter(range(1, bufnr('$')), 'buflisted(v:val)'), 'bufname(v:val)'))
+endfunction
