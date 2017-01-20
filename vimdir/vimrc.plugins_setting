@@ -325,11 +325,11 @@ let g:fzf_action = {
 nnoremap <silent> <C-p> :FZF<CR>
 nnoremap <silent> <C-m> :FZFMru<CR>
 
-command! FZFMru call fzf#run({
+command! FZFMru call fzf#run(fzf#wrap({
   \ 'source':  reverse(s:all_files()),
-  \ 'sink':    'edit',
   \ 'options': '-m -x +s',
-  \ 'down':    '40%' })
+  \ 'down':    '40%' }))
+
 function! s:all_files()
   return extend(
   \ filter(copy(v:oldfiles),
