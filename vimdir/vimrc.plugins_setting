@@ -322,8 +322,8 @@ let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
-nnoremap <silent> <C-p> :FZF<CR>
-nnoremap <silent> <C-m> :FZFMru<CR>
+nnoremap <silent> <C-p><C-f> :FZF<CR>
+nnoremap <silent> <C-p><C-m> :FZFMru<CR>
 
 command! FZFMru call fzf#run(fzf#wrap({
   \ 'source':  reverse(s:all_files()),
