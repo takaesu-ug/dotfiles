@@ -3,6 +3,14 @@ yusabana's dotfiles
 
 dot files(Setting files) Repository （設定ファイル関連のリポジトリ）
 
+Fontをインストール
+-------------
+
+* RictyDiminished
+  * https://github.com/mzyy94/RictyDiminished-for-Powerline
+* Noto Sans CJK JP
+  * https://www.google.com/get/noto/#sans-jpan
+
 MacOSXの場合、xcode, xcode-commandline-toolsをインストールする
 -------------------
 
