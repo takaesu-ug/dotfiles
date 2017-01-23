@@ -23,6 +23,21 @@ AppStoreでインストールする
 % xcode-select --install
 ```
 
+## キーリピートを早くする
+
+* Karabinerは使わない https://github.com/markandrewj/Karabiner-Elements/blob/391b860aa4e4091c2617024ef2afef4da75fcefe/examples/key_repeat.md
+* [Macのキーリピートをシステム設定での設定よりも速くする](http://drumsoft.com/blog/archives/21)
+
+```
+## 設定する 値を小さくしたほうが早くなる
+% defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+% defaults write -g KeyRepeat -int 1         # normal minimum is 2 (30 ms)
+
+## 設定値を確認する
+% defaults read NSGlobalDomain KeyRepeat
+% defaults read NSGlobalDomain InitialKeyRepeat
+```
+
 dotfiles clone する
 ------------------
 
