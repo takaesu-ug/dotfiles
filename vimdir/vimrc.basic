@@ -86,6 +86,10 @@ autocmd InsertLeave * set nopaste
 " 全角文字を指定する :gr '[^\x01-\x7E]' config/locales/'
 set grepprg=pt\ -e\ --nogroup
 
+" grep検索の実行後にQuickFix Listを表示する
+" 標準的な使い方  :vim {pattern} {file} | cw
+autocmd QuickFixCmdPost *grep* cwindow
+
 " Macの場合で insertモードから <Esc> <C-c> <C-[> のキーでノーマルモードに移るときに英数に切り替える
 " http://qiita.com/creasty/items/30d1f0fc262f7c455d14
 if executable('osascript')
