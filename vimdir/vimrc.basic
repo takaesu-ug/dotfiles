@@ -84,7 +84,7 @@ autocmd InsertLeave * set nopaste
 
 " :gr(ep) コマンドでptを使って検索できるように -e オプションを使って正規表現も使えるように
 " 全角文字を指定する :gr '[^\x01-\x7E]' config/locales/'
-set grepprg=pt\ -e\ --nogroup
+set grepprg=hw\ -e\ --no-group
 
 " grep検索の実行後にQuickFix Listを表示する
 " 標準的な使い方  :vim {pattern} {file} | cw
