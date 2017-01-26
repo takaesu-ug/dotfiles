@@ -56,7 +56,8 @@ SEPARATOR3=$(str_with_color white ':')
 
 MY_PROMPT='default' # prompt切り替え(toggle)するためのフラグ変数
 
-PROMPT='${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${STATUS_EMOJI} ${CURRENT_DIRECTORY}
+# PROMPT='${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${STATUS_EMOJI} ${CURRENT_DIRECTORY}
+PROMPT='${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${CURRENT_DIRECTORY}
 ${DATE_TIME} $PROMPT_CHAR'
 
 

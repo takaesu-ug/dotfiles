@@ -33,7 +33,7 @@ alias idea='open -n /Applications/IntelliJ\ IDEA\ 12\ CE.app'
 # grep （数字分上下を表示[-B数字 -A数字]  再帰的[-r]）
 alias grep="grep --color"
 
-# agコマンドの結果をlessにパイプ カラー表示とlessを閉じても画面に残す設定
+# 検索コマンドの結果をlessにパイプ カラー表示とlessを閉じても画面に残す設定
 alias ag="ag --pager='less -R --no-init --quit-if-one-screen'"
 
 # diffコマンドをカラーにする
