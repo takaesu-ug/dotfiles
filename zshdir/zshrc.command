@@ -34,7 +34,7 @@ alias idea='open -n /Applications/IntelliJ\ IDEA\ 12\ CE.app'
 alias grep="grep --color"
 
 # 検索コマンドの結果をlessにパイプ カラー表示とlessを閉じても画面に残す設定
-alias ag="ag --pager='less -R --no-init --quit-if-one-screen'"
+alias ag="ag -S --pager='less -R --no-init --quit-if-one-screen'"
 
 # diffコマンドをカラーにする
 alias diff="colordiff"
