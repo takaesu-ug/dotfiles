@@ -37,9 +37,10 @@ ZSH_THEME_GIT_PROMPT_UNTRACKED=$(str_with_color green '?')
 
 # 絵文字
 # http://punchdrunker.github.io/iOSEmoji/table_html/ios6/index.html
-SUSHI=$'\U1F363 '
-DEFAULT=$'\U1F37A ' # ビール
-ERROR=$'\U1F479 '   # なまはげ
+# ** zshrc.basic で export LANG='en_US.UTF-8' したらエラーになった。。
+# SUSHI=$'\U1F363 '
+# DEFAULT=$'\U1F37A ' # ビール
+# ERROR=$'\U1F479 '   # なまはげ
 
 DATE_TIME=$(str_with_color white '[%D{%Y-%m-%d %H:%M:%S}]')
 STATUS_CODE="(%(?.%F{green}.%F{red})%}%?%{%f%})"
