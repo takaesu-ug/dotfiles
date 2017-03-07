@@ -23,14 +23,11 @@
       - homebrew/dupes
       - homebrew/versions
       - homebrew/boneyard
-      - homebrew/apache
-      - homebrew/php
       - homebrew/binary
 
       - yusabana/custom
-      - sanemat/font       # Font Ricty http://morizyun.github.io/blog/ricty-font-homebrew-mac/   http://qiita.com/sims0728/items/fd4638494bde009bbdb1   http://dev.classmethod.jp/devenv/vim-ricty-for-powerline/
-      - peco/peco
       - argon/mas
+      - tkengo/highway
 
     homebrew_packages:
       - { name: awscli }        # http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
@@ -41,18 +38,17 @@
       - { name: colordiff }
       - { name: ctags }
       - { name: direnv }
-      - { name: docker }
-      - { name: docker-machine }
       - { name: fzf }
       - { name: git }
-#      - { name: go }  # goは公式から入れる https://golang.org/doc/install
+      - { name: go }
+      - { name: highway }
       - { name: hub }
       - { name: imagemagick }
       - { name: jq }
       - { name: jmeter }
       - { name: lesspipe }
       - { name: lha }
-      - { name: libmcrypt }              # phpenv, php-build で必要
+      - { name: licecap }
       - { name: mas }
       - { name: mercurial }
       - { name: mpg123 }
@@ -62,23 +58,16 @@
       - { name: nkf }
       - { name: openssl }
       - { name: packer }
-      - { name: peco }
-      - { name: phantomjs }
-#      - { name: php55 }
-#      - { name: php55-mcrypt }           #laravelに必要
       - { name: plantuml }
       - { name: postgresql }
       - { name: pgcli }
       - { name: pow }
       - { name: pstree }
       - { name: pkg-config }
-      - { name: python }
-      - { name: re2c }  # php-build に必要
+      - { name: python3 }
       - { name: reattach-to-user-namespace } # 自分でビルドする方法もあり .tmux.conf参照
       - { name: readline }
       - { name: redis }
-      - { name: ricty }
-      - { name: rsense }
       - { name: subversion }
       - { name: the_platinum_searcher }
       - { name: the_silver_searcher }
@@ -92,42 +81,35 @@
       - { name: zsh }
 
     homebrew_cask_packages:
-#      - { name: alfred }
+      - { name: virtualbox }
       - { name: atom }
-#      - { name: android-file-transfer }
       - { name: bartender }
+      - { name: blisk }
       - { name: charles }
-#      - { name: calibre }
-#      - { name: clipmenu }
-#      - { name: cyberduck }
-#      - { name: evernote }
+      - { name: calibre }
+      - { name: cyberduck }
+      - { name: docker-toolbox }
       - { name: dropbox }
-#      - { name: flux }
       - { name: firefox-ja }
       - { name: gyazo }
       - { name: google-japanese-ime }
       - { name: google-chrome }
+      - { name: hammerspoon }
       - { name: heroku-toolbelt }
-#      - { name: hipchat }
       - { name: iterm2 }
       - { name: java }
       - { name: keepassx }
-      - { name: karabiner }
-#      - { name: macdown }
+      - { name: kindle }
+      - { name: kindlegen }
       - { name: macvim-kaoriya }
-#      - { name: mysqlworkbench }
+      - { name: mysqlworkbench }
       - { name: opera }
-      - { name: processing }
+      - { name: osxfuse } # sshfsと一緒に使う
       - { name: prott }
-#      - { name: rubymine }
       - { name: skitch }
       - { name: skype }
       - { name: slack }
-      - { name: sourcetree }
-      - { name: spark }
       - { name: sshfs }
-      - { name: visual-studio-code }
-      - { name: virtualbox }
       - { name: vagrant }
       - { name: xquartz }
 

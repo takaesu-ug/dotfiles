@@ -249,6 +249,7 @@ go get -u github.com/Songmu/ghg/cmd/ghg
 ghg get motemen/ghq
 ghg get typester/gh-open
 ghg get typester/ghr
+ghg get mattn/memo
 ```
 
 * ghgのインストールディレクトリにパスを通す

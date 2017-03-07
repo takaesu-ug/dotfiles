@@ -87,6 +87,7 @@ autocmd InsertLeave * set nopaste
 " set grepprg=hw\ -e\ --no-group
 " set grepprg=pt\ -e\ --nogroup
 set grepprg=ag\ --vimgrep\ $*
+set grepformat=%f:%l:%m
 
 " grep検索の実行後にQuickFix Listを表示する
 " 標準的な使い方  :vim {pattern} {file} | cw
