@@ -96,14 +96,6 @@ git config --global credential.helper osxkeychain
 # または２段階認証を使っている場合はアクセストークンを入れる
 ```
 
-peco関連設定(homebrewでインストール済み)
--------------------
-
-```
-% mkdir $HOME/.peco
-% ln -s $HOME/dotfiles/peco_config.json $HOME/.peco/config.json
-```
-
 zsh設定
 --------------------
 ### oh-my-zsh
@@ -248,7 +240,7 @@ go get -u github.com/Songmu/ghg/cmd/ghg
 ```
 ghg get motemen/ghq
 ghg get typester/gh-open
-ghg get typester/ghr
+ghg get peco/peco
 ghg get mattn/memo
 ```
 
@@ -260,13 +252,13 @@ if type ghg >/dev/null 2>&1; then
 fi
 ```
 
-### [今は利用していない] 素でインストールする方法
+peco関連設定(homebrewでインストール済み)
+-------------------
 
 ```
-go get -u github.com/motemen/ghq
-go get -u github.com/typester/gh-open
+% mkdir $HOME/.peco
+% ln -s $HOME/dotfiles/peco_config.json $HOME/.peco/config.json
 ```
-
 
 XXenv 関連のプログラミングビルドツール設定
 -------------------
