@@ -104,7 +104,7 @@ function code () {
 # }
 # zle -N ここに関数の名前
 # bindkey 'ここに設定したいキー' ここに関数の名前
-if [[ -f `brew --prefix`/bin/peco ]]; then
+if type peco > /dev/null 2>&1; then
   # Alias
   alias ghc='cd $(ghq list -p | peco)'
   alias gho='gh-open $(ghq list -p | peco)'
