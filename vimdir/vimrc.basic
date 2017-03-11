@@ -93,6 +93,15 @@ set grepformat=%f:%l:%m
 " 標準的な使い方  :vim {pattern} {file} | cw
 autocmd QuickFixCmdPost *grep* cwindow
 
+" vim内で検索するときに大文字小文字を気にしない（ignore case）する方法 -
+" http://qiita.com/shoma2da/items/23009d4e1a90c5fe5c31
+" /\choge    <= 検索時に \c をつけるとignorecaseによる検索になる
+set ignorecase
+set smartcase
+
+" 検索時のハイライト
+set hlsearch
+
 " Macの場合で insertモードから <Esc> <C-c> <C-[> のキーでノーマルモードに移るときに英数に切り替える
 " http://qiita.com/creasty/items/30d1f0fc262f7c455d14
 if executable('osascript')
