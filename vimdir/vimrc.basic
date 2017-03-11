@@ -102,6 +102,9 @@ set smartcase
 " 検索時のハイライト
 set hlsearch
 
+" https://github.com/hamano/locale-eaw
+set ambiwidth=double
+
 " Macの場合で insertモードから <Esc> <C-c> <C-[> のキーでノーマルモードに移るときに英数に切り替える
 " http://qiita.com/creasty/items/30d1f0fc262f7c455d14
 if executable('osascript')
