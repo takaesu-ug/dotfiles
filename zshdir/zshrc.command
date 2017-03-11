@@ -15,11 +15,7 @@ alias relogin='exec $SHELL -l'
 # http://qiita.com/yusabana/items/b5cc2a706be8c031043e
 LESS=-qR # ビープ音を消して、ANSIカラーシーケンス
 
-# MacVim
-if [[ -f /Applications/MacVim.app/Contents/MacOS/Vim ]]; then
-  alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-  alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-fi
+alias vi='vim'
 
 # Ruby のctag用
 alias rtags='ctags -R -a --sort=yes --exclude="*.js" --exclude="*.h" --exclude=log --exclude="*.yml" --exclude=".git"'
