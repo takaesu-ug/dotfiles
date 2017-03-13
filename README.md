@@ -211,21 +211,6 @@ deinで入れているプラグイン一覧
 * [NeoBundle から dein.vim に乗り換えたら爆速だった話 - Qiita](http://qiita.com/delphinus35/items/00ff2c0ba972c6e41542)
 * [NeoVim と dein.vim を使ってみる! - Qiita](http://qiita.com/ress/items/7e71e007cf8d41a07a1a)
 
-### Rsenseの設定について
-
-- [VimでRSenseを導入 - Labo Memo](http://alice345.hatenablog.com/entry/2014/01/03/130053)
-- [Vim - rsense - Qiita](http://qiita.com/kickstart123/items/afa1af3b05ee5949990f)
-- [rsense omni completion "'omnifunc' は設定されていません" · Issue #355 · Shougo/neocomplcache.vim](https://github.com/Shougo/neocomplcache.vim/issues/355)
-
-```
-brew でRsenseを入れる
-
-% vi .vimrc
-let g:rsenseHome = "/usr/local/Cellar/rsense/0.3/libexec/"
-let g:rsenseUseOmniFunc = 1
-let g:neocomplcache#sources#rsense#home_directory = '/usr/local/Cellar/rsense/0.3/libexec/'
-```
-
 Go関連設定
 --------------------
 
