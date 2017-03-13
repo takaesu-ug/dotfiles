@@ -19,117 +19,120 @@
     homebrew_taps:
       - caskroom/cask
       - caskroom/versions
-
       - homebrew/dupes
       - homebrew/versions
       - homebrew/boneyard
       - homebrew/binary
-
-      - yusabana/custom
       - argon/mas
       - tkengo/highway
 
-    homebrew_packages:
-      - { name: awscli }        # http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
-      - { name: ansible }
-      - { name: automake }
-      - { name: ccat }
-      - { name: cmake }
-      - { name: colordiff }
-      - { name: ctags }
-      - { name: direnv }
-      - { name: fzf }
-      - { name: git }
-      - { name: go }
-      - { name: highway }
-      - { name: hub }
-      - { name: imagemagick }
-      - { name: jq }
-      - { name: jmeter }
-      - { name: lesspipe }
-      - { name: lha }
-      - { name: licecap }
-      - { name: mas }
-      - { name: mercurial }
-      - { name: mpg123 }
-      - { name: mysql56 }
-      - { name: mycli }
-      - { name: nginx }
-      - { name: nkf }
-      - { name: openssl }
-      - { name: packer }
-      - { name: plantuml }
-      - { name: postgresql }
-      - { name: pgcli }
-      - { name: pow }
-      - { name: pstree }
-      - { name: pkg-config }
-      - { name: python3 }
-      - { name: reattach-to-user-namespace } # 自分でビルドする方法もあり .tmux.conf参照
-      - { name: readline }
-      - { name: redis }
-      - { name: subversion }
-      - { name: the_platinum_searcher }
-      - { name: the_silver_searcher }
-      - { name: tig }
-      - { name: tmux-patched }
-      - { name: tree }
-      - { name: w3m }
-      - { name: watch }
-      - { name: wget }
-      - { name: whois }
-      - { name: zsh }
-
     homebrew_cask_packages:
-      - { name: virtualbox }
-      - { name: atom }
-      - { name: bartender }
-      - { name: blisk }
-      - { name: charles }
-      - { name: calibre }
-      - { name: cyberduck }
-      - { name: docker-toolbox }
-      - { name: dropbox }
-      - { name: firefox-ja }
-      - { name: gyazo }
-      - { name: google-japanese-ime }
-      - { name: google-chrome }
-      - { name: hammerspoon }
-      - { name: heroku-toolbelt }
-      - { name: iterm2 }
-      - { name: java }
-      - { name: keepassx }
-      - { name: kindle }
-      - { name: kindlegen }
-      - { name: macvim-kaoriya }
-      - { name: mysqlworkbench }
-      - { name: opera }
-      - { name: osxfuse } # sshfsと一緒に使う
-      - { name: prott }
-      - { name: skitch }
-      - { name: skype }
-      - { name: slack }
-      - { name: sshfs }
-      - { name: vagrant }
-      - { name: xquartz }
+      - name: virtualbox
+      - name: atom
+      - name: bartender
+      - name: blisk
+      - name: charles
+      - name: calibre
+      - name: cyberduck
+      - name: docker-toolbox
+      - name: dropbox
+      - name: firefox
+      - name: gyazo
+      - name: google-japanese-ime
+      - name: google-chrome
+      - name: hammerspoon
+      - name: iterm2
+      - name: java
+      - name: keepassx
+      - name: kindle
+      - name: kindlegen
+      - name: licecap
+      - name: mysqlworkbench
+      - name: opera
+      - name: prott
+      - name: skitch
+      - name: skype
+      - name: slack
+      - name: vagrant
+      - name: xquartz
+
+    homebrew_packages:
+      - name: awscli        # http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+      - name: ansible
+      - name: automake
+      - name: ccat
+      - name: cmake
+      - name: colordiff
+      - name: ctags
+      - name: direnv
+      - name: fzf
+      - name: git
+      - name: go
+      - name: highway
+      - name: hub
+      - name: imagemagick
+      - name: jq
+      - name: jmeter
+      - name: lesspipe
+      - name: lha
+      - name: lua
+      - name: mas
+      - name: mercurial
+      - name: mpg123
+      - name: mycli
+      - name: nginx
+      - name: nkf
+      - name: openssl
+      - name: packer
+      - name: plantuml
+      - name: pgcli
+      - name: pstree
+      - name: pkg-config
+      - name: python3
+      - name: reattach-to-user-namespace  # 自分でビルドする方法もあり .tmux.conf参照
+      - name: readline
+      - name: subversion
+      - name: the_platinum_searcher
+      - name: the_silver_searcher
+      - name: tig
+      - name: tmux
+      - name: tree
+      - name: w3m
+      - name: watch
+      - name: wget
+      - name: whois
+      - name: zsh
+    homebrew_packages_with_options:
+      - name: vim
+        options: 'with-lua'
 
   tasks:
+    ## homebrew cask 関連 ##
+    - name: homebrew cask packages install
+      homebrew_cask: name={{ item.name }} state=installed
+      environment:
+        HOMEBREW_CASK_OPTS: "--appdir=/Applications"  # homebrew-caskでよくあること http://qiita.com/tienlen/items/1a50c7507c8f6454f6c6
+      with_items: '{{ homebrew_cask_packages }}'
+
     ## homebrew 関連 ##
     - name: homebrew update
-      homebrew: update_homebrew=yes
+      homebrew:
+        update_homebrew: yes
     - name: homebrew tap
-      homebrew_tap: tap={{ item }} state=present
-      with_items: homebrew_taps
+      homebrew_tap:
+        name: '{{ item }}'
+        state: present
+      with_items: '{{ homebrew_taps }}'
     - name: homebrew packages install
-      homebrew: name={{ item.name }} state={{ item.state|default("present") }}
-      with_items: homebrew_packages
-    #- name: homebrew installed packages upgrade
-    #- homebrew: update_homebrew=yes upgrade_all=yes
-
-
-#    ## homebrew cask 関連 ##
-#    - name: homebrew cask packages install
-#      homebrew_cask: name={{ item.name }} state=installed
-#      environment:
-#        HOMEBREW_CASK_OPTS: "--appdir=/Applications"  # homebrew-caskでよくあること http://qiita.com/tienlen/items/1a50c7507c8f6454f6c6
-#      with_items: homebrew_cask_packages
+      homebrew:
+        name: '{{ item.name }}'
+        state: '{{ item.state | default("present") }}'
+      with_items: '{{ homebrew_packages }}'
+    - name: homebrew packages install with options
+      homebrew:
+        name: '{{ item.name }}'
+        state: '{{ item.state | default("present") }}'
+        install_options: '{{ item.options }}'
+      with_items: '{{ homebrew_packages_with_options }}'
+    # - name: homebrew installed packages upgrade
+    # - homebrew: update_homebrew=yes upgrade_all=yes
