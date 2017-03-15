@@ -102,6 +102,9 @@ set smartcase
 " 検索時のハイライト
 set hlsearch
 
+" マウス操作を有効にする
+set mouse=a
+
 " https://github.com/hamano/locale-eaw
 if exists('&ambw')
   set ambw=double
