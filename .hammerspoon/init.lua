@@ -1,6 +1,7 @@
--- Karabiner 使えない対策: Hammerspoon で macOS の修飾キーつきホットキーのキーリマップを実現する
--- http://qiita.com/naoya@github/items/81027083aeb70b309c14
--- https://github.com/naoya/hammerspoon-init/blob/master/init.lua
+-- キーリマップ設定
+--   Karabiner 使えない対策: Hammerspoon で macOS の修飾キーつきホットキーのキーリマップを実現する
+--     http://qiita.com/naoya@github/items/81027083aeb70b309c14
+--     https://github.com/naoya/hammerspoon-init/blob/master/init.lua
 local function remapKey(modifiers, key, keyCode)
     hs.hotkey.bind(modifiers, key, keyCode, nil, keyCode)
 end
@@ -46,6 +47,7 @@ remapKey({'ctrl'}, 'h', keyCode('left'))
 remapKey({'ctrl'}, 'j', keyCode('down'))
 remapKey({'ctrl'}, 'k', keyCode('up'))
 
+-------------------------
 
 -- CmdKeyのIME変換
 -- macOS SierraにアップデートしてHammerspoonでCommandキーにかなと英数を割り当てた | mizoguche.info
@@ -74,7 +76,5 @@ local function handleCmdEvent(e)
     prevKeyCode = key
 end
 
-eventtap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.flagsChanged}, handleCmdEvent)
-eventtap:start()
-
-hs.alert.show('Hammerspoon config loaded')
+cmdeventtap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.flagsChanged}, handleCmdEvent)
+cmdeventtap:start()
