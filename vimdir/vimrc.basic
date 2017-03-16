@@ -105,6 +105,9 @@ set hlsearch
 " マウス操作を有効にする
 set mouse=a
 
+" Backspaceのキーを有効にする
+set backspace=indent,eol,start
+
 " https://github.com/hamano/locale-eaw
 if exists('&ambw')
   set ambw=double
