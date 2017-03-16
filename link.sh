@@ -13,13 +13,14 @@ files=(
   .zshenv
 #  .zshrc
   .bundle/config
+  .hammerspoon/init.lua
 )
 
 now=`date '+%Y%m%d'`
 
 # Rubyのbundler のデフォルトディレクトリを事前に作成
-mkdir -p $HOME/.bundle
-
+mkdir -p $HOME/.bundle/
+mkdir -p $HOME/.hammerspoon/
 
 for file in "${files[@]}"; do
   absolute_file=$HOME/$file
@@ -38,14 +39,11 @@ for file in "${files[@]}"; do
         echo "$file を置き換えますか？（y / n）"
       fi
     done
-
   else
     ln -s $HOME/dotfiles/$file $absolute_file
     echo "$file リンクを作成しました"
-
   fi
 done
-
 
 ## reattach-to-user-namespaceのシンボリックリンク作成 <-ここは環境に合わせてをENVを書き換える
 #if [ -f $HOME/dotfiles/my-bin/reattach-to-user-namespace ]; then
