@@ -101,6 +101,7 @@
       - name: watch
       - name: wget
       - name: whois
+      - name: yarn
       - name: zsh
     homebrew_packages_with_options:
       - name: vim
