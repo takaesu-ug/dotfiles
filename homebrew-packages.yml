@@ -48,6 +48,7 @@
       - name: kindlegen
       - name: licecap
       - name: mysqlworkbench
+      - name: onedrive
       - name: opera
       - name: prott
       - name: skitch
