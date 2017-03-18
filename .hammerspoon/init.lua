@@ -78,3 +78,12 @@ end
 
 cmdeventtap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.flagsChanged}, handleCmdEvent)
 cmdeventtap:start()
+
+-------------------------
+
+-- Config loading
+-- iTermやAtomではhotkeyが無効になっている
+hs.hotkey.bind({"cmd", "shift", "ctrl"}, "r", function()
+  hs.reload()
+end)
+hs.alert.show("Hammerspoon Config Loaded")
