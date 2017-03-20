@@ -37,6 +37,7 @@
       - name: docker-toolbox
       - name: dropbox
       - name: firefox
+      - name: flashlight
       - name: gyazo
       - name: google-japanese-ime
       - name: google-chrome
@@ -81,6 +82,7 @@
       - name: mercurial
       - name: mpg123
       - name: mycli
+      - name: mysql
       - name: nginx
       - name: nkf
       - name: openssl
