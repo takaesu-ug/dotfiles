@@ -27,6 +27,7 @@
       - tkengo/highway
 
     homebrew_cask_packages:
+      - name: appcleaner
       - name: virtualbox
       - name: atom
       - name: bartender
@@ -37,7 +38,6 @@
       - name: docker-toolbox
       - name: dropbox
       - name: firefox
-      - name: flashlight
       - name: gyazo
       - name: google-japanese-ime
       - name: google-chrome
@@ -47,6 +47,7 @@
       - name: keepassx
       - name: kindle
       - name: kindlegen
+      - name: lacona
       - name: licecap
       - name: mysqlworkbench
       - name: onedrive
