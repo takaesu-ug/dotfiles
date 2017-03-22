@@ -30,7 +30,7 @@ end
 local function handleGlobalAppEvent(name, event, app)
     if event == hs.application.watcher.activated then
         -- hs.alert.show(name)
-        if name == "iTerm2" or name == "Quiver" then
+        if name == "iTerm2" then
             disableAllHotkeys()
         else
             enableAllHotkeys()
@@ -42,10 +42,10 @@ local appsWatcher = hs.application.watcher.new(handleGlobalAppEvent)
 appsWatcher:start()
 
 -- カーソル移動
-remapKey({'ctrl'}, 'l', keyCode('right'))
-remapKey({'ctrl'}, 'h', keyCode('left'))
-remapKey({'ctrl'}, 'j', keyCode('down'))
-remapKey({'ctrl'}, 'k', keyCode('up'))
+remapKey({'ctrl'}, 'f', keyCode('right'))
+remapKey({'ctrl'}, 'b', keyCode('left'))
+remapKey({'ctrl'}, 'n', keyCode('down'))
+remapKey({'ctrl'}, 'p', keyCode('up'))
 
 -------------------------
 
