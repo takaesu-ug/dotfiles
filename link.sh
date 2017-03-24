@@ -14,6 +14,7 @@ files=(
 #  .zshrc
   .bundle/config
   .hammerspoon/init.lua
+  .config/pet/snippet.toml
 )
 
 now=`date '+%Y%m%d'`
@@ -21,6 +22,7 @@ now=`date '+%Y%m%d'`
 # Rubyのbundler のデフォルトディレクトリを事前に作成
 mkdir -p $HOME/.bundle/
 mkdir -p $HOME/.hammerspoon/
+mkdir -p $HOME/.config/pet/
 
 for file in "${files[@]}"; do
   absolute_file=$HOME/$file
