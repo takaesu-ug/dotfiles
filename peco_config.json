@@ -6,7 +6,7 @@
   "Style": {
     "Basic": ["on_default", "default"],
     "SavedSelection": ["bold", "on_yellow", "black"],
-    "Selected": ["underline", "on_white", "black"],
+    "Selected": ["underline", "on_cyan", "black"],
     "Query": ["yellow", "bold"],
     "Matched": ["red"]
   }
