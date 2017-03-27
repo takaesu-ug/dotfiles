@@ -1,5 +1,0 @@
-[[snippets]]
-  description = "sample curl command"
-  command = "curl -iL http://yahoo.co.jp"
-  output = ""
-

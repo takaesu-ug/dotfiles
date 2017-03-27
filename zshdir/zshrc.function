@@ -305,5 +305,5 @@ if type pet >/dev/null 2>&1; then
     zle redisplay
   }
   zle -N pet-select
-  bindkey '^e' pet-select
+  bindkey '^v' pet-select
 fi
