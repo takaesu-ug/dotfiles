@@ -38,8 +38,7 @@ local function handleGlobalAppEvent(name, event, app)
     end
 end
 
-local appsWatcher = hs.application.watcher.new(handleGlobalAppEvent)
-appsWatcher:start()
+hs.application.watcher.new(handleGlobalAppEvent):start()
 
 -- カーソル移動
 remapKey({'ctrl'}, 'f', keyCode('right'))
