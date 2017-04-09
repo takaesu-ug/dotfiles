@@ -52,6 +52,7 @@
       - name: onedrive
       - name: opera
       - name: prott
+      - name: shortcuts
       - name: skitch
       - name: skype
       - name: slack
