@@ -47,7 +47,6 @@
       - name: keepassx
       - name: kindle
       - name: kindlegen
-      - name: lacona
       - name: licecap
       - name: mysqlworkbench
       - name: onedrive
