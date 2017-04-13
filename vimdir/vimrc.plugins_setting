@@ -303,7 +303,7 @@ let g:indent_guides_space_guides=1
 hi IndentGuidesOdd  ctermbg=235
 hi IndentGuidesEven ctermbg=237
 " デフォルトで有効にするファイルタイプ
-au FileType coffee,javascript IndentGuidesEnable
+au FileType javascript,yaml IndentGuidesEnable
 nmap <silent><Leader>ig <Plug>IndentGuidesToggle"
 
 "------------------------------------
