@@ -156,9 +156,6 @@ repo = 'lilydjwg/colorizer'
 
 ## yaml,ansible 関連 ##
 [[plugins]]
-repo = 'stephpy/vim-yaml'
-
-[[plugins]]
 repo = 'chase/vim-ansible-yaml'
 
 [[plugins]]
