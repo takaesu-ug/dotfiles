@@ -128,20 +128,6 @@ https://github.com/robbyrussell/oh-my-zsh#manual-installation
 iterm2関連の設定
 -------------------
 
-### iterm2 + macvim の環境で記号の表示が半角分しか確保されず表示がずれてしまう件の対応方法
-
-[もぷろぐ: Mac の iTerm2 と Vim の 全角記号の問題について](http://ac-mopp.blogspot.jp/2012/10/mac-iterm2-vim.html)
-
-.vimrcに以下の設定を入れるというのをよく見かけるが、
-`set ambiwidth=double`
-
-iterm2の場合はダメなようです。
-`Preferences > Profile > Text > Double-Width Characters` の `Treat ambiguous-width characters as double width.` にチェックする
-
-だが、、↑のitermの設定にするとtmuxでpaneを分割すると枠線が消えてしまう問題が発生する
-[iTerm2 + tmux での pane の枠線の表示に関する問題を解決する - Qiita](http://qiita.com/snaka/items/0d26a73a5f0372ae95b9)
-
-
 ### color テーマ
 vim のカラーテーマ `vim-hybrid` を利用してiterm2のカラーを変更できるのでお好みに
 [w0ng/vim-hybrid](https://github.com/w0ng/vim-hybrid)
