@@ -27,6 +27,7 @@
       - tkengo/highway
 
     homebrew_cask_packages:
+      - name: alfred
       - name: appcleaner
       - name: virtualbox
       - name: atom
@@ -52,7 +53,6 @@
       - name: onedrive
       - name: opera
       - name: prott
-      - name: shortcuts
       - name: skitch
       - name: skype
       - name: slack
