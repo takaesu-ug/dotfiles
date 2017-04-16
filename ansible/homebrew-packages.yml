@@ -36,7 +36,7 @@
       - name: charles
       - name: calibre
       - name: cyberduck
-      - name: docker-toolbox
+      - name: docker   # docker for mac
       - name: dropbox
       - name: firefox
       - name: gyazo
