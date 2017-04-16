@@ -24,7 +24,7 @@ fi
 
 # ndenv
 if [ -d ${HOME}/.ndenv ]; then
-  export PATH=$HOME/.ndenv/bin:$PATH
+  export PATH=$HOME/.ndenv/bin:$HOME/.ndenv/shims:$PATH
   type ndenv > /dev/null 2>&1 && eval "$(ndenv init -)"
 fi
 
