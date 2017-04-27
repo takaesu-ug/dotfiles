@@ -131,8 +131,8 @@ if type peco > /dev/null 2>&1; then
       ${selected}
     fi
   }
-  zle -N peco-function-list
-  bindkey '^k' peco-function-list
+  # zle -N peco-function-list
+  # bindkey '^k' peco-function-list
 
   ## pecoでghqのソースディレクトリを開く
   function peco-src () {
