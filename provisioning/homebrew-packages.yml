@@ -36,6 +36,7 @@
       - name: charles
       - name: calibre
       - name: cyberduck
+      - name: dbeaver-community
       - name: docker   # docker for mac
       - name: dropbox
       - name: firefox
@@ -96,6 +97,7 @@
       - name: reattach-to-user-namespace  # 自分でビルドする方法もあり .tmux.conf参照
       - name: readline
       - name: subversion
+      - name: terraform
       - name: the_platinum_searcher
       - name: the_silver_searcher
       - name: tig
