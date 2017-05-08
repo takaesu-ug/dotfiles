@@ -53,6 +53,7 @@
       - name: mysqlworkbench
       - name: onedrive
       - name: opera
+      - name: postman
       - name: prott
       - name: skitch
       - name: skype
@@ -72,6 +73,7 @@
       - name: fzf
       - name: git
       - name: go
+      - name: highlight
       - name: highway
       - name: hub
       - name: imagemagick
