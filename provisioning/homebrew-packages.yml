@@ -76,7 +76,7 @@
       - name: highlight
       - name: highway
       - name: hub
-      - name: imagemagick
+      - name: imagemagick@6        # imagemagickはrmagickの関係でver6系を入れる。後に対応されたらver7以上とする
       - name: jq
       - name: jmeter
       - name: lesspipe
@@ -88,6 +88,7 @@
       - name: mycli
       - name: mysql
       - name: nginx
+      - name: ngrep
       - name: nkf
       - name: openssl
       - name: packer
