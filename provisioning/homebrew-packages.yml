@@ -12,8 +12,8 @@
 
 - hosts: localhost
   connection: local
-  gather_facts: no
-  become: no
+  gather_facts: false
+  become: false
 
   vars:
     homebrew_taps:
