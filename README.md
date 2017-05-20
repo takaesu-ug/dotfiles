@@ -214,6 +214,7 @@ ghg get typester/gh-open
 ghg get peco/peco
 ghg get mattn/memo
 ghg get knqyf263/pet
+ghg get pocke/whichpr
 ```
 
 * ghgのインストールディレクトリにパスを通す
