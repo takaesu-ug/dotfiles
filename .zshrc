@@ -17,7 +17,7 @@ source ~/dotfiles/zshdir/zshrc.programming
 source ~/dotfiles/zshdir/zshrc.command
 source ~/dotfiles/zshdir/zshrc.function
 
-# secret environments variables (ex. access_toke)
+# secret environments variables (ex. access_token)
 if [[ -f ~/dotfiles/secret/set_environment.sh ]]; then
   source ~/dotfiles/secret/set_environment.sh
 fi
