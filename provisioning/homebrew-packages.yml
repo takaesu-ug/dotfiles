@@ -66,6 +66,7 @@
       - name: ansible
       - name: automake
       - name: ccat
+      - name: certbot
       - name: cmake
       - name: colordiff
       - name: ctags
