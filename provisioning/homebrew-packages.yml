@@ -114,6 +114,8 @@
       - name: yarn
       - name: zsh
     homebrew_packages_with_options:
+      - name: curl
+        options: 'with-openssl,with-nghttp2'
       - name: vim
         options: 'with-lua'
 
