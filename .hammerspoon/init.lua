@@ -1,50 +1,43 @@
--- キーリマップ設定
---   Karabiner 使えない対策: Hammerspoon で macOS の修飾キーつきホットキーのキーリマップを実現する
---     http://qiita.com/naoya@github/items/81027083aeb70b309c14
---     https://github.com/naoya/hammerspoon-init/blob/master/init.lua
-local function remapKey(modifiers, key, keyCode)
-    hs.hotkey.bind(modifiers, key, keyCode, nil, keyCode)
+-- KarabinerからHammerspoonへ - すぎゃーんメモ
+-- http://memo.sugyan.com/entry/2017/05/09/223704
+local function keyStroke(mods, key)
+    return function() hs.eventtap.keyStroke(mods, key, 0) end
 end
 
-local function keyCode(key, modifiers)
-    modifiers = modifiers or {}
-    return function()
-        hs.eventtap.event.newKeyEvent(modifiers, string.lower(key), true):post()
-        hs.timer.usleep(1000)
-        hs.eventtap.event.newKeyEvent(modifiers, string.lower(key), false):post()
-    end
+local function remap(mods, key, fn)
+    return hs.hotkey.bind(mods, key, fn, nil, fn)
 end
 
-local function disableAllHotkeys()
-    for k, v in pairs(hs.hotkey.getHotkeys()) do
-        v['_hk']:disable()
-    end
-end
+-- global
+-- remap({'ctrl'}, 'h', keyStroke({}, 'delete'))
+remap({'ctrl'}, '[', keyStroke({}, 'escape'))
+-- remap({'ctrl'}, 'j', keyStroke({}, 'return'))
+-- remap({'ctrl', 'cmd'}, 'j', keyStroke({'cmd'}, 'return'))
+remap({'cmd', 'shift', 'ctrl'}, 'r', function() hs.reload() end)
 
-local function enableAllHotkeys()
-    for k, v in pairs(hs.hotkey.getHotkeys()) do
-        v['_hk']:enable()
-    end
-end
+-- disable when a specific application is active
+local remapKeys = {
+    remap({'ctrl'}, 'b', keyStroke({}, 'left')),
+    remap({'ctrl'}, 'f', keyStroke({}, 'right')),
+    remap({'ctrl'}, 'n', keyStroke({}, 'down')),
+    remap({'ctrl'}, 'p', keyStroke({}, 'up')),
+}
 
-local function handleGlobalAppEvent(name, event, app)
+local function handleGlobalHotKeyEvent(name, event, app)
     if event == hs.application.watcher.activated then
-        -- hs.alert.show(name)
-        if name == "iTerm2" then
-            disableAllHotkeys()
+        if name == 'iTerm2' or name == 'Atom' then
+            for i, key in ipairs(remapKeys) do
+                key:disable()
+            end
         else
-            enableAllHotkeys()
+            for i, key in ipairs(remapKeys) do
+                key:enable()
+            end
         end
     end
 end
 
-hs.application.watcher.new(handleGlobalAppEvent):start()
-
--- カーソル移動
-remapKey({'ctrl'}, 'f', keyCode('right'))
-remapKey({'ctrl'}, 'b', keyCode('left'))
-remapKey({'ctrl'}, 'n', keyCode('down'))
-remapKey({'ctrl'}, 'p', keyCode('up'))
+hs.application.watcher.new(handleGlobalHotKeyEvent):start()
 
 -------------------------
 
@@ -78,11 +71,6 @@ end
 cmdeventtap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.flagsChanged}, handleCmdEvent)
 cmdeventtap:start()
 
--------------------------
+------
 
--- Config loading
--- iTermやAtomではhotkeyが無効になっている
-hs.hotkey.bind({"cmd", "shift", "ctrl"}, "r", function()
-  hs.reload()
-end)
 hs.alert.show("Hammerspoon Config Loaded")
