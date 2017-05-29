@@ -4,22 +4,23 @@ scriptencoding utf-8
 source $HOME/dotfiles/vimdir/vimrc.filetype
 
 " deinプラグイン管理
-source $HOME/dotfiles/vimdir/vimrc.dein
+" source $HOME/dotfiles/vimdir/vimrc.dein
+source $HOME/dotfiles/vimdir/vimrc.plug
 
-"Color関連
+" Color関連
 source $HOME/dotfiles/vimdir/vimrc.colors
 
-"表示関連
+" 表示関連
 source $HOME/dotfiles/vimdir/vimrc.apperance
 
-"補完(completion)関連
+" 補完(completion)関連
 source $HOME/dotfiles/vimdir/vimrc.completion
 
-"プラグインの設定
+" プラグインの設定
 source $HOME/dotfiles/vimdir/vimrc.plugins_setting
 
-"基本的な設定関連
+" 基本的な設定関連
 source $HOME/dotfiles/vimdir/vimrc.basic
 
-"プログラミング関連設定
+" プログラミング関連設定
 source $HOME/dotfiles/vimdir/vimrc.programming

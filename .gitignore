@@ -6,3 +6,6 @@
 # http://quartet-communications.com/info/topics/13642
 secret/*
 !secret/.keep
+
+vimdir/autoload/plug.vim
+vimdir/plugged/

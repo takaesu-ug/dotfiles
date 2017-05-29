@@ -1,0 +1,105 @@
+" NeoBundle から vim-plug に乗り換えてみた - Qiita
+"     http://qiita.com/jiminko/items/f4b337ab41db751388f7
+" NeoBundleからvim-plugへ - Qiita
+"     http://qiita.com/park-jh/items/226fdc6c6ea7a7598616
+
+let s:plug_dir = expand('~/.vim/autoload/plug.vim')
+let s:plugged_dir = expand('~/.vim/plugged')
+
+if !filereadable(s:plug_dir)
+  silent execute '!curl -fLo ' . s:plug_dir . ' --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+endif
+
+call plug#begin(s:plugged_dir)
+
+"" Colors
+Plug 'w0ng/vim-hybrid'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'tomasr/molokai'
+Plug 'nanotech/jellybeans.vim'
+
+"" Basic
+Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/plugged/vimproc.vim', 'do': 'make' }
+" テキストをかっこで囲む/削除する
+Plug 'tpope/vim-surround'
+" Alignで行頭や行末などで揃える(選択してから  Align \w\+,)
+Plug 'h1mesuke/vim-alignta'
+" jkでの上下移動を激速にする
+Plug 'rhysd/accelerated-jk'
+" unite.vim http://blog.ruedap.com/entry/20110110/vim_unite_plugin
+Plug 'Shougo/unite.vim'
+Plug 'moznion/unite-git-conflict.vim'
+Plug 'Shougo/neomru.vim'
+Plug 'Shougo/vimfiler'
+" https://github.com/Shougo/neocomplete.vim
+" https://github.com/Shougo/neocomplete.vim/wiki/neocomplete-migration-guide
+Plug 'Shougo/neocomplete.vim'
+" neocomplcacheのsinpet補完
+Plug 'Shougo/neosnippet'
+" refs. http://d.hatena.ne.jp/osyo-manga/20140112/1389525543
+Plug 'Shougo/neosnippet-snippets'
+" vimスニペット集 https://github.com/honza/vim-snippets/tree/master/snippets
+Plug 'honza/vim-snippets'
+" if...endやdef...endなどを書きだしてくれる
+Plug 'tpope/vim-endwise'
+" https://github.com/junegunn/fzf#usage-as-vim-plugin
+" https://github.com/junegunn/fzf/wiki/Examples-(vim)
+" https://github.com/junegunn/fzf.vim
+Plug 'junegunn/fzf.vim'
+" 対応するカッコの補完 vim-smartinput
+Plug 'kana/vim-smartinput'
+" 複数カーソルで一括編集などを行う
+" https://github.com/terryma/vim-multiple-cursors
+Plug 'terryma/vim-multiple-cursors'
+" キャメル、スネークケース区切りで操作
+" http://nanasi.jp/articles/vim/camelcasemotion_vim.html
+Plug 'bkad/CamelCaseMotion'
+" git連携プラグイン
+Plug 'tpope/vim-fugitive'
+" カーソルのあるURLをブラウザで開く
+Plug 'tyru/open-browser.vim'
+" tcomment コメントプラグイン
+Plug 'tomtom/tcomment_vim'
+" quickrun.vim : 編集中のファイルを簡単に実行できるプラグイン
+Plug 'thinca/vim-quickrun'
+" quickrunでrspecの色づけ https://github.com/glidenote/rspec-result-syntax
+Plug 'glidenote/rspec-result-syntax'
+" perldocやphpmanual等のリファレンスをvim上で見る(K ラージKでドキュメントリファレンスを開く)
+Plug 'thinca/vim-ref'
+" 検索置換のサポートツール http://qiita.com/yuku_t/items/77a3361ff4d27bda641e
+Plug 'tpope/vim-abolish'
+" ソースコード上のメソッド宣言、変数宣言の一覧を表示
+Plug 'vim-scripts/taglist.vim'
+" シンタックスエラーを検出する
+Plug 'scrooloose/syntastic'
+" indentの深さに色を付ける
+" http://qiita.com/alpaca_taichou/items/fb442cfa78f91634cfaa
+Plug 'nathanaelkane/vim-indent-guides'
+
+"" Programming Plugin
+""" For Frontend, Javascript or HTML and more.
+Plug 'myhere/vim-nodejs-complete'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'othree/html5.vim'
+Plug 'mattn/emmet-vim'
+" vimでCSSを編集するときに色をプレヴュー〜colorizer&unite-webcolorname | Scimpr Blog
+"   http://blog.scimpr.com/2013/02/24/vimでcssを編集するときに色をプレヴュー〜colorizer/
+" :ColorHighlight - start/update highlighting
+" :ColorClear      - clear all highlights
+" :ColorToggle     - toggle highlights
+Plug 'lilydjwg/colorizer'
+""" Others
+" editconfig テキストエディタの共通フォーマッタ http://editorconfig.org/
+Plug 'editorconfig/editorconfig-vim'
+Plug 'mitsuhiko/vim-jinja'                         " Ansible
+Plug 'chase/vim-ansible-yaml', { 'for': ['yaml'] } " Ansible
+Plug 'cespare/vim-toml', { 'for': ['toml'] }
+Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
+Plug 'tpope/vim-rails', { 'for': ['ruby'] }
+Plug 'skwp/vim-rspec', { 'for': ['ruby'] }
+Plug 'slim-template/vim-slim', { 'for': ['slim'] }
+Plug 'davidhalter/jedi-vim', { 'for': ['python'] }
+Plug 'kannokanno/previm', { 'for': ['markdown'] }  " open-browser 依存
+
+call plug#end()

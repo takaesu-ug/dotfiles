@@ -197,6 +197,20 @@ deinで入れているプラグイン一覧
 * [NeoBundle から dein.vim に乗り換えたら爆速だった話 - Qiita](http://qiita.com/delphinus35/items/00ff2c0ba972c6e41542)
 * [NeoVim と dein.vim を使ってみる! - Qiita](http://qiita.com/ress/items/7e71e007cf8d41a07a1a)
 
+
+### vim-plug
+
+- [junegunn/vim-plug: Minimalist Vim Plugin Manager](https://github.com/junegunn/vim-plug)
+- [NeoBundle から vim-plug に乗り換えてみた - Qiita](http://qiita.com/jiminko/items/f4b337ab41db751388f7)
+- [NeoBundleからvim-plugへ - Qiita](http://qiita.com/park-jh/items/226fdc6c6ea7a7598616)
+
+```
+:PlugStatus
+:PlugInstall
+:PlugUpdate
+```
+
+
 Go関連設定
 --------------------
 
