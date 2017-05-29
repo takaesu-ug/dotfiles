@@ -125,9 +125,9 @@ repo = 'nathanaelkane/vim-indent-guides'
 # jscomplete-vim依存のnodejs用の補完
 repo = 'myhere/vim-nodejs-complete'
 
-[[plugins]]
-# coffee syntax + autocompile http://qiita.com/alpaca_taichou/items/fb442cfa78f91634cfaa
-repo = 'kchmck/vim-coffee-script'
+# [[plugins]]
+# # coffee syntax + autocompile http://qiita.com/alpaca_taichou/items/fb442cfa78f91634cfaa
+# repo = 'kchmck/vim-coffee-script'
 
 [[plugins]]
 # es6, react
