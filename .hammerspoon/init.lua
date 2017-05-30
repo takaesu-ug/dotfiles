@@ -25,7 +25,7 @@ local remapKeys = {
 
 local function handleGlobalHotKeyEvent(name, event, app)
     if event == hs.application.watcher.activated then
-        if name == 'iTerm2' or name == 'Atom' then
+        if name == 'iTerm2' then
             for i, key in ipairs(remapKeys) do
                 key:disable()
             end
@@ -68,7 +68,7 @@ local function handleCmdEvent(e)
     prevKeyCode = key
 end
 
-cmdeventtap = hs.eventtap.new({hs.eventtap.event.types.keyDown, hs.eventtap.event.types.flagsChanged}, handleCmdEvent)
+cmdeventtap = hs.eventtap.new({ hs.eventtap.event.types.keyDown, hs.eventtap.event.types.flagsChanged }, handleCmdEvent)
 cmdeventtap:start()
 
 ------
