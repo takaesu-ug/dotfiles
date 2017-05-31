@@ -25,4 +25,4 @@ xmap <C-k>     <Plug>(neosnippet_expand_target)
 " スニペットのやり方は以下を参照
 " https://github.com/honza/vim-snippets/tree/master/snippets
 let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory='~/.cache/dein/repos/github.com/honza/vim-snippets/snippets'
+let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'
