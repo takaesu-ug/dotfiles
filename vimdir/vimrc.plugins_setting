@@ -332,3 +332,32 @@ function! s:all_files()
   \        "v:val !~ 'fugitive:\\|NERD_tree\\|^/tmp/\\|.git/'"),
   \ map(filter(range(1, bufnr('$')), 'buflisted(v:val)'), 'bufname(v:val)'))
 endfunction
+
+"------------------------------------
+" vim-go
+"------------------------------------
+" :GoBuild 時にエラーのある行にジャンプしない
+let g:go_jump_to_error = 0
+" ファイル保存時に実行されるコード整形で使用するツール名
+let g:go_fmt_command = 'goimports'
+" キーワードコマンドとして godoc を使わない
+let g:go_doc_keywordprg_enabled = 0
+" タグジャンプのキーを godef の動作で置き換える
+let g:go_def_mapping_enabled = 1
+" ハイライトを有効にする
+let g:go_highlight_operators = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_string_spellcheck = 1
+" 新規ファイルでテンプレートを適用しない
+let go_template_autocreate = 0
+" vimproc を使わず job を使う
+let g:go#use_vimproc = 0
+
+"------------------------------------
+" ultiSnips
+"------------------------------------
+let g:UltiSnipsExpandTrigger = '<c-e><c-u>'
+let g:UltiSnipsListSnippets = '<c-e><c-i>'
