@@ -28,9 +28,12 @@ if [ -d ${HOME}/.ndenv ]; then
   type ndenv > /dev/null 2>&1 && eval "$(ndenv init -)"
 fi
 
-
-# # perlbrew
-# if [[ -f ~/perl5/perlbrew/etc/bashrc ]]; then
-#   source ~/perl5/perlbrew/etc/bashrc
-# fi
-#
+# python
+## venvのプロンプト追加
+function show_python_virtualenv() {
+  if [ -n "${VIRTUAL_ENV}" ]; then
+    # echo '[venv] '
+    echo "($(basename $VIRTUAL_ENV))"
+  fi
+}
+PS1='$(show_python_virtualenv)'$PS1

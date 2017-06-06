@@ -11,15 +11,6 @@ function my_git_status() {
   [ $(current_branch) ] && echo "($(current_branch) $(git_prompt_status))"
 }
 
-function python_virtualenv_info() {
-  if [ -n "${VIRTUAL_ENV}" ]; then
-    echo '[venv] '
-  else
-    echo ''
-  fi
-}
-
-
 
 # zshでGitのブランチ名をプロンプトに表示する / LiosK-free Blog
 # http://liosk.blog103.fc2.com/blog-entry-209.html
@@ -68,7 +59,7 @@ SEPARATOR3=$(str_with_color white ':')
 MY_PROMPT='default' # prompt切り替え(toggle)するためのフラグ変数
 
 # PROMPT='${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${STATUS_EMOJI} ${CURRENT_DIRECTORY}
-default_prompt='${PROMPT_PREFIX}${STATUS_CODE} $(python_virtualenv_info)$(my_vcs_info) ${CURRENT_DIRECTORY}
+default_prompt='${PROMPT_PREFIX}${STATUS_CODE} $(my_vcs_info) ${CURRENT_DIRECTORY}
 ${DATE_TIME} $PROMPT_CHAR'
 PROMPT=$default_prompt
 
@@ -91,3 +82,4 @@ $PROMPT_CHAR'
     MY_PROMPT='default'
   fi
 }
+
