@@ -1,6 +1,6 @@
 ## go用の設定
 export GOPATH=~/workspace/gopath
-export PATH=/usr/local/go/bin:$GOPATH/bin:$PATH  # パッケージで入れたgoのbinディレクトリへのパスとGOPATH配下のパスを追加
+export PATH=/usr/local/opt/go/libexec/bin:$GOPATH/bin:$PATH  # パッケージで入れたgoのbinディレクトリへのパスとGOPATH配下のパスを追加
 
 # ghgを入れてgo製のパッケージを利用するだけの設定
 # http://www.songmu.jp/riji/entry/2016-07-06-ghg.html

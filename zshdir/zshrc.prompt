@@ -1,6 +1,8 @@
 ## カスタムプロンプト
 # 参考
 # oh-my-zshのテーマに関するTips http://qiita.com/takc923/items/c479e38112b913b7614a
+# 漢のzsh (2) 取りあえず、プロンプトを整えておく。カッコつけたいからね | マイナビニュース
+#   http://news.mynavi.jp/column/zsh/002/
 
 function str_with_color() {
   echo "%{$fg[$1]%}$2%{$reset_color%}"
@@ -66,10 +68,10 @@ PROMPT=$default_prompt
 
 function toggle_prompt() {
   if [[ $MY_PROMPT == 'default' ]]; then
-    PROMPT='${PROMPT_PREFIX}${STATUS_CODE}[${DATE_TIME}]
+    PROMPT='${PROMPT_PREFIX}${STATUS_CODE}${DATE_TIME}
 $PROMPT_CHAR'
 
-    # RPROMPTはなしで様子みする（自動で画面サイズで消え得るのはいいよね～）
+    # RPROMPTはなしで様子みする（自動で画面サイズで消えるのはいいよね～）
     RPROMPT='$(my_vcs_info) ${STATUS_EMOJI} [${CURRENT_DIRECTORY}]'
 
     # 最終行のRPROMPTだけ出力する
@@ -82,4 +84,3 @@ $PROMPT_CHAR'
     MY_PROMPT='default'
   fi
 }
-
