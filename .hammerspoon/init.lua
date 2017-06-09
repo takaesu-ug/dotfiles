@@ -10,7 +10,7 @@ end
 
 -- global
 -- remap({'ctrl'}, 'h', keyStroke({}, 'delete'))
-remap({'ctrl'}, '[', keyStroke({}, 'escape'))
+-- remap({'ctrl'}, '[', keyStroke({}, 'escape'))
 -- remap({'ctrl'}, 'j', keyStroke({}, 'return'))
 -- remap({'ctrl', 'cmd'}, 'j', keyStroke({'cmd'}, 'return'))
 remap({'cmd', 'shift', 'ctrl'}, 'r', function() hs.reload() end)
