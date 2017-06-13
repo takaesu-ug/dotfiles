@@ -50,3 +50,9 @@ if [ -f /usr/bin/qlmanage ]; then
   alias ql='qlmanage -p "$@" >& /dev/null'
 fi
 
+# chromeコマンドでヘッドレスブラウザ利用
+# https://developers.google.com/web/updates/2017/04/headless-chrome?hl=ja
+if [ -f /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome ]; then
+  alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+  # chrome --headless --disable-gpu --dump-dom https://www.chromestatus.com
+fi
