@@ -80,18 +80,3 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-
-
-"""""" rsense関連は一旦置いておく
-" [[plugins]]
-" # Rsenseを用いた補完 neocomplcache-rsense
-" repo = 'Shougo/neocomplcache-rsense'
-" depends = ['Shougo/neocomplcache']
-" on_ft = ['ruby', 'eruby']
-"
-" " Ruby Rsenseでの補完をさせる
-" " rsense自体は homebrew で入れておく
-" " https://github.com/Shougo/neocomplcache/issues/355
-" let g:rsenseHome = "/usr/local/Cellar/rsense/0.3/libexec/"
-" let g:rsenseUseOmniFunc = 1
-" let g:neocomplcache#sources#rsense#home_directory = '/usr/local/Cellar/rsense/0.3/libexec/'
