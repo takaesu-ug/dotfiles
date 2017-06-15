@@ -356,6 +356,10 @@ let go_template_autocreate = 0
 " vimproc を使わず job を使う
 let g:go#use_vimproc = 0
 
+" C-x C-o で補完候補を表示させる(gocode)
+" importしていないパッケージも保管する
+let g:go_gocode_unimported_packages = 1
+
 "------------------------------------
 " ultiSnips
 "------------------------------------
