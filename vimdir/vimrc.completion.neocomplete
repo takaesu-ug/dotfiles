@@ -80,3 +80,9 @@ endif
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+
+" 補完の追加設定
+" menuone 補完候補が１つでも表示する
+" noselect 保管時に候補が自動選択する動作を無効
+" preview 選択している候補の詳細を表示
+set completeopt=menuone,noselect,preview
