@@ -85,6 +85,7 @@
       - name: lua
       - name: mas
       - name: mercurial
+      - name: mosquitto
       - name: mpg123
       - name: mycli
       - name: mysql
