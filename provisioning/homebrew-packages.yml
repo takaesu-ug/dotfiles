@@ -35,6 +35,7 @@
       - name: blisk
       - name: charles
       - name: calibre
+      - name: contexts
       - name: cyberduck
       - name: dbeaver-community
       - name: docker   # docker for mac
