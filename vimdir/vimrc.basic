@@ -96,6 +96,7 @@ autocmd QuickFixCmdPost *grep* cwindow
 " vim内で検索するときに大文字小文字を気にしない（ignore case）する方法 -
 " http://qiita.com/shoma2da/items/23009d4e1a90c5fe5c31
 " /\choge    <= 検索時に \c をつけるとignorecaseによる検索になる
+" /\Choge    <= 検索時に \C をつけるとcase sensitiveによる検索になる
 set ignorecase
 set smartcase
 
