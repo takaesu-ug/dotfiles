@@ -294,7 +294,7 @@ fi
 
 # refs. http://qiita.com/knqyf263/items/01ff865bbab2f5e48d1e
 if type pet >/dev/null 2>&1; then
-  function prev() {
+  function prev_pet() {
     PREV=$(fc -lrn | head -n 1)
     sh -c "pet new `printf %q "$PREV"`"
   }
