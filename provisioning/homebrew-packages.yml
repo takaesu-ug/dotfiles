@@ -47,6 +47,7 @@
       - name: hammerspoon
       - name: iterm2
       - name: java
+      - name: karabiner-elements
       - name: keepassx
       - name: kindle
       - name: kindlegen
