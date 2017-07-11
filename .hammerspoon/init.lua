@@ -39,37 +39,38 @@ end
 
 hs.application.watcher.new(handleGlobalHotKeyEvent):start()
 
--------------------------
-
--- CmdKeyのIME変換
--- macOS SierraにアップデートしてHammerspoonでCommandキーにかなと英数を割り当てた | mizoguche.info
--- http://mizoguche.info/2017/01/hammerspoon_for_sierra/
-local prevKeyCode
-local function handleCmdEvent(e)
-    local leftCmd = 0x37  -- 55
-    local rightCmd = 0x36 -- 54
-    local alnum = 0x66
-    local kana = 0x68
-    local key = e:getKeyCode()
-    local isCmdKeyUp = not(e:getFlags()['cmd']) and e:getType() == hs.eventtap.event.types.flagsChanged
-
-    -- hs.alert.show(e:getType())
-    -- hs.alert.show(key)
-    -- hs.alert.show(isCmdKeyUp)
-
-    if isCmdKeyUp then
-        if prevKeyCode == leftCmd then
-            hs.eventtap.keyStroke({}, alnum)
-        elseif prevKeyCode == rightCmd then
-            hs.eventtap.keyStroke({}, kana)
-        end
-    end
-
-    prevKeyCode = key
-end
-
-cmdeventtap = hs.eventtap.new({ hs.eventtap.event.types.keyDown, hs.eventtap.event.types.flagsChanged }, handleCmdEvent)
-cmdeventtap:start()
+-- Karabiner-elementsでやる
+-- -------------------------
+--
+-- -- CmdKeyのIME変換
+-- -- macOS SierraにアップデートしてHammerspoonでCommandキーにかなと英数を割り当てた | mizoguche.info
+-- -- http://mizoguche.info/2017/01/hammerspoon_for_sierra/
+-- local prevKeyCode
+-- local function handleCmdEvent(e)
+--     local leftCmd = 0x37  -- 55
+--     local rightCmd = 0x36 -- 54
+--     local alnum = 0x66
+--     local kana = 0x68
+--     local key = e:getKeyCode()
+--     local isCmdKeyUp = not(e:getFlags()['cmd']) and e:getType() == hs.eventtap.event.types.flagsChanged
+--
+--     -- hs.alert.show(e:getType())
+--     -- hs.alert.show(key)
+--     -- hs.alert.show(isCmdKeyUp)
+--
+--     if isCmdKeyUp then
+--         if prevKeyCode == leftCmd then
+--             hs.eventtap.keyStroke({}, alnum)
+--         elseif prevKeyCode == rightCmd then
+--             hs.eventtap.keyStroke({}, kana)
+--         end
+--     end
+--
+--     prevKeyCode = key
+-- end
+--
+-- cmdeventtap = hs.eventtap.new({ hs.eventtap.event.types.keyDown, hs.eventtap.event.types.flagsChanged }, handleCmdEvent)
+-- cmdeventtap:start()
 
 ------
 
