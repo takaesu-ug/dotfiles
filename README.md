@@ -177,9 +177,30 @@ dotfiles/vimdir/README_LINK.txt
 - [NeoBundleからvim-plugへ - Qiita](http://qiita.com/park-jh/items/226fdc6c6ea7a7598616)
 
 ```
+インストール
+$ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+```
 :PlugStatus
 :PlugInstall
 :PlugUpdate
+```
+
+### neovim
+
+設定ファイルのシンボリックリンクを貼る
+
+```
+% ln -s ~/dotfiles/.vimrc ~/.config/nvim/init.vim
+```
+
+#### neovimでvim-plugを使う
+
+```
+curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 
