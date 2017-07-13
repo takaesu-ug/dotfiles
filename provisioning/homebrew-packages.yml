@@ -91,6 +91,7 @@
       - name: mpg123
       - name: mycli
       - name: mysql
+      - name: neovim
       - name: nginx
       - name: ngrep
       - name: nkf

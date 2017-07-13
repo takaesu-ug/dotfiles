@@ -16,6 +16,7 @@ alias relogin='exec $SHELL -l'
 LESS=-qR # ビープ音を消して、ANSIカラーシーケンス
 
 alias vi='vim'
+alias nvi='nvim'
 
 # Ruby のctag用
 alias rtags='ctags -R -a --sort=yes --exclude="*.js" --exclude="*.h" --exclude=log --exclude="*.yml" --exclude=".git"'
