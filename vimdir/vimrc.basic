@@ -14,10 +14,12 @@ set noundofile
 " 一行の文字数が多くてもきちんと描画(@で省略されないようにする)
 set display=lastline
 
-" Visualモードでヤンクしたものをクリップボードにコピー
-" http://vim-users.jp/2010/02/hack126/
-set clipboard+=autoselect
-"set clipboard+=unnamed
+" yankしたものをクリップボードにコピー
+if has('nvim')
+  set clipboard+=unnamedplus  " neovimで利用する http://qiita.com/clomsync/items/11fd415769d429b6f017
+else
+  set clipboard+=autoselect " vim8で利用する
+endif
 
 " Ctrl-iでヘルプ
 nnoremap <C-i>  :<C-u>help<Space>
