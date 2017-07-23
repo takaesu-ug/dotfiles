@@ -61,6 +61,7 @@
       - name: skype
       - name: slack
       - name: vagrant
+      - name: visual-studio-code
       - name: xquartz
 
     homebrew_packages:
