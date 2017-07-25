@@ -371,3 +371,13 @@ let g:UltiSnipsListSnippets = '<c-e><c-i>'
 "------------------------------------
 let g:terraform_align = 1
 let g:terraform_fmt_on_save = 1
+
+
+"------------------------------------
+" jiangmiao/simple-javascript-indenter
+"------------------------------------
+let g:SimpleJsIndenter_BriefMode = 1
+let g:SimpleJsIndenter_CaseIndentLevel = -1
+
+" DOMとMozilla関連とES6のメソッドを補完
+let g:jscomplete_use = ['dom', 'moz']
