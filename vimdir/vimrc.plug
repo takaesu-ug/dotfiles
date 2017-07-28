@@ -107,7 +107,7 @@ Plug 'skwp/vim-rspec', { 'for': ['ruby'] }
 Plug 'slim-template/vim-slim', { 'for': ['slim'] }
 Plug 'davidhalter/jedi-vim', { 'for': ['python'] }
 Plug 'kannokanno/previm', { 'for': ['markdown'] }  " open-browser 依存
-Plug 'fatih/vim-go', { 'for': ['go'] }
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': ['go'] }
 Plug 'hashivim/vim-terraform', { 'for': ['terraform'] }
 
 call plug#end()
