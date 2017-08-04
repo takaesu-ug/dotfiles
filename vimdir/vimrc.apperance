@@ -91,7 +91,7 @@ set softtabstop=0
 " 保存時に行末の空白を除去する
 " autocmd BufWritePre * :%s/\s\+$//ge
 " :Tailw 行末のwhite space削除
-:command Tailw :%s/\s\+$//ge
+:command! Tailw :%s/\s\+$//ge
 "" 保存時にtabをスペースに変換する(2スペース)
 " autocmd BufWritePre * :%s/\t/  /ge
-:command Tab2w :%s/\t/  /ge
+:command! Tab2w :%s/\t/  /ge
