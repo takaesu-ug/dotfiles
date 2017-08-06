@@ -79,6 +79,8 @@ Plug 'scrooloose/syntastic'
 " indentの深さに色を付ける
 " http://qiita.com/alpaca_taichou/items/fb442cfa78f91634cfaa
 Plug 'nathanaelkane/vim-indent-guides'
+" ctrl-p(おもにvim-goの :GoDecls, :GoDeclsDir で利用する) 
+Plug 'ctrlpvim/ctrlp.vim'
 
 "" Programming Plugin
 """ For Frontend, Javascript or HTML and more.
@@ -108,6 +110,7 @@ Plug 'slim-template/vim-slim', { 'for': ['slim'] }
 Plug 'davidhalter/jedi-vim', { 'for': ['python'] }
 Plug 'kannokanno/previm', { 'for': ['markdown'] }  " open-browser 依存
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries', 'for': ['go'] }
+Plug 'AndrewRadev/splitjoin.vim' " gS:分割, gJ:統合
 Plug 'hashivim/vim-terraform', { 'for': ['terraform'] }
 
 call plug#end()

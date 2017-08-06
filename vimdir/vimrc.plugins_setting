@@ -335,6 +335,7 @@ endfunction
 
 "------------------------------------
 " vim-go
+" https://github.com/hnakamur/vim-go-tutorial-ja
 "------------------------------------
 " :GoBuild 時にエラーのある行にジャンプしない
 let g:go_jump_to_error = 0
@@ -342,29 +343,100 @@ let g:go_jump_to_error = 0
 let g:go_fmt_command = 'goimports'
 " キーワードコマンドとして godoc を使わない
 let g:go_doc_keywordprg_enabled = 0
-" タグジャンプのキーを godef の動作で置き換える
-let g:go_def_mapping_enabled = 1
 " ハイライトを有効にする
 let g:go_highlight_operators = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
+" let g:go_highlight_extra_types = 1
 let g:go_highlight_build_constraints = 1
 let g:go_highlight_string_spellcheck = 1
+let g:go_highlight_generate_tags = 1
 " 新規ファイルでテンプレートを適用しない
 let go_template_autocreate = 0
 " vimproc を使わず job を使う
 let g:go#use_vimproc = 0
+" " gofmtでパースエラーをクイックフィックスリストに表示させない
+" let g:go_fmt_fail_silently = 1
 
 " C-x C-o で補完候補を表示させる(gocode)
 " importしていないパッケージも保管する
 let g:go_gocode_unimported_packages = 1
+
+" :GoMetaLinter を実行してLint関連を実行する
+let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+let g:go_metalinter_deadline = "5s"
+" 保存時に実効する meta linter
+let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+
+" ショートカット
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>r <Plug>(go-run)
+autocmd FileType go nmap <leader>t <Plug>(go-test)
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+autocmd FileType go nmap <Leader>i <Plug>(go-info)
+
+" :GoAlternate テストへの移動と戻りのトグル
+autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+
+" 関数等の定義へジャンプ
+" タグジャンプのキーを godef の動作で置き換える
+" :GoDef , gd , ctrl-] のいずれかで定義にジャンプする
+" :GoDefPop, Ctrl-t で元の場所に戻る
+" :GoDecls :GoDeclsDir で ctrlp の機能を使ったジャンプ昨日
+let g:go_def_mode = 'godef'
+let g:go_def_mapping_enabled = 1
+let g:go_decls_includes = "func,type"
+
+" go-info を自動で出したい時有効にする
+" let g:go_auto_type_info = 1
+
+" :GoSameIds , :GoSameIdsClear を自動で行う
+let g:go_auto_sameids = 1
+
+" :GoPlay  playgroundに公開する
+" let g:go_play_open_browser = 0 " ブラウザで開きたくない時
+let g:go_play_browser_command = "chrome"
+
+
+" ]] 次のfunction
+" [[ 前のfunction
+" :GoFiles         パッケージを構成するファイルを一覧する
+" :GoDeps          ファイルが依存しているパッケージを一覧する
+" :GoDoc           カーソルのコードのドキュメント表示
+" :GoReferrers     選択した識別子の参照
+" :GoDescribe      識別子の定義元のリストがクイックフィックスで表示される(フィールド、メソッド)
+" :GoImplements    型が実装しているインターフェースを探す
+" :GoWhicherrs     err識別子がどのような型のエラーなのかを判断する
+" :GoChannelPeers  チャンネルの間でどのように値が送られるかをみる
+" :GoCallers       関数定義にカーソルを置いて実行すると呼び出し側を一覧できる
+" :GoRename aaa    カーソルにある名前を aaa に変更する、GOPATH配下にあるすべてのパッケージを検索する
+" :GoFreevars      ビジュアルモードで選択した範囲で依存している変数を洗い出す(リファクタに役立つ)
+" :GoImpl          インターフェース上で実装したいメソッドを実装する
+
 
 "------------------------------------
 " ultiSnips
 "------------------------------------
 let g:UltiSnipsExpandTrigger = '<c-e><c-u>'
 let g:UltiSnipsListSnippets = '<c-e><c-i>'
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "------------------------------------
 " vim-terraform
