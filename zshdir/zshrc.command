@@ -18,6 +18,13 @@ LESS=-qR # ビープ音を消して、ANSIカラーシーケンス
 alias vi='vim'
 alias nvi='nvim'
 
+# alias b='hub browse $(ghq list | fzf | cut -d "/" -f 2,3)'
+# シングルコートのエスケープは '\'' とする必要がある。（イメージ \' とやっている感じ）
+#   [.bashrcにエイリアス書くときのシングルクオート対策（source ~/.bashrc エラー対処）](http://min117.hatenablog.com/entry/2015/11/07/152302)
+alias b='open $(ghq list |fzf | awk -F "/" '\''{printf("https://%s/%s/%s", $(NF-2), $(NF-1), $(NF))}'\'')'
+alias v='cd $(ghq root)/$(ghq list | fzf); vim .'
+alias vc='code $(ghq root)/$(ghq list | fzf)'
+
 # Ruby のctag用
 alias rtags='ctags -R -a --sort=yes --exclude="*.js" --exclude="*.h" --exclude=log --exclude="*.yml" --exclude=".git"'
 
