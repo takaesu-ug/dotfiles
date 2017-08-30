@@ -66,10 +66,11 @@
 
     homebrew_packages:
       - name: awscli        # http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
-      - name: ansible
+      # - name: ansible # pipでインストール
       - name: automake
       - name: ccat
       - name: certbot
+      - name: chromedriver
       - name: cmake
       - name: colordiff
       - name: ctags
@@ -87,7 +88,7 @@
       - name: lha
       - name: lua
       - name: mas
-      - name: mercurial
+      # - name: mercurial
       - name: mosquitto
       - name: mpg123
       - name: mycli
@@ -102,6 +103,7 @@
       - name: pgcli
       - name: pstree
       - name: pkg-config
+      - name: python
       - name: python3
       - name: reattach-to-user-namespace  # 自分でビルドする方法もあり .tmux.conf参照
       - name: readline
