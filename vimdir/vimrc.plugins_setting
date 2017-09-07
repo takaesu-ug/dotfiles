@@ -398,7 +398,7 @@ autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 " タグジャンプのキーを godef の動作で置き換える
 " :GoDef , gd , ctrl-] のいずれかで定義にジャンプする
 " :GoDefPop, Ctrl-t で元の場所に戻る
-" :GoDecls :GoDeclsDir で ctrlp の機能を使ったジャンプ昨日
+" :GoDecls :GoDeclsDir で ctrlp の機能を使ったジャンプ機能
 let g:go_def_mode = 'godef'
 let g:go_def_mapping_enabled = 1
 let g:go_decls_includes = "func,type"
