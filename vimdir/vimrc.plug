@@ -31,9 +31,16 @@ Plug 'Shougo/unite.vim'
 Plug 'moznion/unite-git-conflict.vim'
 Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimfiler'
-" https://github.com/Shougo/neocomplete.vim
-" https://github.com/Shougo/neocomplete.vim/wiki/neocomplete-migration-guide
-Plug 'Shougo/neocomplete.vim'
+
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    let g:deoplete#enable_at_startup = 1
+else
+    " https://github.com/Shougo/neocomplete.vim
+    " https://github.com/Shougo/neocomplete.vim/wiki/neocomplete-migration-guide
+    Plug 'Shougo/neocomplete.vim'
+endif
+
 " neocomplcacheのsinpet補完
 Plug 'Shougo/neosnippet'
 " refs. http://d.hatena.ne.jp/osyo-manga/20140112/1389525543
