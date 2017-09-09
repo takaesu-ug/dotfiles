@@ -25,7 +25,6 @@ AppStoreでインストールする
 
 ## キーリピートを早くする
 
-* Karabinerは使わない https://github.com/markandrewj/Karabiner-Elements/blob/391b860aa4e4091c2617024ef2afef4da75fcefe/examples/key_repeat.md
 * [Macのキーリピートをシステム設定での設定よりも速くする](http://drumsoft.com/blog/archives/21)
 
 ```
@@ -157,7 +156,7 @@ hybrid.itermcolors というファイルが出来るのitermの preferences->Pro
 
 
 vim設定
---------------------
+----------------
 
 dotfiles/vimdir ディレクトリを ~/.vim にリンクを貼る
 
@@ -193,7 +192,7 @@ $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 設定ファイルのシンボリックリンクを貼る
 
 ```
-% ln -s ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
+% ln -sFi $HOME/dotfiles/vimdir $HOME/.config/nvim
 ```
 
 #### neovimでvim-plugを使う
@@ -248,9 +247,18 @@ peco関連設定(homebrewでインストール済み)
 % ln -s $HOME/dotfiles/peco_config.json $HOME/.peco/config.json
 ```
 
-XXenv 関連のプログラミングビルドツール設定
+XXXXenv 関連のプログラミングビルドツール設定
 -------------------
 
 以下のファイルを参照
 
 [dotfiles/my-docs/env.md](https://github.com/yusabana/dotfiles/blob/master/my-docs/env.md)
+
+
+Karabiner-Elementsの設定
+-------------
+
+```
+% ln -s $HOME/dotfiles/.config/karabiner/assets $HOME/.config/karabiner/
+% ln -s $HOME/dotfiles/.config/karabiner/karabiner.json $HOME/.config/karabiner/
+```

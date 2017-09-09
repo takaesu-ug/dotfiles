@@ -27,6 +27,7 @@ source $HOME/dotfiles/vimdir/vimrc.completion
 "" deoplete関連の設定
 source $HOME/dotfiles/vimdir/vimrc.deoplete
 
-" neovim独自設定
+"" neovim独自設定
+" https://hori-ryota.com/blog/neovim-fix-input-broken-ttimeout/
 set ttimeout
 set ttimeoutlen=30
