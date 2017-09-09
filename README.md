@@ -193,7 +193,7 @@ $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 設定ファイルのシンボリックリンクを貼る
 
 ```
-% ln -s ~/dotfiles/.vimrc ~/.config/nvim/init.vim
+% ln -s ~/dotfiles/.config/nvim/init.vim ~/.config/nvim/init.vim
 ```
 
 #### neovimでvim-plugを使う
@@ -201,6 +201,14 @@ $ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+#### deoplete.nvimを使うために
+
+https://github.com/Shougo/deoplete.nvim#requirements
+
+```
+pip3 install neovim
 ```
 
 
