@@ -26,3 +26,7 @@ source $HOME/dotfiles/vimdir/vimrc.programming
 source $HOME/dotfiles/vimdir/vimrc.completion
 "" deoplete関連の設定
 source $HOME/dotfiles/vimdir/vimrc.deoplete
+
+" neovim独自設定
+set ttimeout
+set ttimeoutlen=30
