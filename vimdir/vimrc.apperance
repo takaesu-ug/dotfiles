@@ -81,12 +81,6 @@ set ttyfast
 "Escの２回押しで検索のハイライト消去
 nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
-"タブをスペースで挿入(4スペース)
-set expandtab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=0
-
 " vimに自作コマンドを実装する - Qiita http://qiita.com/shimbaroid/items/f2ad60c203ccdff7da16
 " 保存時に行末の空白を除去する
 " autocmd BufWritePre * :%s/\s\+$//ge

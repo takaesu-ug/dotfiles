@@ -1,10 +1,12 @@
 scriptencoding utf-8
 
+filetype off
+filetype plugin indent off
+
 " filetypeの設定を記述
 source $HOME/dotfiles/vimdir/vimrc.filetype
 
-" deinプラグイン管理
-" source $HOME/dotfiles/vimdir/vimrc.dein
+" vim-plug
 source $HOME/dotfiles/vimdir/vimrc.plug
 
 " Color関連
@@ -26,6 +28,9 @@ source $HOME/dotfiles/vimdir/vimrc.programming
 source $HOME/dotfiles/vimdir/vimrc.completion
 "" deoplete関連の設定
 source $HOME/dotfiles/vimdir/vimrc.deoplete
+
+filetype on
+filetype plugin indent on
 
 "" neovim独自設定
 " https://hori-ryota.com/blog/neovim-fix-input-broken-ttimeout/
