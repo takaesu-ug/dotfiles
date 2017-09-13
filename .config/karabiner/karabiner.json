@@ -65,8 +65,6 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.happenapps\\.Quiver$",
-                                            "^com\\.tinyspeck\\.slackmacgap$",
                                             "^org\\.gnu\\.Emacs$",
                                             "^org\\.gnu\\.AquamacsEmacs$",
                                             "^org\\.gnu\\.Aquamacs$",
@@ -127,8 +125,6 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.happenapps\\.Quiver$",
-                                            "^com\\.tinyspeck\\.slackmacgap$",
                                             "^org\\.gnu\\.Emacs$",
                                             "^org\\.gnu\\.AquamacsEmacs$",
                                             "^org\\.gnu\\.Aquamacs$",
