@@ -35,7 +35,8 @@ Plug 'Shougo/vimfiler'
 if has('nvim')
     " https://github.com/Shougo/deoplete.nvim#requirements
     Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    let g:deoplete#enable_at_startup = 1
+    Plug 'zchee/deoplete-jedi'
+    Plug 'zchee/deoplete-go', { 'do': 'make'}
 else
     " https://github.com/Shougo/neocomplete.vim
     " https://github.com/Shougo/neocomplete.vim/wiki/neocomplete-migration-guide

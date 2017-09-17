@@ -207,6 +207,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 https://github.com/Shougo/deoplete.nvim#requirements
 
 ```
+pip2 install neovim
 pip3 install neovim
 ```
 
