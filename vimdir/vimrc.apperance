@@ -16,10 +16,10 @@ highlight LineNr ctermfg=238
 " 補完候補の色づけ for vim7
 highlight PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg=#f0e68c
 
-" StatusLine
-" http://www.ksknet.net/vi/statusline.html
-set laststatus=2
-set statusline=%f%r%h%m%=%l/%L:%c%V%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}
+" " StatusLine
+" " http://www.ksknet.net/vi/statusline.html
+" set laststatus=2
+" set statusline=%f%r%h%m%=%l/%L:%c%V%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}
 
 " 全角スペースの表示
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
