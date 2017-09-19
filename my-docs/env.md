@@ -142,3 +142,40 @@ $ brew reinstall libpng --universal
 ```
 $ phpenv install 5.3.29
 ```
+
+
+pipenv
+---------
+
+- Docs
+    - http://pipenv-ja.readthedocs.io/ja/translate-ja/
+    - http://pipenv-ja.readthedocs.io/ja/translate-ja/#pipenv-usage
+
+とりあえず pip3 で python3 系に入れておいてもいいみたい
+
+```
+pip3 install pipenv
+```
+
+### トラブルシューティング
+
+lang関連の問題があるようで `LC_ALL` と `LANG` を設定
+https://github.com/kennethreitz/pipenv/issues/187
+
+### コマンド
+
+```
+$ pipenv --three
+$ pipenv --two
+
+$ pipenv install [package]
+$ pipenv install --dev [package]
+$ pipenv install requests==2.13.0
+
+pipenvでインストールしている状態で実行する
+$ pipenv run python main.py
+
+virtualenvでactivateしたい人のためのコマンド
+$ pipenv shell
+```
+
