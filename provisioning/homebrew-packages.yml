@@ -62,6 +62,7 @@
       - name: slack
       - name: vagrant
       - name: visual-studio-code
+      - name: xmind
       - name: xquartz
 
     homebrew_packages:
