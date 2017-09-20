@@ -112,6 +112,7 @@
       - name: terraform
       - name: the_platinum_searcher
       - name: the_silver_searcher
+      - name: tidy-html5 # tidyのlintでhtml5として有効となるように
       - name: tig
       - name: tmux
       - name: tree
