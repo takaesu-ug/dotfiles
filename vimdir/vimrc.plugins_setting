@@ -170,14 +170,6 @@ let g:unite_source_file_mru_limit = 200
 
 
 "------------------------------------
-" fugitive.vim , vimgrep(:vim)に関して
-" http://qiita.com/yuku_t/items/0c1aff03949cb1b8fe6b
-"------------------------------------
-" ステータス行に現在のgitブランチを表示する
-set statusline+=%{fugitive#statusline()}
-
-
-"------------------------------------
 " quickrun.vim
 "------------------------------------
 " 初期化
@@ -256,13 +248,22 @@ let g:lightline = {
     \ 'colorscheme': 'powerline',
     \ 'active': {
     \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'gitbranch', 'readonly', 'filename', 'modified', 'ale' ] ]
+    \             [ 'readonly', 'filename', 'ale' ] ],
+    \   'right': [ [ 'lineinfo' ],
+    \              [ 'percent' ],
+    \              [ 'gitbranch', 'fileformat', 'fileencoding', 'filetype' ] ]
     \ },
     \ 'component_function': {
     \   'gitbranch': 'fugitive#head',
-    \   'ale': 'ALEGetStatusLine'
+    \   'ale': 'ALEGetStatusLine',
+    \   'filename': 'LightlineFilename',
     \ },
     \ }
+function! LightlineFilename()
+  let filename = expand('%') !=# '' ? expand('%') : '[No Name]'
+  let modified = &modified ? ' +' : ''
+  return filename . modified
+endfunction
 
 
 "------------------------------------
@@ -293,13 +294,13 @@ let g:node_usejscomplete = 1
 let g:user_emmet_leader_key='<C-e>'
 
 let g:user_emmet_settings = {
-\  'variables': {
-\    'lang' : 'ja'
-\  },
-\  'custom_expands' : {
-\    '^\%(loremj\|lipsumj\)\(\d*\)$' : function('emmet#lorem#ja#expand')
-\  }
-\}
+    \  'variables': {
+    \    'lang' : 'ja'
+    \  },
+    \  'custom_expands' : {
+    \    '^\%(loremj\|lipsumj\)\(\d*\)$' : function('emmet#lorem#ja#expand')
+    \  }
+    \}
 
 
 "----------------------------------------
@@ -476,5 +477,4 @@ let g:SimpleJsIndenter_CaseIndentLevel = -1
 
 " DOMとMozilla関連とES6のメソッドを補完
 let g:jscomplete_use = ['dom', 'moz']
-
 
