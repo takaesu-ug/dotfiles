@@ -22,7 +22,7 @@ alias nvi='nvim'
 # シングルコートのエスケープは '\'' とする必要がある。（イメージ \' とやっている感じ）
 #   [.bashrcにエイリアス書くときのシングルクオート対策（source ~/.bashrc エラー対処）](http://min117.hatenablog.com/entry/2015/11/07/152302)
 alias b='open $(ghq list |fzf | awk -F "/" '\''{printf("https://%s/%s/%s", $(NF-2), $(NF-1), $(NF))}'\'')'
-alias v='cd $(ghq root)/$(ghq list | fzf); vim .'
+alias v='cd $(ghq root)/$(ghq list | fzf); vi .'
 alias vc='code $(ghq root)/$(ghq list | fzf)'
 
 # Ruby のctag用
