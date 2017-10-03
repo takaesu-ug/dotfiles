@@ -1,4 +1,5 @@
 #!/bin/bash
+# https://qiita.com/shima_6_you/items/cae79e54171143c14ba3
 # 引数でカラーコードを渡す
 # $ tmuxchcolor # これで変更する
 # $ tmuxchcolor default # これで元に戻す
