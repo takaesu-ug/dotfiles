@@ -3,11 +3,12 @@
 # 引数でカラーコードを渡す
 # $ tmuxchcolor # これで変更する
 # $ tmuxchcolor default # これで元に戻す
-color=${1:-colour8}
+# color=${1:-colour8}
+bgcolor=${1:-colour240}
 
 if [[ -n $(printenv TMUX) ]] ; then
     # pane_id=$(tmux display -p '#{pane_id}')
-    tmux select-pane -P "bg=${color}"
+    tmux select-pane -P "bg=${bgcolor}"
 else
     echo 'Not use tmux'
 fi
