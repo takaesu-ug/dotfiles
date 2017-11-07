@@ -53,7 +53,7 @@ homebrewとpython,ansibleをインストールする
 setup-homebrew-ansible.shを実行することでhomebrewとansibleをインストールする
 
 ```
-% cd $HOME/dotfiles/
+% cd $HOME/dotfiles/provisioning
 % ./setup-hombrew-ansible.sh
 ```
 
