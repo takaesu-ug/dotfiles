@@ -29,7 +29,7 @@
     homebrew_cask_packages:
       - name: alfred
       - name: appcleaner
-      - name: virtualbox
+      # - name: virtualbox
       - name: atom
       - name: bartender
       - name: blisk
@@ -44,7 +44,6 @@
       - name: gyazo
       - name: google-japanese-ime
       - name: google-chrome
-      - name: hammerspoon
       - name: iterm2
       - name: java
       - name: karabiner-elements
@@ -54,9 +53,7 @@
       - name: licecap
       - name: mysqlworkbench
       - name: onedrive
-      - name: opera
       - name: postman
-      - name: prott
       - name: skitch
       - name: skype
       - name: slack
@@ -104,8 +101,8 @@
       - name: pgcli
       - name: pstree
       - name: pkg-config
-      - name: python
-      - name: python3
+      # - name: python
+      # - name: python3
       - name: reattach-to-user-namespace  # 自分でビルドする方法もあり .tmux.conf参照
       - name: readline
       - name: subversion
