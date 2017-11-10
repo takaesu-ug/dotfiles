@@ -1,7 +1,28 @@
 yusabana's dotfiles
 ========
 
-dot files(Setting files) Repository （設定ファイル関連のリポジトリ）
+terminal.app で実施(あとでiterm2は使う)
+- xcodeインストール
+- xcodeコマンドラインツールインストール
+- zshに切り替える
+- dotfiles close
+- oh-my-zsh
+- gitconfig関連設定
+- homebrew install
+- ansible 環境セットアップ、ansible-playbookでhomebrew関連インストール
+- karabiner-elementsの設定
+- iterm2関連設定(以降iterm2で行う)
+- link 貼り(dotfiles以下のファイル達)
+- neovim設定
+- XXXXenv関連の設定(anyenv)
+  - ndenv
+  - rbenv
+  - pyenv
+  - goenv
+- golang関連の設定(goのツールインストール等)
+- pipenvインストール
+
+
 
 Fontをインストール
 -------------
@@ -137,14 +158,16 @@ curl -O https://raw.githubusercontent.com/w0ng/dotfiles/master/iterm2/hybrid.ite
 
 hybrid.itermcolors というファイルが出来るのitermの preferences->Profile から読み込む
 
-## vim-hybridの設定は.vimrcに以下のような定義があること
 
-```
-  set background=dark
-  let g:hybrid_custom_term_colors = 1
-  let g:hybrid_reduced_contrast = 1
-  colorscheme hybrid
-```
+### 全画面表示
+
+Preferences -> General -> `Native full screen windows` のチェックを外す
+
+### メニューバーを常に表示
+
+Preferences -> Appearance -> System -> `Auto-hide menu bar in non-native fullscreen` のチェックを外す
+
+
 
 その他各種設定ファイルを配置
 --------------------
@@ -155,7 +178,7 @@ hybrid.itermcolors というファイルが出来るのitermの preferences->Pro
 ```
 
 
-vim設定
+vim共通
 ----------------
 
 dotfiles/vimdir ディレクトリを ~/.vim にリンクを貼る
@@ -167,7 +190,18 @@ ln -s $HOME/dotfiles/vimdir $HOME/.vim
 参考
 dotfiles/vimdir/README_LINK.txt
 
-### vim-plug
+
+### vim-hybridの設定は.vimrcに以下のような定義があること
+
+```
+  set background=dark
+  let g:hybrid_custom_term_colors = 1
+  let g:hybrid_reduced_contrast = 1
+  colorscheme hybrid
+```
+
+
+### vim8
 
 パッケージ管理は vim-plug を使う
 
@@ -224,12 +258,14 @@ go get -u github.com/Songmu/ghg/cmd/ghg
 * 必要なパッケージをインストール
 
 ```
-ghg get motemen/ghq
-ghg get typester/gh-open
-ghg get peco/peco
-ghg get mattn/memo
-ghg get knqyf263/pet
-ghg get pocke/whichpr
+% ghg get motemen/ghq
+% ghg get typester/gh-open
+% ghg get peco/peco
+% ghg get mattn/memo
+% ghg get knqyf263/pet
+
+# ghgの仕様で入れられないもの
+% go get -u pocke/whichpr
 ```
 
 * ghgのインストールディレクトリにパスを通す
@@ -239,6 +275,7 @@ if type ghg >/dev/null 2>&1; then
   export PATH=$PATH:$(ghg bin)
 fi
 ```
+
 
 peco関連設定(homebrewでインストール済み)
 -------------------
@@ -260,6 +297,5 @@ Karabiner-Elementsの設定
 -------------
 
 ```
-% ln -s $HOME/dotfiles/.config/karabiner/assets $HOME/.config/karabiner/
-% ln -s $HOME/dotfiles/.config/karabiner/karabiner.json $HOME/.config/karabiner/
+% ln -s $HOME/dotfiles/.config/karabiner $HOME/.config/
 ```
