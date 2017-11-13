@@ -1,32 +1,40 @@
-## go用の設定
-export GOPATH=~/workspace/gopath
-export PATH=/usr/local/opt/go/libexec/bin:$GOPATH/bin:$PATH  # パッケージで入れたgoのbinディレクトリへのパスとGOPATH配下のパスを追加
+# anyenvを利用するようにしたので以下の各envの設定は一旦除外
+if [ -d ${HOME}/.anyenv ]; then
+  export PATH="$HOME/.anyenv/bin:$PATH"
+  eval "$(anyenv init -)"
+fi
+# ## env 系の設定 PATHをrbenvのほうがさきにくるようにする
+# # phpenv
+# if [ -d ${HOME}/.phpenv ]; then
+#   export PATH=$HOME/.phpenv/bin:$PATH
+#   type phpenv > /dev/null 2>&1 && eval "$(phpenv init -)"
+# fi
+#
+# # rbenv
+# # (コマンドが存在する場合のみ http://qiita.com/skkzsh/items/d63861293fd6bde1b0d8)
+# if [ -d ${HOME}/.rbenv ]; then
+#   export PATH=$HOME/.rbenv/bin:$PATH
+#   type rbenv > /dev/null 2>&1 && eval "$(rbenv init -)"
+# fi
+#
+# # ndenv
+# if [ -d ${HOME}/.ndenv ]; then
+#   export PATH=$HOME/.ndenv/bin:$HOME/.ndenv/shims:$PATH
+#   type ndenv > /dev/null 2>&1 && eval "$(ndenv init -)"
+# fi
 
+
+## go用の設定(goはgoenvで管理する)
+if type goenv >/dev/null 2>&1; then
+  export GOPATH=~/workspace/gopath
+  export PATH=$(goenv root)/shims:$GOPATH/bin:$PATH  # パッケージで入れたgoのbinディレクトリへのパスとGOPATH配下のパスを追加
+fi
 # ghgを入れてgo製のパッケージを利用するだけの設定
 # http://www.songmu.jp/riji/entry/2016-07-06-ghg.html
 if type ghg >/dev/null 2>&1; then
   export PATH=$PATH:$(ghg bin)
 fi
 
-## env 系の設定 PATHをrbenvのほうがさきにくるようにする
-# phpenv
-if [ -d ${HOME}/.phpenv ]; then
-  export PATH=$HOME/.phpenv/bin:$PATH
-  type phpenv > /dev/null 2>&1 && eval "$(phpenv init -)"
-fi
-
-# rbenv
-# (コマンドが存在する場合のみ http://qiita.com/skkzsh/items/d63861293fd6bde1b0d8)
-if [ -d ${HOME}/.rbenv ]; then
-  export PATH=$HOME/.rbenv/bin:$PATH
-  type rbenv > /dev/null 2>&1 && eval "$(rbenv init -)"
-fi
-
-# ndenv
-if [ -d ${HOME}/.ndenv ]; then
-  export PATH=$HOME/.ndenv/bin:$HOME/.ndenv/shims:$PATH
-  type ndenv > /dev/null 2>&1 && eval "$(ndenv init -)"
-fi
 
 # python
 ## venvのプロンプト追加
