@@ -75,11 +75,11 @@
       - name: direnv
       - name: fzf
       - name: git
-      - name: go
+      # - name: go
       - name: highlight
       - name: highway
       - name: hub
-      - name: imagemagick@6        # imagemagickはrmagickの関係でver6系を入れる。後に対応されたらver7以上とする
+      - name: imagemagick@6   # imagemagickはrmagickの関係でver6系を入れる。後に対応されたらver7以上とする
       - name: jq
       - name: jmeter
       - name: lesspipe

@@ -32,6 +32,14 @@ Fontをインストール
 * Noto Sans CJK JP
   * https://www.google.com/get/noto/#sans-jpan
 
+
+AppStoreで入れるもの
+-------------------
+
+- quiver
+- trello
+
+
 MacOSXの場合、xcode, xcode-commandline-toolsをインストールする
 -------------------
 
