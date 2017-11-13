@@ -1,10 +1,4 @@
 ### Alias類
-alias -g L='| less'
-alias -g G='| grep'
-alias -g H='| head'
-alias -g T='| tail'
-alias -g S='| sed'
-
 alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
