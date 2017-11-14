@@ -33,17 +33,17 @@ Plug 'Shougo/neomru.vim'
 Plug 'Shougo/vimfiler'
 
 if has('nvim')
-    " https://github.com/Shougo/deoplete.nvim#requirements
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-    Plug 'zchee/deoplete-jedi'
-    Plug 'zchee/deoplete-go', { 'do': 'make'}
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
-    " https://github.com/Shougo/neocomplete.vim
-    " https://github.com/Shougo/neocomplete.vim/wiki/neocomplete-migration-guide
-    Plug 'Shougo/neocomplete.vim'
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-" neocomplcacheのsinpet補完
+Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+
+" sinpet補完
 Plug 'Shougo/neosnippet'
 " refs. http://d.hatena.ne.jp/osyo-manga/20140112/1389525543
 Plug 'Shougo/neosnippet-snippets'

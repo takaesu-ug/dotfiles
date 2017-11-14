@@ -3,11 +3,10 @@ scriptencoding utf-8
 " filetypeの設定を記述
 source $HOME/dotfiles/vimdir/vimrc.filetype
 
-" deinプラグイン管理
-" source $HOME/dotfiles/vimdir/vimrc.dein
+" vim-plug
 source $HOME/dotfiles/vimdir/vimrc.plug
 
-" Color関連
+" Color
 source $HOME/dotfiles/vimdir/vimrc.colors
 
 " 表示関連
@@ -24,5 +23,5 @@ source $HOME/dotfiles/vimdir/vimrc.programming
 
 " 補完(completion)関連
 source $HOME/dotfiles/vimdir/vimrc.completion
-"" neocomplete関連設定
-source $HOME/dotfiles/vimdir/vimrc.completion.neocomplete
+" deoplete関連の設定
+source $HOME/dotfiles/vimdir/vimrc.deoplete
