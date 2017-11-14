@@ -9,7 +9,7 @@ source $HOME/dotfiles/vimdir/vimrc.filetype
 " vim-plug
 source $HOME/dotfiles/vimdir/vimrc.plug
 
-" Color関連
+" Color
 source $HOME/dotfiles/vimdir/vimrc.colors
 
 " 表示関連
@@ -26,7 +26,7 @@ source $HOME/dotfiles/vimdir/vimrc.programming
 
 " 補完(completion)関連
 source $HOME/dotfiles/vimdir/vimrc.completion
-"" deoplete関連の設定
+" deoplete関連の設定
 source $HOME/dotfiles/vimdir/vimrc.deoplete
 
 filetype on
