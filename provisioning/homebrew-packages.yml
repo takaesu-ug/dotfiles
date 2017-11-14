@@ -123,7 +123,7 @@
       - name: curl
         options: 'with-openssl,with-nghttp2'
       - name: vim
-        options: 'with-lua'
+        options: 'with-lua,with-python3'
 
   tasks:
     ## homebrew cask 関連 ##
