@@ -2,6 +2,7 @@
 set t_vb=
 set novisualbell
 set noerrorbells
+set belloff=all
 "swap なし
 set noswapfile
 "チルダ（バックアッップ）ファイルなし
