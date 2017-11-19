@@ -113,6 +113,7 @@
       - name: tig
       - name: tmux
       - name: tree
+      - name: v8-315 # therubyracerに必要
       - name: w3m
       - name: watch
       - name: wget
