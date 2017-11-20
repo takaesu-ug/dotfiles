@@ -271,6 +271,7 @@ go get -u github.com/Songmu/ghg/cmd/ghg
 % ghg get peco/peco
 % ghg get mattn/memo
 % ghg get knqyf263/pet
+% ghg get Code-Hex/pget  # 高速ダウンローダー
 
 # ghgの仕様で入れられないもの
 % go get -u pocke/whichpr
