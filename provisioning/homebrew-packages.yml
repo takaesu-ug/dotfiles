@@ -86,7 +86,8 @@
       - name: lha
       - name: lua
       - name: mas
-      # - name: mercurial
+      - name: mecab
+      - name: mecab-ipadic
       - name: mosquitto
       - name: mpg123
       - name: mycli
