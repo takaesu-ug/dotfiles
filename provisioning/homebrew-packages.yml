@@ -88,6 +88,7 @@
       - name: mas
       - name: mecab
       - name: mecab-ipadic
+      - name: mongodb
       - name: mosquitto
       - name: mpg123
       - name: mycli
@@ -114,6 +115,7 @@
       - name: tig
       - name: tmux
       - name: tree
+      - name: unar   # zipなどの解凍ツール(winのcp932などでも文字化けしないように)
       - name: v8-315 # therubyracerに必要
       - name: w3m
       - name: watch
