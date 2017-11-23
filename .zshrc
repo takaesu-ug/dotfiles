@@ -1,3 +1,14 @@
+# 設定ファイルの読み込み順
+# https://qiita.com/muran001/items/7b104d33f5ea3f75353f
+# 1. global) /etc/zshenv
+# 2. local ) ~/.zshenv
+# 3. global) /etc/zprofile
+# 4. local ) ~/.zprofile
+# 5. global) /etc/zshrc
+# 6. local ) ~/.zshrc
+# 7. global) /etc/zlogin
+# 8. local ) ~/.zlogin
+
 # ルート証明を読み込む（brewでcurl-ca-bundleを入れている場合)
 if [[ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]]; then
   export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt

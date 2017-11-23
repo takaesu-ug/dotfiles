@@ -1,6 +1,10 @@
+# El Capitanにしたらzsh上でのPATHが上書きされた - すぎゃーんメモ
+# http://memo.sugyan.com/entry/20151211/1449833480
+# /etc/zprofileなど /etc以下の設定は読まないようにする
+setopt no_global_rcs
+
 # homebrew PATH
-# $HOME binを読み込む
-export PATH=/usr/local/bin:/usr/local/sbin:$HOME/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # ログインシェルやインタラクティブシェル以外でも実行させたい場合はここで以下を読み込む
 # # プログラミング言語関連の設定

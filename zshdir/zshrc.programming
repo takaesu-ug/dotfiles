@@ -1,5 +1,7 @@
 # anyenvを利用するようにしたので以下の各envの設定は一旦除外
-if [ -d ${HOME}/.anyenv ]; then
+## anyenvのディレクトリがあるとき かつ anyenv コマンドが初期化されていないときに実行する
+# if [ -d ${HOME}/.anyenv ] && ! type anyenv >/dev/null 2>&1; then
+if [ -d ${HOME}/.anyenv ] ; then
   export PATH="$HOME/.anyenv/bin:$PATH"
   eval "$(anyenv init -)"
 fi
@@ -32,7 +34,7 @@ fi
 # ghgを入れてgo製のパッケージを利用するだけの設定
 # http://www.songmu.jp/riji/entry/2016-07-06-ghg.html
 if type ghg >/dev/null 2>&1; then
-  export PATH=$PATH:$(ghg bin)
+  export PATH=$(ghg bin):$PATH
 fi
 
 
@@ -45,3 +47,6 @@ function show_python_virtualenv() {
   fi
 }
 PS1='$(show_python_virtualenv)'$PS1
+
+# 独自のsecretな実行ファイル
+export PATH=$HOME/dotfiles/secret/bin:$PATH
