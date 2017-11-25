@@ -27,9 +27,10 @@
       - tkengo/highway
 
     homebrew_cask_packages:
+      # - name: virtualbox
       - name: alfred
       - name: appcleaner
-      # - name: virtualbox
+      - name: android-studio
       - name: atom
       - name: bartender
       - name: blisk
@@ -64,7 +65,6 @@
 
     homebrew_packages:
       - name: awscli        # http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
-      # - name: ansible # pipでインストール
       - name: automake
       - name: ccat
       - name: certbot
@@ -75,7 +75,6 @@
       - name: direnv
       - name: fzf
       - name: git
-      # - name: go
       - name: highlight
       - name: highway
       - name: hub
@@ -134,7 +133,8 @@
     - name: homebrew cask packages install
       homebrew_cask: name={{ item.name }} state=installed
       environment:
-        HOMEBREW_CASK_OPTS: "--appdir=/Applications"  # homebrew-caskでよくあること http://qiita.com/tienlen/items/1a50c7507c8f6454f6c6
+        # homebrew-caskでよくあること http://qiita.com/tienlen/items/1a50c7507c8f6454f6c6
+        HOMEBREW_CASK_OPTS: "--appdir=/Applications"  
       with_items: '{{ homebrew_cask_packages }}'
 
     ## homebrew 関連 ##
