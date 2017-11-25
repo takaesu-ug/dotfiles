@@ -37,15 +37,15 @@ if type ghg >/dev/null 2>&1; then
 fi
 
 
-# python
-## venvのプロンプト追加
-function show_python_virtualenv() {
-  if [ -n "${VIRTUAL_ENV}" ]; then
-    # echo '[venv] '
-    echo "($(basename $VIRTUAL_ENV))"
-  fi
-}
-PS1='$(show_python_virtualenv)'$PS1
+# # python
+# ## venvのプロンプト追加
+# function show_python_virtualenv() {
+#   if [ -n "${VIRTUAL_ENV}" ]; then
+#     # echo '[venv] '
+#     echo "($(basename $VIRTUAL_ENV))"
+#   fi
+# }
+# PS1='$(show_python_virtualenv)'$PS1
 
 
 # 独自のsecretな実行ファイル
