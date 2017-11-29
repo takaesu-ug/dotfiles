@@ -1,4 +1,4 @@
-" pythonのパスをhomebrewでインストールしたパスに設定
+" pythonのパスをpyenvでインストールしたパスに設定
 let g:python3_host_prog = $PYENV_ROOT . '/shims/python3'
 
 let g:deoplete#enable_at_startup = 1
