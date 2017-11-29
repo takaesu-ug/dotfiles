@@ -226,8 +226,10 @@ let g:ale_echo_msg_error_str = 'E'
 let g:ale_echo_msg_warning_str = 'W'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
-" Set this setting in vimrc if you want to fix files automatically on save.
-" This is off by default.
+" Set this setting in vimrc if you want to fix files automatically on save. This is off by default.
+" 次のコマンドでfixersを実行する
+"   :ALEFixSuggest Fixerの種類を確認
+"   :ALEFix  実際にFixer実行
 let g:ale_fix_on_save = 1
 
 " 有効にするlinter
