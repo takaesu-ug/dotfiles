@@ -233,6 +233,7 @@ let g:ale_fix_on_save = 1
 " 有効にするlinter
 let g:ale_linters = {
 \   'python': ['flake8', 'mypy'],
+\   'javascript': ['eslint'],
 \}
 
 " Put this in vimrc or a plugin file of your own.
