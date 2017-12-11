@@ -55,6 +55,7 @@
       - name: mysqlworkbench
       - name: onedrive
       - name: postman
+      - name: shiftit
       - name: skitch
       - name: skype
       - name: slack

@@ -91,6 +91,8 @@ ansibleからhomebrew, homebrew-cask関連のパッケージをインストー�
 ```
 % cd $HOME/dotfiles/
 $ ansible-playbook -i ansible_hosts -vv homebrew-packages.yml
+
+$ pipenv run ansible-playbook -i ansible_hosts -vv homebrew-packages.yml
 ```
 
 ### ※特記事項
