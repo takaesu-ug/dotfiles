@@ -60,6 +60,7 @@
     showpr = "!f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
     openpr = "!f() { hub browse -- `git showpr $1 | cut -f5 -d' ' | sed -e 's|#|pull/|'`; }; f"
     pr  = "!f() { hub browse -- pull/$(git rev-parse --abbrev-ref HEAD); }; f"
+    prbrowse = "!f() { hub browse -- pull/$1; }; f"
     ### サンプル hoge = "!f() { your command }; f"
     ### ** '!'を前につけるとgitを取って展開したコマンドを実行できます **
 
