@@ -27,7 +27,7 @@ source $HOME/dotfiles/vimdir/vimrc.programming
 " 補完(completion)関連
 source $HOME/dotfiles/vimdir/vimrc.completion
 " deoplete関連の設定
-source $HOME/dotfiles/vimdir/vimrc.deoplete
+source $HOME/dotfiles/vimdir/vimrc.deoplete " この設定でnvim起動時の表示が消えてしまう deopleteの起動時有効が悪さ
 
 filetype on
 filetype plugin indent on
