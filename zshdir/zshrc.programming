@@ -49,4 +49,4 @@ fi
 
 
 # 独自のsecretな実行ファイル
-export PATH=$HOME/dotfiles/secret/bin:$PATH
+export PATH=$HOME/dotfiles/secret/bin:$HOME/dotfiles/my-bin:$PATH
