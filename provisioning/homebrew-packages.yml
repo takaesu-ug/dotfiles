@@ -100,6 +100,7 @@
       - name: ngrep
       - name: nkf
       - name: openssl
+      - name: pandoc  # http://sky-y.github.io/site-pandoc-jp/users-guide/
       - name: packer
       - name: plantuml
       - name: pgcli
