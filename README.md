@@ -2,23 +2,33 @@ yusabana's dotfiles
 ========
 
 terminal.app で実施(あとでiterm2は使う)
-- xcodeインストール
+- (手動 app store)xcodeインストール
 - xcodeコマンドラインツールインストール
-- zshに切り替える
 - dotfiles close
-- oh-my-zsh
-- gitconfig関連設定
-- homebrew install
-- ansible 環境セットアップ、ansible-playbookでhomebrew関連インストール
-- karabiner-elementsの設定
-- iterm2関連設定(以降iterm2で行う)
-- link 貼り(dotfiles以下のファイル達)
-- neovim設定
+
 - XXXXenv関連の設定(anyenv)
+  - anyenvの設定まではshellでやるか...
   - ndenv
   - rbenv
   - pyenv
   - goenv
+
+- pyenvでpython2系、python3系の最新版をいれる
+- rbenv ruby 入れる
+
+- dotfiles/provisioning/ で pipenv install する
+- ansible-playbookでhomebrew本体をInstall、homebrew のパッケージ関連インストール
+  - `pipenv run ansible-playbook -i hosts homebrew-packages.yml`
+
+- (手動)zshに切り替える(homebrew で入れた /usr/local/bin/zsh)
+- oh-my-zsh
+
+- karabiner-elementsの設定
+- iterm2関連設定(以降iterm2で行う)
+
+- link 貼り(dotfiles以下のファイル達)
+
+- neovim設定
 - golang関連の設定(goのツールインストール等)
 - pipenvインストール
 
@@ -259,13 +269,27 @@ pip3 install neovim
 Go関連設定
 --------------------
 
+TODO:
+- [最近の私的 Golang 開発環境 - Qiita](https://qiita.com/spiegel-im-spiegel/items/c140fc1fe02aa24be4fd)
+  - 上記の記事の指針と同じようにして gopath は 今のように workspaces/gopath にして、 ghqはworkspaces/ghq/src にしてgo系は dep で管理する
+  - んで GOPATHに workspaces/ghq/ を追加する
+  - 分ける理由は GOPATH汚染 を避けるため http://text.baldanders.info/golang/gopath-pollution/
+
+  - 上記構成が無理だったら以下を試す
+    - 無理かどうかというのは簡単な依存パッケージのgolangのコードを書いてみる
+    - [ghqを使ったローカルリポジトリの統一的・効率的な管理について - Kentaro Kuribayashi's blog](http://blog.kentarok.org/entry/2014/06/03/135300)
+
+- 上記の記事のやり方で GOPATHを複数指定するので ghg はもういらん
+  - なぜか、、ghgはgithubのreleaseが想定通りのrelease構成じゃないと入らないので(whichprのような感じだとダメ)
+
 ### ただバイナリを利用するだけならghgでインストールする。
 
 ```
 go get -u github.com/Songmu/ghg/cmd/ghg
 ```
 
-* 必要なパッケージをインストール
+
+- 必要なパッケージをインストール
 
 ```
 % ghg get motemen/ghq
@@ -276,10 +300,11 @@ go get -u github.com/Songmu/ghg/cmd/ghg
 % ghg get Code-Hex/pget  # 高速ダウンローダー
 
 # ghgの仕様で入れられないもの
-% go get -u pocke/whichpr
+% go get -u github.com/pocke/whichpr
 ```
 
-* ghgのインストールディレクトリにパスを通す
+- ghgのインストールディレクトリにパスを通す
+TODO: この設定が zshrcにあるので消す
 
 ```
 if type ghg >/dev/null 2>&1; then

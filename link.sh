@@ -4,7 +4,7 @@ files=(
   .gitconfig
   .gitattributes
   .gitconfig.local
-  .hgrc
+  # .hgrc
   .inputrc
   .tigrc
   .tmux.conf
@@ -13,8 +13,17 @@ files=(
   .zshenv
 #  .zshrc
   .bundle/config
-  .hammerspoon/init.lua
   .config/pet/snippet.toml
+  # .gitconfig.local_template
+  # karabiner
+  # vimdir -> .vim/
+  # vimdir -> ~/.config/nvim/
+  # ~/.config/memo/
+  # ~/.config/pet/
+  # ~/.config/whichpr
+  # ~/.config/hub
+  # ~/dotfiles/secret/ と ~/Dropbox/_secret/ をリンクする
+  # ~/.docker/config.json OR ~/.docker フォルダごとリンクする
 )
 
 now=`date '+%Y%m%d'`

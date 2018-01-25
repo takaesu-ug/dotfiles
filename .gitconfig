@@ -67,25 +67,12 @@
 #   hub pull-request -i <issue-no>  issueをpull-requestに
 
 
-
-
-# ghq + cpan-ghq + pecoを組み合わせる 〜ghq編〜 - Masteries
-# http://masteries.papix.net/entry/2014-06-30-ghq.html
-# 複数指定した場合は検索時には複数を参照されるが、新しいリポジトリを取得する時は一番上の設定のディレクトリに設定する
-
 [ghq]
     root = ~/workspace/ghq
+    # root = ~/workspace/ghq/src とする <= ディレクトリ構成を変える
     root = ~/workspace/gopath/src
 
 # refs. http://qiita.com/hnakamur/items/cb04882cc69f2d1a7367
 [credential]
     helper = osxkeychain
 
-[diff "officexml"]
-    textconv = /usr/local/bin/tika -t
-[difftool "sourcetree"]
-    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-    path =
-[mergetool "sourcetree"]
-    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-    trustExitCode = true

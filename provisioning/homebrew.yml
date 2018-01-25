@@ -133,6 +133,11 @@
         options: 'with-lua,with-python3'
 
   tasks:
+    - name: homebrew install
+      shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+      args:
+        creates: /usr/local/bin/brew
+
     ## homebrew cask 関連 ##
     - name: homebrew cask packages install
       homebrew_cask: name={{ item.name }} state=installed

@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# homebrew だけ入れるやつで入れて anyenv 入れちゃってから実行するといいから
+# これもいらないな
+
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install python
 brew install ansible
