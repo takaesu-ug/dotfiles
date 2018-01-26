@@ -30,7 +30,7 @@
       # - name: virtualbox
       - name: alfred
       - name: appcleaner
-      - name: android-studio
+      # - name: android-studio
       - name: atom
       - name: bartender
       - name: blisk
