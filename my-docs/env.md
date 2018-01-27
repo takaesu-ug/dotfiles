@@ -11,8 +11,12 @@ anyenv
 ### anyenvのプラグインインストール
 
 ```
-% mkdir -p $(anyenv root)/plugins
-% git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
+$ mkdir -p $(anyenv root)/plugins
+$ git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
+
+$ echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.your_profile
+$ echo 'eval "$(anyenv init -)"' >> ~/.your_profile
+$ exec $SHELL -l
 
 ## 以下のコマンドで各種envのアップデートができる
 % anyenv update

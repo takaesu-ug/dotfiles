@@ -53,6 +53,7 @@
       - name: kindle
       - name: kindlegen
       - name: licecap
+      - name: marp
       - name: mysqlworkbench
       - name: ngrok             # [ngrokを使用してローカル環境を外部に公開する - Qiita](https://qiita.com/kitaro729/items/44214f9f81d3ebda58bd)
       - name: onedrive
