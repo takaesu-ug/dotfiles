@@ -1,0 +1,67 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  become: false
+
+  vars:
+    links:
+      - src:  '~/dotfiles/zshdir/oh-my-zsh/zshrc'
+        dest: '~/.zshrc'
+      - src:  '~/dotfiles/.zlogin'
+        dest: '~/.zlogin'
+      - src:  '~/dotfiles/.zshenv'
+        dest: '~/.zshenv'
+      - src:  '~/dotfiles/.gitconfig'
+        dest: '~/.gitconfig'
+      - src:  '~/dotfiles/.gitattributes'
+        dest: '~/.gitattributes'
+      - src:  '~/dotfiles/.gitconfig.local'
+        dest: '~/.gitconfig.local'
+      - src:  '~/dotfiles/.inputrc'
+        dest: '~/.inputrc'
+      - src:  '~/dotfiles/.tigrc'
+        dest: '~/.tigrc'
+      - src:  '~/dotfiles/.tmux.conf'
+        dest: '~/.tmux.conf'
+      - src:  '~/dotfiles/.vimrc'
+        dest: '~/.vimrc'
+      - src:  '~/dotfiles/vimdir/'
+        dest: '~/.vim'
+      - src:  '~/dotfiles/vimdir/'
+        dest: '~/.config/nvim'
+      - src:  '~/dotfiles/.bundle/'
+        dest: '~/.bundle'
+      - src:  '~/dotfiles/.config/karabiner/'
+        dest: '~/.config/karabiner'
+      - src:  '~/dotfiles/.peco/'
+        dest: '~/.peco'
+      - src:  '~/dotfiles/.docker/'
+        dest: '~/.docker'
+      - src:  '~/dotfiles/bin/'
+        dest: '~/bin'
+      - src:  '~/Dropbox/_config/hub'
+        dest: '~/.config/hub'
+      - src:  '~/Dropbox/_config/whichpr'
+        dest: '~/.config/whichpr'
+      - src:  '~/Dropbox/_config/memo/'
+        dest: '~/.config/memo'
+      - src:  '~/Dropbox/_config/pet/'
+        dest: '~/.config/pet'
+      - src:  '~/Dropbox/_secret/'
+        dest: '~/_secret'
+
+  tasks:
+    - name: Make directory ~/.config 
+      file:
+        path: ~/.config
+        state: directory
+    - name: Make directory ~/.local
+      file:
+        path: ~/.local
+        state: directory
+    - name: Make symlinks
+      file:
+        src: '{{ item.src }}'
+        path: '{{ item.dest }}'
+        state: link
+      with_items: '{{ links }}'
