@@ -270,8 +270,6 @@ TODO:
     - 無理かどうかというのは簡単な依存パッケージのgolangのコードを書いてみる
     - [ghqを使ったローカルリポジトリの統一的・効率的な管理について - Kentaro Kuribayashi's blog](http://blog.kentarok.org/entry/2014/06/03/135300)
 
-- 上記の記事のやり方で GOPATHを複数指定するので ghg はもういらん
-  - なぜか、、ghgはgithubのreleaseが想定通りのrelease構成じゃないと入らないので(whichprのような感じだとダメ)
 
 ```
 % go get -u github.com/motemen/ghq
