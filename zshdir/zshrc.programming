@@ -28,7 +28,7 @@ fi
 ## go用の設定(goはgoenvで管理する)
 if type goenv >/dev/null 2>&1; then
   export GOPATH=~/workspace/gopath:~/workspaces/ghq/
-  export PATH=$(goenv root)/shims:$GOPATH/bin:$PATH  # パッケージで入れたgoのbinディレクトリへのパスとGOPATH配下のパスを追加
+  export PATH=$(goenv root)/shims:~/workspace/gopath/bin:$PATH  # パッケージで入れたgoのbinディレクトリへのパスとGOPATH配下のパスを追加
 fi
 
 

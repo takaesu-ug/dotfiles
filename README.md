@@ -284,10 +284,9 @@ TODO:
 
 ```
 % go get -u github.com/motemen/ghq
-% go get -u github.com/peco/peco
 % go get -u github.com/mattn/memo
 % go get -u github.com/knqyf263/pet
-% go get -u github.com/Code-Hex/pget  # 高速ダウンローダー
+% go get -u github.com/Code-Hex/pget/cmd/pget  # 高速ダウンローダー
 % go get -u github.com/pocke/whichpr
 ```
 

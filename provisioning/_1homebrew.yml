@@ -103,6 +103,7 @@
       - name: openssl
       - name: pandoc  # http://sky-y.github.io/site-pandoc-jp/users-guide/
       - name: packer
+      - name: peco
       - name: plantuml
       - name: pgcli
       - name: pstree
