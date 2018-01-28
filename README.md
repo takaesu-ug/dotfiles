@@ -283,12 +283,11 @@ TODO:
   - なぜか、、ghgはgithubのreleaseが想定通りのrelease構成じゃないと入らないので(whichprのような感じだとダメ)
 
 ```
-% go get -u motemen/ghq
-% go get -u typester/gh-open
-% go get -u peco/peco
-% go get -u mattn/memo
-% go get -u knqyf263/pet
-% go get -u Code-Hex/pget  # 高速ダウンローダー
+% go get -u github.com/motemen/ghq
+% go get -u github.com/peco/peco
+% go get -u github.com/mattn/memo
+% go get -u github.com/knqyf263/pet
+% go get -u github.com/Code-Hex/pget  # 高速ダウンローダー
 % go get -u github.com/pocke/whichpr
 ```
 
