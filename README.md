@@ -1,38 +1,39 @@
 yusabana's dotfiles
 ========
 
-terminal.app で実施(あとでiterm2は使う)
-- (手動 app store)xcodeインストール
-- xcodeコマンドラインツールインストール
-- dotfiles close
+-----------
 
-- XXXXenv関連の設定(anyenv)
-  - anyenvの設定まではshellでやるか...
-  - ndenv
-  - rbenv
-  - pyenv
-  - goenv
+**terminal.app で実施(あとでiterm2は使う)**
 
-- pyenvでpython2系、python3系の最新版をいれる
-- rbenv ruby 入れる
+- XCode Install (App Storeから)
+- XCode Commandline tool インストール
+  - xcode-select —-install
+- cd /Users/takaesu/dotfiles/provisioning
+  - ./1setup_anyenv.sh
+  - exec $SHELL -l
+- python関連インストール(3.6系入れて、pipでpipenv, neovimを入れる)
+  - pyenv install 3.6.4
+  - pyenv global 3.6.4
+  - pyenv rehash
+  - pip install pipenv neovim
+- cd /Users/takaesu/dotfiles/provisioning
+  - pipenv install —ignore-pipfile
+  - pipenv run ansible-playbook -i hosts _1homebrew.yml
+- Dropboxを設定
+- cd /Users/takaesu/dotfiles/provisioning
+  - pipenv run ansible-playbook -i hosts _2zsh.yml
+  - pipenv run ansible-playbook -i hosts _3symlink.yml
+  - pipenv run ansible-playbook -i hosts _4vimplug.yml
+- golang 関連のインストール
+  - goenv を利用
+- ruby関連インストール
+  - rbenv 利用
+- node関連インストール
+  - ndenv 利用
+- キーリピートの設定(playbookにするか…)
+- iterm2関連の設定
 
-- dotfiles/provisioning/ で pipenv install する
-- ansible-playbookでhomebrew本体をInstall、homebrew のパッケージ関連インストール
-  - `pipenv run ansible-playbook -i hosts homebrew-packages.yml`
-
-- (手動)zshに切り替える(homebrew で入れた /usr/local/bin/zsh)
-- oh-my-zsh
-
-- karabiner-elementsの設定
-- iterm2関連設定(以降iterm2で行う)
-
-- link 貼り(dotfiles以下のファイル達)
-
-- neovim設定
-- golang関連の設定(goのツールインストール等)
-- pipenvインストール
-
-
+-----------
 
 Fontをインストール
 -------------
@@ -186,16 +187,6 @@ Preferences -> General -> `Native full screen windows` のチェックを外す
 ### メニューバーを常に表示
 
 Preferences -> Appearance -> System -> `Auto-hide menu bar in non-native fullscreen` のチェックを外す
-
-
-
-その他各種設定ファイルを配置
---------------------
-
-```
-% cd $HOME/dotfiles/
-% ./link.sh
-```
 
 
 vim共通
