@@ -1,0 +1,27 @@
+- hosts: localhost
+  connection: local
+  gather_facts: false
+  become: false
+
+  tasks:
+    - name: Add homebrew's zsh binary in /etc/shells
+      lineinfile:
+        path: /etc/shells
+        state: present
+        line: /usr/local/bin/zsh
+      become: true
+
+    - name: Enable homebrew's zsh
+      shell: chsh -s /usr/local/bin/zsh
+      become: true
+      changed_when: false
+
+    - name: Install oh-my-zsh
+      shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+      args:
+        creates: ~/.oh-my-zsh
+
+    - name: Backup original zshrc of oh-my-zsh
+      shell: mv ~/.zshrc ~/.zshrc_bk_oh-my-zsh
+      args:
+        creates: ~/.zshrc_bk_oh-my-zsh
