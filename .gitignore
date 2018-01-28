@@ -1,5 +1,3 @@
-.gitconfig.local
-
 .DS_Store
 
 # git管理下にしたくないが.keepは反映させて空のディレクトリを置いておきたい
