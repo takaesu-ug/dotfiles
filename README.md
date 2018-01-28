@@ -282,43 +282,14 @@ TODO:
 - 上記の記事のやり方で GOPATHを複数指定するので ghg はもういらん
   - なぜか、、ghgはgithubのreleaseが想定通りのrelease構成じゃないと入らないので(whichprのような感じだとダメ)
 
-### ただバイナリを利用するだけならghgでインストールする。
-
 ```
-go get -u github.com/Songmu/ghg/cmd/ghg
-```
-
-
-- 必要なパッケージをインストール
-
-```
-% ghg get motemen/ghq
-% ghg get typester/gh-open
-% ghg get peco/peco
-% ghg get mattn/memo
-% ghg get knqyf263/pet
-% ghg get Code-Hex/pget  # 高速ダウンローダー
-
-# ghgの仕様で入れられないもの
+% go get -u motemen/ghq
+% go get -u typester/gh-open
+% go get -u peco/peco
+% go get -u mattn/memo
+% go get -u knqyf263/pet
+% go get -u Code-Hex/pget  # 高速ダウンローダー
 % go get -u github.com/pocke/whichpr
-```
-
-- ghgのインストールディレクトリにパスを通す
-TODO: この設定が zshrcにあるので消す
-
-```
-if type ghg >/dev/null 2>&1; then
-  export PATH=$PATH:$(ghg bin)
-fi
-```
-
-
-peco関連設定(homebrewでインストール済み)
--------------------
-
-```
-% mkdir $HOME/.peco
-% ln -s $HOME/dotfiles/peco_config.json $HOME/.peco/config.json
 ```
 
 XXXXenv 関連のプログラミングビルドツール設定
@@ -328,10 +299,3 @@ XXXXenv 関連のプログラミングビルドツール設定
 
 [dotfiles/my-docs/env.md](https://github.com/yusabana/dotfiles/blob/master/my-docs/env.md)
 
-
-Karabiner-Elementsの設定
--------------
-
-```
-% ln -s $HOME/dotfiles/.config/karabiner $HOME/.config/
-```
