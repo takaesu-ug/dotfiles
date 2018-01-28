@@ -295,5 +295,5 @@ XXXXenv 関連のプログラミングビルドツール設定
 
 以下のファイルを参照
 
-[dotfiles/my-docs/env.md](https://github.com/yusabana/dotfiles/blob/master/my-docs/env.md)
+[dotfiles/docs/env.md](https://github.com/yusabana/dotfiles/blob/master/docs/env.md)
 
