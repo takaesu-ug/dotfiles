@@ -48,7 +48,7 @@ AppStoreで入れるもの
 -------------------
 
 - quiver
-- trello
+- zipang
 
 
 MacOSXの場合、xcode, xcode-commandline-toolsをインストールする
