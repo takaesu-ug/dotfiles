@@ -8,3 +8,6 @@ secret/*
 vimdir/autoload/plug.vim
 vimdir/plugged/
 vimdir/.mypy_cache
+
+.bundle/cache/
+.bundle/vendor/
