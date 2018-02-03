@@ -29,6 +29,9 @@
     log-one = log --all --oneline --decorate --graph
     lgl = log --date=local
     hist = log --graph --date=short --pretty='format:%h %ad | %s%d [%an]'
+    # Gitでファイルの特定行の変更履歴を追う - Qiita https://qiita.com/kmagai/items/51d814fa931359105f19
+    #   exp) $ git log-line Gemfile 5
+    log-line = "!f() { git log -L $2,$2:$1; }; f"
 
     # svn-ref [svnのrivision]  gitのハッシュを確認できる(svnリビジョンを複数指定した時はsvnのリビジョンの昇順で表示する)
     #プログラム的にはdoのあとでretsvn(retsvn=${retsvn}' '${rev};) と ret(ret=${ret}' '`git log --grep "git-svn-id.*@${rev}" --pretty=%H;`;)を作っている.
