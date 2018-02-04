@@ -1,4 +1,5 @@
 scriptencoding utf-8
+set encoding=utf-8
 
 filetype off
 filetype plugin indent off

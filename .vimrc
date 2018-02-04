@@ -1,4 +1,5 @@
 scriptencoding utf-8
+set encoding=utf-8
 
 " filetypeの設定を記述
 source $HOME/dotfiles/vimdir/vimrc.filetype
