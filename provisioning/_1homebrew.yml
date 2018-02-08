@@ -31,14 +31,14 @@
       - name: alfred
       - name: appcleaner
       # - name: android-studio
-      - name: atom
+      # - name: atom
       - name: bartender
       - name: blisk
       - name: charles
       - name: calibre
       - name: contexts
       - name: cyberduck
-      - name: dbeaver-community
+      # - name: dbeaver-community
       - name: docker   # docker for mac
       - name: drawio
       - name: dropbox
@@ -109,8 +109,8 @@
       - name: pgcli
       - name: pstree
       - name: pkg-config
-      - name: python
-      - name: python3
+#      - name: python
+#      - name: python3
       - name: reattach-to-user-namespace  # 自分でビルドする方法もあり .tmux.conf参照
       - name: readline
       - name: subversion
