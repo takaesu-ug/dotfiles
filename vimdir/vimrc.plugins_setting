@@ -480,6 +480,15 @@ let g:terraform_fmt_on_save = 1
 let g:SimpleJsIndenter_BriefMode = 1
 let g:SimpleJsIndenter_CaseIndentLevel = -1
 
+"------------------------------------
+" jscomplete-vim
+"------------------------------------
+autocmd FileType javascript
+  \ :setl omnifunc=jscomplete#CompleteJS
 " DOMとMozilla関連とES6のメソッドを補完
 let g:jscomplete_use = ['dom', 'moz']
 
+"------------------------------------
+" javascript-libraries-syntax
+"------------------------------------
+let g:used_javascript_libs = 'jquery,underscore,react,flux,jasmine,angularjs,vue'
