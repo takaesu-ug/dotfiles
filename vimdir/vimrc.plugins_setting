@@ -492,3 +492,11 @@ let g:jscomplete_use = ['dom', 'moz']
 " javascript-libraries-syntax
 "------------------------------------
 let g:used_javascript_libs = 'jquery,underscore,react,flux,jasmine,angularjs,vue'
+
+"------------------------------------
+" prettier.vim https://github.com/prettier/vim-prettier
+"------------------------------------
+let g:prettier#exec_cmd_async = 1
+
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
