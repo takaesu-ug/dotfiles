@@ -75,6 +75,7 @@
       - name: certbot
       - name: chromedriver
       - name: cmake
+      - name: csshx
       - name: colordiff
       - name: ctags
       - name: direnv
