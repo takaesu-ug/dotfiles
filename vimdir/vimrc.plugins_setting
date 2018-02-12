@@ -235,14 +235,13 @@ let g:ale_fix_on_save = 1
 " 有効にするlinter
 let g:ale_linters = {
 \   'python': ['flake8', 'mypy'],
-\   'javascript': ['eslint', 'flow'],
 \}
 
 " Put this in vimrc or a plugin file of your own.
 " After this is configured, :ALEFix will try and fix your JS code with ESLint.
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
 \   'python': ['autopep8', 'isort'],
+\   'javascript': ['prettier', 'eslint'],
 \}
 
 
@@ -492,11 +491,3 @@ let g:jscomplete_use = ['dom', 'moz']
 " javascript-libraries-syntax
 "------------------------------------
 let g:used_javascript_libs = 'jquery,underscore,react,flux,jasmine,angularjs,vue'
-
-"------------------------------------
-" prettier.vim https://github.com/prettier/vim-prettier
-"------------------------------------
-let g:prettier#exec_cmd_async = 1
-
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
