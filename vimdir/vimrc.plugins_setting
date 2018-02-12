@@ -241,7 +241,7 @@ let g:ale_linters = {
 " After this is configured, :ALEFix will try and fix your JS code with ESLint.
 let g:ale_fixers = {
 \   'python': ['autopep8', 'isort'],
-\   'javascript': ['prettier', 'eslint'],
+\   'javascript': ['prettier'],
 \}
 
 
