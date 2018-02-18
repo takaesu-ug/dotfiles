@@ -89,7 +89,7 @@ autocmd InsertLeave * set nopaste
 " 全角文字を指定する :gr '[^\x01-\x7E]' config/locales/'
 " set grepprg=hw\ -e\ --no-group
 " set grepprg=pt\ -e\ --nogroup
-set grepprg=ag\ --vimgrep\ $*
+set grepprg=ag\ --hidden\ --vimgrep\ $*
 set grepformat=%f:%l:%m
 
 " grep検索の実行後にQuickFix Listを表示する
