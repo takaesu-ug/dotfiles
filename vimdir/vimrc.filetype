@@ -8,3 +8,4 @@ autocmd BufNewFile,BufRead *.html.erb set filetype=eruby.html
 autocmd BufNewFile,BufRead *.j2       set filetype=jinja
 autocmd BufNewFile,BufRead *.scala    set filetype=scala
 autocmd BufNewFile,BufRead *.toml     set filetype=toml
+autocmd BufNewFile,BufRead *.jsx      set filetype=javascript.jsx
