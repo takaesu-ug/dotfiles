@@ -494,3 +494,8 @@ let g:jscomplete_use = ['dom', 'moz']
 " javascript-libraries-syntax
 "------------------------------------
 let g:used_javascript_libs = 'jquery,underscore,react,flux,jasmine,angularjs,vue'
+
+"------------------------------------
+" vim-javascript
+"------------------------------------
+let g:javascript_plugin_flow = 1
