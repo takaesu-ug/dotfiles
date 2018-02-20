@@ -82,6 +82,7 @@
       - name: direnv
       - name: fzf
       - name: git
+      - name: heroku
       - name: highlight
       - name: highway
       - name: hub
