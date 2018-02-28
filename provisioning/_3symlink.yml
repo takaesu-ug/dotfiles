@@ -49,6 +49,8 @@
         dest: '~/.config/pet'
       - src:  '~/Dropbox/_secret/'
         dest: '~/_secret'
+      - src:  '~/dotfiles/.ctags'
+        dest: '~/.ctags'
 
   tasks:
     - name: Make directory ~/.config 
