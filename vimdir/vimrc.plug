@@ -75,8 +75,6 @@ Plug 'tyru/open-browser.vim'
 Plug 'tomtom/tcomment_vim'
 " quickrun.vim : 編集中のファイルを簡単に実行できるプラグイン
 Plug 'thinca/vim-quickrun'
-" quickrunでrspecの色づけ https://github.com/glidenote/rspec-result-syntax
-Plug 'glidenote/rspec-result-syntax'
 " perldocやphpmanual等のリファレンスをvim上で見る(K ラージKでドキュメントリファレンスを開く)
 Plug 'thinca/vim-ref'
 " 検索置換のサポートツール http://qiita.com/yuku_t/items/77a3361ff4d27bda641e
