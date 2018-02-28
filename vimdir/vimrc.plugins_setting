@@ -490,3 +490,13 @@ let g:used_javascript_libs = 'jquery,underscore,react,flux,jasmine,angularjs,vue
 " vim-javascript
 "------------------------------------
 let g:javascript_plugin_flow = 1
+
+"------------------------------------
+" itmammoth/run-rspec.vim https://github.com/itmammoth/run-rspec.vim
+"------------------------------------
+let g:run_rspec_bin = "bin/rspec"
+
+nnoremap <leader>t :RunSpec<CR>
+nnoremap <leader>l :RunSpecLine<CR>
+nnoremap <leader>e :RunSpecLastRun<CR>
+nnoremap <leader>cr :RunSpecCloseResult<CR>

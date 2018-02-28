@@ -122,7 +122,7 @@ Plug 'chase/vim-ansible-yaml', { 'for': ['yaml'] } " Ansible
 Plug 'cespare/vim-toml', { 'for': ['toml'] }
 Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
 Plug 'tpope/vim-rails', { 'for': ['ruby'] }
-Plug 'skwp/vim-rspec', { 'for': ['ruby'] }
+Plug 'itmammoth/run-rspec.vim', { 'for': ['ruby'] }
 Plug 'slim-template/vim-slim', { 'for': ['slim'] }
 Plug 'davidhalter/jedi-vim', { 'for': ['python'] }
 Plug 'kannokanno/previm', { 'for': ['markdown'] }  " open-browser 依存
