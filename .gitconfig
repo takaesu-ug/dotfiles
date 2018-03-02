@@ -67,7 +67,7 @@
     ### ** '!'を前につけるとgitを取って展開したコマンドを実行できます **
 
 #   hub pull-request -i <issue-no>  issueをpull-requestに
-
+    pushfwl = push --force-with-lease
 
 [ghq]
     root = ~/workspace/ghq/src
