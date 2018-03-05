@@ -17,7 +17,7 @@
     stt = status -s -b
     co = checkout
     ci = commit
-    br = branch
+    br = !git --no-pager branch
 
     # https://speakerdeck.com/a_matsuda/my-favorite-tools?slide=42
     loga = log -p --stat --reverse --abbrev-commit --decorate --topo-order
