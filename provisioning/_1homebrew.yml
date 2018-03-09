@@ -79,6 +79,7 @@
       - name: colordiff
       - name: ctags
       - name: direnv
+      - name: ffmpeg
       - name: fzf
       - name: git
       - name: heroku
@@ -130,6 +131,7 @@
       - name: wget
       - name: whois
       - name: yarn
+      - name: youtube-dl
       - name: zsh
     homebrew_packages_with_options:
       - name: curl
