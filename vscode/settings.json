@@ -1,0 +1,15 @@
+{
+    "editor.fontSize": 15,
+    "editor.fontFamily": "'Ricty Diminished Discord', Menlo, Monaco, 'Courier New', monospace",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Hybrid Next (Gray Background)",
+    "workbench.iconTheme": "vscode-great-icons",
+    "swaggerViewer.defaultPort": 9101,
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.wordWrap": "on",
+        "editor.renderWhitespace": "all"
+    }
+}

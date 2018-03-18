@@ -51,6 +51,10 @@
         dest: '~/_secret'
       - src:  '~/dotfiles/.ctags'
         dest: '~/.ctags'
+      - src:  '~/dotfiles/vscode/settings.json'
+        dest: '~/Library/Application Support/Code/User/settings.json'
+      - src:  '~/dotfiles/vscode/keybindings.json'
+        dest: '~/Library/Application Support/Code/User/keybindings.json'
 
   tasks:
     - name: Make directory ~/.config 
