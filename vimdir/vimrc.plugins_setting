@@ -287,6 +287,8 @@ let g:node_usejscomplete = 1
 " div>(ul>li*5)+span
 " a[href=http// sytle=display:none;] → <a href="http//" sytle="display:none;"></a>
 let g:user_emmet_leader_key='<C-e>'
+" refs https://coderwall.com/p/_uhrxw/using-tab-key-as-abbreviation-expander-on-emmet-vim
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 let g:user_emmet_settings = {
     \  'javascript.jsx' : {
