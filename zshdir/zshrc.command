@@ -22,12 +22,6 @@ alias vc='code $(ghq root)/$(ghq list | fzf)'
 # Ruby のctag用
 alias rtags='ctags -R -a --sort=yes --exclude="*.js" --exclude="*.h" --exclude=log --exclude="*.yml" --exclude=".git"'
 
-# Sublime Text 2
-alias subl='/Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl "$@"'
-# IDE起動
-alias eclipse='open -n /Applications/eclipse/Eclipse.app'
-alias idea='open -n /Applications/IntelliJ\ IDEA\ 12\ CE.app'
-
 # grep （数字分上下を表示[-B数字 -A数字]  再帰的[-r]）
 alias grep="grep --color"
 
