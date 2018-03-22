@@ -55,6 +55,8 @@
         dest: '~/Library/Application Support/Code/User/settings.json'
       - src:  '~/dotfiles/vscode/keybindings.json'
         dest: '~/Library/Application Support/Code/User/keybindings.json'
+      - src:  '~/dotfiles/.ideavimrc'
+        dest: '~/.ideavimrc'
 
   tasks:
     - name: Make directory ~/.config 
