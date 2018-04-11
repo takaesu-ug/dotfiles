@@ -114,6 +114,7 @@ Plug 'ternjs/tern_for_vim', { 'for': ['javascript', 'javascript.jsx'], 'do': 'np
 " :ColorClear      - clear all highlights
 " :ColorToggle     - toggle highlights
 Plug 'lilydjwg/colorizer'
+Plug 'styled-components/vim-styled-components'
 """ Others
 " editconfig テキストエディタの共通フォーマッタ http://editorconfig.org/
 Plug 'editorconfig/editorconfig-vim'
