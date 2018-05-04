@@ -2,3 +2,9 @@ set visualbell
 set noerrorbells
 
 set surround
+
+" 通常の検索とは分けたほうがいいかもということでコメントアウト
+" nnoremap / :<C-u>action Find<CR>
+
+" close tab
+nnoremap <C-w>o :<C-u>action CloseAllEditorsButActive<CR>

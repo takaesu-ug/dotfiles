@@ -137,3 +137,8 @@ else
   " refs http://d.hatena.ne.jp/yuta84q/20101216/1292508997
   inoremap <silent> <C-c> <Esc>
 endif
+
+" Vim で snake_case を CamelCase に置換する - Qiita
+" https://qiita.com/annyamonnya/items/f003fd671fecaf55c9e7
+:command! Snake2Camel :%s/_\(.\)/\u\1/gc
+:command! Camel2Snake :%s/\u\1/_\(.\)/gc

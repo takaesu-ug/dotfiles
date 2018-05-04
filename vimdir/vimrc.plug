@@ -77,7 +77,8 @@ Plug 'tomtom/tcomment_vim'
 Plug 'thinca/vim-quickrun'
 " perldocやphpmanual等のリファレンスをvim上で見る(K ラージKでドキュメントリファレンスを開く)
 Plug 'thinca/vim-ref'
-" 検索置換のサポートツール http://qiita.com/yuku_t/items/77a3361ff4d27bda641e
+" 検索置換のサポートツール snake_case, camelCaseなど置換
+" http://qiita.com/yuku_t/items/77a3361ff4d27bda641e
 Plug 'tpope/vim-abolish'
 " ソースコード上のメソッド宣言、変数宣言の一覧を表示
 Plug 'vim-scripts/taglist.vim'
