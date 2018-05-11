@@ -27,7 +27,7 @@
       - tkengo/highway
 
     homebrew_cask_packages:
-      # - name: virtualbox
+      - name: virtualbox  # インストール前に security の設定で Oracle を allowする必要がある
       - name: alfred
       - name: appcleaner
       # - name: android-studio
