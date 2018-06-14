@@ -17,12 +17,8 @@
 
   vars:
     homebrew_taps:
-      - caskroom/cask
-      - caskroom/versions
-      - homebrew/dupes
-      - homebrew/versions
-      - homebrew/boneyard
-      - homebrew/binary
+      - homebrew/cask
+      - homebrew/cask-versions
       - argon/mas
       - tkengo/highway
 
@@ -49,6 +45,7 @@
       - name: iterm2
       - name: intellij-idea
       - name: java
+      - name: kap
       - name: karabiner-elements
       - name: keepassx
       - name: kindle
@@ -68,6 +65,7 @@
       - name: vivaldi
       - name: xmind
       - name: xquartz
+      - name: zoomus
 
     homebrew_packages:
       - name: awscli        # http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
