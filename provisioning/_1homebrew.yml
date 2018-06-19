@@ -34,6 +34,7 @@
       - name: calibre
       - name: contexts
       - name: cyberduck
+      - name: discord
       - name: docker   # docker for mac
       - name: drawio
       - name: dropbox
