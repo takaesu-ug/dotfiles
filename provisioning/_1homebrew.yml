@@ -39,7 +39,6 @@
       - name: drawio
       - name: dropbox
       - name: firefox
-      - name: franz
       - name: gyazo
       - name: google-japanese-ime
       - name: google-chrome
