@@ -81,6 +81,7 @@
       - name: ffmpeg
       - name: fzf
       - name: git
+      - name: gnuplot # gnuplot コマンドで特定のデータからコマンドで簡単にグラフ化するツール
       - name: heroku
       - name: highlight
       - name: highway
