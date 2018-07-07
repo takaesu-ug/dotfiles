@@ -1,6 +1,7 @@
 {
     "editor.fontSize": 15,
     "editor.fontFamily": "'Ricty Diminished Discord', Menlo, Monaco, 'Courier New', monospace",
+    "editor.renderControlCharacters": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "window.zoomLevel": 0,
@@ -10,6 +11,26 @@
     "[markdown]": {
         "editor.formatOnSave": true,
         "editor.wordWrap": "on",
-        "editor.renderWhitespace": "all"
+    },
+    "javascript.validate.enable": false,
+    "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
+    "flow.useNPMPackagedFlow": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "vim.enableNeovim": true,
+    "vim.hlsearch": true,
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors": {
+        "normal": ["#8FBCBB", "#434C5E"],
+        "insert": "#BF616A",
+        "visual": "#B48EAD",
+        "visualline": "#B48EAD",
+        "visualblock": "#A3BE8C",
+        "replace": "#D08770"
+    },
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#8FBCBB",
+        "statusBar.noFolderBackground": "#8FBCBB",
+        "statusBar.debuggingBackground": "#8FBCBB",
+        "statusBar.foreground": "#434C5E"
     }
 }
