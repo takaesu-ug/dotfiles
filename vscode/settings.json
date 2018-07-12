@@ -2,9 +2,12 @@
     "editor.fontSize": 15,
     "editor.fontFamily": "'Ricty Diminished Discord', Menlo, Monaco, 'Courier New', monospace",
     "editor.renderControlCharacters": true,
+    "editor.rulers": [80, 100],
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
-    "window.zoomLevel": 0,
+    "files.autoSaveDelay": 500,
+    "window.zoomLevel": -1,
+    "window.title": "${activeEditorMedium}${separator}${rootName}",
     "workbench.colorTheme": "Hybrid Next (Gray Background)",
     "workbench.iconTheme": "vscode-great-icons",
     "swaggerViewer.defaultPort": 9101,
@@ -32,5 +35,9 @@
         "statusBar.noFolderBackground": "#8FBCBB",
         "statusBar.debuggingBackground": "#8FBCBB",
         "statusBar.foreground": "#434C5E"
+    },
+    "vim.disableExtension": false,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
     }
 }
