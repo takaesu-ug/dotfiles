@@ -3,6 +3,7 @@
     "editor.fontFamily": "'Ricty Diminished Discord', Menlo, Monaco, 'Courier New', monospace",
     "editor.renderControlCharacters": true,
     "editor.rulers": [80, 100],
+    "editor.minimap.enabled": false,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.autoSaveDelay": 500,
