@@ -1,4 +1,4 @@
-# vscode setting ups
+# vscode setups
 
 https://qiita.com/mottox2/items/581869563ce5f427b5f6
 
