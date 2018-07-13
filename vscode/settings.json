@@ -32,9 +32,10 @@
         "replace": "#D08770"
     },
     "workbench.colorCustomizations": {
-        "statusBar.background": "#B48EAD",
-        "statusBar.noFolderBackground": "#B48EAD",
-        "statusBar.debuggingBackground": "#B48EAD"
+        "statusBar.background": "#8FBCBB",
+        "statusBar.noFolderBackground": "#8FBCBB",
+        "statusBar.debuggingBackground": "#8FBCBB",
+        "statusBar.foreground": "#434C5E"
     },
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
