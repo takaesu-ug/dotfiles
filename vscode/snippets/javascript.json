@@ -18,5 +18,12 @@
 			"// @flow"
 		],
 		"description": "Insert flow annotation"
+	},
+	"flow fixme annotation": {
+		"prefix": "flow-fix",
+		"body": [
+			"// \\$FlowFixMe"
+		],
+		"description": "Insert flow fix annotation"
 	}
 }
