@@ -1,6 +1,7 @@
 {
     "editor.fontSize": 15,
-    "editor.fontFamily": "'Ricty Diminished Discord', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "'Fira Code', 'Ricty Diminished Discord', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
     "editor.renderControlCharacters": true,
     "editor.rulers": [
         80,

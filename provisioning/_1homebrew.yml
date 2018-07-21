@@ -30,6 +30,7 @@
       # - name: atom
       - name: bartender
       - name: blisk
+      - name: homebrew/cask-fonts/font-fira-code
       - name: charles
       - name: calibre
       - name: contexts
