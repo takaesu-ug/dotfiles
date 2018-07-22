@@ -2,15 +2,24 @@
     "editor.fontSize": 15,
     "editor.fontFamily": "'Fira Code', 'Ricty Diminished Discord', Menlo, Monaco, 'Courier New', monospace",
     "editor.fontLigatures": true,
+    "editor.formatOnSave": true,
     "editor.renderControlCharacters": true,
     "editor.rulers": [
         80,
         100
     ],
     "editor.minimap.enabled": false,
+    "emmet.includeLanguages": {
+        "html": "html",
+        "erb": "erb",
+        "javascript": "javascriptreact",
+        "vue": "html",
+        "ejs": "html"
+    },
     "terminal.integrated.fontSize": 14,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 500,
     "window.zoomLevel": -1,
     "window.title": "${activeEditorMedium}${separator}${rootName}",
@@ -18,16 +27,21 @@
     "workbench.iconTheme": "vscode-great-icons",
     "swaggerViewer.defaultPort": 9101,
     "[markdown]": {
-        "editor.formatOnSave": true,
         "editor.wordWrap": "on",
+    },
+    "[python]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4
     },
     "javascript.validate.enable": false,
     "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
     "flow.useNPMPackagedFlow": true,
     "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.shell.osx": "zsh",
     "vim.useSystemClipboard": true,
     "vim.enableNeovim": true,
     "vim.hlsearch": true,
+    "vim.visualstar": true,
     "vim.statusBarColorControl": true,
     "vim.statusBarColors": {
         "normal": [
