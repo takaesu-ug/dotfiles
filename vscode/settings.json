@@ -42,6 +42,8 @@
     "vim.enableNeovim": true,
     "vim.hlsearch": true,
     "vim.visualstar": true,
+    "vim.easymotion": false,
+    "vim.easymotionKeys": "sdfghjkloiurewnm",
     "vim.statusBarColorControl": true,
     "vim.statusBarColors": {
         "normal": [
