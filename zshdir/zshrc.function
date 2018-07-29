@@ -106,7 +106,7 @@ if type peco > /dev/null 2>&1; then
     #awk 'match($1,/^Host$/){print $2}' ~/.ssh/config | xargs sh -c 'ssh "$@" </dev/tty' ssh
     local host=$(awk 'match($1,/^Host$/){print $2}' ~/.ssh/config | grep -v '\*' | peco)
     if [ -n "$host" ]; then
-      BUFFER="ssh ${host}"
+      BUFFER="sshp ${host}"
       zle accept-line  # accept-line を実行することでコマンドを実行する
     fi
     zle clear-screen

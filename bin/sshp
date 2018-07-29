@@ -1,8 +1,30 @@
 #!/bin/sh
 
-# echo -ne "\033]1337;SetProfile=$@\a"
-echo -ne "\033]1337;SetProfile=for-ssh\a"
+# tmux起動時
+if [[ -n $(printenv TMUX) ]] ; then
+    # 現在のペインID
+    # local pane_id=$(tmux display -p '#{pane_id}')
 
-/usr/bin/ssh "$@"
+    # 接続先ホスト名に応じて背景色を切り替え
+    if [[ `echo $1 | grep '\.production\.'` ]] ; then
+        tmux select-pane -P 'bg=colour52,fg=colour255'
+    elif [[ `echo $1 | grep '\.staging\.'` ]] ; then
+        tmux select-pane -P 'bg=colour17,fg=colour255'
+    else
+        tmux select-pane -P 'bg=colour16,fg=colour231'
+    fi
 
-echo -ne "\033]1337;SetProfile=my profile\a"
+    /usr/bin/ssh "$@"
+
+    # デフォルトの背景色に戻す
+    # tmux select-pane -t $pane_id -P 'default'
+    tmux select-pane -P 'default'
+else
+    # itermのプロファイルを設定
+    # echo -ne "\033]1337;SetProfile=$@\a"
+    echo -ne "\033]1337;SetProfile=for-ssh\a"
+
+    /usr/bin/ssh "$@"
+
+    echo -ne "\033]1337;SetProfile=my profile\a"
+fi
