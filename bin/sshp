@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# echo -ne "\033]1337;SetProfile=$@\a"
+echo -ne "\033]1337;SetProfile=for-ssh\a"
+
+/usr/bin/ssh "$@"
+
+echo -ne "\033]1337;SetProfile=my profile\a"
