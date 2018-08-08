@@ -21,13 +21,13 @@
     "files.trimFinalNewlines": true,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 500,
-    "window.zoomLevel": -1,
+    "window.zoomLevel": -2,
     "window.title": "${activeEditorMedium}${separator}${rootName}",
     "workbench.colorTheme": "Hybrid Next (Gray Background)",
     "workbench.iconTheme": "vscode-great-icons",
     "swaggerViewer.defaultPort": 9101,
     "[markdown]": {
-        "editor.wordWrap": "on",
+        "editor.wordWrap": "on"
     },
     "[python]": {
         "editor.insertSpaces": true,
@@ -38,6 +38,10 @@
     "flow.useNPMPackagedFlow": true,
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.shell.osx": "zsh",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.currentLine.enabled": false,
     "vim.useSystemClipboard": true,
     "vim.enableNeovim": true,
     "vim.hlsearch": true,
@@ -61,8 +65,5 @@
         "statusBar.noFolderBackground": "#8FBCBB",
         "statusBar.debuggingBackground": "#8FBCBB",
         "statusBar.foreground": "#434C5E"
-    },
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
     }
 }
