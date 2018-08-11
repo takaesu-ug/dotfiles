@@ -1,8 +1,6 @@
 yusabana's dotfiles
 ========
 
------------
-
 **terminal.app で実施(あとでiterm2は使う)**
 
 - XCode Install (App Storeから)
