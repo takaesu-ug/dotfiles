@@ -38,10 +38,8 @@ let g:surround_{char2nr("-")} = ":\r"
 "------------------------------------
 " tcomment.vim
 "------------------------------------
-let g:tcommentMapLeader1 = '<C-_>'       "(default: '<c-_>')
-" let g:tcommentMapLeader2 = '<Leader>'    "(default: '<Leader>_')
-let g:tcommentMapLeaderOp1 = 'gc'        "(default: 'gc')
-let g:tcommentMapLeaderOp2 = 'gC'        "(default: 'gC')
+let g:tcomment_mapleader1 = '<C-_>'       "(default: '<c-_>')
+let g:tcomment_opleader1 = 'gc'        "(default: 'gc')
 
 " tcommentで使用する形式を追加
 if !exists('g:tcomment_types')
