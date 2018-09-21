@@ -4,12 +4,10 @@ bung87.rails
 bung87.vscode-gemfile
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
-CoenraadS.bracket-pair-colorizer
 dbaeumer.vscode-eslint
 eamodio.gitlens
 EditorConfig.EditorConfig
 eg2.tslint
-emmanuelbeziat.vscode-great-icons
 esbenp.prettier-vscode
 flowtype.flow-for-vscode
 formulahendry.auto-close-tag
@@ -19,7 +17,8 @@ jpoissonnier.vscode-styled-components
 ms-python.python
 ms-vsliveshare.vsliveshare
 msjsdiag.debugger-for-chrome
-rebornix.Ruby
+PKief.material-icon-theme
+rebornix.ruby
 shardulm94.trailing-spaces
 vscodevim.vim
 wmaurer.change-case
