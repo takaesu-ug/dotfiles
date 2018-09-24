@@ -233,6 +233,8 @@ let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \}
 
+nmap <silent><C-f> <Plug>(ale_fix)
+
 
 "------------------------------------
 " itchyny/lightline.vim
