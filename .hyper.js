@@ -9,7 +9,7 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 14,
+    fontSize: 15,
 
     // font family with optional fallbacks
     // fontFamily: ''Fira Code', 'Ricty Diminished Discord', Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
@@ -108,10 +108,11 @@ module.exports = {
     env: {},
 
     // set to `false` for no bell
-    bell: 'SOUND',
+    // bell: 'SOUND',
+    bell: false,
 
     // if `true` (without backticks and without quotes), selected text will automatically be copied to the clipboard
-    copyOnSelect: false,
+    copyOnSelect: true,
 
     // if `true` (without backticks and without quotes), hyper will be set as the default protocol client for SSH
     defaultSSHApp: true,
@@ -132,9 +133,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: [
-    'hyper-hybrid-reduced-contrast'
-  ],
+  plugins: ['hyper-hybrid-reduced-contrast'],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
