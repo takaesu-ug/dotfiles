@@ -59,6 +59,8 @@
         dest: '~/Library/Application Support/Code/User/snippets'
       - src:  '~/dotfiles/.ideavimrc'
         dest: '~/.ideavimrc'
+      - src:  '~/dotfiles/.hyper.js'
+        dest: '~/.hyper.js'
 
   tasks:
     - name: Make directory ~/.config 
