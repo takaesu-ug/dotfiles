@@ -13,7 +13,7 @@ module.exports = {
 
     // font family with optional fallbacks
     // fontFamily: ''Fira Code', 'Ricty Diminished Discord', Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
-    fontFamily: '"Ricty Diminished Discord", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"Fira Code", "Ricty Diminished Discord", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -47,10 +47,14 @@ module.exports = {
     borderColor: '#333',
 
     // custom CSS to embed in the main window
-    css: '',
+    css: ``,
 
     // custom CSS to embed in the terminal window
-    termCSS: '',
+    termCSS: `
+        x-screen x-row {
+            font-variant-ligatures: initial;
+        }
+    `,
 
     // if you're using a Linux setup which show native menus, set to false
     // default: `true` on Linux, `true` on Windows, ignored on macOS
