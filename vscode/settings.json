@@ -39,9 +39,10 @@
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.shell.osx": "zsh",
     "gitlens.advanced.messages": {
+        "suppressFileNotUnderSourceControlWarning": true,
         "suppressShowKeyBindingsNotice": true
     },
-    "gitlens.currentLine.enabled": false,
+    "gitlens.currentLine.enabled": true,
     "vim.useSystemClipboard": true,
     "vim.enableNeovim": true,
     "vim.hlsearch": true,
