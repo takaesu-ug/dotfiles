@@ -232,7 +232,7 @@ fi
 if type fzf >/dev/null 2>&1; then
   # https://github.com/junegunn/fzf/wiki/examples
   export FZF_DEFAULT_OPTS="--reverse --inline-info"
-  export FZF_DEFAULT_COMMAND='ag -g ""'
+  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
   # vim関連
   alias vif='vim $(fzf)'
