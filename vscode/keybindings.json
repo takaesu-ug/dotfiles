@@ -1,18 +1,30 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-    {
-        "key": "ctrl+;",
-        "command": "workbench.action.terminal.focus",
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "ctrl+;",
-        "command": "workbench.action.focusFirstEditorGroup",
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+i",
-        "command": "tab",
-        "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
-    }
+  {
+    "key": "ctrl+;",
+    "command": "workbench.action.terminal.focus",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+;",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "tab",
+    "when": "editorTextFocus && !editorReadonly && !editorTabMovesFocus"
+  },
+  {
+    "key": "shift+cmd+ctrl+]",
+    "command": "workbench.action.showNextWindowTab"
+  },
+  {
+    "key": "shift+cmd+ctrl+[",
+    "command": "workbench.action.showPreviousWindowTab"
+  },
+  {
+    "key": "ctrl+shift+w",
+    "command": "workbench.action.switchWindow"
+  }
 ]
