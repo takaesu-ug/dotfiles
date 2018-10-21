@@ -17,3 +17,13 @@ ansible = "*"
 [requires]
 
 python_version = "3.6"
+
+
+[scripts]
+
+start = "echo abc"
+all = "ansible-playbook -i host _1homebrew.yml _2zsh.yml _3symlink.yml _4vimplug.yml"
+1homebrew = "ansible-playbook -i hosts _1homebrew.yml"
+2zsh = "ansible-playbook -i hosts _2zsh.yml"
+3symlink = "ansible-playbook -i hosts _3symlink.yml"
+4vimplug = "ansible-playbook -i host _4vimplug.yml"
