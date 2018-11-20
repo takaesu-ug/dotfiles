@@ -26,5 +26,27 @@
   {
     "key": "ctrl+shift+w",
     "command": "workbench.action.switchWindow"
+  },
+  { "key": "cmd+]", "command": "workbench.action.nextEditor" },
+  { "key": "cmd+[", "command": "workbench.action.previousEditor" },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.nextSideBarView",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "cmd+[",
+    "command": "workbench.action.previousSideBarView",
+    "when": "sideBarFocus"
+  },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.nextPanelView",
+    "when": "panelFocus"
+  },
+  {
+    "key": "cmd+[",
+    "command": "workbench.action.previousPanelView",
+    "when": "panelFocus"
   }
 ]
