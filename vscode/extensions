@@ -4,6 +4,7 @@ bung87.vscode-gemfile
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 chrmarti.regex
+cpmcgrath.codealignment-vscode
 dbaeumer.vscode-eslint
 donjayamanne.githistory
 eamodio.gitlens
@@ -19,11 +20,12 @@ mechatroner.rainbow-csv
 ms-python.python
 ms-vsliveshare.vsliveshare
 msjsdiag.debugger-for-chrome
-PKief.material-icon-theme
 rebornix.ruby
+robertohuertasm.vscode-icons
 ryu1kn.partial-diff
 shardulm94.trailing-spaces
 sianglim.slim
+VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim
 wayou.vscode-todo-highlight
 wmaurer.change-case
