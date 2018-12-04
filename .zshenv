@@ -4,6 +4,8 @@ export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
 # Homebrew PATH
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+# homebrew関連で keg-only なパッケージ用
+export PATH=/usr/local/opt/mysql-client/bin:$PATH
 
 # El Capitanにしたらzsh上でのPATHが上書きされた - すぎゃーんメモ
 # http://memo.sugyan.com/entry/20151211/1449833480
