@@ -67,5 +67,8 @@
   "editor.suggest.localityBonus": true,
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "Hybrid Next (Gray Background)",
-  "vim.disableExtension": false
+  "vim.disableExtension": false,
+  "breadcrumbs.enabled": true,
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false
 }
