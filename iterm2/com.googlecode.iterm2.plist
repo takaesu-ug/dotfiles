@@ -273,13 +273,15 @@
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>616 1540 629 280 -54 1200 1920 1057 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>650 588 620 392 0 0 1920 1177 </string>
+	<string>2330 630 620 392 1920 267 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>702 690 796 473 0 0 1920 1177 </string>
+	<string>527 614 928 394 0 0 1920 1177 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>0 588 592 584 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1920 436 1434 741 1920 300 1440 877 </string>
+	<string>240 575 650 452 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 289 650 452 0 0 1920 1177 </string>
+	<string>0 0 1920 1178 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>268 75 650 452 0 0 1920 1177 </string>
 	<key>New Bookmarks</key>
@@ -2150,6 +2152,8 @@
 			<string>/Users/takaesu</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveRequestedFullDiskAccess</key>
+	<true/>
 	<key>NoSyncHaveUsedCopyMode</key>
 	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
@@ -2158,6 +2162,8 @@
 	<string>3759C861-173E-4B8F-8AB2-A51F91CB46CF</string>
 	<key>NoSyncPermissionToShowTip</key>
 	<false/>
+	<key>NoSyncSuppressClipboardAccessDeniedWarning</key>
+	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>539522832.52317405</real>
 	<key>PMPrintingExpandedStateForPrint2</key>
@@ -2208,9 +2214,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-07-29T10:52:48Z</date>
+	<date>2018-12-14T00:33:04Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>ShowFullScreenTabBar</key>
+	<false/>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1538921216</real>
 	<key>UseBorder</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
@@ -2220,6 +2230,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.1.7</string>
+	<string>3.2.6</string>
 </dict>
 </plist>
