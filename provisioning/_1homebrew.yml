@@ -40,6 +40,7 @@
       - name: docker   # docker for mac
       - name: drawio
       - name: dropbox
+      # - name: dbeaver-community
       - name: firefox
       - name: gyazo
       - name: google-japanese-ime
@@ -63,8 +64,8 @@
       - name: skitch
       - name: skype
       - name: slack
-      - name: tableplus
-      - name: teamsql
+      - name: tableplus # DBクライアント
+      - name: teamsql   # DBクライアント
       - name: vagrant
       - name: visual-studio-code
       - name: vivaldi
