@@ -41,6 +41,7 @@
   "terminal.integrated.shell.osx": "zsh",
   "gitlens.advanced.messages": {
     "suppressFileNotUnderSourceControlWarning": true,
+    "suppressLineUncommittedWarning": true,
     "suppressShowKeyBindingsNotice": true
   },
   "gitlens.currentLine.enabled": true,
@@ -69,5 +70,6 @@
   "workbench.colorTheme": "Hybrid Next (Gray Background)",
   "vim.disableExtension": false,
   "breadcrumbs.enabled": true,
-  "javascript.preferences.quoteStyle": "single"
+  "javascript.preferences.quoteStyle": "single",
+  "emmet.triggerExpansionOnTab": true
 }
