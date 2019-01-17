@@ -71,5 +71,7 @@
   "vim.disableExtension": false,
   "breadcrumbs.enabled": true,
   "javascript.preferences.quoteStyle": "single",
-  "emmet.triggerExpansionOnTab": true
+  "emmet.triggerExpansionOnTab": true,
+  "eslint.autoFixOnSave": true,
+  "tslint.autoFixOnSave": true
 }
