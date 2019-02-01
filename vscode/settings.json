@@ -4,10 +4,7 @@
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.renderControlCharacters": true,
-  "editor.rulers": [
-    80,
-    100
-  ],
+  "editor.rulers": [80, 100],
   "editor.minimap.enabled": false,
   "emmet.includeLanguages": {
     "html": "html",
@@ -19,7 +16,7 @@
   "terminal.integrated.fontSize": 14,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  "files.autoSave": "afterDelay",
+  "files.autoSave": "onFocusChange",
   "files.autoSaveDelay": 5000,
   "window.zoomLevel": -1,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
