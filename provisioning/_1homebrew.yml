@@ -40,7 +40,7 @@
       - name: docker   # docker for mac
       - name: drawio
       - name: dropbox
-      # - name: dbeaver-community
+      # - name: dbeaver-community # DBクライアント
       - name: firefox
       - name: gyazo
       - name: google-japanese-ime
@@ -56,10 +56,11 @@
       - name: kindlegen
       - name: licecap
       - name: marp
-      - name: mysqlworkbench
-      - name: ngrok             # [ngrokを使用してローカル環境を外部に公開する - Qiita](https://qiita.com/kitaro729/items/44214f9f81d3ebda58bd)
+      - name: mysqlworkbench  # DB(mysql)クライアント
+      - name: ngrok           # [ngrokを使用してローカル環境を外部に公開する - Qiita](https://qiita.com/kitaro729/items/44214f9f81d3ebda58bd)
       - name: onedrive
       - name: postman
+      # - name: sequel-pro  # DB(mysql)クライアント
       - name: shiftit
       - name: skitch
       - name: skype
