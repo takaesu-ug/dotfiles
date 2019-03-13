@@ -70,5 +70,8 @@
   "javascript.preferences.quoteStyle": "single",
   "emmet.triggerExpansionOnTab": true,
   "eslint.autoFixOnSave": true,
-  "tslint.autoFixOnSave": true
+  "tslint.autoFixOnSave": true,
+  "vim.neovimPath": "/usr/local/bin/nvim",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
 }

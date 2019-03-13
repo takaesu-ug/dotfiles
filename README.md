@@ -167,6 +167,14 @@ https://github.com/robbyrussell/oh-my-zsh#manual-installation
 iterm2関連の設定
 -------------------
 
+## iterm2の設定を読み込むようにする
+
+iterm2のディレクトリを Preferences で読み込むようにする
+
+```
+~/dotfiles/iterm2/
+```
+
 ### color テーマ
 vim のカラーテーマ `vim-hybrid` を利用してiterm2のカラーを変更できるのでお好みに
 [w0ng/vim-hybrid](https://github.com/w0ng/vim-hybrid)

@@ -275,11 +275,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>2330 630 620 392 1920 267 1440 877 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>527 614 928 394 0 0 1920 1177 </string>
+	<string>2222 617 796 486 1920 267 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>0 588 592 584 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>240 575 650 452 0 0 1920 1177 </string>
+	<string>0 0 1920 1177 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 1920 1178 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -2214,11 +2214,11 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-12-14T00:33:04Z</date>
+	<date>2019-01-19T00:40:22Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>UKCrashReporterLastCrashReportDate</key>
 	<real>1538921216</real>
 	<key>UseBorder</key>
