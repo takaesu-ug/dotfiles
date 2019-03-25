@@ -20,7 +20,7 @@ alias v='cd $(ghq root)/$(ghq list | fzf); vi .'
 alias vc='code $(ghq root)/$(ghq list | fzf)'
 
 # Ruby のctag用
-alias rtags='ctags -R -a --sort=yes --exclude="*.js" --exclude="*.h" --exclude=log --exclude="*.yml" --exclude=".git"'
+alias rtags='ctags -R -a --sort=yes --exclude="*.js" --exclude="*.h" --exclude=log --exclude="*.yml" --exclude=".git*"'
 
 # grep （数字分上下を表示[-B数字 -A数字]  再帰的[-r]）
 alias grep="grep --color"
