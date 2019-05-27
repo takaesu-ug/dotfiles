@@ -73,5 +73,11 @@
   "tslint.autoFixOnSave": true,
   "vim.neovimPath": "/usr/local/bin/nvim",
   "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "ruby.intellisense": "rubyLocate",
+  "ruby.locate": {
+    "include": "**/*.rb",
+    "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}"
+  },
+  "ruby.useLanguageServer": true
 }
