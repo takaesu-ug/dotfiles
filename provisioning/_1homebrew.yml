@@ -29,7 +29,7 @@
       # - name: android-studio
       - name: bartender
       - name: blisk
-      - name: boostnote
+      # - name: boostnote
       - name: homebrew/cask-fonts/font-fira-code
       - name: charles
       - name: calibre
