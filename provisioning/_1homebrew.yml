@@ -27,7 +27,6 @@
       - name: alfred
       - name: appcleaner
       # - name: android-studio
-      # - name: atom
       - name: bartender
       - name: blisk
       - name: boostnote
@@ -42,10 +41,9 @@
       - name: dropbox
       # - name: dbeaver-community # DBクライアント
       - name: firefox
-      - name: gyazo
       - name: google-japanese-ime
       - name: google-chrome
-      - name: hyper
+      # - name: hyper
       - name: iterm2
       - name: intellij-idea
       - name: java
@@ -56,17 +54,15 @@
       - name: kindlegen
       - name: licecap
       - name: marp
-      - name: mysqlworkbench  # DB(mysql)クライアント
+      # - name: mysqlworkbench  # DB(mysql)クライアント
       - name: ngrok           # [ngrokを使用してローカル環境を外部に公開する - Qiita](https://qiita.com/kitaro729/items/44214f9f81d3ebda58bd)
       - name: onedrive
       - name: postman
-      # - name: sequel-pro  # DB(mysql)クライアント
       - name: shiftit
       - name: skitch
-      - name: skype
+      # - name: skype
       - name: slack
       - name: tableplus # DBクライアント
-      # - name: teamsql   # DBクライアント proxyエラーになる
       - name: vagrant
       - name: visual-studio-code
       - name: vivaldi
