@@ -52,6 +52,7 @@
       - name: keepassx
       - name: kindle
       - name: kindlegen
+      - name: krisp
       - name: licecap
       - name: marp
       # - name: mysqlworkbench  # DB(mysql)クライアント
