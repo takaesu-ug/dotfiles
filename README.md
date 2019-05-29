@@ -10,6 +10,8 @@ yusabana's dotfiles
   - ./1setup_anyenv.sh
   - exec $SHELL -l
 - python関連インストール(3.6系入れて、pipでpipenv, neovimを入れる)
+  - pyenv install できない場合(moojaviで): https://qiita.com/zreactor/items/c3fd04417e0d61af0afe
+  - anyenv install pyenv
   - pyenv install 3.6.4
   - pyenv global 3.6.4
   - pyenv rehash
@@ -22,6 +24,8 @@ yusabana's dotfiles
   - pipenv run ansible-playbook -i hosts _2zsh.yml
   - pipenv run ansible-playbook -i hosts _3symlink.yml
   - pipenv run ansible-playbook -i hosts _4vimplug.yml
+- dotfiles/iterm2 の設定を読み込む
+  - https://qiita.com/reoring/items/a0f3d6186efd11c87f1b
 - golang 関連のインストール
   - goenv を利用
 - ruby関連インストール
