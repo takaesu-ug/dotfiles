@@ -116,7 +116,7 @@ Plug 'leafgarland/typescript-vim'
 " :ColorClear      - clear all highlights
 " :ColorToggle     - toggle highlights
 Plug 'lilydjwg/colorizer'
-Plug 'styled-components/vim-styled-components'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 """ Others
 " editconfig テキストエディタの共通フォーマッタ http://editorconfig.org/
 Plug 'editorconfig/editorconfig-vim'
