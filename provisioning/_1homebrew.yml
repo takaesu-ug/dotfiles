@@ -41,6 +41,7 @@
       - name: dropbox
       # - name: dbeaver-community # DBクライアント
       - name: firefox
+      - name: gifox
       - name: google-japanese-ime
       - name: google-chrome
       # - name: hyper
@@ -77,7 +78,6 @@
       - name: automake
       - name: ccat
       - name: certbot
-      - name: chromedriver
       - name: cmake
       - name: csshx
       - name: colordiff
@@ -87,7 +87,6 @@
       - name: fzf
       - name: git
       - name: gnuplot # gnuplot コマンドで特定のデータからコマンドで簡単にグラフ化するツール
-      - name: heroku
       - name: highlight
       - name: highway
       - name: hub
