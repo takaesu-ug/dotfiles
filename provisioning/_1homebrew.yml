@@ -41,7 +41,6 @@
       - name: dropbox
       # - name: dbeaver-community # DBクライアント
       - name: firefox
-      - name: gifox
       - name: google-japanese-ime
       - name: google-chrome
       # - name: hyper
