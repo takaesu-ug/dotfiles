@@ -7,7 +7,12 @@ fi
 
 ## go用の設定(goはgoenvで管理する)
 if type goenv >/dev/null 2>&1; then
-  export GOPATH=~/workspace/gopath:~/workspaces/ghq/
+  # goenvが無条件にGOPATHを設定してしまうのを除外
+  # ref GOENV_DISABLE_GOPATH https://qiita.com/gimKondo/items/add08298e24ae400505e
+  export GOENV_DISABLE_GOPATH=1
+
+  export GOPATH=~/workspace/gopath
+  # export GOPATH=~/workspace/gopath/:~/workspaces/ghq/
   export PATH=$(goenv root)/shims:~/workspace/gopath/bin:$PATH  # パッケージで入れたgoのbinディレクトリへのパスとGOPATH配下のパスを追加
 fi
 
