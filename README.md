@@ -276,11 +276,6 @@ TODO:
   - んで GOPATHに workspaces/ghq/ を追加する
   - 分ける理由は GOPATH汚染 を避けるため http://text.baldanders.info/golang/gopath-pollution/
 
-  - 上記構成が無理だったら以下を試す
-    - 無理かどうかというのは簡単な依存パッケージのgolangのコードを書いてみる
-    - [ghqを使ったローカルリポジトリの統一的・効率的な管理について - Kentaro Kuribayashi's blog](http://blog.kentarok.org/entry/2014/06/03/135300)
-
-
 ```
 % go get -u github.com/motemen/ghq
 % go get -u github.com/mattn/memo
