@@ -48,5 +48,10 @@
     "key": "cmd+[",
     "command": "workbench.action.previousPanelView",
     "when": "panelFocus"
+  },
+  {
+    "key": "ctrl+-",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
   }
 ]
