@@ -57,6 +57,7 @@
       - name: marp
       # - name: mysqlworkbench  # DB(mysql)クライアント
       - name: ngrok           # [ngrokを使用してローカル環境を外部に公開する - Qiita](https://qiita.com/kitaro729/items/44214f9f81d3ebda58bd)
+      - name: noun-project
       - name: onedrive
       - name: postman
       - name: shiftit
