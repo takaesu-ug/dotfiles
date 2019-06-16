@@ -82,6 +82,7 @@
       - name: csshx
       - name: colordiff
       - name: ctags
+      - name: curl
       - name: direnv
       - name: ffmpeg
       - name: fzf
@@ -130,6 +131,7 @@
       - name: tree
       - name: unar   # zipなどの解凍ツール(winのcp932などでも文字化けしないように)
       - name: v8-315 # therubyracerに必要
+      - name: vim
       - name: w3m
       - name: watch
       - name: wget
@@ -137,11 +139,6 @@
       - name: yarn
       - name: youtube-dl
       - name: zsh
-    homebrew_packages_with_options:
-      - name: curl
-        options: 'with-openssl,with-nghttp2'
-      - name: vim
-        options: 'with-lua,with-python3'
 
   tasks:
     - name: homebrew install
@@ -161,21 +158,18 @@
     - name: homebrew update
       homebrew:
         update_homebrew: yes
+
     - name: homebrew tap
       homebrew_tap:
         name: '{{ item }}'
         state: present
       with_items: '{{ homebrew_taps }}'
+
     - name: homebrew packages install
       homebrew:
         name: '{{ item.name }}'
         state: '{{ item.state | default("present") }}'
       with_items: '{{ homebrew_packages }}'
-    - name: homebrew packages install with options
-      homebrew:
-        name: '{{ item.name }}'
-        state: '{{ item.state | default("present") }}'
-        install_options: '{{ item.options }}'
-      with_items: '{{ homebrew_packages_with_options }}'
+
     # - name: homebrew installed packages upgrade
     # - homebrew: update_homebrew=yes upgrade_all=yes
