@@ -82,7 +82,6 @@
       - name: csshx
       - name: colordiff
       - name: ctags
-      - name: curl
       - name: direnv
       - name: ffmpeg
       - name: fzf
