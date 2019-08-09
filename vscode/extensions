@@ -1,6 +1,7 @@
-Hridoy.rails-snippets
+amazonwebservices.aws-toolkit-vscode
 bung87.rails
 bung87.vscode-gemfile
+castwide.solargraph
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 chrmarti.regex
@@ -15,13 +16,16 @@ flowtype.flow-for-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
+Hridoy.rails-snippets
 jpoissonnier.vscode-styled-components
 mechatroner.rainbow-csv
+misogi.ruby-rubocop
 ms-python.python
+ms-vscode-remote.remote-containers
+ms-vscode.Go
 ms-vsliveshare.vsliveshare
 msjsdiag.debugger-for-chrome
 rebornix.ruby
-robertohuertasm.vscode-icons
 ryu1kn.partial-diff
 shardulm94.trailing-spaces
 sianglim.slim
@@ -30,3 +34,4 @@ vscodevim.vim
 wayou.vscode-todo-highlight
 wmaurer.change-case
 wyze.theme-hybrid-next
+zhuangtongfa.Material-theme
