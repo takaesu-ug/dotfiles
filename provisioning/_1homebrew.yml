@@ -102,12 +102,14 @@
       - name: mongodb
       - name: mosquitto
       - name: mpg123
+      - name: mkcert  # localでsslのCA作るやつ
       - name: mycli
       - name: mysql-client
       - name: neovim
       - name: nginx
       - name: ngrep
       - name: nkf
+      - name: nss # mkcertで使う
       - name: openssl
       - name: pandoc  # http://sky-y.github.io/site-pandoc-jp/users-guide/
       - name: packer
