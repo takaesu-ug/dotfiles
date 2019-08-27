@@ -5,6 +5,7 @@ castwide.solargraph
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 chrmarti.regex
+CoenraadS.bracket-pair-colorizer-2
 cpmcgrath.codealignment-vscode
 dbaeumer.vscode-eslint
 donjayamanne.githistory
@@ -17,8 +18,10 @@ formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
 Hridoy.rails-snippets
+johnpapa.vscode-peacock
 jpoissonnier.vscode-styled-components
 mechatroner.rainbow-csv
+mikestead.dotenv
 misogi.ruby-rubocop
 ms-python.python
 ms-vscode-remote.remote-containers
