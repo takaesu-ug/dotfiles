@@ -26,7 +26,7 @@
       - name: virtualbox  # インストール前に security の設定で Oracle を allowする必要がある
       - name: alfred
       - name: appcleaner
-      # - name: android-studio
+      - name: android-studio
       - name: bartender
       - name: blisk
       # - name: boostnote
@@ -99,7 +99,6 @@
       - name: mas
       - name: mecab
       - name: mecab-ipadic
-      - name: mongodb
       - name: mosquitto
       - name: mpg123
       - name: mkcert  # localでsslのCA作るやつ
@@ -122,6 +121,7 @@
 #      - name: python3
       - name: reattach-to-user-namespace  # 自分でビルドする方法もあり .tmux.conf参照
       - name: readline
+      - name: redis
       - name: subversion
       - name: terraform
       - name: the_platinum_searcher
