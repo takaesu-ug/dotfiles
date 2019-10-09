@@ -21,7 +21,6 @@
   "files.trimFinalNewlines": true,
   "files.autoSave": "onFocusChange",
   "files.autoSaveDelay": 5000,
-  "window.zoomLevel": -1,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "[markdown]": {
     "editor.wordWrap": "on"
@@ -125,5 +124,10 @@
       "value": "#42b883"
     }
   ],
-  "vim.useSystemClipboard": true
+  "vim.useSystemClipboard": true,
+  "solargraph.useBundler": true,
+  "window.zoomLevel": -0.8,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
