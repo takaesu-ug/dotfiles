@@ -8,6 +8,7 @@ function str_with_color() {
   echo "%{$fg[$1]%}$2%{$reset_color%}"
 }
 
+# 現状使っていない
 function my_git_status() {
   # testコマンド で current_branchを取得して git _prompt_statusを表示する
   [ $(current_branch) ] && echo "($(current_branch) $(git_prompt_status))"
@@ -27,7 +28,8 @@ function my_vcs_info() {
   LANG=C vcs_info >&/dev/null
   # バージョン管理システムの情報があったら右プロンプトに表示する。
   if [ -n "$vcs_info_msg_0_" ]; then
-    echo "${vcs_info_msg_0_} $(git_prompt_status)"
+    # echo "${vcs_info_msg_0_} $(git_prompt_status)"
+    echo "${vcs_info_msg_0_}"
   fi
 }
 
