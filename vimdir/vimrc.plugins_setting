@@ -235,6 +235,13 @@ let g:ale_fixers = {
 
 nmap <silent><C-f> <Plug>(ale_fix)
 
+" シェルスクリプトにしたらできる...
+" Vim, ALE, Docker, and Per-Project Linting | Ryan McGrath
+" https://rymc.io/blog/2019/vim-ale-docker-per-project-linting/
+"
+" let g:ale_ruby_rubocop_executable = 'docker-compose run -T --rm sense_api bundle exec rubocop'
+let g:ale_ruby_rubocop_executable = '.bin/rubocop'
+
 
 "------------------------------------
 " itchyny/lightline.vim
