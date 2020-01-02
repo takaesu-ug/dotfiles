@@ -1,0 +1,21 @@
+### Added by Zplugin's installer
+source "$HOME/.zplugin/bin/zplugin.zsh"
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+### End of Zplugin installer's chunk
+
+zplugin light zsh-users/zsh-autosuggestions
+zplugin light zdharma/fast-syntax-highlighting
+# ctrl-r のヒストリー
+zplugin load zdharma/history-search-multi-word
+
+# History(OMZ)
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=50000
+SAVEHIST=10000
+HIST_STAMPS="yyyy-mm-dd"
+zplugin snippet OMZ::lib/history.zsh
+
+# theme
+zplugin ice pick"async.zsh" src"pure.zsh"
+zplugin light sindresorhus/pure

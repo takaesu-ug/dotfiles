@@ -15,8 +15,8 @@ if [[ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]]; then
 fi
 
 #### 以 下 自 分 用 の 設 定  ###
-# promptの設定を読み込む
-source ~/dotfiles/zshdir/zshrc.prompt
+# # promptの設定を読み込む
+# source ~/dotfiles/zshdir/zshrc.prompt
 
 # 基本的な設定
 source ~/dotfiles/zshdir/zshrc.basic
@@ -24,6 +24,8 @@ source ~/dotfiles/zshdir/zshrc.basic
 # オリジナルコマンド類の読み込み
 source ~/dotfiles/zshdir/zshrc.command
 source ~/dotfiles/zshdir/zshrc.function
+
+source ~/dotfiles/zshdir/zshrc.zplugin
 
 # secret environments variables (ex. access_token)
 if [[ -f ~/dotfiles/secret/set_environment.sh ]]; then

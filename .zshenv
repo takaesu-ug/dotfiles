@@ -12,7 +12,6 @@ export PATH=/usr/local/opt/mysql-client/bin:$PATH
 # /etc/zprofileなど /etc以下の設定は読まないようにする
 setopt no_global_rcs
 
-
 # プログラミング言語関連の設定
 #   ログインシェルやインタラクティブシェル以外でも実行させたい場合はここで以下を読み込む
 #   ALEなど以下のようにzshの-cオプションで実行されるみたいなのでログインシェルでの実行ではないためzshenvで読み込む必要がある
