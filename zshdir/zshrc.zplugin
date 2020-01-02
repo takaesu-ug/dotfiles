@@ -1,3 +1,7 @@
+## zplugin 参考
+# https://github.com/zdharma/zplugin
+# https://blog.katio.net/page/zplugin
+
 ### Added by Zplugin's installer
 source "$HOME/.zplugin/bin/zplugin.zsh"
 autoload -Uz _zplugin
