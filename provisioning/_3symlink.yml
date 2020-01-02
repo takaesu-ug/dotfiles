@@ -5,7 +5,7 @@
 
   vars:
     links:
-      - src:  '~/dotfiles/zshdir/oh-my-zsh/zshrc'
+      - src:  '~/dotfiles/.zshrc'
         dest: '~/.zshrc'
       - src:  '~/dotfiles/.zlogin'
         dest: '~/.zlogin'
@@ -13,8 +13,6 @@
         dest: '~/.zshenv'
       - src:  '~/dotfiles/.gitconfig'
         dest: '~/.gitconfig'
-      - src:  '~/dotfiles/.gitattributes'
-        dest: '~/.gitattributes'
       - src:  '~/dotfiles/.gitconfig.local'
         dest: '~/.gitconfig.local'
       - src:  '~/dotfiles/.inputrc'
@@ -59,8 +57,6 @@
         dest: '~/Library/Application Support/Code/User/snippets'
       - src:  '~/dotfiles/.ideavimrc'
         dest: '~/.ideavimrc'
-      - src:  '~/dotfiles/.hyper.js'
-        dest: '~/.hyper.js'
 
   tasks:
     - name: Make directory ~/.config 

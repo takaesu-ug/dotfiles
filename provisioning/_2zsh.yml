@@ -16,12 +16,12 @@
       become: true
       changed_when: false
 
-    - name: Install oh-my-zsh
-      shell: curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+    - name: Install zplugin
+      shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zplugin/master/doc/install.sh)"
       args:
-        creates: ~/.oh-my-zsh
+        creates: ~/.zplugin
 
     - name: Backup original zshrc of oh-my-zsh
-      shell: mv ~/.zshrc ~/.zshrc_bk_oh-my-zsh
+      shell: mv ~/.zshrc ~/.zshrc_bk_zplugin
       args:
-        creates: ~/.zshrc_bk_oh-my-zsh
+        creates: ~/.zshrc_bk_zplugin
