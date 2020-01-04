@@ -56,6 +56,7 @@
       # - name: noun-project
       - name: onedrive
       - name: postman
+      - name: rubymine
       - name: shiftit
       - name: skitch
       # - name: skype
@@ -64,6 +65,7 @@
       - name: vagrant
       - name: visual-studio-code
       - name: vivaldi
+      - name: webstorm
       - name: xmind
       - name: xquartz
       - name: zoomus
