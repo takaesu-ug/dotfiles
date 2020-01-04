@@ -29,21 +29,18 @@
       - name: android-studio
       - name: bartender
       - name: blisk
-      # - name: boostnote
       - name: homebrew/cask-fonts/font-fira-code
       - name: charles
-      - name: calibre
+      # - name: calibre
       - name: contexts
       - name: cyberduck
       - name: discord
       - name: docker   # docker for mac
       - name: drawio
       - name: dropbox
-      # - name: dbeaver-community # DBクライアント
       - name: firefox
       - name: google-japanese-ime
       - name: google-chrome
-      # - name: hyper
       - name: iterm2
       - name: intellij-idea
       - name: java
@@ -54,17 +51,16 @@
       - name: kindlegen
       - name: krisp
       - name: licecap
-      - name: marp
       - name: mysqlworkbench  # DB(mysql)クライアント
       - name: ngrok           # [ngrokを使用してローカル環境を外部に公開する - Qiita](https://qiita.com/kitaro729/items/44214f9f81d3ebda58bd)
-      - name: noun-project
+      # - name: noun-project
       - name: onedrive
       - name: postman
       - name: shiftit
       - name: skitch
       # - name: skype
       - name: slack
-      - name: tableplus # DBクライアント
+      # - name: tableplus # DBクライアント
       - name: vagrant
       - name: visual-studio-code
       - name: vivaldi
@@ -117,8 +113,6 @@
       - name: pgcli
       - name: pstree
       - name: pkg-config
-#      - name: python
-#      - name: python3
       - name: reattach-to-user-namespace  # 自分でビルドする方法もあり .tmux.conf参照
       - name: readline
       - name: redis

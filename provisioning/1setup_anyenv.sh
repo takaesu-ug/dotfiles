@@ -5,12 +5,13 @@ git clone https://github.com/riywo/anyenv ~/.anyenv
 # anyenv init
 export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+anyenv install --init
 
-echo '# anyenv init' >> ~/.bash_profile
-echo 'export LC_ALL=en_US.UTF-8' >> ~/.bash_profile
-echo 'export LANG=en_US.UTF-8' >> ~/.bash_profile
-echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile
-echo 'eval "$(anyenv init -)"' >> ~/.bash_profile
+echo '# anyenv init' >> ~/.zshrc
+echo 'export LC_ALL=en_US.UTF-8' >> ~/.zshrc
+echo 'export LANG=en_US.UTF-8' >> ~/.zshrc
+echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(anyenv init -)"' >> ~/.zshrc
 
 # anyenv plugins
 mkdir -p $(anyenv root)/plugins
@@ -22,7 +23,7 @@ anyenv update
 anyenv git pull
 
 # XXenv install
-anyenv install ndenv
+anyenv install nodenv
 anyenv install rbenv
 anyenv install pyenv
 anyenv install goenv
