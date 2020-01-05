@@ -19,7 +19,8 @@ Plug 'tomasr/molokai'
 Plug 'nanotech/jellybeans.vim'
 
 "" Basic
-Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/plugged/vimproc.vim', 'do': 'make' }
+" Plug 'Shougo/vimproc.vim', { 'dir': '~/.vim/plugged/vimproc.vim', 'do': 'make' }
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " テキストをかっこで囲む/削除する
 Plug 'tpope/vim-surround'
 " Alignで行頭や行末などで揃える(選択してから  Align \w\+,)
