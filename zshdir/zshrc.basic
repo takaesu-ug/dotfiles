@@ -26,6 +26,7 @@ autoload -U compinit
 compinit
 zstyle ':completion:*:default' menu select=1 # 補完候補から選べるようにする
 zstyle ':completion:*' list-colors "${LS_COLORS}" # 補完候補のカラー表示
+zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' # case-insentiveな補完 https://qiita.com/watertight/items/2454f3e9e43ef647eb6b
 
 # あなたの知らない less の世界 - Qiita http://qiita.com/delphinus/items/b04752bb5b64e6cc4ea9
 export PAGER=less
