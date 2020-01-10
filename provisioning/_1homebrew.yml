@@ -89,6 +89,7 @@
       - name: highway
       - name: hub
       - name: imagemagick   # imagemagickはrmagickの関係でver6系を入れる。後に対応されたらver7以上とする
+      - name: itchyny/tap/mmv
       - name: jq
       - name: jmeter
       - name: lesspipe
