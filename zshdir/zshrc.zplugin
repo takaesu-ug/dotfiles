@@ -1,25 +1,32 @@
 ## zplugin 参考
-# https://github.com/zdharma/zplugin
+# https://github.com/zdharma/zinit
 # https://blog.katio.net/page/zplugin
 
-### Added by Zplugin's installer
-source "$HOME/.zplugin/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-### End of Zplugin installer's chunk
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing DHARMA Initiative Plugin Manager (zdharma/zinit)…%f"
+    command mkdir -p $HOME/.zinit
+    command git clone https://github.com/zdharma/zinit $HOME/.zinit/bin && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%F" || \
+        print -P "%F{160}▓▒░ The clone has failed.%F"
+fi
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+### End of Zinit installer's chunk
 
-zplugin light zsh-users/zsh-autosuggestions
-zplugin light zdharma/fast-syntax-highlighting
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma/fast-syntax-highlighting
 # ctrl-r のヒストリー
-zplugin load zdharma/history-search-multi-word
+zinit load zdharma/history-search-multi-word
 
 # History(OMZ)
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=50000
 SAVEHIST=10000
 HIST_STAMPS="yyyy-mm-dd"
-zplugin snippet OMZ::lib/history.zsh
+zinit snippet OMZ::lib/history.zsh
 
 # theme
-zplugin ice pick"async.zsh" src"pure.zsh"
-zplugin light sindresorhus/pure
+zinit ice pick"async.zsh" src"pure.zsh"
+zinit light sindresorhus/pure
