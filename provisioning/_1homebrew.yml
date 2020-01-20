@@ -30,6 +30,7 @@
       - name: bartender
       # - name: blisk
       - name: homebrew/cask-fonts/font-fira-code
+      - name: homebrew/cask-fonts/font-ricty-diminished
       - name: charles
       # - name: calibre
       - name: contexts
@@ -62,6 +63,7 @@
       # - name: skype
       - name: slack
       # - name: tableplus # DBクライアント
+      - name: typora # markdown editor (ファイル形式)
       - name: vagrant
       - name: visual-studio-code
       - name: vivaldi
