@@ -35,6 +35,7 @@
       # - name: calibre
       - name: contexts
       - name: cyberduck
+      - name: datagrip # jetbrains
       - name: discord
       - name: docker   # docker for mac
       - name: drawio
@@ -43,7 +44,7 @@
       - name: google-japanese-ime
       - name: google-chrome
       - name: iterm2
-      - name: intellij-idea
+      - name: intellij-idea # jetbrains
       - name: java
       - name: kap
       - name: karabiner-elements
@@ -57,7 +58,7 @@
       # - name: noun-project
       - name: onedrive
       - name: postman
-      - name: rubymine
+      - name: rubymine # jetbrains
       - name: shiftit
       - name: skitch
       # - name: skype
@@ -67,7 +68,7 @@
       - name: vagrant
       - name: visual-studio-code
       - name: vivaldi
-      - name: webstorm
+      - name: webstorm # jetbrains
       - name: xmind
       - name: xquartz
       - name: zoomus
