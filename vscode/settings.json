@@ -126,7 +126,6 @@
   ],
   "vim.useSystemClipboard": true,
   "solargraph.useBundler": true,
-  "window.zoomLevel": -0.8,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -135,5 +134,6 @@
   },
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "window.zoomLevel": -0.3
 }
