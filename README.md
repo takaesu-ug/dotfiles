@@ -5,19 +5,18 @@ yusabana's dotfiles
 
 - XCode Install (App Storeから)
 - XCode Commandline tool インストール
-  - xcode-select —-install
+  - xcode-select -install
 - cd /Users/takaesu/dotfiles/provisioning
   - ./1setup_anyenv.sh
   - exec $SHELL -l
 - python関連インストール(3.6系入れて、pipでpipenv, neovimを入れる)
   - pyenv install できない場合(moojaviで): https://qiita.com/zreactor/items/c3fd04417e0d61af0afe
-  - anyenv install pyenv
-  - pyenv install 3.6.4
-  - pyenv global 3.6.4
+  - pyenv install 3.8.1
+  - pyenv global 3.8.1
   - pyenv rehash
-  - pip install pipenv neovim
+  - pip install pipenv
 - cd /Users/takaesu/dotfiles/provisioning
-  - pipenv install —ignore-pipfile
+  - pipenv install --ignore-pipfile
   - pipenv run ansible-playbook -i hosts _1homebrew.yml
 - Dropboxを設定
 - cd /Users/takaesu/dotfiles/provisioning
