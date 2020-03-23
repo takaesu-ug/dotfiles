@@ -117,26 +117,11 @@ if exists('&ambw')
   set ambw=double
 endif
 
-"タブをスペースで挿入(4スペース)
+" タブをスペースで挿入(4スペース)
 setlocal expandtab
 setlocal tabstop=4
 setlocal shiftwidth=4
 setlocal softtabstop=0
-
-" Macの場合で insertモードから <Esc> <C-c> <C-[> のキーでノーマルモードに移るときに英数に切り替える
-" http://qiita.com/creasty/items/30d1f0fc262f7c455d14
-if executable('osascript')
-  let s:keycode_jis_eisuu = 102
-  let g:force_alphanumeric_input_command = "osascript -e 'tell application \"System Events\" to key code " . s:keycode_jis_eisuu . "' &"
-
-  inoremap <silent> <Esc> <Esc>:call system(g:force_alphanumeric_input_command)<CR>
-  inoremap <silent> <C-[> <C-[>:call system(g:force_alphanumeric_input_command)<CR>
-  inoremap <silent> <C-c> <Esc>:call system(g:force_alphanumeric_input_command)<CR>
-else
-  " Mac以外の場合はC-cをEscと同じ挙動とする
-  " refs http://d.hatena.ne.jp/yuta84q/20101216/1292508997
-  inoremap <silent> <C-c> <Esc>
-endif
 
 " Vim で snake_case を CamelCase に置換する - Qiita
 " https://qiita.com/annyamonnya/items/f003fd671fecaf55c9e7
