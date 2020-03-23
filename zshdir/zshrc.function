@@ -86,7 +86,9 @@ function google_translate() {
   w3m +13 "http://translate.google.com/${opt}"
 }
 
-## pecoを使ったコマンド関連
+
+# fzf
+#
 # function ここに関数の名前() {
 #         BUFFER="ここにコマンド" #何をコマンドラインに表示するか
 #         CURSOR=$#BUFFER # カーソル位置を行末に設定
@@ -94,128 +96,85 @@ function google_translate() {
 # }
 # zle -N ここに関数の名前
 # bindkey 'ここに設定したいキー' ここに関数の名前
-if type peco > /dev/null 2>&1; then
-  # Alias
-  alias ghc='cd $(ghq list -p | peco)'
-  alias gho='gh-open $(ghq list -p | peco)'
-  alias sshlist="awk 'match($1,/^Host$/){print $2}' ~/.ssh/config | grep -v '\*' | peco | xargs -o ssh"
+if type fzf >/dev/null 2>&1; then
+  # https://github.com/junegunn/fzf/wiki/examples
+  export FZF_DEFAULT_OPTS="--reverse --inline-info"
+  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
+  alias ghc='cd $(ghq list -p | fzf)'
+  alias sshlist="awk 'match($1,/^Host$/){print $2}' ~/.ssh/config | grep -v '\*' | fzf | xargs -o ssh"
+
 
   ## .ssh/config の Hostから一覧を取得してSSHする
-  function peco-sshlist () {
+  function fzf-sshlist () {
     #BSD以外のOSでのやり方
     #awk 'match($1,/^Host$/){print $2}' ~/.ssh/config | xargs sh -c 'ssh "$@" </dev/tty' ssh
-    local host=$(awk 'match($1,/^Host$/){print $2}' ~/.ssh/config | grep -v '\*' | peco)
+    local host=$(awk 'match($1,/^Host$/){print $2}' ~/.ssh/config | grep -v '\*' | fzf)
     if [ -n "$host" ]; then
       BUFFER="sshp ${host}"
       zle accept-line  # accept-line を実行することでコマンドを実行する
     fi
     zle clear-screen
   }
-  zle -N peco-sshlist
-  bindkey '^s' peco-sshlist
+  zle -N fzf-sshlist
+  bindkey '^s' fzf-sshlist
 
-  ## peco-で始まるfunctionを検索する
-  function peco-function-list () {
-    local selected=$(functions | grep "^.*\ ()\ {" | sed -e "s| () {||" | grep peco- | grep -v function-list | peco --query "$LBUFFER")
-    if [ -n "$selected" ]; then
-      ${selected}
-    fi
-  }
-  # zle -N peco-function-list
-  # bindkey '^k' peco-function-list
-
-  ## pecoでghqのソースディレクトリを開く
-  function peco-src () {
-    local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
-    if [ -n "$selected_dir" ]; then
-      BUFFER="cd ${selected_dir}"
-      zle accept-line
-    fi
-    zle clear-screen
-  }
-  zle -N peco-src
-  bindkey '^]' peco-src
-
-  ## gh-openエイリアスコマンドのショートカット設定
-  function peco-gh-open () {
-    gh-open $(ghq list -p | peco)
-  }
-  zle -N peco-gh-open
-  bindkey '^g' peco-gh-open
-
-  ## ^r でのコマンドヒストリにpecoを使う
-  function peco-select-history() {
-    local tac
-    if which tac > /dev/null; then
-      tac="tac"
-    else
-      tac="tail -r"
-    fi
-
-    # http://qiita.com/richmikan@github/items/3c74212b0d8dec9bd00f
-    NL=$(printf '\\\012_')
-    NL=${NL%_}
-
-    BUFFER=$(\history -n 1 | \
-      eval $tac | \
-      peco --query "$LBUFFER" --prompt "[histories] >" | sed -e 's/\\n/'"$NL"'/g')
-      # peco --query "$LBUFFER" --prompt "[histories] >" | tr '\\n' '\n')
-    CURSOR=$#BUFFER
-    zle clear-screen
-  }
-  zle -N peco-select-history
-  bindkey '^r' peco-select-history
-
-
-  function peco-bundle-open() {
-    # 最低限動作するなら以下の４行だけでいいが、ZLEのbind_keyで動かすと改行されずに次の入力に移らないない。
-    # local package=$(bundle list | awk 'NR>1 {print $2}' |peco)
-    # if [ -n "$package" ]; then
-    #   cd `bundle show $package`
-    # fi
-    local package=$(bundle list | awk 'NR>1 {print $2}' |peco)
-    if [ -n "$package" ]; then
-      BUFFER="cd `bundle show $package`"
-      zle accept-line
-    fi
-    zle clear-screen
-  }
-  zle -N peco-bundle-open
-  bindkey '^o' peco-bundle-open
 
   # http://qiita.com/sona-tar/items/fe401c597e8e51d4e243
-  function peco-git-hash() {
-    git log --oneline | peco | awk '{print $1}'
+  function fzf-git-hash() {
+    git log --oneline | fzf | awk '{print $1}'
   }
-  alias git-hash='peco-git-hash'
-  alias -g GH='$(peco-git-hash)'
+  alias git-hash='fzf-git-hash'
+  alias -g GH='$(fzf-git-hash)'
   # GHの使い方
   # git diff GH
 
-  function peco-git-changed-files() {
-    git status --short | peco | awk '{print $2}'
+
+  function fzf-git-changed-files() {
+    git status --short | fzf | awk '{print $2}'
   }
-  alias git-changed-files='peco-git-changed-files'
-  alias -g GF='$(peco-git-changed-files)'
+  alias git-changed-files='fzf-git-changed-files'
+  alias -g GF='$(fzf-git-changed-files)'
   # GFの使い方
   # git add GH
   # git co GH
 
 
   # git ls-tree - Qiita http://qiita.com/sasaplus1/items/cff8d5674e0ad6c26aa9
-  function peco-git-cd() {
-    cd $(git ls-tree -dr --name-only HEAD | peco)
+  function fzf-git-cd() {
+    cd $(git ls-tree -dr --name-only HEAD | fzf)
   }
 
 
+  # ghqのソースディレクトリを開く
+  function fzf-src () {
+    local selected_dir=$(ghq list -p | fzf --query "$LBUFFER")
+    if [ -n "$selected_dir" ]; then
+      BUFFER="cd ${selected_dir}"
+      zle accept-line
+    fi
+    zle clear-screen
+  }
+  zle -N fzf-src
+  bindkey '^]' fzf-src
+
+
+  ## gh-openエイリアスコマンドのショートカット設定
+  function fzf-gh-open () {
+    cd $(ghq list -p | fzf) && hub browse
+  }
+  zle -N fzf-gh-open
+  bindkey '^g' fzf-gh-open
+
+
   # http://k0kubun.hatenablog.com/entry/2014/07/06/033336
-  function peco-find-file() {
+  function fzf-find-file() {
     if git rev-parse 2> /dev/null; then
       source_files=$(git ls-files)
     else
       source_files=$(find . -type f)
     fi
-    selected_files=$(echo $source_files | peco --prompt "[find files] >")
+    selected_files=$(echo $source_files | fzf --prompt "[find files] >")
     result=''
     for file in $selected_files; do
       result="${result}$(echo $file | tr '\n' ' ')"
@@ -224,15 +183,9 @@ if type peco > /dev/null 2>&1; then
     CURSOR=$#BUFFER  # カーソル位置を行末に設定
     zle redisplay
   }
-  zle -N peco-find-file
-  bindkey '^q' peco-find-file
-fi
+  zle -N fzf-find-file
+  bindkey '^q' fzf-find-file
 
-
-if type fzf >/dev/null 2>&1; then
-  # https://github.com/junegunn/fzf/wiki/examples
-  export FZF_DEFAULT_OPTS="--reverse --inline-info"
-  export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
   # vim関連
   alias vif='vim $(fzf)'
