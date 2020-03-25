@@ -125,7 +125,7 @@
       - name: the_silver_searcher
       - name: tidy-html5 # tidyのlintでhtml5として有効となるように
       - name: tig
-      - name: tmux
+      - name: z80oolong/tmux/tmux # https://saikyoline.jp/weblog/2019/05/28/235315.html
       - name: tree
       - name: unar   # zipなどの解凍ツール(winのcp932などでも文字化けしないように)
       - name: v8-315 # therubyracerに必要
