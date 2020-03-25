@@ -24,13 +24,14 @@
 
     homebrew_cask_packages:
       - name: virtualbox  # インストール前に security の設定で Oracle を allowする必要がある
+      - name: authy
       - name: alfred
       - name: appcleaner
       - name: android-studio
       - name: bartender
       # - name: blisk
-      - name: homebrew/cask-fonts/font-fira-code
       - name: homebrew/cask-fonts/font-ricty-diminished
+      - name: homebrew/cask-fonts/font-jetbrains-mono
       # - name: charles
       # - name: calibre
       - name: contexts
