@@ -1,26 +1,18 @@
 [[source]]
-
 url = "https://pypi.python.org/simple"
 verify_ssl = true
 name = "pypi"
 
-
 [dev-packages]
 
-
-
 [packages]
-
 ansible = "*"
-
+ignore-pipfile = "*"
 
 [requires]
-
 python_version = "3.8"
 
-
 [scripts]
-
 start = "echo abc"
 all = "ansible-playbook -i host _1homebrew.yml _2zsh.yml _3symlink.yml _4vimplug.yml"
 1homebrew = "ansible-playbook -i hosts _1homebrew.yml"
