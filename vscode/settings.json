@@ -1,10 +1,10 @@
 {
   "editor.fontSize": 14,
-  "editor.fontFamily": "'JetBrains Mono', 'Ricty Diminished Discord', Menlo, Monaco, 'Courier New'",
+  "editor.fontFamily": "'JetBrains Mono', 'BIZ UDGothic', 'Ricty Diminished Discord', Menlo, Monaco, 'Courier New'",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.renderControlCharacters": true,
-  "editor.rulers": [80, 100],
+  "editor.rulers": [80, 100, 120],
   "editor.minimap.enabled": false,
   "emmet.includeLanguages": {
     "html": "html",
