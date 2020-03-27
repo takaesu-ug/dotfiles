@@ -36,23 +36,12 @@ yusabana's dotfiles
 
 -----------
 
-Fontをインストール
--------------
-
-* RictyDiminished
-  * https://github.com/mzyy94/RictyDiminished-for-Powerline
-* Noto Sans CJK JP
-  * https://www.google.com/get/noto/#sans-jpan
-
-
 AppStoreで入れるもの
 -------------------
 
 - quiver
-- zipang
 
-
-MacOSXの場合、xcode, xcode-commandline-toolsをインストールする
+xcode, xcode-commandline-toolsをインストールする
 -------------------
 
 ### xcode
@@ -197,6 +186,10 @@ Preferences -> General -> `Native full screen windows` のチェックを外す
 
 Preferences -> Appearance -> System -> `Auto-hide menu bar in non-native fullscreen` のチェックを外す
 
+### Ambiguous charactersの設定
+
+Preference -> Profiles -> Text `Ambiguous characters are double-width`
+
 
 vim共通
 ----------------
@@ -277,10 +270,10 @@ TODO:
 
 ```
 % go get -u github.com/motemen/ghq
+% go get -u github.com/pocke/whichpr
 % go get -u github.com/mattn/memo
 % go get -u github.com/knqyf263/pet
 % go get -u github.com/Code-Hex/pget/cmd/pget  # 高速ダウンローダー
-% go get -u github.com/pocke/whichpr
 ```
 
 XXXXenv 関連のプログラミングビルドツール設定
