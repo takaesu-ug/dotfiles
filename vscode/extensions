@@ -13,11 +13,11 @@ eamodio.gitlens
 EditorConfig.EditorConfig
 eg2.tslint
 esbenp.prettier-vscode
-flowtype.flow-for-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
 Hridoy.rails-snippets
+isudox.vscode-jetbrains-keybindings
 johnpapa.vscode-peacock
 jpoissonnier.vscode-styled-components
 mechatroner.rainbow-csv
