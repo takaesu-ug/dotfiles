@@ -149,7 +149,7 @@
       homebrew_cask: name={{ item.name }} state=installed
       environment:
         # homebrew-caskでよくあること http://qiita.com/tienlen/items/1a50c7507c8f6454f6c6
-        HOMEBREW_CASK_OPTS: "--appdir=/Applications"  
+        HOMEBREW_CASK_OPTS: "--appdir=/Applications"
       with_items: '{{ homebrew_cask_packages }}'
 
     ## homebrew 関連 ##
