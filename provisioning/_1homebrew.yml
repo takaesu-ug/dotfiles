@@ -103,7 +103,7 @@
       - name: mkcert  # localでsslのCA作るやつ
       - name: mycli
       - name: mysql-client
-      - name: neovim
+      # - name: neovim
       - name: nginx
       - name: ngrep
       - name: nkf
