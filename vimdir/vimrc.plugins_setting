@@ -364,85 +364,85 @@ function! s:all_files()
   \ map(filter(range(1, bufnr('$')), 'buflisted(v:val)'), 'bufname(v:val)'))
 endfunction
 
-"------------------------------------
-" vim-go
-" https://github.com/hnakamur/vim-go-tutorial-ja
-"------------------------------------
-" :GoBuild 時にエラーのある行にジャンプしない
-let g:go_jump_to_error = 0
-" ファイル保存時に実行されるコード整形で使用するツール名
-let g:go_fmt_command = 'goimports'
-" キーワードコマンドとして godoc を使わない
-let g:go_doc_keywordprg_enabled = 0
-" ハイライトを有効にする
-let g:go_highlight_operators = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-" let g:go_highlight_extra_types = 1
-let g:go_highlight_build_constraints = 1
-let g:go_highlight_string_spellcheck = 1
-let g:go_highlight_generate_tags = 1
-" 新規ファイルでテンプレートを適用しない
-let go_template_autocreate = 0
-" vimproc を使わず job を使う
-let g:go#use_vimproc = 0
-" " gofmtでパースエラーをクイックフィックスリストに表示させない
-" let g:go_fmt_fail_silently = 1
-
-" C-x C-o で補完候補を表示させる(gocode)
-" importしていないパッケージも保管する
-let g:go_gocode_unimported_packages = 1
-
-" :GoMetaLinter を実行してLint関連を実行する
-let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
-let g:go_metalinter_deadline = "5s"
-" 保存時に実効する meta linter
-let g:go_metalinter_autosave = 1
-let g:go_metalinter_autosave_enabled = ['vet', 'golint']
-
-" ショートカット
-" run :GoBuild or :GoTestCompile based on the go file
-function! s:build_go_files()
-  let l:file = expand('%')
-  if l:file =~# '^\f\+_test\.go$'
-    call go#test#Test(0, 1)
-  elseif l:file =~# '^\f\+\.go$'
-    call go#cmd#Build(0)
-  endif
-endfunction
-
-autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-autocmd FileType go nmap <leader>r <Plug>(go-run)
-autocmd FileType go nmap <leader>t <Plug>(go-test)
-autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
-autocmd FileType go nmap <Leader>i <Plug>(go-info)
-
-" :GoAlternate テストへの移動と戻りのトグル
-autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
-autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
-autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
-autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
-
-" 関数等の定義へジャンプ
-" タグジャンプのキーを godef の動作で置き換える
-" :GoDef , gd , ctrl-] のいずれかで定義にジャンプする
-" :GoDefPop, Ctrl-t で元の場所に戻る
-" :GoDecls :GoDeclsDir で ctrlp の機能を使ったジャンプ機能
-let g:go_def_mode = 'godef'
-let g:go_def_mapping_enabled = 1
-let g:go_decls_includes = "func,type"
-
-" go-info を自動で出したい時有効にする
-" let g:go_auto_type_info = 1
-
-" :GoSameIds , :GoSameIdsClear を自動で行う
-let g:go_auto_sameids = 1
-
-" :GoPlay  playgroundに公開する
-" let g:go_play_open_browser = 0 " ブラウザで開きたくない時
-let g:go_play_browser_command = "chrome"
+" "------------------------------------
+" " vim-go
+" " https://github.com/hnakamur/vim-go-tutorial-ja
+" "------------------------------------
+" " :GoBuild 時にエラーのある行にジャンプしない
+" let g:go_jump_to_error = 0
+" " ファイル保存時に実行されるコード整形で使用するツール名
+" let g:go_fmt_command = 'goimports'
+" " キーワードコマンドとして godoc を使わない
+" let g:go_doc_keywordprg_enabled = 0
+" " ハイライトを有効にする
+" let g:go_highlight_operators = 1
+" let g:go_highlight_functions = 1
+" let g:go_highlight_methods = 1
+" let g:go_highlight_fields = 1
+" let g:go_highlight_types = 1
+" " let g:go_highlight_extra_types = 1
+" let g:go_highlight_build_constraints = 1
+" let g:go_highlight_string_spellcheck = 1
+" let g:go_highlight_generate_tags = 1
+" " 新規ファイルでテンプレートを適用しない
+" let go_template_autocreate = 0
+" " vimproc を使わず job を使う
+" let g:go#use_vimproc = 0
+" " " gofmtでパースエラーをクイックフィックスリストに表示させない
+" " let g:go_fmt_fail_silently = 1
+"
+" " C-x C-o で補完候補を表示させる(gocode)
+" " importしていないパッケージも保管する
+" let g:go_gocode_unimported_packages = 1
+"
+" " :GoMetaLinter を実行してLint関連を実行する
+" let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
+" let g:go_metalinter_deadline = "5s"
+" " 保存時に実効する meta linter
+" let g:go_metalinter_autosave = 1
+" let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+"
+" " ショートカット
+" " run :GoBuild or :GoTestCompile based on the go file
+" function! s:build_go_files()
+"   let l:file = expand('%')
+"   if l:file =~# '^\f\+_test\.go$'
+"     call go#test#Test(0, 1)
+"   elseif l:file =~# '^\f\+\.go$'
+"     call go#cmd#Build(0)
+"   endif
+" endfunction
+"
+" autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+" autocmd FileType go nmap <leader>r <Plug>(go-run)
+" autocmd FileType go nmap <leader>t <Plug>(go-test)
+" autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+" autocmd FileType go nmap <Leader>i <Plug>(go-info)
+"
+" " :GoAlternate テストへの移動と戻りのトグル
+" autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
+" autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
+" autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
+" autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+"
+" " 関数等の定義へジャンプ
+" " タグジャンプのキーを godef の動作で置き換える
+" " :GoDef , gd , ctrl-] のいずれかで定義にジャンプする
+" " :GoDefPop, Ctrl-t で元の場所に戻る
+" " :GoDecls :GoDeclsDir で ctrlp の機能を使ったジャンプ機能
+" let g:go_def_mode = 'godef'
+" let g:go_def_mapping_enabled = 1
+" let g:go_decls_includes = "func,type"
+"
+" " go-info を自動で出したい時有効にする
+" " let g:go_auto_type_info = 1
+"
+" " :GoSameIds , :GoSameIdsClear を自動で行う
+" let g:go_auto_sameids = 1
+"
+" " :GoPlay  playgroundに公開する
+" " let g:go_play_open_browser = 0 " ブラウザで開きたくない時
+" let g:go_play_browser_command = "chrome"
 
 
 " ]] 次のfunction
@@ -460,14 +460,6 @@ let g:go_play_browser_command = "chrome"
 " :GoFreevars      ビジュアルモードで選択した範囲で依存している変数を洗い出す(リファクタに役立つ)
 " :GoImpl          インターフェース上で実装したいメソッドを実装する
 
-
-"------------------------------------
-" ultiSnips
-"------------------------------------
-let g:UltiSnipsExpandTrigger = '<c-e><c-u>'
-let g:UltiSnipsListSnippets = '<c-e><c-i>'
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "------------------------------------
 " vim-terraform
@@ -509,3 +501,18 @@ nnoremap <leader>t :RunSpec<CR>
 nnoremap <leader>l :RunSpecLine<CR>
 nnoremap <leader>e :RunSpecLastRun<CR>
 nnoremap <leader>cr :RunSpecCloseResult<CR>
+
+"------------------------------------
+" vim-lsp関連の設定
+" https://christina04.hatenablog.com/entry/migrate-from-vim-go-to-vim-lsp
+" https://mattn.kaoriya.net/software/vim/20191231213507.htm
+"------------------------------------
+nmap <silent> gd :LspDefinition<CR>
+nmap <silent> <f2> :LspRename<CR>
+nmap <silent> <Leader>d :LspTypeDefinition<CR>
+nmap <silent> <Leader>r :LspReferences<CR>
+nmap <silent> <Leader>i :LspImplementation<CR>
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+let g:asyncomplete_popup_delay = 200
+let g:lsp_text_edit_enabled = 1

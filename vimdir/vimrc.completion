@@ -1,6 +1,6 @@
-"-------------------------------------------------------------------------------
+"--------------------------------------------
 " 補完・履歴 の基本
-"-------------------------------------------------------------------------------
+"--------------------------------------------
 set wildmenu               " コマンド補完を強化
 set wildchar=<tab>         " コマンド補完を開始するキー
 set wildmode=list:full     " リスト表示，最長マッチ
@@ -12,13 +12,3 @@ cnoremap <C-p> <Up>
 cnoremap <Up> <C-p>
 cnoremap <C-n> <Down>
 cnoremap <Down> <C-n>
-
-"" スニペット
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
-" honza/vim-snippetsの読み込み
-" スニペットのやり方は以下を参照
-" https://github.com/honza/vim-snippets/tree/master/snippets
-let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'

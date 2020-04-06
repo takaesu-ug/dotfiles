@@ -3,13 +3,8 @@
 "-------------------------------------------------------------------------------
 if has('gui_running')
   set background=dark
-  " colorscheme molokai
 else
   set background=dark
-
-  " colorscheme Tomorrow-Night
-  " colorscheme jellybeans
-  " colorscheme molokai
 
   " hybridについては以下の設定も込み
   let g:hybrid_use_Xresources = 1

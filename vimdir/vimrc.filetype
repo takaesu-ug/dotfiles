@@ -9,3 +9,5 @@ autocmd BufNewFile,BufRead *.j2       set filetype=jinja
 autocmd BufNewFile,BufRead *.scala    set filetype=scala
 autocmd BufNewFile,BufRead *.toml     set filetype=toml
 autocmd BufNewFile,BufRead *.jsx      set filetype=javascript.jsx
+autocmd BufNewFile,BufRead *.ts       set filetype=typescript
+autocmd BufNewFile,BufRead *.go       set filetype=go

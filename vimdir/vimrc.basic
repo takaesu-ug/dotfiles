@@ -100,11 +100,10 @@ autocmd QuickFixCmdPost *grep* cwindow
 " http://qiita.com/shoma2da/items/23009d4e1a90c5fe5c31
 " /\choge    <= 検索時に \c をつけるとignorecaseによる検索になる
 " /\Choge    <= 検索時に \C をつけるとcase sensitiveによる検索になる
-set ignorecase
-set smartcase
-
-" 検索時のハイライト
-set hlsearch
+set ignorecase " 検索パターンに大文字小文字を区別しない
+set smartcase " 検索パターンに大文字を含んでいたら大文字小文字を区別する
+set incsearch " インクリメンタルサーチ. １文字入力毎に検索を行う
+set hlsearch " 検索時のハイライト
 
 " マウス操作を有効にする
 set mouse=a
