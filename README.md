@@ -68,3 +68,32 @@ Provisonning
 ```
 
 ### Iterm2関連の設定
+
+- iterm2のディレクトリを Preferences で読み込む
+
+```
+~/dotfiles/iterm2/
+```
+
+- `hybrid.itermcolors` というファイルを `preferences->Profile` から読み込む
+- `Preferences` -> `General` -> `Window` -> `Native full screen windows` のチェックを外す
+- `Preferences` -> `Appearance` -> `General` -> `Auto-hide menu bar in non-native fullscreen` のチェックを外す
+- `Preference` -> `Profiles` -> `Text` -> `Ambiguous characters are double-width`
+
+
+Others
+------
+
+## キーリピートを早くする
+
+```
+設定値を確認する
+% defaults read NSGlobalDomain InitialKeyRepeat
+% defaults read NSGlobalDomain KeyRepeat
+
+設定する値を小さくしたほうが早くなる
+% defaults write -g InitialKeyRepeat -int 12 # normal minimum is 15 (225 ms)
+% defaults write -g KeyRepeat -int 2         # normal minimum is 2 (30 ms)
+```
+
+

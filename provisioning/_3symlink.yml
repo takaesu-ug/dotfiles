@@ -26,7 +26,7 @@
       - src:  '~/dotfiles/vimdir/'
         dest: '~/.vim'
       - src:  '~/dotfiles/vimdir/'
-        dest: '~/.config/nvim'
+        dest: '~/.config/nvim' # nvimのリンクは今後不要かも(neovim使わないので)
       - src:  '~/dotfiles/.bundle/'
         dest: '~/.bundle'
       - src:  '~/dotfiles/.config/karabiner/'
