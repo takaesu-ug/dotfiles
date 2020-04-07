@@ -111,6 +111,7 @@
       - name: openssl
       - name: pandoc  # http://sky-y.github.io/site-pandoc-jp/users-guide/
       - name: packer
+      - name: knqyf263/pet/pet
       # - name: peco
       - name: plantuml
       - name: pgcli

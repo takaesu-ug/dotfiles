@@ -63,7 +63,6 @@ Provisonning
 % go get -u github.com/motemen/ghq
 % go get -u github.com/pocke/whichpr
 % go get -u github.com/mattn/memo
-% go get -u github.com/knqyf263/pet
 % go get -u github.com/Code-Hex/pget/cmd/pget  # 高速ダウンローダー
 ```
 
