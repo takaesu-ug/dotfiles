@@ -69,6 +69,7 @@ Provisonning
 ### Iterm2関連の設定
 
 - iterm2のディレクトリを Preferences で読み込む
+- 読み込んじゃえば以下の設定は特に何もしなくていいかも
 
 ```
 ~/dotfiles/iterm2/
