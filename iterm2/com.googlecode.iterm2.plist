@@ -289,7 +289,7 @@
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
 	<string>624 606 799 448 0 0 2048 1257 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1030 0 1018 1257 0 0 2048 1257 </string>
+	<string>566 1280 1018 1057 -512 1280 2560 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>0 0 1018 1257 0 0 2048 1257 </string>
 	<key>New Bookmarks</key>
@@ -1541,15 +1541,17 @@
 	<key>NoSyncInstallationId</key>
 	<string>AA403193-43B2-48C6-917A-EEC45FB712E1</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>2</integer>
+	<integer>3</integer>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
-	<real>607995156.44006002</real>
+	<real>608183013.794402</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
 	<true/>
+	<key>NoSyncPermissionToShowTip</key>
+	<false/>
 	<key>NoSyncRecordedVariables</key>
 	<dict>
 		<key>0</key>
@@ -2276,6 +2278,39 @@
 	<true/>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>607822356.43994904</real>
+	<key>PointerActions</key>
+	<dict>
+		<key>Button,1,1,,</key>
+		<dict>
+			<key>Action</key>
+			<string>kContextMenuPointerAction</string>
+		</dict>
+		<key>Button,2,1,,</key>
+		<dict>
+			<key>Action</key>
+			<string>kPasteFromClipboardPointerAction</string>
+		</dict>
+		<key>Gesture,ThreeFingerSwipeDown,,</key>
+		<dict>
+			<key>Action</key>
+			<string>kPrevWindowPointerAction</string>
+		</dict>
+		<key>Gesture,ThreeFingerSwipeLeft,,</key>
+		<dict>
+			<key>Action</key>
+			<string>kPrevTabPointerAction</string>
+		</dict>
+		<key>Gesture,ThreeFingerSwipeRight,,</key>
+		<dict>
+			<key>Action</key>
+			<string>kNextTabPointerAction</string>
+		</dict>
+		<key>Gesture,ThreeFingerSwipeUp,,</key>
+		<dict>
+			<key>Action</key>
+			<string>kNextWindowPointerAction</string>
+		</dict>
+	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/ug/dotfiles/iterm2</string>
 	<key>SUEnableAutomaticChecks</key>
