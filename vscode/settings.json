@@ -121,9 +121,6 @@
   ],
   "vim.useSystemClipboard": true,
   "solargraph.useBundler": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -131,6 +128,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "window.zoomLevel": -0.3,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "javascript.referencesCodeLens.enabled": true,
   "typescript.referencesCodeLens.enabled": true
 }
