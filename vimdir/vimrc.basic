@@ -17,9 +17,12 @@ set display=lastline
 
 " yankしたものをクリップボードにコピー
 if has('nvim')
-  set clipboard+=unnamedplus " neovimで利用する
+  " neovim
+  set clipboard+=unnamedplus
 else
-  set clipboard+=autoselect  " vim8で利用する
+  " vim8
+  set clipboard+=unnamed
+  " set clipboard+=autoselect
 endif
 
 " Ctrl-iでヘルプ
