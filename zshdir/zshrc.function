@@ -117,7 +117,7 @@ if type fzf >/dev/null 2>&1; then
     zle clear-screen
   }
   zle -N fzf-sshlist
-  bindkey '^s' fzf-sshlist
+  bindkey '^g' fzf-sshlist
 
 
   # http://qiita.com/sona-tar/items/fe401c597e8e51d4e243
@@ -157,15 +157,6 @@ if type fzf >/dev/null 2>&1; then
   }
   zle -N fzf-src
   bindkey '^]' fzf-src
-
-
-  ## gh-openエイリアスコマンドのショートカット設定
-  function fzf-gh-open () {
-    cd $(ghq list -p | fzf) && hub browse
-  }
-  zle -N fzf-gh-open
-  bindkey '^g' fzf-gh-open
-
 
   # http://k0kubun.hatenablog.com/entry/2014/07/06/033336
   function fzf-find-file() {
