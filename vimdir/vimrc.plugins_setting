@@ -167,7 +167,6 @@ endfunction"}}}
 
 let g:unite_source_file_mru_limit = 200
 
-
 "------------------------------------
 " quickrun.vim
 "------------------------------------
@@ -181,7 +180,6 @@ augroup QuickRunUnitTest
     autocmd BufWinEnter,BufNewFile *.t set filetype=perl.unit
 augroup END
 let g:quickrun_config['perl.unit'] = {'command': 'prove', 'cmdopt': '-lv -MProject::Libs'}
-
 
 "------------------------------------
 " シンタックス(syntax checker)
@@ -242,7 +240,6 @@ nmap <silent><C-f> <Plug>(ale_fix)
 " let g:ale_ruby_rubocop_executable = 'docker-compose run -T --rm sense_api bundle exec rubocop'
 let g:ale_ruby_rubocop_executable = '.bin/rubocop'
 
-
 "------------------------------------
 " itchyny/lightline.vim
 "------------------------------------
@@ -267,20 +264,6 @@ function! LightlineFilename()
   return filename . modified
 endfunction
 
-
-"------------------------------------
-" vim-jsx
-"------------------------------------
-let g:jsx_ext_required = 0        " ファイルタイプがjsでも読み込む．
-let g:jsx_pragma_required = 0     " @から始まるプラグマでは読み込まない．
-
-
-"------------------------------------
-" vim-nodejs-complete
-"------------------------------------
-let g:node_usejscomplete = 1
-
-
 "------------------------------------
 " emmet-vim(zencoding)
 "------------------------------------
@@ -294,7 +277,8 @@ let g:node_usejscomplete = 1
 " div>(ul>li*5)+span
 " a[href=http// sytle=display:none;] → <a href="http//" sytle="display:none;"></a>
 let g:user_emmet_leader_key='<C-e>'
-" refs https://coderwall.com/p/_uhrxw/using-tab-key-as-abbreviation-expander-on-emmet-vim
+" tabでEmmet展開
+" https://coderwall.com/p/_uhrxw/using-tab-key-as-abbreviation-expander-on-emmet-vim
 imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 let g:user_emmet_settings = {
@@ -308,7 +292,6 @@ let g:user_emmet_settings = {
     \    '^\%(loremj\|lipsumj\)\(\d*\)$' : function('emmet#lorem#ja#expand')
     \  }
     \}
-
 
 "----------------------------------------
 " open-browsere
@@ -371,30 +354,10 @@ endfunction
 let g:terraform_align = 1
 let g:terraform_fmt_on_save = 1
 
-
-"------------------------------------
-" jiangmiao/simple-javascript-indenter
-"------------------------------------
-let g:SimpleJsIndenter_BriefMode = 1
-let g:SimpleJsIndenter_CaseIndentLevel = -1
-
-"------------------------------------
-" jscomplete-vim
-"------------------------------------
-autocmd FileType javascript
-  \ :setl omnifunc=jscomplete#CompleteJS
-" DOMとMozilla関連とES6のメソッドを補完
-let g:jscomplete_use = ['dom', 'moz']
-
 "------------------------------------
 " javascript-libraries-syntax
 "------------------------------------
 let g:used_javascript_libs = 'jquery,underscore,react,flux,jasmine,angularjs,vue'
-
-"------------------------------------
-" vim-javascript
-"------------------------------------
-let g:javascript_plugin_flow = 1
 
 "------------------------------------
 " vim-lsp関連の設定
