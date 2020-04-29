@@ -1,6 +1,6 @@
-"------------------------------------
-" プラグインごとの設定 Plugins
-"------------------------------------
+" プラグインごとの設定
+" ====================
+
 "------------------------------------
 " netrw
 "------------------------------------
@@ -12,18 +12,6 @@ let g:netrw_liststyle = 1
 let g:netrw_altv = 1
 " 'o'でファイルを開くときは下側に開く。(デフォルトが上側なので入れ替え)
 let g:netrw_alto = 1
-
-"------------------------------------
-" VimFiler
-" K => 新規フォルダ
-" N => 新規ファイル
-" Space => 選択
-" r => リネーム
-"------------------------------------
-" 「:e」でvimfilerを開くように変更
-let g:vimfiler_as_default_explorer = 1
-" vimfilerのセーフモードを解除 （切替はgs）
-let g:vimfiler_safe_mode_by_default = 0
 
 "------------------------------------
 " surround.vim
@@ -70,26 +58,6 @@ au FileType php nmap <buffer><C-@>c :TCommentAs php_surround<CR>
 au FileType php vmap <buffer><C-@>c :TCommentAs php_surround<CR>
 
 "------------------------------------
-" taglist.Vim
-"------------------------------------
-" 関数一覧
-set tags=tags
-"set tags+=~/.tags
-let Tlist_Ctags_Cmd = '/usr/local/bin/ctags' " ctagsのパス
-let Tlist_Show_One_File = 1               " 現在編集中のソースのタグしか表示しない
-let Tlist_Exit_OnlyWindow = 1             " taglistのウィンドーが最後のウィンドーならばVimを閉じる
-" let Tlist_Use_Right_Window = 1            " 右側でtaglistのウィンドーを表示
-let Tlist_Enable_Fold_Column = 1          " 折りたたみ
-"let Tlist_Auto_Open = 1                   " 自動表示
-let Tlist_Auto_Update = 1
-let Tlist_WinWidth = 30
-map <silent> <Leader>tl :TlistToggle<CR>        " taglistを開くショットカットキー
-" nmap <F7> :CMiniBufExplorer<CR>:TrinityToggleTagList<CR>:TMiniBufExplorer<CR>
-" nmap <Leader>tl :CMiniBufExplorer<CR>:TrinityToggleTagList<CR>:TMiniBufExplorer<CR>
-let g:tlist_javascript_settings = 'javascript;c:class;m:method;f:function;p:property'
-let g:tlist_ruby_settings = 'ruby;c:classes;f:methods;m:modules;F:singleton methods;d:rspec describe;C:rspec context;i:rspec tests'
-
-"------------------------------------
 " camelcasemotion.vim
 "------------------------------------
 " <Shift-wbe>でCameCaseやsnake_case単位での単語移動
@@ -105,81 +73,12 @@ nmap j <Plug>(accelerated_jk_gj)
 nmap k <Plug>(accelerated_jk_gk)
 
 "------------------------------------
-" unite.vim
-" uniteを開いた時に tab (C-i) でアクションのビューを表示する
-"------------------------------------
-" Start insert.
-let g:unite_enable_start_insert = 1
-
-" ヒストリー/ヤンク機能を有効化
-let g:unite_source_history_yank_enable =1
-
-" The prefix key.
-nnoremap    [unite]   <Nop>
-nmap        <Space><Space> [unite]
-
-" 全部乗せ
-nnoremap <silent> [unite]a  :<C-u>UniteWithCurrentDir -no-split -buffer-name=files buffer file_mru bookmark file<CR>
-" ファイル一覧
-nnoremap <silent> [unite]f  :<C-u>Unite -no-split -buffer-name=files file<CR>
-" 現在のバッファのカレントディレクトリからファイル一覧
-nnoremap <silent> [unite]d  :<C-u>UniteWithBufferDir -no-split file<CR>
-" バッファ一覧
-nnoremap <silent> [unite]b  :<C-u>Unite -no-split buffer<CR>
-" 常用セット
-nnoremap <silent> [unite]u  :<C-u>Unite -no-split buffer file_mru<CR>
-" 最近使用したファイル一覧
-nnoremap <silent> [unite]m  :<C-u>Unite -no-split file_mru<CR>
-" ヒストリ/ヤンクを表示
-nnoremap <silent> [unite]h :<C-u>Unite<Space>history/yank<CR>
-" レジストリを表示
-noremap <silent> [unite]r :<C-u>Unite<Space>register<CR>
-" ptコマンドを使ってgrep実行
-nnoremap <silent> [unite]g :<C-u>Unite grep:. -buffer-name=search-buffer<CR>
-if executable('pt')
-  let g:unite_source_grep_command = 'pt'
-  let g:unite_source_grep_default_opts = '--nogroup --nocolor'
-  let g:unite_source_grep_recursive_opt = ''
-  let g:unite_source_grep_encoding = 'utf-8'
-endif
-" unite-git-conflict 起動
-nnoremap <silent> [unite]gc :<C-u>Unite git-conflict<CR>
-
-" unite.vimを開いている間のキーマッピング
-autocmd FileType unite call s:unite_my_settings()
-function! s:unite_my_settings()"{{{
-  "" Overwrite settings.
-  " ESCキーを2回押すと終了する
-  nmap <buffer> <ESC> <Plug>(unite_exit)
-  nmap <buffer> <ESC><ESC> <Plug>(unite_exit)
-  imap <buffer> jj      <Plug>(unite_insert_leave)
-  nnoremap <silent><buffer> <C-k> :<C-u>call unite#mappings#do_action('preview')<CR>
-  imap <buffer> <C-w>     <Plug>(unite_delete_backward_path)
-
-  " ウィンドウを分割して開く
-  nnoremap <silent> <buffer> <expr> <C-l> unite#do_action('split')
-  inoremap <silent> <buffer> <expr> <C-l> unite#do_action('split')
-
-  " ウィンドウを縦に分割して開く
-  nnoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
-  inoremap <silent> <buffer> <expr> <C-v> unite#do_action('vsplit')
-endfunction"}}}
-
-let g:unite_source_file_mru_limit = 200
-
-"------------------------------------
 " quickrun.vim
 "------------------------------------
 " 初期化
 let g:quickrun_config = {}
 " キーバインド設定（デフォルト \ + r で実行)
 nmap <Leader>rr <plug>(quickrun)
-augroup QuickRunUnitTest
-    autocmd!
-    " Perl(*.t)ファイルのテストはproveを使うための追加
-    autocmd BufWinEnter,BufNewFile *.t set filetype=perl.unit
-augroup END
-let g:quickrun_config['perl.unit'] = {'command': 'prove', 'cmdopt': '-lv -MProject::Libs'}
 
 "------------------------------------
 " シンタックス(syntax checker)
@@ -231,8 +130,6 @@ let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \}
 
-nmap <silent><C-f> <Plug>(ale_fix)
-
 " シェルスクリプトにしたらできる...
 " Vim, ALE, Docker, and Per-Project Linting | Ryan McGrath
 " https://rymc.io/blog/2019/vim-ale-docker-per-project-linting/
@@ -263,35 +160,6 @@ function! LightlineFilename()
   let modified = &modified ? ' +' : ''
   return filename . modified
 endfunction
-
-"------------------------------------
-" emmet-vim(zencoding)
-"------------------------------------
-" >は下の階層
-" +は同階層
-" *数値は個数
-" $は連番が入る $を並べた数の桁が使える
-" .はクラス名 #はID名
-" ()はブロックにできる 複雑な階層があるときなどに使用
-"example
-" div>(ul>li*5)+span
-" a[href=http// sytle=display:none;] → <a href="http//" sytle="display:none;"></a>
-let g:user_emmet_leader_key='<C-e>'
-" tabでEmmet展開
-" https://coderwall.com/p/_uhrxw/using-tab-key-as-abbreviation-expander-on-emmet-vim
-imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
-
-let g:user_emmet_settings = {
-    \  'javascript.jsx' : {
-    \      'extends' : 'jsx',
-    \  },
-    \  'variables': {
-    \    'lang' : 'ja'
-    \  },
-    \  'custom_expands' : {
-    \    '^\%(loremj\|lipsumj\)\(\d*\)$' : function('emmet#lorem#ja#expand')
-    \  }
-    \}
 
 "----------------------------------------
 " open-browsere
@@ -355,22 +223,26 @@ let g:terraform_align = 1
 let g:terraform_fmt_on_save = 1
 
 "------------------------------------
-" javascript-libraries-syntax
+" coc.nvim
+" https://www.youtube.com/watch?v=gnupOrSEikQ
+" https://qiita.com/Amadeus_vn/items/5dfcf8d3676c2c5576ef
 "------------------------------------
-let g:used_javascript_libs = 'jquery,underscore,react,flux,jasmine,angularjs,vue'
+" " Formatting selected code.
+" xmap <leader>f  <Plug>(coc-format-selected)
+" nmap <leader>f  <Plug>(coc-format-selected)
+" " set pumblend=10
 
-"------------------------------------
-" vim-lsp関連の設定
-" https://christina04.hatenablog.com/entry/migrate-from-vim-go-to-vim-lsp
-" https://mattn.kaoriya.net/software/vim/20191231213507.htm
-"------------------------------------
-nmap <silent> gd :LspDefinition<CR>
-nmap <silent> <f2> :LspRename<CR>
-nmap <silent> <Leader>d :LspTypeDefinition<CR>
-nmap <silent> <Leader>r :LspReferences<CR>
-nmap <silent> <Leader>i :LspImplementation<CR>
-let g:lsp_diagnostics_enabled = 1
-let g:lsp_diagnostics_echo_cursor = 1
-let g:asyncomplete_auto_popup = 1
-let g:asyncomplete_popup_delay = 200
-let g:lsp_text_edit_enabled = 1
+let g:coc_global_extensions = [
+    \ 'coc-marketplace',
+    \ 'coc-snippets',
+    \ 'coc-pairs',
+    \ 'coc-lists',
+    \ 'coc-json',
+    \ 'coc-html',
+    \ 'coc-emmet',
+    \ 'coc-css',
+    \ 'coc-tsserver',
+    \ 'coc-solargraph',
+    \ 'coc-styled-components',
+    \ 'coc-yaml',
+    \ ]

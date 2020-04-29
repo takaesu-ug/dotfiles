@@ -1,0 +1,19 @@
+{
+  "suggest.noselect": true,
+  "suggest.preferCompleteThanJumpPlaceholder": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescript.tsx",
+    "typescriptreact",
+    "json"
+  ],
+  "languageserver": {
+    "dockerfile": {
+      "command": "docker-langserver",
+      "filetypes": ["dockerfile"],
+      "args": ["--stdio"]
+    }
+  }
+}

@@ -16,47 +16,24 @@ call plug#begin(s:plugged_dir)
 Plug 'w0ng/vim-hybrid'
 
 "" Basic
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 " テキストをかっこで囲む/削除する
 Plug 'tpope/vim-surround'
 " Alignで行頭や行末などで揃える(選択してから  Align \w\+,)
 Plug 'h1mesuke/vim-alignta'
 " jkでの上下移動を激速にする
 Plug 'rhysd/accelerated-jk'
-" unite.vim http://blog.ruedap.com/entry/20110110/vim_unite_plugin
-Plug 'Shougo/unite.vim'
-Plug 'moznion/unite-git-conflict.vim'
-Plug 'Shougo/neomru.vim'
-Plug 'Shougo/vimfiler'
-
-" lsp(Language Server Protocol)
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'mattn/vim-lsp-icons'
-" lsp snippet
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
-" lspの各言語設定
-" Plug 'mattn/vim-goimports', { 'for': ['go'] }
-Plug 'mattn/vim-goimports'
-Plug 'ryanolsonx/vim-lsp-typescript'
-
-
-" sinpet補完
-" :Template xxx でスニペットのテンプレートを出せる https://github.com/mattn/sonictemplate-vim
-Plug 'mattn/sonictemplate-vim'
 
 " if...endやdef...endなどを書きだしてくれる
 Plug 'tpope/vim-endwise'
+" fzf
 " https://github.com/junegunn/fzf#usage-as-vim-plugin
 " https://github.com/junegunn/fzf/wiki/Examples-(vim)
 " https://github.com/junegunn/fzf.vim
 Plug 'junegunn/fzf.vim'
+
 " 対応するカッコの補完 vim-smartinput
 Plug 'kana/vim-smartinput'
+
 " 複数カーソルで一括編集などを行う
 " https://github.com/terryma/vim-multiple-cursors
 Plug 'terryma/vim-multiple-cursors'
@@ -71,16 +48,17 @@ Plug 'tyru/open-browser.vim'
 Plug 'tomtom/tcomment_vim'
 " quickrun.vim : 編集中のファイルを簡単に実行できるプラグイン
 Plug 'thinca/vim-quickrun'
-" perldocやphpmanual等のリファレンスをvim上で見る(K ラージKでドキュメントリファレンスを開く)
-Plug 'thinca/vim-ref'
 " 検索置換のサポートツール snake_case, camelCaseなど置換
 " http://qiita.com/yuku_t/items/77a3361ff4d27bda641e
 Plug 'tpope/vim-abolish'
-" ソースコード上のメソッド宣言、変数宣言の一覧を表示
-Plug 'vim-scripts/taglist.vim'
+
 " " シンタックスエラーを検出する
 " Plug 'scrooloose/syntastic'
+" COCでまかなえるからaleもいらないかもしれない
 Plug 'w0rp/ale'
+
+" LSP(Language Server Protocol)関連の設定
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " https://github.com/itchyny/lightline.vim
 Plug 'itchyny/lightline.vim'
@@ -89,32 +67,19 @@ Plug 'itchyny/lightline.vim'
 " http://qiita.com/alpaca_taichou/items/fb442cfa78f91634cfaa
 Plug 'nathanaelkane/vim-indent-guides'
 
-"" Programming Plugin
-""" For Frontend, Javascript or HTML and more.
-Plug 'maxmellon/vim-jsx-pretty', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/javascript-libraries-syntax.vim', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'othree/html5.vim'
-Plug 'mattn/emmet-vim'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " CSS色をプレビュー
 " :ColorHighlight - start/update highlighting
-" :ColorClear      - clear all highlights
-" :ColorToggle     - toggle highlights
+" :ColorClear     - clear all highlights
+" :ColorToggle    - toggle highlights
 Plug 'lilydjwg/colorizer'
 
-""" For Ruby
-Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
+" Rails
 Plug 'tpope/vim-rails', { 'for': ['ruby'] }
-Plug 'slim-template/vim-slim', { 'for': ['slim'] }
 
 """ Others
 Plug 'editorconfig/editorconfig-vim' " エディタ共通Formatter http://editorconfig.org/
-Plug 'mitsuhiko/vim-jinja'                         " Ansible
-Plug 'chase/vim-ansible-yaml', { 'for': ['yaml'] } " Ansible
 Plug 'cespare/vim-toml', { 'for': ['toml'] }
 Plug 'kannokanno/previm', { 'for': ['markdown'] }  " open-browser 依存
-Plug 'AndrewRadev/splitjoin.vim' " gS:分割, gJ:統合
 Plug 'hashivim/vim-terraform', { 'for': ['terraform'] }
 
 call plug#end()
