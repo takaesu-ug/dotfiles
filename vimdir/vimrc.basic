@@ -137,6 +137,8 @@ setlocal tabstop=4
 setlocal shiftwidth=4
 setlocal softtabstop=0
 
+set encoding=UTF-8
+
 " Vim で snake_case を CamelCase に置換する - Qiita
 " https://qiita.com/annyamonnya/items/f003fd671fecaf55c9e7
 :command! Snake2Camel :%s/_\(.\)/\u\1/gc

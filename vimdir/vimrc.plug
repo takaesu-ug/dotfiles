@@ -16,6 +16,9 @@ call plug#begin(s:plugged_dir)
 Plug 'w0ng/vim-hybrid'
 
 "" Basic
+" Filer
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 " テキストをかっこで囲む/削除する
 Plug 'tpope/vim-surround'
 " Alignで行頭や行末などで揃える(選択してから  Align \w\+,)
@@ -76,7 +79,7 @@ Plug 'lilydjwg/colorizer'
 " Rails
 Plug 'tpope/vim-rails', { 'for': ['ruby'] }
 
-""" Others
+" Others
 Plug 'editorconfig/editorconfig-vim' " エディタ共通Formatter http://editorconfig.org/
 Plug 'cespare/vim-toml', { 'for': ['toml'] }
 Plug 'kannokanno/previm', { 'for': ['markdown'] }  " open-browser 依存

@@ -14,6 +14,13 @@ let g:netrw_altv = 1
 let g:netrw_alto = 1
 
 "------------------------------------
+" NERDTree
+"------------------------------------
+let NERDTreeShowHidden=1
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+
+"------------------------------------
 " surround.vim
 "------------------------------------
 " s, ssで選択範囲を指定文字でくくる
@@ -302,6 +309,8 @@ nnoremap <silent> <space>m  :<C-u>CocList mru<cr>
 " nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
 " " coc-snippetsの設定
 " " Use <C-l> for trigger snippet expand.
