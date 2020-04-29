@@ -14,6 +14,8 @@ set backupskip=/tmp/*,/private/tmp/*
 set noundofile
 " 一行の文字数が多くてもきちんと描画(@で省略されないようにする)
 set display=lastline
+" メッセージの表示を2行表示(statusバーの下)
+set cmdheight=2
 
 " yankしたものをクリップボードにコピー
 if has('nvim')

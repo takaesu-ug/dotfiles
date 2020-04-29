@@ -38,7 +38,7 @@ let g:tcomment_types = {
       \'eruby_surround' : "<%% %s %%>",
       \'eruby_surround_minus' : "<%% %s -%%>",
       \'eruby_surround_equality' : "<%%= %s %%>",
-\}
+      \}
 
 " マッピングを追加
 function! SetErubyMapping2()
@@ -227,11 +227,6 @@ let g:terraform_fmt_on_save = 1
 " https://www.youtube.com/watch?v=gnupOrSEikQ
 " https://qiita.com/Amadeus_vn/items/5dfcf8d3676c2c5576ef
 "------------------------------------
-" " Formatting selected code.
-" xmap <leader>f  <Plug>(coc-format-selected)
-" nmap <leader>f  <Plug>(coc-format-selected)
-" " set pumblend=10
-
 let g:coc_global_extensions = [
     \ 'coc-marketplace',
     \ 'coc-snippets',
@@ -246,3 +241,72 @@ let g:coc_global_extensions = [
     \ 'coc-styled-components',
     \ 'coc-yaml',
     \ ]
+
+" COCの補完候補を出す(refresh)
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+" Use <c-k> to trigger completion.
+inoremap <silent><expr> <c-k> coc#refresh()
+
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Formatting selected code.
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" コマンド
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Add (Neo)Vim's native statusline support.
+" NOTE: Please see `:h coc-status` for integrations with external plugins that
+" provide custom statusline: lightline.vim, vim-airline.
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" Mappings using CoCList:
+" Show all diagnostics.
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions.
+nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+" Show commands.
+nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document.
+nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols.
+nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+" Search workspace files.
+nnoremap <silent> <space>f  :<C-u>CocList files<cr>
+" Search workspace mru.
+nnoremap <silent> <space>m  :<C-u>CocList mru<cr>
+" " Do default action for next item.
+" nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+" " Do default action for previous item.
+" nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+" Resume latest coc list.
+nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+" " coc-snippetsの設定
+" " Use <C-l> for trigger snippet expand.
+" imap <C-l> <Plug>(coc-snippets-expand)
+" " Use <C-j> for jump to next placeholder, it's default of coc.nvim
+" let g:coc_snippet_next = '<c-j>'
+" " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+" let g:coc_snippet_prev = '<c-k>'
