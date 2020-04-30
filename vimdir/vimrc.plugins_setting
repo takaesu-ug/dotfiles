@@ -18,7 +18,7 @@ let g:netrw_alto = 1
 "------------------------------------
 let NERDTreeShowHidden=1
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
-
+nnoremap <silent><C-d> :NERDTreeFocus<CR>
 
 "------------------------------------
 " surround.vim
@@ -247,6 +247,7 @@ let g:coc_global_extensions = [
     \ 'coc-solargraph',
     \ 'coc-styled-components',
     \ 'coc-yaml',
+    \ 'coc-go',
     \ ]
 
 " COCの補完候補を出す(refresh)
@@ -319,3 +320,5 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " let g:coc_snippet_next = '<c-j>'
 " " Use <C-k> for jump to previous placeholder, it's default of coc.nvim
 " let g:coc_snippet_prev = '<c-k>'
+let g:coc_snippet_next = '<c-n>'
+let g:coc_snippet_prev = '<c-p>'
