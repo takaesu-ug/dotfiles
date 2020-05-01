@@ -135,5 +135,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "javascript.referencesCodeLens.enabled": true,
-  "typescript.referencesCodeLens.enabled": true
+  "typescript.referencesCodeLens.enabled": true,
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true
 }
