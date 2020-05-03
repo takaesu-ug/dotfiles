@@ -11,6 +11,9 @@ if type goenv >/dev/null 2>&1; then
   # ref GOENV_DISABLE_GOPATH https://qiita.com/gimKondo/items/add08298e24ae400505e
   export GOENV_DISABLE_GOPATH=1
 
+  # go modulesを利用する
+  export GO111MODULE=on
+
   export GOPATH=~/workspace/gopath
   # export GOPATH=~/workspace/gopath/:~/workspaces/ghq/
   export PATH=$(goenv root)/shims:~/workspace/gopath/bin:$PATH  # パッケージで入れたgoのbinディレクトリへのパスとGOPATH配下のパスを追加
