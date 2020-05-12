@@ -14,10 +14,6 @@ if [[ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]]; then
   export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
 fi
 
-#### 以 下 自 分 用 の 設 定  ###
-# # promptの設定を読み込む
-# source ~/dotfiles/zshdir/zshrc.prompt
-
 # 基本的な設定
 source ~/dotfiles/zshdir/zshrc.basic
 
