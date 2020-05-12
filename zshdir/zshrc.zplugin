@@ -33,4 +33,4 @@ zinit light sindresorhus/pure
 PURE_PROMPT_SYMBOL=$
 #PROMPTにDATETIMEを表示する
 DATE_TIME='%D{%Y-%m-%d %H:%M:%S}'
-PROMPT="[$DATE_TIME]$PROMPT"
+PROMPT="%F{242}[$DATE_TIME]%f$PROMPT"
