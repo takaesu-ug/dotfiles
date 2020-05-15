@@ -19,15 +19,5 @@ if type goenv >/dev/null 2>&1; then
   export PATH=$(goenv root)/shims:~/workspace/gopath/bin:$PATH  # パッケージで入れたgoのbinディレクトリへのパスとGOPATH配下のパスを追加
 fi
 
-# # python
-# ## venvのプロンプト追加
-# function show_python_virtualenv() {
-#   if [ -n "${VIRTUAL_ENV}" ]; then
-#     # echo '[venv] '
-#     echo "($(basename $VIRTUAL_ENV))"
-#   fi
-# }
-# PS1='$(show_python_virtualenv)'$PS1
-
 # 独自のsecretな実行ファイル
 export PATH=$HOME/_secret/bin:$HOME/bin:$PATH
