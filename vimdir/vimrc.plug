@@ -16,9 +16,6 @@ call plug#begin(s:plugged_dir)
 Plug 'w0ng/vim-hybrid'
 
 "" Basic
-" Filer
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 " テキストをかっこで囲む/削除する
 Plug 'tpope/vim-surround'
 " Alignで行頭や行末などで揃える(選択してから  Align \w\+,)

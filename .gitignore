@@ -9,6 +9,8 @@ vimdir/autoload/plug.vim
 vimdir/autoload/plug.vim.old
 vimdir/plugged/
 vimdir/.mypy_cache
+vimdir/sessions/
+vimdir/.netrwhist
 
 .bundle/cache/
 .bundle/vendor/
