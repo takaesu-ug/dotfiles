@@ -137,5 +137,39 @@
   "javascript.referencesCodeLens.enabled": true,
   "typescript.referencesCodeLens.enabled": true,
   "go.formatTool": "goimports",
-  "go.useLanguageServer": true
+  "go.useLanguageServer": true,
+  "hediet.vscode-drawio.local-storage": {
+    ".drawio-config": {
+      "language": "",
+      "customFonts": [],
+      "libraries": "general;basic;arrows2;clipart;flowchart;er;uml;aws4;mscae;citrix;gcp2;kubernetes;bpmn",
+      "customLibraries": [
+        "L.scratchpad"
+      ],
+      "plugins": [],
+      "recentColors": [
+        "E6E6E6",
+        "none"
+      ],
+      "formatWidth": "240",
+      "createTarget": false,
+      "pageFormat": {
+        "x": 0,
+        "y": 0,
+        "width": 850,
+        "height": 1100
+      },
+      "search": true,
+      "showStartScreen": true,
+      "gridColor": "#d0d0d0",
+      "darkGridColor": "#6e6e6e",
+      "autosave": true,
+      "resizeImages": null,
+      "openCounter": 0,
+      "version": 18,
+      "unit": 1,
+      "isRulerOn": false,
+      "ui": ""
+    }
+  }
 }

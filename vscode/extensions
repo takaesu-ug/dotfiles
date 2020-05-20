@@ -16,6 +16,8 @@ esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
+GitHub.github-vscode-theme
+hediet.vscode-drawio
 Hridoy.rails-snippets
 johnpapa.vscode-peacock
 jpoissonnier.vscode-styled-components

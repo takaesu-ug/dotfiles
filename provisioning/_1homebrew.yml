@@ -39,7 +39,6 @@
       - name: datagrip # jetbrains
       - name: discord
       - name: docker   # docker for mac
-      - name: drawio
       - name: dropbox
       - name: firefox
       - name: google-japanese-ime
