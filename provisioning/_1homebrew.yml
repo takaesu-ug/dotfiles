@@ -48,7 +48,7 @@
       - name: intellij-idea # jetbrains
       - name: java
       - name: karabiner-elements
-      - name: keepassx
+      - name: keepassxc
       - name: kindle
       - name: krisp
       - name: licecap
