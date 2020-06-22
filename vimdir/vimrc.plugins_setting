@@ -259,6 +259,7 @@ function! s:check_back_space() abort
 endfunction
 " Use <c-k> to trigger completion.
 inoremap <silent><expr> <c-k> coc#refresh()
+" よくわからんけど補完候補を出すのは c-g でできる...
 
 
 " Highlight the symbol and its references when holding the cursor.

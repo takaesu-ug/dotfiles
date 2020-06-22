@@ -76,3 +76,6 @@ nmap <ESC><ESC> :nohlsearch<CR><ESC>
 "" 保存時にtabをスペースに変換する(2スペース)
 " autocmd BufWritePre * :%s/\t/  /ge
 :command! Tab2w :%s/\t/  /ge
+
+" 分割時のスクロールを同期しない
+set noscb
