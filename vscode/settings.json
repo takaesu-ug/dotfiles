@@ -138,38 +138,6 @@
   "typescript.referencesCodeLens.enabled": true,
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
-  "hediet.vscode-drawio.local-storage": {
-    ".drawio-config": {
-      "language": "",
-      "customFonts": [],
-      "libraries": "general;basic;arrows2;clipart;flowchart;er;uml;aws4;mscae;citrix;gcp2;kubernetes;bpmn",
-      "customLibraries": [
-        "L.scratchpad"
-      ],
-      "plugins": [],
-      "recentColors": [
-        "E6E6E6",
-        "none"
-      ],
-      "formatWidth": "240",
-      "createTarget": false,
-      "pageFormat": {
-        "x": 0,
-        "y": 0,
-        "width": 850,
-        "height": 1100
-      },
-      "search": true,
-      "showStartScreen": true,
-      "gridColor": "#d0d0d0",
-      "darkGridColor": "#6e6e6e",
-      "autosave": true,
-      "resizeImages": null,
-      "openCounter": 0,
-      "version": 18,
-      "unit": 1,
-      "isRulerOn": false,
-      "ui": ""
-    }
-  }
+  "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWw7YmFzaWM7YXJyb3dzMjtjbGlwYXJ0O2Zsb3djaGFydDtlcjt1bWw7YXdzNDttc2NhZTtjaXRyaXg7Z2NwMjtrdWJlcm5ldGVzO2JwbW5cIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltcIm5vbmVcIixcIjAwMDAwMFwiLFwiRkZGRkZGXCIsXCJFNkU2RTZcIl0sXCJmb3JtYXRXaWR0aFwiOjI0MCxcImNyZWF0ZVRhcmdldFwiOmZhbHNlLFwicGFnZUZvcm1hdFwiOntcInhcIjowLFwieVwiOjAsXCJ3aWR0aFwiOjg1MCxcImhlaWdodFwiOjExMDB9LFwic2VhcmNoXCI6dHJ1ZSxcInNob3dTdGFydFNjcmVlblwiOnRydWUsXCJncmlkQ29sb3JcIjpcIiNkMGQwZDBcIixcImRhcmtHcmlkQ29sb3JcIjpcIiM2ZTZlNmVcIixcImF1dG9zYXZlXCI6dHJ1ZSxcInJlc2l6ZUltYWdlc1wiOm51bGwsXCJvcGVuQ291bnRlclwiOjAsXCJ2ZXJzaW9uXCI6MTgsXCJ1bml0XCI6MSxcImlzUnVsZXJPblwiOmZhbHNlLFwidWlcIjpcIlwifSJ9",
+  "hediet.vscode-drawio.theme": "atlas"
 }
