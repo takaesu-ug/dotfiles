@@ -17,8 +17,10 @@ formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
 GitHub.github-vscode-theme
+golang.go
 hediet.vscode-drawio
 Hridoy.rails-snippets
+jebbs.plantuml
 johnpapa.vscode-peacock
 jpoissonnier.vscode-styled-components
 k--kato.intellij-idea-keybindings
@@ -27,10 +29,10 @@ mikestead.dotenv
 misogi.ruby-rubocop
 ms-python.python
 ms-vscode-remote.remote-containers
-ms-vscode.Go
 ms-vsliveshare.vsliveshare
 msjsdiag.debugger-for-chrome
 rebornix.ruby
+redhat.vscode-yaml
 ryu1kn.partial-diff
 shardulm94.trailing-spaces
 sianglim.slim

@@ -32,6 +32,7 @@
       # - name: blisk
       - name: homebrew/cask-fonts/font-ricty-diminished
       - name: homebrew/cask-fonts/font-jetbrains-mono
+      - name: cocoapods
       # - name: charles
       # - name: calibre
       - name: contexts
@@ -54,6 +55,7 @@
       - name: licecap
       - name: mysqlworkbench  # DB(mysql)クライアント
       - name: ngrok           # [ngrokを使用してローカル環境を外部に公開する - Qiita](https://qiita.com/kitaro729/items/44214f9f81d3ebda58bd)
+      - name: notion
       - name: onedrive
       - name: postman
       - name: rubymine # jetbrains
