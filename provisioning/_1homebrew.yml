@@ -51,9 +51,9 @@
       - name: karabiner-elements
       - name: keepassxc
       - name: kindle
-      - name: krisp
+      # - name: krisp
       - name: licecap
-      - name: mysqlworkbench  # DB(mysql)クライアント
+      # - name: mysqlworkbench  # DB(mysql)クライアント
       - name: ngrok           # [ngrokを使用してローカル環境を外部に公開する - Qiita](https://qiita.com/kitaro729/items/44214f9f81d3ebda58bd)
       - name: notion
       - name: onedrive
@@ -64,7 +64,7 @@
       # - name: skype
       - name: slack
       # - name: typora # markdown editor (ファイル形式)
-      - name: vagrant
+      # - name: vagrant
       - name: visual-studio-code
       - name: vivaldi
       - name: webstorm # jetbrains
