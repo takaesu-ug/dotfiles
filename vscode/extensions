@@ -16,6 +16,7 @@ esbenp.prettier-vscode
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
+gimenete.github-linker
 GitHub.github-vscode-theme
 golang.go
 hediet.vscode-drawio
