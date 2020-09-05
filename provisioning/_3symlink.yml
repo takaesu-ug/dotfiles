@@ -35,8 +35,6 @@
         dest: '~/.peco'
       - src:  '~/dotfiles/.docker/config.json'
         dest: '~/.docker/config.json'
-      - src:  '~/dotfiles/.docker/daemon.json'
-        dest: '~/.docker/daemon.json'
       - src:  '~/dotfiles/bin/'
         dest: '~/bin'
       - src:  '~/Dropbox/_config/hub'
