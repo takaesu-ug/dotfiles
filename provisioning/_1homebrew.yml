@@ -29,7 +29,7 @@
       - name: appcleaner
       - name: android-studio
       - name: bartender
-      # - name: blisk
+      # - name: blisk # 開発用ブラウザ(モバイル等も)
       - name: homebrew/cask-fonts/font-ricty-diminished
       - name: homebrew/cask-fonts/font-jetbrains-mono
       - name: cocoapods
@@ -38,6 +38,7 @@
       - name: contexts
       # - name: cyberduck
       - name: datagrip # jetbrains
+      - name: deepl
       - name: discord
       - name: docker   # docker for mac
       - name: dropbox
@@ -63,6 +64,7 @@
       - name: skitch
       # - name: skype
       - name: slack
+      - name: sizzy # モバイル等のマルチデバイスアプリ
       # - name: typora # markdown editor (ファイル形式)
       # - name: vagrant
       - name: visual-studio-code
