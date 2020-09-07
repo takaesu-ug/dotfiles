@@ -6,6 +6,7 @@ AppStoreでインストールする
 
 - quiver
 - xcode
+- tot(メモアプリ)
 
 ### xcode-commandline-toolsをインストールする
 
@@ -60,7 +61,7 @@ Provisonning
 ### golang関連
 
 ```
-% go get -u github.com/motemen/ghq
+% go get -u github.com/x-motemen/ghq
 % go get -u github.com/pocke/whichpr
 % go get -u github.com/mattn/memo
 % go get -u github.com/Code-Hex/pget/cmd/pget # 高速ダウンローダー
@@ -79,7 +80,8 @@ Provisonning
 - `hybrid.itermcolors` というファイルを `preferences->Profile` から読み込む
 - `Preferences` -> `General` -> `Window` -> `Native full screen windows` のチェックを外す
 - `Preferences` -> `Appearance` -> `General` -> `Auto-hide menu bar in non-native fullscreen` のチェックを外す
-- `Preference` -> `Profiles` -> `Text` -> `Ambiguous characters are double-width`
+- `Preference` -> `Profiles` -> `Text` -> `Ambiguous characters are double-width` のチェックを入れない
+- `Preference` -> `Profiles` -> `Text` -> Font `JetBrains Mono` , Non-ASCII Font `Ricty` を設定する
 
 
 Others
