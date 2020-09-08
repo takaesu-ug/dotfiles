@@ -65,7 +65,6 @@ Provisonning
 % go get -u github.com/pocke/whichpr
 % go get -u github.com/mattn/memo
 % go get -u github.com/Code-Hex/pget/cmd/pget # 高速ダウンローダー
-% go get -u github.com/Svetlitski/mereg # フォアグラウンドで複数コマンドを実行
 ```
 
 ### Iterm2関連の設定
