@@ -1,257 +1,269 @@
 {
-    "title": "Control + Function Keys to Media Control",
-    "rules": [
-                {
-                    "description":"control + f1 to display_brightness_decrement",
-                    "manipulators": [
-                        {
-                            "type": "basic",
-                            "from": {
-                                "key_code": "f1",
-                                "modifiers": {
-                                    "mandatory": [
-                                        "control"
-                                    ]
-                                }
-                            },
-                            "to": [
-                                {
-                                    "key_code":"display_brightness_decrement"
-                                }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "description":"control + f2 to display_brightness_increment",
-                    "manipulators": [
-                        {
-                            "type": "basic",
-                            "from": {
-                                    "key_code": "f2",
-                                    "modifiers": {
-                                            "mandatory": [
-                                                    "control"
-                                            ]
-                                    }
-                            },
-                            "to": [
-                                    {
-                                            "key_code":"display_brightness_increment"
-                                    }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "description":"control + f3 to mission_control",
-                    "manipulators": [
-                        {
-                            "type": "basic",
-                            "from": {
-                                    "key_code": "f3",
-                                    "modifiers": {
-                                            "mandatory": [
-                                                    "control"
-                                            ]
-                                    }
-                            },
-                            "to": [
-                                    {
-                                            "key_code":"mission_control"
-                                    }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "description":"control + f4 to launchpad",
-                    "manipulators": [
-                        {
-                            "type": "basic",
-                            "from": {
-                                    "key_code": "f4",
-                                    "modifiers": {
-                                            "mandatory": [
-                                                    "control"
-                                            ]
-                                    }
-                            },
-                            "to": [
-                                    {
-                                            "key_code":"launchpad"
-                                    }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "description":"control + f5 to illumination_decrement",
-                    "manipulators": [
-                        {
-                            "type": "basic",
-                            "from": {
-                                    "key_code": "f5",
-                                    "modifiers": {
-                                            "mandatory": [
-                                                    "control"
-                                            ]
-                                    }
-                            },
-                            "to": [
-                                    {
-                                            "key_code":"illumination_decrement"
-                                    }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "description":"control + f6 to illumination_increment",
-                    "manipulators": [
-                        {
-                            "type": "basic",
-                            "from": {
-                                    "key_code": "f6",
-                                    "modifiers": {
-                                            "mandatory": [
-                                                    "control"
-                                            ]
-                                    }
-                            },
-                            "to": [
-                                    {
-                                            "key_code":"illumination_increment"
-                                    }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "description":"control + f7 to rewind",
-                    "manipulators": [
-                        {
-                            "type": "basic",
-                            "from": {
-                                    "key_code": "f7",
-                                    "modifiers": {
-                                            "mandatory": [
-                                                    "control"
-                                            ]
-                                    }
-                            },
-                            "to": [
-                                    {
-                                            "key_code":"rewind"
-                                    }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "description":"control + f8 to play_or_pause",
-                    "manipulators": [
-                        {
-                            "type": "basic",
-                            "from": {
-                                    "key_code": "f8",
-                                    "modifiers": {
-                                            "mandatory": [
-                                                    "control"
-                                            ]
-                                    }
-                            },
-                            "to": [
-                                    {
-                                            "key_code":"play_or_pause"
-                                    }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "description":"control + f9 to fastforward",
-                    "manipulators": [
-                        {
-                            "type": "basic",
-                            "from": {
-                                    "key_code": "f9",
-                                    "modifiers": {
-                                            "mandatory": [
-                                                    "control"
-                                            ]
-                                    }
-                            },
-                            "to": [
-                                    {
-                                            "key_code":"fastforward"
-                                    }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "description":"control + f10 to mute",
-                    "manipulators": [
-                        {
-                            "type": "basic",
-                            "from": {
-                                    "key_code": "f10",
-                                    "modifiers": {
-                                            "mandatory": [
-                                                    "control"
-                                            ]
-                                    }
-                            },
-                            "to": [
-                                    {
-                                            "key_code":"mute"
-                                    }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "description":"control + f11 to volume_decrement",
-                    "manipulators": [
-                        {
-                            "type": "basic",
-                            "from": {
-                                    "key_code": "f11",
-                                    "modifiers": {
-                                            "mandatory": [
-                                                    "control"
-                                            ]
-                                    }
-                            },
-                            "to": [
-                                    {
-                                            "key_code":"volume_decrement"
-                                    }
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "description":"control + f12 to volume_increment",
-                    "manipulators": [
-                        {
-                            "type": "basic",
-                            "from": {
-                                    "key_code": "f12",
-                                    "modifiers": {
-                                            "mandatory": [
-                                                    "control"
-                                            ]
-                                    }
-                            },
-                            "to": [
-                                    {
-                                            "key_code":"volume_increment"
-                                    }
-                            ]
-                        }
-                    ]
-                }
-	]
+  "title": "Control + Shift + Function Keys to Media Control",
+  "rules": [
+    {
+      "description": "control + shift + f1 to display_brightness_decrement",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f1",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "display_brightness_decrement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "control + shift + f2 to display_brightness_increment",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f2",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "display_brightness_increment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "control + shift + f3 to mission_control",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f3",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "mission_control"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "control + shift + f4 to launchpad",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f4",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "launchpad"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "control + shift + f5 to illumination_decrement",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f5",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "illumination_decrement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "control + shift + f6 to illumination_increment",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f6",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "illumination_increment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "control + shift + f7 to rewind",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f7",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "rewind"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "control + shift + f8 to play_or_pause",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f8",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "play_or_pause"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "control + shift + f9 to fastforward",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f9",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "fastforward"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "control + shift + f10 to mute",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f10",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "mute"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "control + shift + f11 to volume_decrement",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f11",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "volume_decrement"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "control + shift + f12 to volume_increment",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f12",
+            "modifiers": {
+              "mandatory": [
+                "control",
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "volume_increment"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
