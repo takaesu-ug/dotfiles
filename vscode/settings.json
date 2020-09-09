@@ -147,5 +147,7 @@
   "hediet.vscode-drawio.theme": "atlas",
   "hediet.vscode-drawio.offline": false,
   "git.suggestSmartCommit": false,
-  "python.languageServer": "Microsoft"
+  "python.languageServer": "Microsoft",
+  "tabnine.experimentalAutoImports": true,
+  "code-runner.runInTerminal": true
 }

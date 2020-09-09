@@ -16,3 +16,7 @@ Extensionをインストール
 ```
 $ sh extensions_install.sh
 ```
+
+## VS Codeショートカット
+
+https://qiita.com/oruponu/items/ae9c720d4522c1606daf

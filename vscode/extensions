@@ -24,7 +24,6 @@ Hridoy.rails-snippets
 jebbs.plantuml
 johnpapa.vscode-peacock
 jpoissonnier.vscode-styled-components
-k--kato.intellij-idea-keybindings
 mechatroner.rainbow-csv
 mikestead.dotenv
 misogi.ruby-rubocop
@@ -37,6 +36,7 @@ redhat.vscode-yaml
 ryu1kn.partial-diff
 shardulm94.trailing-spaces
 sianglim.slim
+TabNine.tabnine-vscode
 VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim
 wayou.vscode-todo-highlight
