@@ -87,6 +87,7 @@
       - name: direnv
       - name: ffmpeg
       - name: fzf
+      - name: gh
       - name: git
       - name: gnuplot # gnuplot コマンドで特定のデータからコマンドで簡単にグラフ化するツール
       - name: highlight
