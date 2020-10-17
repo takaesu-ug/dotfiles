@@ -64,7 +64,7 @@
       - name: skitch
       # - name: skype
       - name: slack
-      - name: sizzy # モバイル等のマルチデバイスアプリ
+      # - name: sizzy # モバイル等のマルチデバイスアプリ
       # - name: typora # markdown editor (ファイル形式)
       # - name: vagrant
       - name: visual-studio-code
@@ -103,7 +103,7 @@
       - name: mas
       # - name: mecab
       # - name: mecab-ipadic
-      - name: mosquitto
+      # - name: mosquitto
       - name: mpg123
       - name: mkcert  # localでsslのCA作るやつ
       - name: mycli
@@ -125,7 +125,7 @@
       - name: reattach-to-user-namespace  # 自分でビルドする方法もあり .tmux.conf参照
       - name: readline
       - name: redis
-      - name: subversion
+      # - name: subversion
       - name: terraform
       - name: the_platinum_searcher
       - name: the_silver_searcher
