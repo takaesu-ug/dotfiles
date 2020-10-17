@@ -48,7 +48,7 @@
       - name: goland # jetbrains
       - name: iterm2
       - name: intellij-idea # jetbrains
-      - name: java
+      # - name: java
       - name: karabiner-elements
       - name: keepassxc
       - name: kindle
