@@ -1,8 +1,8 @@
 ---
-BUNDLE_PATH: "~/.bundle/vendor/bundle"
 BUNDLE_JOBS: "4"
 BUNDLE_GEM__TEST: "rspec"
 BUNDLE_GEM__MIT: "true"
 BUNDLE_GEM__COC: "true"
 BUNDLE_BUILD__EVENTMACHINE: "--with-cppflags=-I/usr/local/opt/openssl/include"
-BUNDLE_BUILD__MYSQL2: "--with-ldflags=-L/usr/local/opt/openssl/lib"
+BUNDLE_BUILD__NOKOGIRI: "--use-system-libraries"
+BUNDLE_BUILD__CRFSUITE: "--with-cppflags=-I/opt/brew/include/"
