@@ -66,7 +66,7 @@
       - name: slack
       # - name: sizzy # モバイル等のマルチデバイスアプリ
       # - name: typora # markdown editor (ファイル形式)
-      # - name: vagrant
+      - name: vagrant
       - name: visual-studio-code
       # - name: vivaldi
       - name: webstorm # jetbrains
@@ -88,6 +88,7 @@
       - name: ffmpeg
       - name: fzf
       - name: gh
+      - name: ghq
       - name: git
       - name: gnuplot # gnuplot コマンドで特定のデータからコマンドで簡単にグラフ化するツール
       - name: highlight
@@ -137,7 +138,7 @@
       - name: unar   # zipなどの解凍ツール(winのcp932などでも文字化けしないように)
       - name: v8-315 # therubyracerに必要
       - name: vim
-      - name: w3m
+      # - name: w3m
       - name: watch
       - name: wget
       - name: whois
@@ -146,10 +147,13 @@
       # - name: zsh
 
   tasks:
+    - name: already exist homebrew ?
+      shell: which brew
+      register: exist_brew
+      failed_when: no
     - name: homebrew install
       shell: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-      args:
-        creates: /usr/local/bin/brew
+      when: exist_brew.rc != 0
 
     ## homebrew cask 関連 ##
     - name: homebrew cask packages install
