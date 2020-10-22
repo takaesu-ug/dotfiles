@@ -1,4 +1,5 @@
 ---
+BUNDLE_PATH: "~/.bundle/vendor/bundle"
 BUNDLE_JOBS: "4"
 BUNDLE_GEM__TEST: "rspec"
 BUNDLE_GEM__MIT: "true"
