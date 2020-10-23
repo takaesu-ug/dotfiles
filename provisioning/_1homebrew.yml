@@ -126,6 +126,7 @@
       - name: reattach-to-user-namespace  # 自分でビルドする方法もあり .tmux.conf参照
       - name: readline
       - name: redis
+      - name: ripgrep
       # - name: subversion
       - name: terraform
       - name: the_platinum_searcher
