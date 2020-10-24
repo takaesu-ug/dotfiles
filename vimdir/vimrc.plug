@@ -29,6 +29,7 @@ Plug 'tpope/vim-endwise'
 " https://github.com/junegunn/fzf#usage-as-vim-plugin
 " https://github.com/junegunn/fzf/wiki/Examples-(vim)
 " https://github.com/junegunn/fzf.vim
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " 対応するカッコの補完 vim-smartinput
