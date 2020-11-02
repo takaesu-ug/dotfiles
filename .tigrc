@@ -27,6 +27,9 @@ color title-blur white magenta
 bind main o !@hub browse -- commit/%(commit)
 bind diff o !@hub browse -- commit/%(commit)
 bind log  o !@hub browse -- commit/%(commit)
+# O で該当PRを開く
+bind main O @tosa %(commit)
+bind blame O @tosa %(commit)
 
 # <Ctrl-c> で、コミットハッシュ値をコピーできるようにする
 bind main Y !@bash -c "cut -c-7 <<<%(commit) | xargs echo -n | pbcopy"
