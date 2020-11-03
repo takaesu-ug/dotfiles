@@ -118,7 +118,7 @@
       - name: pandoc  # http://sky-y.github.io/site-pandoc-jp/users-guide/
       - name: packer
       - name: knqyf263/pet/pet
-      - name: kyoshidajp/tosa/tosa # PRを検出する https://qiita.com/kyoshidajp/items/18d5385ef8375c7bcd14
+      - name: kyoshidajp/tosa/tosa # githubのPRを検出する https://qiita.com/kyoshidajp/items/18d5385ef8375c7bcd14
       - name: plantuml
       - name: pgcli
       - name: pstree
@@ -133,7 +133,7 @@
       - name: the_silver_searcher
       - name: tidy-html5 # tidyのlintでhtml5として有効となるように
       - name: tig
-      # - name: z80oolong/tmux/tmux # https://saikyoline.jp/weblog/2019/05/28/235315.html
+      # - name: z80oolong/tmux/tmux@3.0a # https://saikyoline.jp/weblog/2019/05/28/235315.html
       - name: tmux
       - name: tree
       - name: unar   # zipなどの解凍ツール(winのcp932などでも文字化けしないように)

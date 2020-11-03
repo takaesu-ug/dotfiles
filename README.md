@@ -61,8 +61,6 @@ Provisonning
 ### golang関連
 
 ```
-% go get -u github.com/x-motemen/ghq
-% go get -u github.com/pocke/whichpr
 % go get -u github.com/mattn/memo
 % go get -u github.com/Code-Hex/pget/cmd/pget # 高速ダウンローダー
 ```
