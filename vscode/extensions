@@ -24,6 +24,7 @@ Hridoy.rails-snippets
 jebbs.plantuml
 johnpapa.vscode-peacock
 jpoissonnier.vscode-styled-components
+karunamurti.haml
 marp-team.marp-vscode
 mechatroner.rainbow-csv
 mikestead.dotenv
@@ -39,7 +40,6 @@ ryu1kn.partial-diff
 shardulm94.trailing-spaces
 sianglim.slim
 TabNine.tabnine-vscode
-vayan.haml
 VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim
 wayou.vscode-todo-highlight
