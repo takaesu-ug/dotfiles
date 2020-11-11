@@ -1,5 +1,5 @@
 {
-  "editor.fontSize": 14,
+  "editor.fontSize": 15,
   "editor.fontFamily": "'JetBrains Mono', 'BIZ UDGothic', 'Ricty Diminished Discord', Menlo, Monaco, 'Courier New'",
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
@@ -131,7 +131,6 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.zoomLevel": -0.3,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -162,5 +161,6 @@
         "before": ["k"],
         "after": ["g", "k"]
     }
-  ]
+  ],
+  "window.zoomLevel": -0.2
 }
