@@ -42,6 +42,7 @@
       - name: discord
       - name: docker   # docker for mac
       - name: dropbox
+      - name: dynalist
       - name: firefox
       - name: google-japanese-ime
       - name: google-chrome
