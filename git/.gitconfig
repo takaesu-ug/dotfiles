@@ -1,5 +1,5 @@
 [include]
-    path = ~/dotfiles/.gitconfig.local
+    path = ~/dotfiles/git/.gitconfig.local
 
 [core]
     attributesFile = ~/.gitattributes
