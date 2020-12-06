@@ -32,6 +32,7 @@
       # - name: blisk # 開発用ブラウザ(モバイル等も)
       - name: homebrew/cask-fonts/font-ricty-diminished
       - name: homebrew/cask-fonts/font-jetbrains-mono
+      - name: font-noto-sans-cjk-jp
       - name: cocoapods
       # - name: charles
       # - name: calibre
@@ -43,6 +44,7 @@
       - name: docker   # docker for mac
       - name: dropbox
       - name: dynalist
+      - name: figma
       - name: firefox
       - name: google-japanese-ime
       - name: google-chrome
@@ -66,7 +68,6 @@
       # - name: skype
       - name: slack
       # - name: sizzy # モバイル等のマルチデバイスアプリ
-      # - name: typora # markdown editor (ファイル形式)
       - name: vagrant
       - name: visual-studio-code
       # - name: vivaldi
@@ -93,7 +94,6 @@
       - name: git
       - name: gnuplot # gnuplot コマンドで特定のデータからコマンドで簡単にグラフ化するツール
       - name: highlight
-      # - name: highway
       - name: hub
       - name: imagemagick   # imagemagickはrmagickの関係でver6系を入れる。後に対応されたらver7以上とする
       - name: itchyny/tap/mmv
