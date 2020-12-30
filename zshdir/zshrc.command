@@ -42,6 +42,9 @@ alias svn-vim-diff='svn diff "$@" |vim -R -'
 alias pm-installed="find `perl -e 'print \"@INC\"'` -name \"*.pm\" -print"
 alias pm-version='perl -le '"'"'for $module (@ARGV) { eval "use $module"; print "$module ", ${"$module\::VERSION"} || "not found" }'"'"
 
+# ruby関連
+alias s="DEPRECATION_SILENCE=true bundle exec spring rspec -b -f d"
+
 ### Mac Only
 # クイックルック起動
 # 次のコマンドをdefaults実行するとquicklookでテキスト選択できるようになる
