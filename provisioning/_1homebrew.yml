@@ -78,7 +78,8 @@
 
     homebrew_packages:
       - name: asciinema
-      - name: awscli        # http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+      # awscli ver2担っているので一旦除外
+      # - name: awscli        # http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
       - name: automake
       - name: ccat
       - name: certbot
@@ -136,6 +137,7 @@
       - name: tig
       # - name: z80oolong/tmux/tmux@3.0a # https://saikyoline.jp/weblog/2019/05/28/235315.html
       - name: tmux
+      - name: tnftp
       - name: tree
       - name: unar   # zipなどの解凍ツール(winのcp932などでも文字化けしないように)
       - name: v8-315 # therubyracerに必要
@@ -159,7 +161,9 @@
 
     ## homebrew cask 関連 ##
     - name: homebrew cask packages install
-      homebrew_cask: name={{ item.name }} state=installed
+      homebrew_cask:
+        name: '{{ item.name }}'
+        state: installed
       environment:
         # homebrew-caskでよくあること http://qiita.com/tienlen/items/1a50c7507c8f6454f6c6
         HOMEBREW_CASK_OPTS: "--appdir=/Applications"
