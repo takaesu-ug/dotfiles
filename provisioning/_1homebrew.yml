@@ -72,7 +72,7 @@
       - name: visual-studio-code
       # - name: vivaldi
       - name: webstorm # jetbrains
-      # - name: xmind
+      - name: xmind
       - name: xquartz
       - name: zoomus
 
@@ -101,6 +101,7 @@
       - name: jq
       - name: jmeter
       - name: lesspipe
+      - name: lucagrulla/cw/cw # Cloudwatch logs関連
       - name: lha
       - name: lua
       - name: mas
