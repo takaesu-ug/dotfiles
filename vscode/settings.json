@@ -137,6 +137,9 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
   "javascript.referencesCodeLens.enabled": true,
   "typescript.referencesCodeLens.enabled": true,
   "typescript.implementationsCodeLens.enabled": true,
@@ -153,14 +156,48 @@
     "editor.defaultFormatter": "vscode.html-language-features"
   },
   "vim.normalModeKeyBindingsNonRecursive": [
-      {
-        "before": ["j"],
-        "after": ["g", "j"]
+    {
+      "before": ["j"],
+      "after": ["g", "j"]
     },
     {
-        "before": ["k"],
-        "after": ["g", "k"]
+      "before": ["k"],
+      "after": ["g", "k"]
     }
   ],
-  "window.zoomLevel": -0.2
+  "yaml.schemas": {},
+  "redhat.telemetry.enabled": true,
+  "yaml.customTags": [
+    "!And",
+    "!And sequence",
+    "!If",
+    "!If sequence",
+    "!Not",
+    "!Not sequence",
+    "!Equals",
+    "!Equals sequence",
+    "!Or",
+    "!Or sequence",
+    "!FindInMap",
+    "!FindInMap sequence",
+    "!Base64",
+    "!Join",
+    "!Join sequence",
+    "!Cidr",
+    "!Ref",
+    "!Sub",
+    "!Sub sequence",
+    "!GetAtt",
+    "!GetAZs",
+    "!ImportValue",
+    "!ImportValue sequence",
+    "!Select",
+    "!Select sequence",
+    "!Split",
+    "!Split sequence"
+  ],
+  "git.ignoreMissingGitWarning": true,
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "editor.bracketPairColorization.enabled": true,
+  "notebook.editorOptionsCustomizations": null
 }
