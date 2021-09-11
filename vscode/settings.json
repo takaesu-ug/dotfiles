@@ -199,5 +199,6 @@
   "git.ignoreMissingGitWarning": true,
   "extensions.autoUpdate": "onlyEnabledExtensions",
   "editor.bracketPairColorization.enabled": true,
-  "notebook.editorOptionsCustomizations": null
+  "notebook.editorOptionsCustomizations": null,
+  "markdown-preview-enhanced.liveUpdate": false
 }
