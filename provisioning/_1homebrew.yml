@@ -29,6 +29,7 @@
       - name: appcleaner
       - name: android-studio
       - name: bartender
+      - name: bdash
       # - name: blisk # 開発用ブラウザ(モバイル等も)
       - name: homebrew/cask-fonts/font-ricty-diminished
       - name: homebrew/cask-fonts/font-jetbrains-mono
