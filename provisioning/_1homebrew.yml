@@ -41,6 +41,7 @@
       # - name: cyberduck
       - name: datagrip # jetbrains
       - name: deepl
+      - name: deno
       - name: discord
       - name: docker   # docker for mac
       - name: dropbox
@@ -53,6 +54,7 @@
       - name: iterm2
       - name: intellij-idea # jetbrains
       # - name: java
+      - name: jump
       - name: karabiner-elements
       - name: keepassxc
       - name: kindle
