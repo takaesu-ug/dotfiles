@@ -28,6 +28,7 @@
       - name: alfred
       - name: appcleaner
       - name: android-studio
+      - name: android-platform-tools
       - name: bartender
       - name: bdash
       # - name: blisk # 開発用ブラウザ(モバイル等も)
@@ -41,20 +42,19 @@
       # - name: cyberduck
       - name: datagrip # jetbrains
       - name: deepl
-      - name: deno
       - name: discord
       - name: docker   # docker for mac
       - name: dropbox
       - name: dynalist
       - name: figma
       - name: firefox
+      - name: flipper
       - name: google-japanese-ime
       - name: google-chrome
       - name: goland # jetbrains
       - name: iterm2
       - name: intellij-idea # jetbrains
       # - name: java
-      - name: jump
       - name: karabiner-elements
       - name: keepassxc
       - name: kindle
@@ -74,6 +74,7 @@
       - name: vagrant
       - name: visual-studio-code
       # - name: vivaldi
+      - name: vysor # スマホミラーリングアプリ
       - name: webstorm # jetbrains
       - name: xmind
       - name: xquartz
@@ -90,6 +91,7 @@
       - name: csshx
       - name: colordiff
       - name: ctags
+      - name: deno
       - name: direnv
       - name: ffmpeg
       - name: fzf
@@ -103,6 +105,7 @@
       - name: itchyny/tap/mmv
       - name: jq
       - name: jmeter
+      - name: jump
       - name: lesspipe
       - name: lucagrulla/cw/cw # Cloudwatch logs関連
       - name: lha
