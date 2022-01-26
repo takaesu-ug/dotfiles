@@ -46,6 +46,7 @@
       - name: docker   # docker for mac
       - name: dropbox
       - name: dynalist
+      - name: fig
       - name: figma
       - name: firefox
       - name: flipper
