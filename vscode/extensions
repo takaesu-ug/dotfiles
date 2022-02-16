@@ -8,6 +8,7 @@ chrmarti.regex
 CoenraadS.bracket-pair-colorizer-2
 cpmcgrath.codealignment-vscode
 dbaeumer.vscode-eslint
+denoland.vscode-deno
 donjayamanne.githistory
 dzhavat.css-flexbox-cheatsheet
 eamodio.gitlens
@@ -18,10 +19,10 @@ formulahendry.auto-rename-tag
 formulahendry.code-runner
 gimenete.github-linker
 GitHub.github-vscode-theme
+GitHub.vscode-pull-request-github
 golang.go
 hediet.vscode-drawio
 Hridoy.rails-snippets
-jebbs.plantuml
 johnpapa.vscode-peacock
 jpoissonnier.vscode-styled-components
 karunamurti.haml
@@ -34,6 +35,7 @@ ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
 ms-vscode-remote.remote-containers
 ms-vsliveshare.vsliveshare
 ms-vsliveshare.vsliveshare-audio
@@ -53,6 +55,7 @@ VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim
 wayou.vscode-todo-highlight
 wingrunr21.vscode-ruby
+withfig.fig
 wmaurer.change-case
 wyze.theme-hybrid-next
 zhuangtongfa.material-theme
