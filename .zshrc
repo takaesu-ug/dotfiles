@@ -9,6 +9,9 @@
 # 7. global) /etc/zlogin
 # 8. local ) ~/.zlogin
 
+# Fig pre block. Keep at the top of this file.
+. "$HOME/.fig/shell/zshrc.pre.zsh"
+
 # ルート証明を読み込む（brewでcurl-ca-bundleを入れている場合)
 if [[ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]]; then
   export SSL_CERT_FILE=/usr/local/opt/curl-ca-bundle/share/ca-bundle.crt
@@ -31,3 +34,6 @@ fi
 ### 最後に読み込ませたい
 # direnv用の設定
 eval "$(direnv hook zsh)"
+
+# Fig post block. Keep at the bottom of this file.
+. "$HOME/.fig/shell/zshrc.post.zsh"
