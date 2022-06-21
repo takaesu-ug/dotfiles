@@ -25,7 +25,6 @@
     homebrew_cask_packages:
       - name: virtualbox  # インストール前に security の設定で Oracle を allowする必要がある
       - name: authy
-      - name: alfred
       - name: appcleaner
       - name: android-studio
       - name: android-platform-tools
@@ -69,7 +68,6 @@
       - name: postman
       - name: raycast # alfredみたいなもん
       - name: rubymine # jetbrains
-      - name: shiftit
       - name: skitch
       # - name: skype
       - name: slack
