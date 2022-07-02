@@ -1,3 +1,6 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
+
 # 設定ファイルの読み込み順
 # https://qiita.com/muran001/items/7b104d33f5ea3f75353f
 # 1. global) /etc/zshenv
@@ -8,9 +11,6 @@
 # 6. local ) ~/.zshrc
 # 7. global) /etc/zlogin
 # 8. local ) ~/.zlogin
-
-# Fig pre block. Keep at the top of this file.
-. "$HOME/.fig/shell/zshrc.pre.zsh"
 
 # ルート証明を読み込む（brewでcurl-ca-bundleを入れている場合)
 if [[ -f /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt ]]; then
@@ -36,4 +36,4 @@ fi
 eval "$(direnv hook zsh)"
 
 # Fig post block. Keep at the bottom of this file.
-. "$HOME/.fig/shell/zshrc.post.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
