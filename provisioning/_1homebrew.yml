@@ -24,12 +24,12 @@
 
     homebrew_cask_packages:
       - name: virtualbox  # インストール前に security の設定で Oracle を allowする必要がある
-      - name: authy
+      # - name: authy
       - name: appcleaner
       - name: android-studio
       - name: android-platform-tools
       - name: bartender
-      - name: bdash
+      # - name: bdash
       # - name: blisk # 開発用ブラウザ(モバイル等も)
       - name: homebrew/cask-fonts/font-ricty-diminished
       - name: homebrew/cask-fonts/font-jetbrains-mono
@@ -59,7 +59,7 @@
       - name: keepassxc
       - name: kindle
       # - name: krisp
-      - name: licecap
+      # - name: licecap # 使えなくなっている...
       # - name: mysqlworkbench  # DB(mysql)クライアント
       - name: ngrok           # [ngrokを使用してローカル環境を外部に公開する - Qiita](https://qiita.com/kitaro729/items/44214f9f81d3ebda58bd)
       - name: notion
@@ -68,7 +68,7 @@
       - name: postman
       - name: raycast # alfredみたいなもん
       - name: rubymine # jetbrains
-      - name: skitch
+      # - name: skitch
       # - name: skype
       - name: slack
       # - name: sizzy # モバイル等のマルチデバイスアプリ
@@ -77,7 +77,7 @@
       # - name: vivaldi
       - name: vysor # スマホミラーリングアプリ
       - name: webstorm # jetbrains
-      - name: xmind
+      # - name: xmind
       - name: xquartz
       - name: zoomus
 
@@ -105,7 +105,7 @@
       - name: imagemagick   # imagemagickはrmagickの関係でver6系を入れる。後に対応されたらver7以上とする
       - name: itchyny/tap/mmv
       - name: jq
-      - name: jmeter
+      # - name: jmeter
       - name: jump
       - name: lesspipe
       - name: lucagrulla/cw/cw # Cloudwatch logs関連
@@ -150,7 +150,6 @@
       - name: unar   # zipなどの解凍ツール(winのcp932などでも文字化けしないように)
       - name: v8-315 # therubyracerに必要
       - name: vim
-      # - name: w3m
       - name: watch
       - name: wget
       - name: whois
