@@ -1,0 +1,71 @@
+{
+  "entries": {
+    "tap": {
+      "argon/mas": {
+        "revision": "eb8e71f83306dd929ba502cfa9af30db1d602725"
+      },
+      "homebrew/bundle": {
+        "revision": "fd19f5a023de598eab1ee1281944946a450f1b30"
+      },
+      "homebrew/cask": {
+        "revision": "7fb2e26b170fb2da81f5ef456ccf20c4c7fe984c"
+      },
+      "homebrew/cask-fonts": {
+        "revision": "d4ed7eadbda2ba19f53ca23d884b734c311d7fef"
+      },
+      "homebrew/cask-versions": {
+        "revision": "a362886397dc886ae6754b910b299d62223972fb"
+      },
+      "homebrew/core": {
+        "revision": "6f3b8445bcf9da92ebda53657995fef9172fb1fe"
+      }
+    },
+    "cask": {
+      "docker": {
+        "version": "4.10.0,82025",
+        "options": {
+          "args": {
+            "appdir": "/Applications"
+          },
+          "full_name": "docker"
+        }
+      },
+      "font-migu-1p": {
+        "version": "20150712",
+        "options": {
+          "full_name": "font-migu-1p"
+        }
+      },
+      "iterm2": {
+        "version": "3.4.16",
+        "options": {
+          "full_name": "iterm2"
+        }
+      },
+      "temurin8": {
+        "version": "8,332,09",
+        "options": {
+          "full_name": "temurin8"
+        }
+      },
+      "appcleaner": {
+        "version": "3.6.4,4270",
+        "options": {
+          "full_name": "appcleaner"
+        }
+      }
+    }
+  },
+  "system": {
+    "macos": {
+      "monterey": {
+        "HOMEBREW_VERSION": "3.5.3",
+        "HOMEBREW_PREFIX": "/opt/homebrew",
+        "Homebrew/homebrew-core": "6f3b8445bcf9da92ebda53657995fef9172fb1fe",
+        "CLT": "13.4.0.0.1.1651278267",
+        "Xcode": "13.4.1",
+        "macOS": "12.4"
+      }
+    }
+  }
+}
