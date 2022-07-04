@@ -4,20 +4,20 @@
   become: false
 
   tasks:
-    - name: Add homebrew's zsh binary in /etc/shells
-      lineinfile:
-        path: /etc/shells
-        state: present
-        line: /usr/local/bin/zsh
-      become: true
+    #- name: Add homebrew's zsh binary in /etc/shells
+    #  lineinfile:
+    #    path: /etc/shells
+    #    state: present
+    #    line: /usr/local/bin/zsh
+    #  become: true
 
-    - name: Enable homebrew's zsh
-      shell: chsh -s /usr/local/bin/zsh
-      become: true
-      changed_when: false
+    #- name: Enable homebrew's zsh
+    #  shell: chsh -s /usr/local/bin/zsh
+    #  become: true
+    #  changed_when: false
 
     - name: Install zinit
-      shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+      shell: sh -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
       args:
         creates: ~/.zinit
 
