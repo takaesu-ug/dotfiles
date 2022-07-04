@@ -79,6 +79,7 @@ Provisonning
 - `Preferences` -> `Appearance` -> `General` -> `Auto-hide menu bar in non-native fullscreen` のチェックを外す
 - `Preference` -> `Profiles` -> `Text` -> `Ambiguous characters are double-width` のチェックを入れない
 - `Preference` -> `Profiles` -> `Text` -> Font `JetBrains Mono` , Non-ASCII Font `Ricty` を設定する
+- `General` -> `Selection` -> `Applications in terminal may access clipboard` を設定する
 
 
 Others
