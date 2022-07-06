@@ -8,16 +8,16 @@
         "revision": "ed98ec54d2417684c3fa335ba7356fac2562e152"
       },
       "homebrew/cask": {
-        "revision": "0bf339ec54cdfef6f492c184e32d13ad49b23889"
+        "revision": "bb1dd399c77a36e67bb21ddbf4bc113f7c80fe03"
       },
       "homebrew/cask-fonts": {
-        "revision": "a9bf9b49c5009d8efd8f15542b5c1ff819e917ab"
+        "revision": "057549c676d52464fe639681eb000c72cdff8f27"
       },
       "homebrew/cask-versions": {
         "revision": "00a214fb53cb79d1de6911ea90255c49b2595376"
       },
       "homebrew/core": {
-        "revision": "19923d9d9dafa9b8066fda6c55b191f02515a3ba"
+        "revision": "4f840acccaf9fa85f8caeb150377a405c7b01adb"
       },
       "lucagrulla/cw": {
         "revision": "618c5a5e0b2a03b39bdf859f1227a78b34198194"
@@ -2549,7 +2549,7 @@
       "monterey": {
         "HOMEBREW_VERSION": "3.5.4",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "19923d9d9dafa9b8066fda6c55b191f02515a3ba",
+        "Homebrew/homebrew-core": "4f840acccaf9fa85f8caeb150377a405c7b01adb",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4.1",
         "macOS": "12.4"

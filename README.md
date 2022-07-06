@@ -58,6 +58,15 @@ Provisonning
 % pipenv run ansible-playbook -i hosts _4vimplug.yml
 ```
 
+### Brew bundleでの各種ソフトウェアのインストール
+
+```bash
+brew bundle
+
+# 更新はしたくない場合
+brew bundle --no-upgrade
+```
+
 ### golang関連
 
 ```
