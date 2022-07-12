@@ -35,5 +35,9 @@ fi
 # direnv用の設定
 eval "$(direnv hook zsh)"
 
+# figのworkflowショートカット邪魔
+# https://github.com/withfig/fig/issues/1583
+export FIG_WORKFLOWS_KEYBIND="^\\"
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
