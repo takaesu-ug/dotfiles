@@ -68,14 +68,5 @@ set ttyfast
 "Escの２回押しで検索のハイライト消去
 nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
-" vimに自作コマンドを実装する - Qiita http://qiita.com/shimbaroid/items/f2ad60c203ccdff7da16
-" 保存時に行末の空白を除去する
-" autocmd BufWritePre * :%s/\s\+$//ge
-" :Tailw 行末のwhite space削除
-:command! Tailw :%s/\s\+$//ge
-"" 保存時にtabをスペースに変換する(2スペース)
-" autocmd BufWritePre * :%s/\t/  /ge
-:command! Tab2w :%s/\t/  /ge
-
 " 分割時のスクロールを同期しない
 set noscb

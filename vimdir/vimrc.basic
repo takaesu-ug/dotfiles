@@ -1,3 +1,12 @@
+" vimに自作コマンドを実装する - Qiita http://qiita.com/shimbaroid/items/f2ad60c203ccdff7da16
+" 保存時に行末の空白を除去する
+" autocmd BufWritePre * :%s/\s\+$//ge
+" :Tailw 行末のwhite space削除
+:command! Tailw :%s/\s\+$//ge
+"" 保存時にtabをスペースに変換する(2スペース)
+" autocmd BufWritePre * :%s/\t/  /ge
+:command! Tab2w :%s/\t/  /ge
+
 "ビープ音を消す
 set t_vb=
 set novisualbell
@@ -105,6 +114,7 @@ autocmd InsertLeave * set nopaste
 " set grepprg=hw\ -e\ --no-group
 " set grepprg=pt\ -e\ --nogroup
 set grepprg=ag\ --hidden\ --vimgrep\ $*
+" set grepprg=rg\ --hidden
 set grepformat=%f:%l:%m
 
 " grep検索の実行後にQuickFix Listを表示する
