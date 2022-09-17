@@ -218,12 +218,12 @@
 		</dict>
 	</dict>
 	<key>Default Bookmark Guid</key>
-	<string>26EC5247-80E1-4178-9EA1-C805803C54DD</string>
-	<key>EnableAPIServer</key>
-	<true/>
+	<string>EC6676C9-4D0B-4955-B702-24F4AB1BAE6F</string>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideMenuBarInFullscreen</key>
+	<false/>
+	<key>HideScrollbar</key>
 	<false/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
@@ -430,6 +430,8 @@
 				<key>Red Component</key>
 				<real>1</real>
 			</dict>
+			<key>Cursor Type</key>
+			<integer>2</integer>
 			<key>Custom Command</key>
 			<string>No</string>
 			<key>Custom Directory</key>
@@ -452,7 +454,7 @@
 				<real>0.73333334922790527</real>
 			</dict>
 			<key>Guid</key>
-			<string>57B50FC4-E7E4-4762-B458-4142F7D08725</string>
+			<string>7121B5DF-B6A9-4462-B3F3-6D37C2AA2866</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>Idle Code</key>
@@ -1073,13 +1075,11 @@
 				<real>0.72156862745098038</real>
 			</dict>
 			<key>Guid</key>
-			<string>26EC5247-80E1-4178-9EA1-C805803C54DD</string>
+			<string>EC6676C9-4D0B-4955-B702-24F4AB1BAE6F</string>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>Idle Code</key>
 			<integer>0</integer>
-			<key>Initial Text</key>
-			<string></string>
 			<key>Jobs to Ignore</key>
 			<array>
 				<string>rlogin</string>
@@ -1392,9 +1392,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>JetBrainsMono-Regular 15</string>
-			<key>Only The Default BG Color Uses Transparency</key>
-			<true/>
+			<string>JetBrainsMono-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
@@ -1438,7 +1436,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Transparency</key>
-			<real>0.097689494680851058</real>
+			<real>0.089999999999999997</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -1459,8 +1457,6 @@
 			<string>/Users/yuji-takaesu</string>
 		</dict>
 	</array>
-	<key>PMPrintingExpandedStateForPrint2</key>
-	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1494,19 +1490,13 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
-	<key>Print In Black And White</key>
-	<true/>
-	<key>QuitWhenAllWindowsClosed</key>
-	<true/>
-	<key>SmartPlacement</key>
-	<false/>
 	<key>SoundForEsc</key>
+	<false/>
+	<key>UseBorder</key>
 	<false/>
 	<key>UseLionStyleFullscreen</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
-	<key>findMode_iTerm</key>
-	<integer>0</integer>
 </dict>
 </plist>
