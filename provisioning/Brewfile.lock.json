@@ -5,19 +5,19 @@
         "revision": "eb8e71f83306dd929ba502cfa9af30db1d602725"
       },
       "homebrew/bundle": {
-        "revision": "89ecc8a5c6d4c29bf646255b8b06588c5479b61f"
+        "revision": "95e1114e202c57887b761e268f43f0077f593f0f"
       },
       "homebrew/cask": {
-        "revision": "a69232566aa37cb55333d732eb5877fd505f0242"
+        "revision": "453312f43c4959afb276d663cd422a74dbf37f75"
       },
       "homebrew/cask-fonts": {
-        "revision": "c905ce5373c7fedd2329ee4763454d5c767bcca6"
+        "revision": "8fef229ebe25d19ce0d3fca85d939c9df7aaf291"
       },
       "homebrew/cask-versions": {
-        "revision": "2a53b9697dd4bf86e5db76ff0f0b8a84c609b702"
+        "revision": "ae709e9927e667964b5e5312c7ca9932af9b0519"
       },
       "homebrew/core": {
-        "revision": "ab1bb8c757a6808cc15d2131a9118a04fe47a465"
+        "revision": "f890e2444f92abb7dc791ebef23637556902828f"
       },
       "lucagrulla/cw": {
         "revision": "618c5a5e0b2a03b39bdf859f1227a78b34198194"
@@ -118,7 +118,7 @@
         }
       },
       "dropbox": {
-        "version": "157.4.4801",
+        "version": "157.4.4808",
         "options": {
           "full_name": "dropbox"
         }
@@ -130,13 +130,13 @@
         }
       },
       "fig": {
-        "version": "1.0.61,526",
+        "version": "1.0.61,528",
         "options": {
           "full_name": "fig"
         }
       },
       "figma": {
-        "version": "116.3.7",
+        "version": "116.3.8",
         "options": {
           "full_name": "figma"
         }
@@ -148,7 +148,7 @@
         }
       },
       "flipper": {
-        "version": "0.164.0",
+        "version": "0.165.1",
         "options": {
           "full_name": "flipper"
         }
@@ -226,7 +226,7 @@
         }
       },
       "rubymine": {
-        "version": "2022.2.1,222.3739.56",
+        "version": "2022.2.2,222.4167.28",
         "options": {
           "full_name": "rubymine"
         }
@@ -2547,9 +2547,9 @@
   "system": {
     "macos": {
       "monterey": {
-        "HOMEBREW_VERSION": "3.6.1",
+        "HOMEBREW_VERSION": "3.6.2",
         "HOMEBREW_PREFIX": "/opt/homebrew",
-        "Homebrew/homebrew-core": "ab1bb8c757a6808cc15d2131a9118a04fe47a465",
+        "Homebrew/homebrew-core": "f890e2444f92abb7dc791ebef23637556902828f",
         "CLT": "13.4.0.0.1.1651278267",
         "Xcode": "13.4.1",
         "macOS": "12.5"
