@@ -3,7 +3,7 @@ export PATH=
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
 # Homebrew PATH
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/local/sbin:$PATH
 # homebrew関連で keg-only なパッケージ用
 export PATH=/usr/local/opt/mysql-client/bin:$PATH
 

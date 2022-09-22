@@ -198,7 +198,7 @@ nmap <silent><Leader>ig <Plug>IndentGuidesToggle"
 " https://github.com/junegunn/fzf/wiki/Examples-(vim)
 " https://github.com/junegunn/fzf#usage-as-vim-plugin
 " コマンドはこれを参照 https://github.com/junegunn/fzf.vim#commands
-set rtp+=/usr/local/opt/fzf
+set rtp+=/opt/homebrew/opt/fzf
 let g:fzf_layout = { 'down': '~40%' }
 let g:fzf_action = {
   \ 'ctrl-t': 'tab split',
