@@ -86,6 +86,7 @@ brew "youtube-dl"
 # brew "zsh"
 
 cask "appcleaner"
+cask "aws-vault"
 cask "docker", args: { appdir: "/Applications" }
 cask "font-ricty-diminished"
 cask "font-jetbrains-mono"

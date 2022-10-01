@@ -260,6 +260,12 @@
         "options": {
           "full_name": "zoom"
         }
+      },
+      "aws-vault": {
+        "version": "6.6.0",
+        "options": {
+          "full_name": "aws-vault"
+        }
       }
     },
     "brew": {
