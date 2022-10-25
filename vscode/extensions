@@ -1,3 +1,4 @@
+2gua.rainbow-brackets
 amazonwebservices.aws-toolkit-vscode
 bung87.rails
 bung87.vscode-gemfile
@@ -5,7 +6,6 @@ castwide.solargraph
 christian-kohler.npm-intellisense
 christian-kohler.path-intellisense
 chrmarti.regex
-CoenraadS.bracket-pair-colorizer-2
 cpmcgrath.codealignment-vscode
 dbaeumer.vscode-eslint
 denoland.vscode-deno
@@ -21,12 +21,11 @@ gimenete.github-linker
 GitHub.github-vscode-theme
 GitHub.vscode-pull-request-github
 golang.go
+hashicorp.terraform
 hediet.vscode-drawio
 Hridoy.rails-snippets
 johnpapa.vscode-peacock
-jpoissonnier.vscode-styled-components
 karunamurti.haml
-marp-team.marp-vscode
 mechatroner.rainbow-csv
 mikestead.dotenv
 misogi.ruby-rubocop
@@ -36,11 +35,12 @@ ms-python.vscode-pylance
 ms-toolsai.jupyter
 ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
+ms-toolsai.vscode-jupyter-cell-tags
+ms-toolsai.vscode-jupyter-slideshow
 ms-vscode-remote.remote-containers
 ms-vsliveshare.vsliveshare
 ms-vsliveshare.vsliveshare-audio
 ms-vsliveshare.vsliveshare-pack
-msjsdiag.debugger-for-chrome
 Prisma.prisma
 rebornix.ruby
 redhat.vscode-yaml
@@ -51,11 +51,11 @@ shd101wyy.markdown-preview-enhanced
 sianglim.slim
 TabNine.tabnine-vscode
 taichi.vscode-textlint
+VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim
 wayou.vscode-todo-highlight
 wingrunr21.vscode-ruby
-withfig.fig
 wmaurer.change-case
 wyze.theme-hybrid-next
 zhuangtongfa.material-theme

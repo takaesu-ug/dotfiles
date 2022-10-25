@@ -122,7 +122,7 @@
   ],
   "javascript.referencesCodeLens.enabled" : true,
   "vim.easymotion" : false,
-  "python.languageServer" : "Microsoft",
+  "python.languageServer" : "Default",
   "cSpell.userWords" : [
     "awscdk",
     "awscli",
@@ -234,5 +234,5 @@
     "ejs" : "html"
   },
   "terminal.external.osxExec" : "iTerm.app",
-  "gitlens.currentLine.enabled" : true
+  "gitlens.currentLine.enabled": true
 }
