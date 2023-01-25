@@ -15,8 +15,13 @@ AppStoreでインストールする
 ```
 
 
-Provisonning
+Provisioning
 ------
+
+TODO: 
+    asdf というのを試してみたい
+    https://asdf-vm.com/
+
 
 ### anyenv関連のインストール
 
