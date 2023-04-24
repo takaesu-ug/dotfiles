@@ -211,7 +211,8 @@
   "yaml.schemas": {},
   "[python]": {
     "editor.insertSpaces": true,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.formatOnType": true
   },
   "ruby.locate": {
     "include": "**\/*.rb",
@@ -234,5 +235,7 @@
   "gitlens.currentLine.enabled": true,
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "textlint.autoFixOnSave": true
 }
