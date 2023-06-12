@@ -1,12 +1,104 @@
 {
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[markdown]": {
     "editor.wordWrap": "on"
   },
-  "typescript.referencesCodeLens.enabled": true,
-  "terminal.integrated.shell.osx": "zsh",
-  "go.toolsManagement.autoUpdate": true,
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "rebornix.ruby",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "breadcrumbs.enabled": true,
+  "cSpell.userWords": [
+    "awscdk",
+    "awscli",
+    "Dynalist",
+    "Raycast",
+    "tokubai",
+    "Vimmer",
+    "Wareki"
+  ],
+  "code-runner.runInTerminal": true,
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": true,
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "editor.fontFamily": "'JetBrains Mono', 'BIZ UDGothic', 'Ricty Diminished Discord', Menlo, Monaco, 'Courier New'",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 15,
+  "editor.formatOnSave": true,
+  "editor.minimap.enabled": false,
+  "editor.renderControlCharacters": true,
+  "editor.rulers": [
+    80,
+    100,
+    120
+  ],
+  "editor.suggest.localityBonus": true,
+  "editor.suggestSelection": "first",
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.wordWrap": "off",
+  "emmet.includeLanguages": {
+    "ejs": "html",
+    "erb": "erb",
+    "html": "html",
+    "javascript": "javascriptreact",
+    "vue": "html"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  "files.autoSave": "onFocusChange",
+  "files.autoSaveDelay": 5000,
   "files.insertFinalNewline": true,
-  "vim.disableExtension": false,
+  "files.trimFinalNewlines": true,
+  "flow.useNPMPackagedFlow": true,
+  "git.ignoreMissingGitWarning": true,
+  "git.suggestSmartCommit": false,
+  "gitlens.advanced.messages": {
+    "suppressFileNotUnderSourceControlWarning": true,
+    "suppressLineUncommittedWarning": true,
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.codeLens.enabled": false,
+  "gitlens.currentLine.enabled": true,
+  "go.formatTool": "goimports",
+  "go.toolsManagement.autoUpdate": true,
+  "go.useLanguageServer": true,
+  "hediet.vscode-drawio.offline": false,
+  "hediet.vscode-drawio.theme": "atlas",
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.referencesCodeLens.enabled": true,
+  "javascript.validate.enable": false,
+  "json.schemas": [],
+  "markdown-preview-enhanced.liveUpdate": false,
+  "markdown.preview.breaks": true,
+  "notebook.editorOptionsCustomizations": null,
   "peacock.favoriteColors": [
     {
       "name": "Angular Red",
@@ -65,7 +157,58 @@
       "value": "#557c9b"
     }
   ],
+  "python.languageServer": "Default",
+  "redhat.telemetry.enabled": true,
+  "ruby.intellisense": "rubyLocate",
+  "ruby.locate": {
+    "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}",
+    "include": "**/*.rb"
+  },
+  "ruby.useLanguageServer": true,
+  "solargraph.useBundler": true,
+  "tabnine.experimentalAutoImports": true,
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.shell.osx": "zsh",
+  "textlint.autoFixOnSave": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "vim.disableExtension": false,
+  "vim.easymotion": false,
+  "vim.easymotionKeys": "sdfghjkloiurewnm",
+  "vim.hlsearch": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "after": [
+        "g",
+        "j"
+      ],
+      "before": [
+        "j"
+      ]
+    },
+    {
+      "after": [
+        "g",
+        "k"
+      ],
+      "before": [
+        "k"
+      ]
+    }
+  ],
+  "vim.statusBarColorControl": false,
+  "vim.useSystemClipboard": true,
+  "vim.visualstar": true,
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "window.nativeTabs": true,
+  "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.colorTheme": "Hybrid Next (Gray Background)",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.iconTheme": "material-icon-theme",
   "yaml.customTags": [
     "!And",
     "!And sequence",
@@ -95,147 +238,5 @@
     "!Split",
     "!Split sequence"
   ],
-  "hediet.vscode-drawio.offline": false,
-  "ruby.useLanguageServer": true,
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "go.useLanguageServer": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  "notebook.editorOptionsCustomizations": null,
-  "gitlens.codeLens.enabled": false,
-  "extensions.autoUpdate": "onlyEnabledExtensions",
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
-  "editor.suggest.localityBonus": true,
-  "editor.minimap.enabled": false,
-  "gitlens.advanced.messages": {
-    "suppressFileNotUnderSourceControlWarning": true,
-    "suppressLineUncommittedWarning": true,
-    "suppressShowKeyBindingsNotice": true
-  },
-  "editor.rulers": [
-    80,
-    100,
-    120
-  ],
-  "javascript.referencesCodeLens.enabled": true,
-  "vim.easymotion": false,
-  "python.languageServer": "Default",
-  "cSpell.userWords": [
-    "awscdk",
-    "awscli",
-    "Dynalist",
-    "Raycast",
-    "tokubai",
-    "Vimmer",
-    "Wareki"
-  ],
-  "vim.hlsearch": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "go.formatTool": "goimports",
-  "solargraph.useBundler": true,
-  "git.suggestSmartCommit": false,
-  "editor.codeActionsOnSave": {
-    "source.addMissingImports": true,
-    "source.organizeImports": true,
-    "source.fixAll.eslint": true
-  },
-  "markdown.preview.breaks": true,
-  "vim.useSystemClipboard": true,
-  "editor.suggestSelection": "first",
-  "editor.fontLigatures": true,
-  "breadcrumbs.enabled": true,
-  "editor.fontSize": 15,
-  "markdown-preview-enhanced.liveUpdate": false,
-  "files.trimFinalNewlines": true,
-  "files.autoSave": "onFocusChange",
-  "redhat.telemetry.enabled": true,
-  "vim.statusBarColorControl": false,
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "editor.fontFamily": "'JetBrains Mono', 'BIZ UDGothic', 'Ricty Diminished Discord', Menlo, Monaco, 'Courier New'",
-  "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  },
-  "editor.formatOnSave": true,
-  "code-runner.runInTerminal": true,
-  "terminal.integrated.fontSize": 14,
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "ruby.intellisense": "rubyLocate",
-  "vim.visualstar": true,
-  "git.ignoreMissingGitWarning": true,
-  "editor.renderControlCharacters": true,
-  "editor.bracketPairColorization.enabled": true,
-  "tabnine.experimentalAutoImports": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "after": [
-        "g",
-        "j"
-      ],
-      "before": [
-        "j"
-      ]
-    },
-    {
-      "after": [
-        "g",
-        "k"
-      ],
-      "before": [
-        "k"
-      ]
-    }
-  ],
-  "[ruby]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2,
-    "editor.defaultFormatter": "rebornix.ruby"
-  },
-  "editor.accessibilitySupport": "off",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "hediet.vscode-drawio.theme": "atlas",
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.implementationsCodeLens.enabled": true,
-  "bracket-pair-colorizer-2.depreciation-notice": false,
-  "window.nativeTabs": true,
-  "yaml.schemas": {},
-  "[python]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4,
-    "editor.formatOnType": true
-  },
-  "ruby.locate": {
-    "include": "**\/*.rb",
-    "exclude": "{**\/@(test|spec|tmp|.*),**\/@(test|spec|tmp|.*)\/**,**\/*_spec.rb}"
-  },
-  "files.autoSaveDelay": 5000,
-  "flow.useNPMPackagedFlow": true,
-  "emmet.triggerExpansionOnTab": true,
-  "javascript.validate.enable": false,
-  "vim.easymotionKeys": "sdfghjkloiurewnm",
-  "json.schemas": [],
-  "emmet.includeLanguages": {
-    "vue": "html",
-    "erb": "erb",
-    "javascript": "javascriptreact",
-    "html": "html",
-    "ejs": "html"
-  },
-  "terminal.external.osxExec": "iTerm.app",
-  "gitlens.currentLine.enabled": true,
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "editor.unicodeHighlight.nonBasicASCII": false,
-  "textlint.autoFixOnSave": true
+  "yaml.schemas": {}
 }
