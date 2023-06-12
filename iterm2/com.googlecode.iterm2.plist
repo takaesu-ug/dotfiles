@@ -219,6 +219,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>EC6676C9-4D0B-4955-B702-24F4AB1BAE6F</string>
+	<key>EnableAPIServer</key>
+	<true/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideMenuBarInFullscreen</key>
