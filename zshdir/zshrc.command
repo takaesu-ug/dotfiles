@@ -13,7 +13,8 @@ alias gfa='git fetch --all --prune'
 # http://qiita.com/yusabana/items/b5cc2a706be8c031043e
 LESS=-qR # ビープ音を消して、ANSIカラーシーケンス
 
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 alias nvi='nvim'
 
 # alias b='hub browse $(ghq list | fzf | cut -d "/" -f 2,3)'
