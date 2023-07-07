@@ -15,5 +15,6 @@
       "filetypes": ["dockerfile"],
       "args": ["--stdio"]
     }
-  }
+  },
+  "snippets.ultisnips.pythonPrompt": false
 }
