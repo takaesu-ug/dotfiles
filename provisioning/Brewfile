@@ -14,6 +14,7 @@ tap "kyoshidajp/tosa"
 brew "asciinema"
 # awscli ver2になっているので一旦除外
 # brew "awscli"        # http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
+brew "aicommits"
 brew "automake"
 brew "ccat"
 brew "certbot"
