@@ -238,5 +238,6 @@
     "!Split",
     "!Split sequence"
   ],
-  "yaml.schemas": {}
+  "yaml.schemas": {},
+  "editor.inlineSuggest.enabled": true
 }
