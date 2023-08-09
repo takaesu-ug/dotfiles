@@ -38,6 +38,7 @@ brew "imagemagick"   # imagemagickはrmagickの関係でver6系を入れる。�
 brew "itchyny/tap/mmv"
 brew "jq"
 # brew "jmeter"
+brew "jsonnet"
 brew "jump"
 brew "lesspipe"
 brew "lucagrulla/cw/cw" # Cloudwatch logs関連
