@@ -21,6 +21,7 @@ GitHub.copilot-chat
 GitHub.github-vscode-theme
 GitHub.vscode-pull-request-github
 golang.go
+Grafana.vscode-jsonnet
 harg.iceberg
 hashicorp.terraform
 hediet.vscode-drawio
@@ -51,7 +52,6 @@ ryu1kn.text-marker
 shardulm94.trailing-spaces
 shd101wyy.markdown-preview-enhanced
 sianglim.slim
-taichi.vscode-textlint
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim
