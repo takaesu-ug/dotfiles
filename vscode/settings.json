@@ -239,5 +239,6 @@
     "!Split sequence"
   ],
   "yaml.schemas": {},
-  "editor.inlineSuggest.enabled": true
+  "editor.inlineSuggest.enabled": true,
+  "workbench.tree.indent": 16
 }

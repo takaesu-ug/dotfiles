@@ -19,6 +19,7 @@ gimenete.github-linker
 GitHub.copilot
 GitHub.copilot-chat
 GitHub.github-vscode-theme
+github.vscode-github-actions
 GitHub.vscode-pull-request-github
 golang.go
 Grafana.vscode-jsonnet
