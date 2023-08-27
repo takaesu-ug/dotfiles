@@ -12,6 +12,7 @@ dzhavat.css-flexbox-cheatsheet
 eamodio.gitlens
 esbenp.prettier-vscode
 ezforo.copy-relative-path-and-line-numbers
+figma.figma-vscode-extension
 formulahendry.auto-close-tag
 formulahendry.auto-rename-tag
 formulahendry.code-runner
@@ -53,6 +54,7 @@ ryu1kn.text-marker
 shardulm94.trailing-spaces
 shd101wyy.markdown-preview-enhanced
 sianglim.slim
+unifiedjs.vscode-mdx
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 vscodevim.vim
