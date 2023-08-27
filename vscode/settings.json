@@ -240,5 +240,6 @@
   ],
   "yaml.schemas": {},
   "editor.inlineSuggest.enabled": true,
-  "workbench.tree.indent": 16
+  "workbench.tree.indent": 16,
+  "githubPullRequests.pullBranch": "never"
 }
