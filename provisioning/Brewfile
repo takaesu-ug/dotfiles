@@ -87,7 +87,6 @@ brew "watch"
 brew "wget"
 brew "whois"
 brew "yarn"
-brew "youtube-dl"
 # brew "zsh"
 
 cask "appcleaner"
