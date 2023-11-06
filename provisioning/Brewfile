@@ -87,6 +87,7 @@ brew "watch"
 brew "wget"
 brew "whois"
 brew "yarn"
+brew "yt-dlp"
 # brew "zsh"
 
 cask "appcleaner"
