@@ -3,10 +3,10 @@
 
 tap "argon/mas"
 tap "homebrew/bundle"
-tap "homebrew/cask"
+# tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
+# tap "homebrew/core" # いらない？？
 tap "lucagrulla/cw"
 tap "knqyf263/pet"
 tap "kyoshidajp/tosa"
