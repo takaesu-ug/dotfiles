@@ -58,7 +58,6 @@ brew "nginx"
 brew "ngrep"
 brew "nkf"
 brew "nss" # mkcertで使う
-brew "orbstack"
 brew "openssl"
 # brew "pandoc"  # http://sky-y.github.io/site-pandoc-jp/users-guide/
 # brew "packer"
@@ -82,7 +81,6 @@ brew "tmux"
 brew "tnftp"
 brew "tree"
 brew "unar"   # zipなどの解凍ツール(winのcp932などでも文字化けしないように)
-brew "v8-315" # therubyracerに必要
 brew "vim"
 brew "watch"
 brew "wget"
@@ -138,6 +136,7 @@ cask "ngrok"           # [ngrokを使用してローカル環境を外部に公�
 cask "notion"
 cask "obsidian"
 cask "onedrive"
+cask "orbstack"
 cask "pika"
 cask "postman"
 cask "raycast"
@@ -153,4 +152,5 @@ cask "vysor" # スマホミラーリングアプリ
 cask "webstorm"
 # cask "xmind"
 # cask "xquartz"
+cask "zed"
 cask "zoom"
