@@ -20,7 +20,7 @@
     "editor.tabSize": 4
   },
   "[ruby]": {
-    "editor.defaultFormatter": "rebornix.ruby",
+    "editor.defaultFormatter": "Shopify.ruby-lsp",
     "editor.insertSpaces": true,
     "editor.tabSize": 2
   },
@@ -45,9 +45,9 @@
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.addMissingImports": true,
-    "source.fixAll.eslint": true,
-    "source.organizeImports": true
+    "source.addMissingImports": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
   },
   "editor.fontFamily": "'JetBrains Mono', 'BIZ UDGothic', 'Ricty Diminished Discord', Menlo, Monaco, 'Courier New'",
   "editor.fontLigatures": true,
@@ -55,15 +55,16 @@
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.renderControlCharacters": true,
-  "editor.rulers": [
-    80,
-    100,
-    120
-  ],
+  "editor.rulers": [80, 100, 120],
   "editor.suggest.localityBonus": true,
   "editor.suggestSelection": "first",
   "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.wordWrap": "off",
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "on"
+  },
   "emmet.includeLanguages": {
     "ejs": "html",
     "erb": "erb",
@@ -182,22 +183,12 @@
   "vim.hlsearch": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "after": [
-        "g",
-        "j"
-      ],
-      "before": [
-        "j"
-      ]
+      "after": ["g", "j"],
+      "before": ["j"]
     },
     {
-      "after": [
-        "g",
-        "k"
-      ],
-      "before": [
-        "k"
-      ]
+      "after": ["g", "k"],
+      "before": ["k"]
     }
   ],
   "vim.statusBarColorControl": false,
@@ -241,5 +232,8 @@
   "yaml.schemas": {},
   "editor.inlineSuggest.enabled": true,
   "workbench.tree.indent": 16,
-  "githubPullRequests.pullBranch": "never"
+  "githubPullRequests.pullBranch": "never",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
