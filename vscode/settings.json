@@ -180,6 +180,7 @@
   "textlint.autoFixOnSave": true,
   "typescript.implementationsCodeLens.enabled": true,
   "typescript.referencesCodeLens.enabled": true,
+  "typescript.preferences.importModuleSpecifier": "project-relative",
   "vim.disableExtension": false,
   "vim.easymotion": false,
   "vim.easymotionKeys": "sdfghjkloiurewnm",
