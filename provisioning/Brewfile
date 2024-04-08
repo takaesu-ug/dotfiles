@@ -90,6 +90,7 @@ brew "yt-dlp"
 # brew "zsh"
 
 cask "appcleaner"
+cask "arc" # ブラウザ
 cask "aws-vault"
 cask "docker", args: { appdir: "/Applications" }
 cask "font-ricty-diminished"
