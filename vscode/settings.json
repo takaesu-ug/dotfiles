@@ -180,7 +180,8 @@
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1",
-    "CW_NEW_SESSION": "1"
+    "CW_NEW_SESSION": "1",
+    "Q_NEW_SESSION": "1"
   },
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.shell.osx": "zsh",
@@ -255,4 +256,7 @@
     "!Split sequence"
   ],
   "yaml.schemas": {},
+  "color-highlight.matchHslWithNoFunction": true,
+  "color-highlight.matchRgbWithNoFunction": true,
+  "color-highlight.markerType": "dot-after",
 }

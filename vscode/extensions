@@ -1,3 +1,4 @@
+amazonwebservices.codewhisperer-for-command-line-companion
 biomejs.biome
 bradlc.vscode-tailwindcss
 bung87.vscode-gemfile
@@ -10,6 +11,7 @@ donjayamanne.githistory
 dzhavat.css-flexbox-cheatsheet
 eamodio.gitlens
 esbenp.prettier-vscode
+expo.vscode-expo-tools
 ezforo.copy-relative-path-and-line-numbers
 figma.figma-vscode-extension
 formulahendry.auto-close-tag
@@ -27,6 +29,7 @@ harg.iceberg
 hashicorp.terraform
 hediet.vscode-drawio
 hikionori.kanagawa-vscode-theme
+jock.svg
 johnpapa.vscode-peacock
 karunamurti.haml
 mechatroner.rainbow-csv
@@ -44,6 +47,7 @@ ms-vscode-remote.remote-containers
 ms-vscode.makefile-tools
 ms-vsliveshare.vsliveshare
 ms-vsliveshare.vsliveshare-pack
+naumovs.color-highlight
 prisma.prisma
 redhat.vscode-yaml
 ryu1kn.partial-diff
@@ -52,12 +56,13 @@ shardulm94.trailing-spaces
 shd101wyy.markdown-preview-enhanced
 shopify.ruby-lsp
 unifiedjs.vscode-mdx
+usernamehw.errorlens
 visualstudioexptteam.intellicode-api-usage-examples
 visualstudioexptteam.vscodeintellicode
 vscodevim.vim
 wayou.vscode-todo-highlight
-withfig.fig
 wmaurer.change-case
 wyze.theme-hybrid-next
 xrc-inc.jsonnet-formatter
+yoavbls.pretty-ts-errors
 zhuangtongfa.material-theme
