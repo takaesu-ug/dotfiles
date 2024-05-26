@@ -259,4 +259,8 @@
   "color-highlight.matchHslWithNoFunction": true,
   "color-highlight.matchRgbWithNoFunction": true,
   "color-highlight.markerType": "dot-after",
+  "prisma.showPrismaDataPlatformNotification": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "prettify-ts.enableHover": true,
+  "prettify-ts.viewNestedTypes": true,
 }

@@ -47,6 +47,7 @@ ms-vscode-remote.remote-containers
 ms-vscode.makefile-tools
 ms-vsliveshare.vsliveshare
 ms-vsliveshare.vsliveshare-pack
+mylesmurphy.prettify-ts
 naumovs.color-highlight
 prisma.prisma
 redhat.vscode-yaml
