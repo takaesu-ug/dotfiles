@@ -57,6 +57,7 @@ brew "mysql-client"
 brew "nginx"
 brew "ngrep"
 brew "nkf"
+brew "smudge/smudge/nightlight"
 brew "nss" # mkcertで使う
 brew "openssl"
 # brew "pandoc"  # http://sky-y.github.io/site-pandoc-jp/users-guide/
