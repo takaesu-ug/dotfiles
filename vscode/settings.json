@@ -187,7 +187,7 @@
   "terminal.integrated.shell.osx": "zsh",
   "textlint.autoFixOnSave": true,
   "typescript.implementationsCodeLens.enabled": true,
-  "typescript.preferences.importModuleSpecifier": "project-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.referencesCodeLens.enabled": true,
   "vim.disableExtension": false,
   "vim.easymotion": false,
