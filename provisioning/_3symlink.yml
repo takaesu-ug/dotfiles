@@ -33,6 +33,8 @@
         dest: '~/.bundle'
       - src:  '~/dotfiles/.config/karabiner/'
         dest: '~/.config/karabiner'
+      - src:  '~/dotfiles/.config/wezterm/'
+        dest: '~/.config/wezterm'
       - src:  '~/dotfiles/.peco/'
         dest: '~/.peco'
       - src:  '~/dotfiles/.docker/config.json'

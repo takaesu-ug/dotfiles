@@ -153,6 +153,7 @@ cask "visual-studio-code"
 # cask "vivaldi"
 cask "vysor" # スマホミラーリングアプリ
 cask "webstorm"
+cask "wezterm"
 # cask "xmind"
 # cask "xquartz"
 cask "zed"
