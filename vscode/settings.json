@@ -263,4 +263,5 @@
   "github.copilot.editor.enableAutoCompletions": true,
   "prettify-ts.enableHover": true,
   "prettify-ts.viewNestedTypes": true,
+  "prettify-ts.maxDepth": 2,
 }
