@@ -10,10 +10,15 @@ config.color_scheme = 'Hybrid'
 
 -- フォント
 config.font_size = 17.0
-config.font = wezterm.font 'JetBrains Mono'
+config.font = wezterm.font_with_fallback {
+    'JetBrains Mono',
+    'Ricty Diminished Discord',
+    -- 'Menlo',
+}
+
 
 -- 背景の非透過率（1なら完全に透過させない）
-config.window_background_opacity = 0.85
+config.window_background_opacity = 0.9
 
 -- config.enable_scroll_bar = true
 -- config.tab_bar_at_bottom = true
