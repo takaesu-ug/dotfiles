@@ -45,6 +45,9 @@
     "Wareki"
   ],
   "code-runner.runInTerminal": true,
+  "color-highlight.markerType": "dot-after",
+  "color-highlight.matchHslWithNoFunction": true,
+  "color-highlight.matchRgbWithNoFunction": true,
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
@@ -64,11 +67,7 @@
     "strings": "on"
   },
   "editor.renderControlCharacters": true,
-  "editor.rulers": [
-    80,
-    100,
-    120
-  ],
+  "editor.rulers": [80, 100, 120],
   "editor.suggest.localityBonus": true,
   "editor.suggestSelection": "first",
   "editor.unicodeHighlight.nonBasicASCII": false,
@@ -89,6 +88,9 @@
   "flow.useNPMPackagedFlow": true,
   "git.ignoreMissingGitWarning": true,
   "git.suggestSmartCommit": false,
+  "github.copilot.chat.localeOverride": "ja",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
   "githubPullRequests.pullBranch": "never",
   "gitlens.advanced.messages": {
     "suppressFileNotUnderSourceControlWarning": true,
@@ -167,6 +169,10 @@
       "value": "#557c9b"
     }
   ],
+  "prettify-ts.enableHover": true,
+  "prettify-ts.maxDepth": 2,
+  "prettify-ts.viewNestedTypes": true,
+  "prisma.showPrismaDataPlatformNotification": false,
   "python.languageServer": "Default",
   "redhat.telemetry.enabled": true,
   "ruby.intellisense": "rubyLocate",
@@ -179,8 +185,8 @@
   "tabnine.experimentalAutoImports": true,
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1",
     "CW_NEW_SESSION": "1",
+    "FIG_NEW_SESSION": "1",
     "Q_NEW_SESSION": "1"
   },
   "terminal.integrated.fontSize": 14,
@@ -195,22 +201,12 @@
   "vim.hlsearch": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "after": [
-        "g",
-        "j"
-      ],
-      "before": [
-        "j"
-      ]
+      "after": ["g", "j"],
+      "before": ["j"]
     },
     {
-      "after": [
-        "g",
-        "k"
-      ],
-      "before": [
-        "k"
-      ]
+      "after": ["g", "k"],
+      "before": ["k"]
     }
   ],
   "vim.statusBarColorControl": false,
@@ -256,12 +252,5 @@
     "!Split sequence"
   ],
   "yaml.schemas": {},
-  "color-highlight.matchHslWithNoFunction": true,
-  "color-highlight.matchRgbWithNoFunction": true,
-  "color-highlight.markerType": "dot-after",
-  "prisma.showPrismaDataPlatformNotification": false,
-  "github.copilot.editor.enableAutoCompletions": true,
-  "prettify-ts.enableHover": true,
-  "prettify-ts.viewNestedTypes": true,
-  "prettify-ts.maxDepth": 2,
+  "application.shellEnvironmentResolutionTimeout": 30
 }
