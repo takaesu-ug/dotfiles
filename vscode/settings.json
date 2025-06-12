@@ -23,6 +23,7 @@
     "editor.tabSize": 4
   },
   "[ruby]": {
+    "editor.formatOnSave": true,
     "editor.defaultFormatter": "Shopify.ruby-lsp",
     "editor.insertSpaces": true,
     "editor.tabSize": 2
@@ -33,17 +34,8 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "bracket-pair-colorizer-2.depreciation-notice": false,
+  "application.shellEnvironmentResolutionTimeout": 30,
   "breadcrumbs.enabled": true,
-  "cSpell.userWords": [
-    "awscdk",
-    "awscli",
-    "Dynalist",
-    "Raycast",
-    "tokubai",
-    "Vimmer",
-    "Wareki"
-  ],
   "code-runner.runInTerminal": true,
   "color-highlight.markerType": "dot-after",
   "color-highlight.matchHslWithNoFunction": true,
@@ -51,9 +43,9 @@
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
+    // "source.organizeImports": "explicit", これを有効にすると、importの順番が変わるので無効にする
     "source.addMissingImports": "explicit",
-    "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "explicit"
+    "source.fixAll.eslint": "explicit"
   },
   "editor.fontFamily": "'JetBrains Mono', 'BIZ UDGothic', 'Ricty Diminished Discord', Menlo, Monaco, 'Courier New'",
   "editor.fontLigatures": true,
@@ -85,17 +77,18 @@
   "files.autoSaveDelay": 5000,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
-  "flow.useNPMPackagedFlow": true,
   "git.ignoreMissingGitWarning": true,
   "git.suggestSmartCommit": false,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.completionContext.typescript.mode": "on",
   "github.copilot.chat.localeOverride": "ja",
-  "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.nextEditSuggestions.fixes": true,
   "githubPullRequests.pullBranch": "never",
   "gitlens.advanced.messages": {
     "suppressFileNotUnderSourceControlWarning": true,
-    "suppressLineUncommittedWarning": true,
-    "suppressShowKeyBindingsNotice": true
+    "suppressLineUncommittedWarning": true
   },
   "gitlens.codeLens.enabled": false,
   "gitlens.currentLine.enabled": true,
@@ -103,7 +96,7 @@
   "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
   "hediet.vscode-drawio.offline": false,
-  "hediet.vscode-drawio.theme": "atlas",
+  "hediet.vscode-drawio.theme": "kennedy",
   "javascript.preferences.quoteStyle": "single",
   "javascript.referencesCodeLens.enabled": true,
   "javascript.validate.enable": false,
@@ -169,20 +162,8 @@
       "value": "#557c9b"
     }
   ],
-  "prettify-ts.enableHover": true,
   "prettify-ts.maxDepth": 2,
-  "prettify-ts.viewNestedTypes": true,
-  "prisma.showPrismaDataPlatformNotification": false,
   "python.languageServer": "Default",
-  "redhat.telemetry.enabled": true,
-  "ruby.intellisense": "rubyLocate",
-  "ruby.locate": {
-    "exclude": "{**/@(test|spec|tmp|.*),**/@(test|spec|tmp|.*)/**,**/*_spec.rb}",
-    "include": "**/*.rb"
-  },
-  "ruby.useLanguageServer": true,
-  "solargraph.useBundler": true,
-  "tabnine.experimentalAutoImports": true,
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.env.osx": {
     "CW_NEW_SESSION": "1",
@@ -190,8 +171,6 @@
     "Q_NEW_SESSION": "1"
   },
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.shell.osx": "zsh",
-  "textlint.autoFixOnSave": true,
   "typescript.implementationsCodeLens.enabled": true,
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.referencesCodeLens.enabled": true,
@@ -212,15 +191,13 @@
   "vim.statusBarColorControl": false,
   "vim.useSystemClipboard": true,
   "vim.visualstar": true,
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "window.nativeTabs": true,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.colorCustomizations": {
     "tab.activeBackground": "#626262"
   },
-  "workbench.colorTheme": "Hybrid Next (Gray Background)",
+  "workbench.colorTheme": "Hybrid Next Plus",
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.indent": 16,
   "yaml.customTags": [
     "!And",
@@ -252,5 +229,5 @@
     "!Split sequence"
   ],
   "yaml.schemas": {},
-  "application.shellEnvironmentResolutionTimeout": 30
+  "rubyLsp.formatter": "rubocop"
 }
