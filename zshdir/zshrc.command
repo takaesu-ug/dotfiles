@@ -9,6 +9,7 @@ alias relogin='exec $SHELL -l'
 alias ls='eza'
 alias l='ls -lah'
 alias ll='ls -lh'
+alias lll='ls -lh -snew'
 alias gfa='git fetch --all --prune'
 
 # http://qiita.com/yusabana/items/b5cc2a706be8c031043e
