@@ -96,7 +96,7 @@ cask "appcleaner"
 cask "arc" # ブラウザ
 cask "aws-vault"
 cask "claude"
-cask "docker", args: { appdir: "/Applications" }
+# cask "docker", args: { appdir: "/Applications" }
 cask "font-ricty-diminished"
 cask "font-jetbrains-mono"
 cask "font-noto-sans-cjk-jp"
