@@ -12,7 +12,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[markdown]": {
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "off"
   },
   "[prisma]": {
     "editor.defaultFormatter": "Prisma.prisma"
