@@ -66,6 +66,7 @@ brew "openssl"
 brew "knqyf263/pet/pet"
 brew "kyoshidajp/tosa/tosa" # githubのPRを検出する https://qiita.com/kyoshidajp/items/18d5385ef8375c7bcd14
 brew "oven-sh/bun/bun"
+brew "go-parquet-tools"
 brew "plantuml"
 brew "pgcli"
 brew "pstree"
