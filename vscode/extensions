@@ -2,6 +2,7 @@ altimateai.vscode-altimate-mcp-server
 amazonwebservices.codewhisperer-for-command-line-companion
 anthropic.claude-code
 ashishalex.dataform-lsp-vscode
+asvetliakov.vscode-neovim
 biomejs.biome
 bradlc.vscode-tailwindcss
 christian-kohler.path-intellisense
@@ -64,7 +65,6 @@ shopify.ruby-lsp
 sorbet.sorbet-vscode-extension
 unifiedjs.vscode-mdx
 usernamehw.errorlens
-vscodevim.vim
 wayou.vscode-todo-highlight
 wmaurer.change-case
 xrc-inc.jsonnet-formatter

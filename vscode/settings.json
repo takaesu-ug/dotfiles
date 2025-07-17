@@ -260,5 +260,6 @@
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.guides.highlightActiveIndentation": "always",
   "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
-  "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons"
+  "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons",
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim"
 }
