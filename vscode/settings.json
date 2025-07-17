@@ -36,12 +36,10 @@
   },
   "application.shellEnvironmentResolutionTimeout": 30,
   "breadcrumbs.enabled": true,
-  "code-runner.runInTerminal": true,
   "color-highlight.markerType": "dot-after",
   "color-highlight.matchHslWithNoFunction": true,
   "color-highlight.matchRgbWithNoFunction": true,
   "editor.accessibilitySupport": "off",
-  "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
     // "source.organizeImports": "explicit", これを有効にすると、importの順番が変わるので無効にする
     "source.addMissingImports": "explicit",
@@ -196,7 +194,6 @@
   "workbench.colorCustomizations": {
     "tab.activeBackground": "#626262"
   },
-  "workbench.colorTheme": "Hybrid Next Plus",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.tree.indent": 16,
   "yaml.customTags": [
@@ -257,5 +254,11 @@
     "workspaceSymbol": true,
     "signatureHelp": true,
     "typeHierarchy": true
-  }
+  },
+  "prettier.bracketSameLine": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.highlightActiveIndentation": "always",
+  "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
+  "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons"
 }

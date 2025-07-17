@@ -68,5 +68,13 @@
     "key": "ctrl+space",
     "command": "-editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "bigqueryRunner.dryRun"
+  },
+  {
+    "key": "shift+cmd+enter",
+    "command": "bigqueryRunner.run"
   }
 ]
