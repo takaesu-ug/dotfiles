@@ -54,7 +54,7 @@ brew "mpg123"
 brew "mkcert"  # localでsslのCA作るやつ
 brew "mycli"
 brew "mysql-client"
-# brew "neovim"
+brew "neovim"
 brew "nginx"
 brew "ngrep"
 brew "nkf"
