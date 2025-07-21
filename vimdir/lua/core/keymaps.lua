@@ -42,7 +42,7 @@ keymap('n', '1', '0', opts)
 -- Escの２回押しで検索のハイライト消去
 keymap('n', '<ESC><ESC>', ':nohlsearch<CR><ESC>', opts)
 
--- カスタムコマンド（Vim互換のために維持）
+-- カスタムコマンド
 vim.cmd([[
   :command! Tailw :%s/\s\+$//ge
   :command! Tab2w :%s/\t/  /ge

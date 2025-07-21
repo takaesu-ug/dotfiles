@@ -10,9 +10,9 @@ vim.cmd('filetype plugin indent off')
 -- コアモジュールの読み込み
 require('core')
 
--- -- UIモジュールの読み込み
--- require('ui')
--- 
+-- UIモジュールの読み込み
+require('ui')
+
 -- -- プラグインの読み込み
 -- require('plugins')
 

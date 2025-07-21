@@ -6,5 +6,5 @@ require('core.options')
 -- キーマッピングの読み込み
 require('core.keymaps')
 
--- -- 自動コマンドの読み込み
--- require('core.autocommands')
+-- 自動コマンドの読み込み
+require('core.autocommands')

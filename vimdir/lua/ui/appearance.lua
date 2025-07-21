@@ -21,7 +21,7 @@ cmd([[
   highlight PmenuSel cterm=reverse ctermfg=33 ctermbg=222 gui=reverse guifg=#3399ff guibg=#f0e68c
 ]])
 
--- ステータスライン設定（lightlineを使用）
+-- ステータスライン設定(2:常に表示)
 opt.laststatus = 2
 
 -- 全角スペースの表示
