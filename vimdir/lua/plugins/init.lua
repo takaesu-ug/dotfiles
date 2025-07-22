@@ -114,19 +114,14 @@ local plugins = {
   },
 
   -- インデントガイド
-  {
-    'nathanaelkane/vim-indent-guides',
-    event = "VimEnter",
-    config = function()
-      require('plugins.configs.indent-guides')
-    end,
-  },
+  require("plugins.configs.treesitter"),
+  require("plugins.configs.indent-blankline"),
 
---  -- カラープレビュー
---  {
---      'lilydjwg/colorizer',
---      cmd = { 'ColorHighlight', 'ColorClear', 'ColorToggle' },
---  },
+  -- カラープレビュー
+  {
+    'lilydjwg/colorizer',
+    cmd = { 'ColorHighlight', 'ColorClear', 'ColorToggle' },
+  },
 }
 
 -- lazy.nvimのセットアップ

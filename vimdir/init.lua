@@ -13,8 +13,8 @@ require('core')
 -- UIモジュールの読み込み
 require('ui')
 
--- -- プラグインの読み込み
--- require('plugins')
+-- プラグインの読み込み
+require('plugins')
 
 -- ファイルタイプの有効化（設定読み込み後）
 vim.cmd('filetype on')
