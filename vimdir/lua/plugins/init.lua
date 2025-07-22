@@ -68,10 +68,7 @@ local plugins = {
 --  },
 --
   -- Git
-  {
-      'tpope/vim-fugitive',
-      cmd = { 'Git', 'Gstatus', 'Gblame', 'Gpush', 'Gpull' },
-  },
+  require("plugins.configs.fugitive"),
 
 --  -- コメント
 --  {
