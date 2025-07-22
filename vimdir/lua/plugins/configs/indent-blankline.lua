@@ -1,6 +1,7 @@
 -- lua/plugins/configs/indent-blankline.lua
 return {
   "lukas-reineke/indent-blankline.nvim",
+  dependencies = { "nvim-treesitter/nvim-treesitter" },
   main = "ibl",
   event = "BufReadPost",
   config = function()

@@ -100,22 +100,13 @@ local plugins = {
 --      end,
 --  },
 
-  -- ステータスライン
-  {
-    'itchyny/lightline.vim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-      require('plugins.configs.lightline')
-    end,
-  },
-
   -- インデントガイド
   require("plugins.configs.treesitter"),
   require("plugins.configs.indent-blankline"),
-
   -- カラープレビュー
   require("plugins.configs.colorizer"),
+  -- ステータスライン
+  require('plugins.configs.lightline'),
 }
 
 -- lazy.nvimのセットアップ
