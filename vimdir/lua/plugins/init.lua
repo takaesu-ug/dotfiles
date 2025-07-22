@@ -118,10 +118,7 @@ local plugins = {
   require("plugins.configs.indent-blankline"),
 
   -- カラープレビュー
-  {
-    'lilydjwg/colorizer',
-    cmd = { 'ColorHighlight', 'ColorClear', 'ColorToggle' },
-  },
+  require("plugins.configs.colorizer"),
 }
 
 -- lazy.nvimのセットアップ
