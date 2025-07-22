@@ -1,12 +1,5 @@
 -- plugins/configs/lightline.lua
 
--- ファイル名表示関数
-local function lightline_filename()
-  local filename = vim.fn.expand('%') ~= '' and vim.fn.expand('%') or '[No Name]'
-  local modified = vim.bo.modified and ' +' or ''
-  return filename .. modified
-end
-
 -- lightline設定
 vim.g.lightline = {
   colorscheme = 'powerline',
@@ -28,5 +21,11 @@ vim.g.lightline = {
   }
 }
 
--- ファイル名表示関数をグローバルに登録
-_G.LightlineFilename = lightline_filename
+-- Vimscript関数として定義
+vim.cmd([[
+function! LightlineFilename()
+  let filename = expand('%') !=# '' ? expand('%') : '[No Name]'
+  let modified = &modified ? ' +' : ''
+  return filename . modified
+endfunction
+]])
