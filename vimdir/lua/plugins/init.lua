@@ -69,15 +69,9 @@ local plugins = {
 --
   -- Git
   require("plugins.configs.fugitive"),
+  -- コメント
+  require('plugins.configs.tcomment'),
 
---  -- コメント
---  {
---      'tomtom/tcomment_vim',
---      config = function()
---          require('plugins.configs.tcomment')
---      end,
---  },
---
 --  -- 検索置換サポート
 --  { 'tpope/vim-abolish' },
 --
