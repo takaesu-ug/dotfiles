@@ -5,7 +5,7 @@ return {
   main = "ibl",
   event = "BufReadPost",
   config = function()
-    vim.api.nvim_set_hl(0, "IblScope", { fg = "#FFFF00" })
+    vim.api.nvim_set_hl(0, "IblScope", { fg = "#eeefa0" })
 
     require("ibl").setup({
       indent = {
@@ -14,7 +14,7 @@ return {
       },
       scope = {
         enabled = true,
-        char = "|",         -- スコープも同じ文字
+        char = "|",        -- スコープも同じ文字
         show_start = true,
         show_end = true,
         highlight = "IblScope",
