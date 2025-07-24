@@ -172,23 +172,6 @@
   "typescript.implementationsCodeLens.enabled": true,
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.referencesCodeLens.enabled": true,
-  "vim.disableExtension": false,
-  "vim.easymotion": false,
-  "vim.easymotionKeys": "sdfghjkloiurewnm",
-  "vim.hlsearch": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "after": ["g", "j"],
-      "before": ["j"]
-    },
-    {
-      "after": ["g", "k"],
-      "before": ["k"]
-    }
-  ],
-  "vim.statusBarColorControl": false,
-  "vim.useSystemClipboard": true,
-  "vim.visualstar": true,
   "window.nativeTabs": true,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.colorCustomizations": {
@@ -261,5 +244,9 @@
   "editor.guides.highlightActiveIndentation": "always",
   "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
   "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons",
-  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim"
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "workbench.settings.applyToAllProfiles": []
 }
