@@ -236,7 +236,7 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
   "editor.guides.bracketPairs": "active",
-  "workbench.colorTheme": "Tomorrow Night Blue",
+  "workbench.colorTheme": "One Monokai",
   "workbench.colorCustomizations": {
     "tab.activeBackground": "#0b7209",
     "editorIndentGuide.activeBackground1": "#fff",
