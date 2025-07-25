@@ -96,6 +96,8 @@ local plugins = {
 
   -- syntax
   require("plugins.configs.treesitter"),
+  -- matchup
+  require('plugins.configs.matchup'),
   -- インデントガイド
   require("plugins.configs.indent-blankline"),
   -- カラープレビュー
