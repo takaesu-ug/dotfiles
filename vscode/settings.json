@@ -239,12 +239,8 @@
   "workbench.colorTheme": "One Monokai",
   "workbench.colorCustomizations": {
     "tab.activeBackground": "#0b7209",
-    "editorIndentGuide.activeBackground1": "#fff",
-    "editorIndentGuide.activeBackground2": "#fff",
-    "editorIndentGuide.activeBackground3": "#fff",
-    "editorIndentGuide.activeBackground4": "#fff",
-    "editorIndentGuide.activeBackground5": "#fff",
-    "editorIndentGuide.activeBackground6": "#fff"
+    "editorIndentGuide.background1": "#474747",
+    "editorIndentGuide.activeBackground1": "#ffffff"
   },
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.tree.indent": 16,
