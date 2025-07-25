@@ -94,8 +94,9 @@ local plugins = {
 --      end,
 --  },
 
-  -- インデントガイド
+  -- syntax
   require("plugins.configs.treesitter"),
+  -- インデントガイド
   require("plugins.configs.indent-blankline"),
   -- カラープレビュー
   require("plugins.configs.colorizer"),

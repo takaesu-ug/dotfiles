@@ -2,6 +2,10 @@
 return {
   "lukas-reineke/indent-blankline.nvim",
   dependencies = { "nvim-treesitter/nvim-treesitter" },
+  cond = function()
+    -- vscodeではないときに有効にする
+    return vim.g.vscode ~= 1
+  end,
   main = "ibl",
   event = "BufReadPost",
   config = function()
