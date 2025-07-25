@@ -98,7 +98,6 @@
   "javascript.preferences.quoteStyle": "single",
   "javascript.referencesCodeLens.enabled": true,
   "javascript.validate.enable": false,
-  "json.schemas": [],
   "markdown-preview-enhanced.liveUpdate": false,
   "markdown.preview.breaks": true,
   "notebook.editorOptionsCustomizations": null,
@@ -168,17 +167,12 @@
     "FIG_NEW_SESSION": "1",
     "Q_NEW_SESSION": "1"
   },
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontSize": 15,
   "typescript.implementationsCodeLens.enabled": true,
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.referencesCodeLens.enabled": true,
   "window.nativeTabs": true,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "workbench.colorCustomizations": {
-    "tab.activeBackground": "#626262"
-  },
-  "workbench.editor.enablePreviewFromQuickOpen": false,
-  "workbench.tree.indent": 16,
   "yaml.customTags": [
     "!And",
     "!And sequence",
@@ -239,14 +233,24 @@
     "typeHierarchy": true
   },
   "prettier.bracketSameLine": true,
-  "editor.guides.bracketPairs": "active",
+  "editor.bracketPairColorization.enabled": true,
   "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.guides.highlightActiveIndentation": "always",
-  "workbench.colorTheme": "Monokai Dimmed",
-  "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons",
+  "editor.guides.bracketPairs": "active",
+  "workbench.colorTheme": "Tomorrow Night Blue",
+  "workbench.colorCustomizations": {
+    "tab.activeBackground": "#0b7209",
+    "editorIndentGuide.activeBackground1": "#fff",
+    "editorIndentGuide.activeBackground2": "#fff",
+    "editorIndentGuide.activeBackground3": "#fff",
+    "editorIndentGuide.activeBackground4": "#fff",
+    "editorIndentGuide.activeBackground5": "#fff",
+    "editorIndentGuide.activeBackground6": "#fff"
+  },
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.tree.indent": 16,
   "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
-  "workbench.settings.applyToAllProfiles": []
+  "editor.guides.highlightActiveIndentation": "always"
 }
