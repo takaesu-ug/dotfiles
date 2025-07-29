@@ -5,10 +5,6 @@
 secret/*
 !secret/.keep
 
-vimdir/autoload/plug.vim
-vimdir/autoload/plug.vim.old
-vimdir/plugged/
-vimdir/.mypy_cache
 vimdir/sessions/
 vimdir/.netrwhist
 
