@@ -32,7 +32,9 @@ fi
 
 ### 最後に読み込ませたい
 # direnv用の設定
-eval "$(direnv hook zsh)"
+if (( $+commands[direnv] )); then
+  eval "$(direnv hook zsh)"
+fi
 
 # pnpm
 export PNPM_HOME="$HOME/Library/pnpm"
@@ -42,6 +44,10 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+# mise用の設定
+if (( $+commands[mise] )); then
+  eval "$(mise activate zsh)"
+fi
 
 [[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
 

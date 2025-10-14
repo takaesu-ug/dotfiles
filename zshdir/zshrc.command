@@ -5,8 +5,11 @@ alias mv='mv -i'
 alias x='exit'
 alias tree='tree -F -C --dirsfirst'
 alias relogin='exec $SHELL -l'
+
+if (( $+commands[eza] )); then
+  alias ls='eza'
+fi
 # alias ls='ls -G'
-alias ls='eza'
 alias l='ls -lah'
 alias ll='ls -lh'
 alias lll='ls -lah -snew'
@@ -15,9 +18,11 @@ alias gfa='git fetch --all --prune'
 # http://qiita.com/yusabana/items/b5cc2a706be8c031043e
 LESS=-qR # ビープ音を消して、ANSIカラーシーケンス
 
-alias vi='nvim'
 alias vim='nvim'
 alias nvi='nvim'
+if (( $+commands[nvim] )); then
+  alias vi='nvim'
+fi
 
 # alias b='hub browse $(ghq list | fzf | cut -d "/" -f 2,3)'
 # シングルコートのエスケープは '\'' とする必要がある。（イメージ \' とやっている感じ）
