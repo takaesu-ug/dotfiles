@@ -1,5 +1,6 @@
 [settings]
-lockfile = true
+experimental = true
+# lockfile = true
 
 [tools]
 node = "22"
@@ -7,6 +8,7 @@ python = "3.12"
 ruby = "3"
 ripgrep = "latest"
 uv = "latest"
+gh = "latest"
 
 [tasks.apps]
 description = "Brewfile に基づいて GUI アプリをインストール/更新"
@@ -22,4 +24,5 @@ run = "mise install"  # tools 節のツールをインストール
 [tasks.zsh]
 description = "zshのセットアップ"
 run = """
+bash -c "$(curl --fail --show-error --silent --location https://raw.githubusercontent.com/zdharma-continuum/zinit/HEAD/scripts/install.sh)"
 """
