@@ -1,0 +1,25 @@
+[settings]
+lockfile = true
+
+[tools]
+node = "22"
+python = "3.12"
+ruby = "3"
+ripgrep = "latest"
+uv = "latest"
+
+[tasks.apps]
+description = "Brewfile に基づいて GUI アプリをインストール/更新"
+run = """
+brew bundle check --file=./Brewfile && brew bundle --file=./Brewfile --no-upgrade
+"""
+
+[tasks.setup]
+description = "開発環境をまとめて用意（ツール＋アプリ）"
+depends = ["apps"]
+run = "mise install"  # tools 節のツールをインストール
+
+[tasks.zsh]
+description = "zshのセットアップ"
+run = """
+"""
