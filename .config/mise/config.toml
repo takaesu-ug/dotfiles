@@ -1,6 +1,7 @@
 [settings]
 experimental = true
 # lockfile = true
+pipx.uvx = true
 
 [tools]
 node = "22"
