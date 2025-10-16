@@ -5,10 +5,11 @@ experimental = true
 [tools]
 node = "22"
 python = "3.12"
-ruby = "3"
+# ruby = "3.3"
 ripgrep = "latest"
 uv = "latest"
 gh = "latest"
+"npm:@openai/codex" = "latest"
 
 [tasks.apps]
 description = "Brewfile に基づいて GUI アプリをインストール/更新"
