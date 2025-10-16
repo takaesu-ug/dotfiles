@@ -1,5 +1,6 @@
-# ref
-# https://kakakakakku.hatenablog.com/entry/2020/09/17/124653
+# 既存環境からBrewfile作成：brew bundle dump --describe --force
+# 事前チェック：brew bundle check
+# 実行（不足分だけ入れる）：brew bundle --no-upgrade
 
 tap "argon/mas"
 tap "homebrew/bundle"
