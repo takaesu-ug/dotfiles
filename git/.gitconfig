@@ -9,9 +9,9 @@
 [color]
     ui = auto
 [pager]
-    log = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less -q -X -F
-    show = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less -q -X -F
-    diff = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less -q -X -F
+#    log = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less -q -X -F
+#    show = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less -q -X -F
+#    diff = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less -q -X -F
 [alias]
     st = status
     stt = status -s -b
