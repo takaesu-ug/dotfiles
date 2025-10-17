@@ -8,8 +8,9 @@ alias relogin='exec $SHELL -l'
 
 if (( $+commands[eza] )); then
   alias ls='eza'
+else
+  alias ls='ls -GF'
 fi
-# alias ls='ls -G'
 alias l='ls -lah'
 alias ll='ls -lh'
 alias lll='ls -lah -snew'

@@ -11,6 +11,9 @@ ripgrep = "latest"
 uv = "latest"
 gh = "latest"
 "npm:@openai/codex" = "latest"
+bun = "latest"
+rust = "latest"
+"cargo:eza" = "latest"
 
 [tasks.apps]
 description = "Brewfile に基づいて GUI アプリをインストール/更新"

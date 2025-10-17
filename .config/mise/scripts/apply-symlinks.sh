@@ -7,6 +7,7 @@ declare -a LINKS=(
   "${HOME}/.zshrc::${DOTFILES_DIR}/.zshrc"
   "${HOME}/.zlogin::${DOTFILES_DIR}/.zlogin"
   "${HOME}/.zshenv::${DOTFILES_DIR}/.zshenv"
+  "${HOME}/.zprofile::${DOTFILES_DIR}/.zprofile"
   "${HOME}/.gitconfig::${DOTFILES_DIR}/git/.gitconfig"
   "${HOME}/.gitconfig.local::${DOTFILES_DIR}/git/.gitconfig.local"
   "${HOME}/.gitignore_global::${DOTFILES_DIR}/git/.gitignore_global"
