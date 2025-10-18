@@ -2,18 +2,13 @@
 # 事前チェック：brew bundle check
 # 実行（不足分だけ入れる）：brew bundle --no-upgrade
 
-# tap "argon/mas"
-# tap "homebrew/bundle"
-# tap "homebrew/cask-fonts"
-# tap "homebrew/cask-versions"
-# tap "lucagrulla/cw"
-# tap "knqyf263/pet"
-# tap "kyoshidajp/tosa"
 
-
-brew "mise"
-brew "tig"
-brew "openssl@3"
+brew 'git'
+brew 'envchain'
+brew 'mise'
+brew 'tig'
+brew 'openssl@3'
+brew 'tmux'
 
 # brew "asciinema"
 # brew "aicommits"
@@ -28,7 +23,6 @@ brew "openssl@3"
 # brew "direnv"
 # brew "ffmpeg"
 # brew "gh"
-# brew "git"
 # brew "gitleaks"
 # brew "gnuplot" # gnuplot コマンドで特定のデータからコマンドで簡単にグラフ化するツール
 # brew "highlight"
@@ -79,35 +73,37 @@ brew "openssl@3"
 # brew "whois"
 # brew "yt-dlp"
 
-cask "1password-cli"
-cask "chatgpt"
-cask "appcleaner"
-cask "arc" # ブラウザ
-cask "aws-vault"
-cask "claude"
-cask "font-ricty-diminished"
-cask "font-jetbrains-mono"
-cask "font-noto-sans-cjk-jp"
-cask "font-migu-1p"
-cask "bartender"
-cask "contexts"
-cask "cursor"
-cask "deepl"
-cask "discord"
-cask "dropbox"
-cask "figma"
-cask "google-cloud-sdk"
-cask "google-japanese-ime"
-cask "karabiner-elements"
-cask "obsidian"
-cask "onedrive"
-cask "orbstack"
-cask "raycast"
-cask "visual-studio-code"
-cask "notion"
-cask "zoom"
-cask "slack"
-# cask "iterm2"
+cask '1password-cli'
+cask 'chatgpt'
+cask 'appcleaner'
+cask 'arc' # ブラウザ
+cask 'aws-vault-binary'
+cask 'claude'
+cask 'font-ricty-diminished'
+cask 'font-jetbrains-mono'
+cask 'font-noto-sans-cjk-jp'
+cask 'font-migu-1p'
+cask 'bartender'
+cask 'contexts'
+cask 'cursor'
+cask 'deepl'
+cask 'discord'
+cask 'dropbox'
+cask 'figma'
+cask 'gcloud-cli'
+cask 'google-japanese-ime'
+cask 'karabiner-elements'
+cask 'obsidian'
+# cask 'onedrive'
+cask 'orbstack'
+cask 'raycast'
+cask 'visual-studio-code'
+cask 'notion'
+cask 'zoom'
+cask 'slack'
+cask 'iterm2'
+cask 'session-manager-plugin'
+
 # cask "temurin8"
 # # cask "android-platform-tools"
 # # cask "blisk" # 開発用ブラウザ(モバイル等も)

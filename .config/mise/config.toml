@@ -2,6 +2,7 @@
 experimental = true
 # lockfile = true
 pipx.uvx = true
+disable_backends = ["asdf"]
 
 [tasks.apps]
 description = "Brewfile に基づいて GUI アプリをインストール/更新"
@@ -35,8 +36,7 @@ rust = "latest"
 "cargo:eza" = "latest"
 "aqua:junegunn/fzf" = "latest"
 "aqua:x-motemen/ghq" = "latest"
-"aqua:mislav/hub" = "latest"
 "aqua:jqlang/jq" = "latest"
 "aqua:neovim/neovim" = "latest"
-"asdf:mise-plugins/mise-tmux" = "latest"
 "aqua:BurntSushi/ripgrep" = "latest"
+"aqua:aws/aws-cli" = "latest"
