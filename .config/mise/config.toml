@@ -3,18 +3,6 @@ experimental = true
 # lockfile = true
 pipx.uvx = true
 
-[tools]
-node = "22"
-python = "3.12"
-# ruby = "3.3"
-ripgrep = "latest"
-uv = "latest"
-gh = "latest"
-"npm:@openai/codex" = "latest"
-bun = "latest"
-rust = "latest"
-"cargo:eza" = "latest"
-
 [tasks.apps]
 description = "Brewfile に基づいて GUI アプリをインストール/更新"
 run = """
@@ -35,3 +23,20 @@ bash -c "$(curl --fail --show-error --silent --location https://raw.githubuserco
 [tasks.symlinks]
 description = "dotfiles からホームディレクトリへのシンボリックリンクを作成"
 run = "bash ~/.config/mise/scripts/apply-symlinks.sh"
+
+[tools]
+node = "22"
+python = "3.12"
+uv = "latest"
+gh = "latest"
+"npm:@openai/codex" = "latest"
+bun = "latest"
+rust = "latest"
+"cargo:eza" = "latest"
+"aqua:junegunn/fzf" = "latest"
+"aqua:x-motemen/ghq" = "latest"
+"aqua:mislav/hub" = "latest"
+"aqua:jqlang/jq" = "latest"
+"aqua:neovim/neovim" = "latest"
+"asdf:mise-plugins/mise-tmux" = "latest"
+"aqua:BurntSushi/ripgrep" = "latest"
