@@ -9,8 +9,10 @@ brew 'mise'
 brew 'tig'
 brew 'openssl@3'
 brew 'tmux'
+brew 'mysql-client' # Execute => brew link --force mysql-client
+brew 'libpq'  # (psql client) Execute => brew link --force libpq
 
-# brew "asciinema"
+# brew 'asciinema'
 # brew "aicommits"
 # brew "automake"
 # brew "ccat"
@@ -42,7 +44,6 @@ brew 'tmux'
 # brew "mpg123"
 # brew "mkcert"  # localでsslのCA作るやつ
 # brew "mycli"
-# brew "mysql-client"
 # brew "nginx"
 # brew "ngrep"
 # brew "nkf"
