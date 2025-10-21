@@ -25,10 +25,10 @@ declare -a LINKS=(
 #  "${HOME}/.docker/config.json::${DOTFILES_DIR}/.docker/config.json"
   "${HOME}/bin::${DOTFILES_DIR}/bin"
 #  "${HOME}/.ctags::${DOTFILES_DIR}/.ctags"
-#  "${HOME}/Library/Application Support/Code/User/settings.json::${DOTFILES_DIR}/vscode/settings.json"
-#  "${HOME}/Library/Application Support/Code/User/keybindings.json::${DOTFILES_DIR}/vscode/keybindings.json"
-#  "${HOME}/Library/Application Support/Code/User/snippets::${DOTFILES_DIR}/vscode/snippets"
-#  "${HOME}/.ideavimrc::${DOTFILES_DIR}/.ideavimrc"
+ "${HOME}/Library/Application Support/Code/User/settings.json::${DOTFILES_DIR}/vscode/settings.json"
+ "${HOME}/Library/Application Support/Code/User/keybindings.json::${DOTFILES_DIR}/vscode/keybindings.json"
+ "${HOME}/Library/Application Support/Code/User/snippets::${DOTFILES_DIR}/vscode/snippets"
+ "${HOME}/.ideavimrc::${DOTFILES_DIR}/.ideavimrc"
 
 #  "${HOME}/.config/pet::${HOME}/Dropbox/_config/pet"  # privateなgithubにおく
 )
