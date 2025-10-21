@@ -3,6 +3,7 @@ experimental = true
 # lockfile = true
 pipx.uvx = true
 disable_backends = ["asdf"]
+idiomatic_version_file_enable_tools = ["node", "ruby"]
 
 [tasks.apps]
 description = "Brewfile に基づいて GUI アプリをインストール/更新"
@@ -30,13 +31,16 @@ node = "22"
 python = "3.12"
 uv = "latest"
 gh = "latest"
-"npm:@openai/codex" = "latest"
 bun = "latest"
 rust = "latest"
-"cargo:eza" = "latest"
+ruby = "3"
 "aqua:junegunn/fzf" = "latest"
 "aqua:x-motemen/ghq" = "latest"
 "aqua:jqlang/jq" = "latest"
 "aqua:neovim/neovim" = "latest"
 "aqua:BurntSushi/ripgrep" = "latest"
 "aqua:aws/aws-cli" = "latest"
+"cargo:eza" = "latest"
+"npm:@openai/codex" = "latest"
+"npm:@yarnpkg/cli-dist" = "latest"
+deno = "latest"

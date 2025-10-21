@@ -21,19 +21,16 @@ declare -a LINKS=(
   "${HOME}/.config/karabiner::${DOTFILES_DIR}/.config/karabiner"
 #  "${HOME}/.config/wezterm::${DOTFILES_DIR}/.config/wezterm"
 #  "${HOME}/.config/ghostty::${DOTFILES_DIR}/.config/ghostty"
-#  "${HOME}/.peco::${DOTFILES_DIR}/.peco"
+#  "${HOME}/.peco::${DOTFILES_DIR}/.peco" # pecoはもういらない
 #  "${HOME}/.docker/config.json::${DOTFILES_DIR}/.docker/config.json"
   "${HOME}/bin::${DOTFILES_DIR}/bin"
-#  "${HOME}/.config/hub::${HOME}/Dropbox/_config/hub"
-#  "${HOME}/.config/whichpr::${HOME}/Dropbox/_config/whichpr"
-#  "${HOME}/.config/memo::${HOME}/Dropbox/_config/memo"
-#  "${HOME}/.config/pet::${HOME}/Dropbox/_config/pet"
-#  "${HOME}/_secret::${HOME}/Dropbox/_secret"
 #  "${HOME}/.ctags::${DOTFILES_DIR}/.ctags"
 #  "${HOME}/Library/Application Support/Code/User/settings.json::${DOTFILES_DIR}/vscode/settings.json"
 #  "${HOME}/Library/Application Support/Code/User/keybindings.json::${DOTFILES_DIR}/vscode/keybindings.json"
 #  "${HOME}/Library/Application Support/Code/User/snippets::${DOTFILES_DIR}/vscode/snippets"
 #  "${HOME}/.ideavimrc::${DOTFILES_DIR}/.ideavimrc"
+
+#  "${HOME}/.config/pet::${HOME}/Dropbox/_config/pet"  # privateなgithubにおく
 )
 
 conflict_detected=0
