@@ -243,7 +243,6 @@
   },
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.tree.indent": 16,
-  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
@@ -263,5 +262,6 @@
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "makefile.configureOnOpen": false
+  "makefile.configureOnOpen": false,
+  "redhat.telemetry.enabled": true
 }
