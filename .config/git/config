@@ -1,9 +1,9 @@
-[include]
-    path = ~/dotfiles/git/.gitconfig.local
+[user]
+    name = Yuji Takaesu
+    email = taka.esu.user@gmail.com
 
 [core]
     attributesFile = ~/.gitattributes
-    excludesfile = ~/.gitignore_global
     editor = vim -U NONE -u NONE -c \"set fenc=utf-8\" -c \"syntax enable\"
     quotepath = false
 [color]
@@ -60,13 +60,12 @@
     # Commit Hash から、該当 Pull Request を見つける方法 - Qiita
     # http://qiita.com/awakia/items/f14dc6310e469964a8f7
     showpr = "!f() { git log --merges --oneline --reverse --ancestry-path $1...master | grep 'Merge pull request #' | head -n 1; }; f"
-    openpr = "!f() { hub browse -- `git showpr $1 | cut -f5 -d' ' | sed -e 's|#|pull/|'`; }; f"
-    pr  = "!f() { hub browse -- pull/$(git rev-parse --abbrev-ref HEAD); }; f"
-    prbrowse = "!f() { hub browse -- pull/$1; }; f"
+    openpr = "!f() { gh browse -- `git showpr $1 | cut -f5 -d' ' | sed -e 's|#|pull/|'`; }; f"
+    pr  = "!f() { open $(gh browse -n)/pull/$(git rev-parse --abbrev-ref HEAD); }; f"
+    prbrowse = "!f() { gh browse -- pull/$1; }; f"
     ### サンプル hoge = "!f() { your command }; f"
     ### ** '!'を前につけるとgitを取って展開したコマンドを実行できます **
 
-#   hub pull-request -i <issue-no>  issueをpull-requestに
     pushfwl = push --force-with-lease
 
 [ghq]
@@ -78,6 +77,7 @@
     helper = osxkeychain
 
 [url "https://github.com/"]
-  insteadOf = git@github.com:
+    insteadOf = git@github.com:
+
 [init]
-	defaultBranch = main
+    defaultBranch = main

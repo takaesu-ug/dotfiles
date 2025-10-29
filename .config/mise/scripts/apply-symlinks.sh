@@ -8,28 +8,21 @@ declare -a LINKS=(
   "${HOME}/.zlogin::${DOTFILES_DIR}/.zlogin"
   "${HOME}/.zshenv::${DOTFILES_DIR}/.zshenv"
   "${HOME}/.zprofile::${DOTFILES_DIR}/.zprofile"
-  "${HOME}/.gitconfig::${DOTFILES_DIR}/git/.gitconfig"
-  "${HOME}/.gitconfig.local::${DOTFILES_DIR}/git/.gitconfig.local"
-  "${HOME}/.gitignore_global::${DOTFILES_DIR}/git/.gitignore_global"
+  "${HOME}/.config/git::${DOTFILES_DIR}/.config/git"
   "${HOME}/.inputrc::${DOTFILES_DIR}/.inputrc"
   "${HOME}/.tigrc::${DOTFILES_DIR}/.tigrc"
   "${HOME}/.tmux.conf::${DOTFILES_DIR}/.tmux.conf"
-#  "${HOME}/.vimrc::${DOTFILES_DIR}/.vimrc"
-  "${HOME}/.vim::${DOTFILES_DIR}/vimdir"
-  "${HOME}/.config/nvim::${DOTFILES_DIR}/vimdir"
   "${HOME}/.bundle::${DOTFILES_DIR}/.bundle"
   "${HOME}/.config/karabiner::${DOTFILES_DIR}/.config/karabiner"
+  "${HOME}/bin::${DOTFILES_DIR}/bin"
+  "${HOME}/Library/Application Support/Code/User/settings.json::${DOTFILES_DIR}/vscode/settings.json"
+  "${HOME}/Library/Application Support/Code/User/keybindings.json::${DOTFILES_DIR}/vscode/keybindings.json"
+  "${HOME}/Library/Application Support/Code/User/snippets::${DOTFILES_DIR}/vscode/snippets"
+  "${HOME}/.config/nvim::${DOTFILES_DIR}/vimdir"
+  "${HOME}/.ideavimrc::${DOTFILES_DIR}/.ideavimrc"
+
 #  "${HOME}/.config/wezterm::${DOTFILES_DIR}/.config/wezterm"
 #  "${HOME}/.config/ghostty::${DOTFILES_DIR}/.config/ghostty"
-#  "${HOME}/.peco::${DOTFILES_DIR}/.peco" # pecoはもういらない
-#  "${HOME}/.docker/config.json::${DOTFILES_DIR}/.docker/config.json"
-  "${HOME}/bin::${DOTFILES_DIR}/bin"
-#  "${HOME}/.ctags::${DOTFILES_DIR}/.ctags"
- "${HOME}/Library/Application Support/Code/User/settings.json::${DOTFILES_DIR}/vscode/settings.json"
- "${HOME}/Library/Application Support/Code/User/keybindings.json::${DOTFILES_DIR}/vscode/keybindings.json"
- "${HOME}/Library/Application Support/Code/User/snippets::${DOTFILES_DIR}/vscode/snippets"
- "${HOME}/.ideavimrc::${DOTFILES_DIR}/.ideavimrc"
-
 #  "${HOME}/.config/pet::${HOME}/Dropbox/_config/pet"  # privateなgithubにおく
 )
 
