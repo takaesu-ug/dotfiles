@@ -9,6 +9,7 @@ brew 'tig'
 brew 'openssl@3'
 brew 'tmux'
 brew 'mysql-client' # Execute => brew link --force mysql-client
+brew "smudge/smudge/nightlight" # using raycast night shift
 brew 'libpq'  # (psql client) Execute => brew link --force libpq
 
 # brew 'asciinema'
@@ -46,7 +47,6 @@ brew 'libpq'  # (psql client) Execute => brew link --force libpq
 # brew "nginx"
 # brew "ngrep"
 # brew "nkf"
-# brew "smudge/smudge/nightlight"
 # brew "nss" # mkcertで使う
 # # brew "pandoc"  # http://sky-y.github.io/site-pandoc-jp/users-guide/
 # # brew "packer"
