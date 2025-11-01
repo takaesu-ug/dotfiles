@@ -1,0 +1,65 @@
+[[snippets]]
+  description = "my ip"
+  command = "curl http://httpbin.org/ip | jq -r .origin"
+  output = ""
+
+[[snippets]]
+  description = "ssh key generate"
+  command = "ssh-keygen -t rsa -b 4096 -C '<comment>' -f <file>"
+  output = ""
+
+[[snippets]]
+  description = "npm list toplevel only"
+  command = "npm list -g --depth=0"
+  output = ""
+
+[[snippets]]
+  description = "uri decode (unescape)"
+  command = "ruby -r uri -e \"puts URI.unescape('<uri>')\""
+  output = ""
+
+[[snippets]]
+  description = "Docker rmi all images"
+  command = "docker rmi $(docker images -q -f dangling=true)"
+  output = ""
+
+[[snippets]]
+  description = "Docker rm all containers"
+  command = "docker ps -a -q -f 'status=exited' | xargs docker rm -v"
+  output = ""
+
+[[snippets]]
+  description = "Docker attach"
+  command = "docker attach `docker ps -q -f name=<container_name>`"
+  output = ""
+
+[[snippets]]
+  description = "docker-compose down and remove more"
+  command = "docker-compose down rmi all --volumes --remove-orphans"
+  output = ""
+
+[[snippets]]
+  description = "children dirs git status"
+  command = "for DIR in `ls`; do (cd $DIR && pwd && git status --short) done"
+  output = ""
+
+[[snippets]]
+  description = "exec rspec with endless loop"
+  command = "while true; do bundle exec rspec spec; done"
+  output = ""
+
+[[snippets]]
+  description = "remove temporary line by matching string"
+  command = "pt -l '<string>' | xargs sed -i '' -e '/<string>/d'"
+  output = ""
+
+[[snippets]]
+  description = "mysqldump"
+  command = "mysqldump -B -c -uroot -p -h127.0.0.1 <DB> > dump.sql"
+  output = ""
+
+[[snippets]]
+  description = "rubocop diff files only"
+  command = "bundle exec rubocop $(git diff --name-only master)"
+  output = ""
+

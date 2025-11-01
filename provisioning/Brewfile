@@ -11,6 +11,7 @@ brew 'tmux'
 brew 'mysql-client' # Execute => brew link --force mysql-client
 brew "smudge/smudge/nightlight" # using raycast night shift
 brew 'libpq'  # (psql client) Execute => brew link --force libpq
+brew "knqyf263/pet/pet"
 
 # brew 'asciinema'
 # brew "aicommits"
@@ -21,10 +22,8 @@ brew 'libpq'  # (psql client) Execute => brew link --force libpq
 # brew "csshx"
 # brew "colordiff"
 # brew "ctags"
-# brew "deno"
 # brew "direnv"
 # brew "ffmpeg"
-# brew "gh"
 # brew "gitleaks"
 # brew "gnuplot" # gnuplot コマンドで特定のデータからコマンドで簡単にグラフ化するツール
 # brew "highlight"
@@ -38,9 +37,6 @@ brew 'libpq'  # (psql client) Execute => brew link --force libpq
 # brew "lua"
 # brew "mactop"
 # brew "mas"
-# # brew "mecab"
-# # brew "mecab-ipadic"
-# # brew "mosquitto"
 # brew "mpg123"
 # brew "mkcert"  # localでsslのCA作るやつ
 # brew "mycli"
@@ -48,9 +44,6 @@ brew 'libpq'  # (psql client) Execute => brew link --force libpq
 # brew "ngrep"
 # brew "nkf"
 # brew "nss" # mkcertで使う
-# # brew "pandoc"  # http://sky-y.github.io/site-pandoc-jp/users-guide/
-# # brew "packer"
-# brew "knqyf263/pet/pet"
 # brew "kyoshidajp/tosa/tosa" # githubのPRを検出する https://qiita.com/kyoshidajp/items/18d5385ef8375c7bcd14
 # brew "go-parquet-tools"
 # brew "plantuml"
@@ -83,18 +76,15 @@ cask 'font-ricty-diminished'
 cask 'font-jetbrains-mono'
 cask 'font-noto-sans-cjk-jp'
 cask 'font-migu-1p'
-# cask 'bartender' # ライセンスが複雑になっているので使わない
 cask 'contexts'
 cask 'cursor'
 cask 'deepl'
 cask 'discord'
-# cask 'dropbox' # 当面使わない
 cask 'figma'
 cask 'gcloud-cli'
 cask 'google-japanese-ime'
 cask 'karabiner-elements'
 cask 'obsidian'
-# cask 'onedrive'
 cask 'orbstack'
 cask 'raycast'
 cask 'visual-studio-code'
@@ -104,13 +94,6 @@ cask 'slack'
 cask 'iterm2'
 cask 'session-manager-plugin'
 
-# # cask "android-platform-tools"
-# # cask "blisk" # 開発用ブラウザ(モバイル等も)
-# # cask "cocoapods"
-# # cask "charles"
-# # cask "calibre"
-# # cask "craft"
-# # cask "cyberduck"
 # cask "datagrip"
 # cask "drawio"
 # cask "fig"
@@ -120,18 +103,9 @@ cask 'session-manager-plugin'
 # cask "google-drive"
 # cask "goland"
 # cask "intellij-idea"
-# # cask "java"
 # cask "ngrok"
 # cask "pika"
 # cask "postman"
 # cask "rubymine"
-# # cask "skitch"
-# # cask "skype"
-# # cask "sizzy" # モバイル等のマルチデバイスアプリ
-# # cask "vagrant"
-# # cask "vivaldi"
 # cask "vysor" # スマホミラーリングアプリ
-# # cask "webstorm"
-# # cask "xmind"
-# # cask "xquartz"
 # cask "zed" # editor
