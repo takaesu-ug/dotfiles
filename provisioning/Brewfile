@@ -7,11 +7,14 @@ brew 'git'
 brew 'envchain'
 brew 'tig'
 brew 'openssl@3'
+brew 'postgresql@18'
 brew 'tmux'
 brew 'mysql-client' # Execute => brew link --force mysql-client
-brew "smudge/smudge/nightlight" # using raycast night shift
 brew 'libpq'  # (psql client) Execute => brew link --force libpq
-brew "knqyf263/pet/pet"
+brew 'tree'
+brew 'colordiff'
+brew 'smudge/smudge/nightlight' # using raycast night shift
+brew 'knqyf263/pet/pet'
 
 # brew 'asciinema'
 # brew "aicommits"
@@ -20,7 +23,6 @@ brew "knqyf263/pet/pet"
 # brew "certbot"
 # brew "cmake"
 # brew "csshx"
-# brew "colordiff"
 # brew "ctags"
 # brew "direnv"
 # brew "ffmpeg"
@@ -59,7 +61,6 @@ brew "knqyf263/pet/pet"
 # brew "the_silver_searcher"
 # brew "tidy-html5" # tidyのlintでhtml5として有効となるように
 # brew "tnftp"
-# brew "tree"
 # brew "unar"   # zipなどの解凍ツール(winのcp932などでも文字化けしないように)
 # brew "watch"
 # brew "wget"
