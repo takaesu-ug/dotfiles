@@ -1,5 +1,3 @@
-# Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # 設定ファイルの読み込み順
 # https://qiita.com/muran001/items/7b104d33f5ea3f75353f
 # 1. global) /etc/zshenv
@@ -25,11 +23,6 @@ source ~/dotfiles/zshdir/zshrc.function
 
 source ~/dotfiles/zshdir/zshrc.zplugin
 
-# secret environments variables (ex. access_token)
-if [[ -f ~/dotfiles/secret/set_environment.sh ]]; then
-  source ~/dotfiles/secret/set_environment.sh
-fi
-
 ### 最後に読み込ませたい
 # direnv用の設定
 if (( $+commands[direnv] )); then
@@ -48,8 +41,3 @@ esac
 if (( $+commands[mise] )); then
   eval "$(mise activate zsh)"
 fi
-
-[[ -f "$HOME/fig-export/dotfiles/dotfile.zsh" ]] && builtin source "$HOME/fig-export/dotfiles/dotfile.zsh"
-
-# Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
