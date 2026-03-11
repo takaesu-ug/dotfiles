@@ -94,6 +94,7 @@ cask 'zoom'
 cask 'slack'
 cask 'iterm2'
 cask 'session-manager-plugin'
+cask 'zed' # editor
 
 # cask "datagrip"
 # cask "drawio"
@@ -109,4 +110,3 @@ cask 'session-manager-plugin'
 # cask "postman"
 # cask "rubymine"
 # cask "vysor" # スマホミラーリングアプリ
-# cask "zed" # editor
