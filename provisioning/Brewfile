@@ -15,6 +15,7 @@ brew 'tree'
 brew 'colordiff'
 brew 'smudge/smudge/nightlight' # using raycast night shift
 brew 'knqyf263/pet/pet'
+brew 'k1LoW/tap/git-wt'
 
 # brew 'asciinema'
 # brew "aicommits"
@@ -92,14 +93,14 @@ cask 'visual-studio-code'
 cask 'notion'
 cask 'zoom'
 cask 'slack'
-cask 'iterm2'
 cask 'session-manager-plugin'
 cask 'zed' # editor
+cask 'ghostty'
+cask 'cmux'
 
 # cask "datagrip"
 # cask "drawio"
 # cask "fig"
-# cask "firefox"
 # cask "flipper"
 # cask "google-chrome"
 # cask "google-drive"
@@ -108,5 +109,4 @@ cask 'zed' # editor
 # cask "ngrok"
 # cask "pika"
 # cask "postman"
-# cask "rubymine"
 # cask "vysor" # スマホミラーリングアプリ

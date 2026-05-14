@@ -1,24 +1,3 @@
-# anyenvを利用するようにしたので以下の各envの設定は一旦除外
-## anyenvのディレクトリがあるとき かつ anyenv コマンドが初期化されていないときに実行する
-if [ -d ${HOME}/.anyenv ] && ! type anyenv >/dev/null 2>&1; then
-  export PATH="$HOME/.anyenv/bin:$PATH"
-  eval "$(anyenv init -)"
-fi
-
-## go用の設定(goはgoenvで管理する)
-if type goenv >/dev/null 2>&1; then
-  # goenvが無条件にGOPATHを設定してしまうのを除外
-  # ref GOENV_DISABLE_GOPATH https://qiita.com/gimKondo/items/add08298e24ae400505e
-  export GOENV_DISABLE_GOPATH=1
-
-  # go modulesを利用する
-  export GO111MODULE=on
-
-  export GOPATH=~/workspace/gopath
-  # export GOPATH=~/workspace/gopath/:~/workspaces/ghq/
-  export PATH=$(goenv root)/shims:~/workspace/gopath/bin:$PATH  # パッケージで入れたgoのbinディレクトリへのパスとGOPATH配下のパスを追加
-fi
-
 # 独自のsecretな実行ファイル
 export PATH=$HOME/_secret/bin:$HOME/bin:$PATH
 
@@ -31,3 +10,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Rust関連
 #. "$HOME/.cargo/env"
+
+# Claude
+export PATH=$HOME/.local/bin:$PATH
+

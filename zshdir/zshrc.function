@@ -175,7 +175,7 @@ if type fzf >/dev/null 2>&1; then
     zle redisplay
   }
   zle -N fzf-find-file
-  bindkey '^q' fzf-find-file
+  bindkey '^f' fzf-find-file
 
 
   # vim関連
@@ -240,4 +240,14 @@ if type pet >/dev/null 2>&1; then
   }
   zle -N pet-select
   bindkey '^v' pet-select
+fi
+
+# refs. https://github.com/k1LoW/git-wt
+if type git-wt >/dev/null 2>&1; then
+    function fzf-git-wt() {
+        cd $(git-wt | fzf --header-lines=1 | awk '{if ($1 == "*") print $2; else print $1}')
+        zle reset-prompt
+    }
+    zle -N fzf-git-wt
+    bindkey '^w' fzf-git-wt
 fi
