@@ -16,6 +16,7 @@ brew 'colordiff'
 brew 'smudge/smudge/nightlight' # using raycast night shift
 brew 'knqyf263/pet/pet'
 brew 'k1LoW/tap/git-wt'
+brew 'tree-sitter-cli' # nvim-treesitter (main branch) で必要
 
 # brew 'asciinema'
 # brew "aicommits"
