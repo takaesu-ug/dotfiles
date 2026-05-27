@@ -63,3 +63,36 @@
   command = "bundle exec rubocop $(git diff --name-only master)"
   output = ""
 
+[[snippets]]
+  description = "google cloud roles list (--organization=org_numberとすると組織全体)"
+  command = '''
+    gcloud asset analyze-iam-policy \
+    --project=<project> \
+    --identity="user:<user_email>" \
+    --flatten="policy.binding.members[]" \
+    --format="table(
+        policy.binding.members:label=GRANTED_VIA,
+        policy.binding.role:label=ROLE,
+        policy.attachedResource:label=RESOURCE
+    )" | grep -E "GRANTED_VIA|group:|<user_email>" | awk '
+    NR==1 { print "0_SCOPE\t" $1 "\t" $2 "\t" $3 }
+    NR>1 {
+        if ($0 ~ /projects\/<project>$/) { scope = "1_【プロジェクト全体】" }
+        else if ($0 ~ /\/datasets\//) { scope = "2_【データセット個別】" }
+        else { scope = "3_【その他個別リソース】" }
+
+        print scope "\t" $1 "\t" $2 "\t" $3
+    }' | sort | column -t
+'''
+  output = ""
+
+[[snippets]]
+  description = "google cloud project roles by user"
+  command = '''
+    gcloud projects get-iam-policy <project> \
+    --flatten="bindings[].members" \
+    --format="table(bindings.members:label=PRINCIPAL, bindings.role:label=ROLE)" \
+    --sort-by="bindings.members"
+'''
+  output = ""
+
