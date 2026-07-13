@@ -22,7 +22,12 @@ cmd([[
 ]])
 
 -- ステータスライン設定(2:常に表示)
-opt.laststatus = 2
+-- vscode-neovimではstatuslineの描画先がなく編集画面に漏れるため非表示にする
+if vim.g.vscode then
+  opt.laststatus = 0
+else
+  opt.laststatus = 2
+end
 
 -- 全角スペースの表示
 cmd([[

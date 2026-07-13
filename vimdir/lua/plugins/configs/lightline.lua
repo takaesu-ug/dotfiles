@@ -3,6 +3,10 @@ return {
   'itchyny/lightline.vim',
   lazy = false,
   priority = 1000,
+  cond = function()
+    -- vscodeではないときに有効にする
+    return vim.g.vscode ~= 1
+  end,
   config = function()
     -- lightline設定
     vim.g.lightline = {
