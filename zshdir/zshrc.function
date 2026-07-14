@@ -248,9 +248,10 @@ if type git-wt >/dev/null 2>&1; then
         local selected=$(git-wt | fzf --header-lines=1 | awk '{if ($1 == "*") print $2; else print $1}')
         if [ -n "$selected" ]; then
           BUFFER="cd ${selected}"
+          zle accept-line
         fi
         zle reset-prompt
     }
     zle -N fzf-git-wt
-    bindkey '^n' fzf-git-wt
+    bindkey '^o' fzf-git-wt
 fi
