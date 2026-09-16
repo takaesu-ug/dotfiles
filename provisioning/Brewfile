@@ -18,6 +18,9 @@ brew 'knqyf263/pet/pet'
 brew 'k1LoW/tap/git-wt'
 brew 'tree-sitter-cli' # nvim-treesitter (main branch) で必要
 
+brew 'helm'
+brew 'kustomize'
+
 # brew 'asciinema'
 # brew "aicommits"
 # brew "automake"
@@ -96,7 +99,6 @@ cask 'slack'
 cask 'session-manager-plugin'
 cask 'zed' # editor
 cask 'ghostty'
-cask 'cmux'
 
 # cask "datagrip"
 # cask "drawio"
