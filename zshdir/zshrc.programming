@@ -14,3 +14,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Claude
 export PATH=$HOME/.local/bin:$PATH
 
+# psqlコマンド
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# granted https://docs.commonfate.io/granted/internals/shell-alias
+alias assume="source assume"

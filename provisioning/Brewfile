@@ -20,6 +20,7 @@ brew 'tree-sitter-cli' # nvim-treesitter (main branch) で必要
 
 brew 'helm'
 brew 'kustomize'
+brew 'common-fate/granted/granted', trusted: true # https://docs.commonfate.io/granted/getting-started
 
 # brew 'asciinema'
 # brew "aicommits"

@@ -43,4 +43,3 @@ if (( $+commands[mise] )); then
 fi
 
 eval "$(git wt --init zsh)"
-
